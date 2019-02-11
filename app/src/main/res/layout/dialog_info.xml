@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="400dp"
+    android:background="@drawable/rect_bg">
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="360dp">
+        <TextView
+            android:id="@+id/tvMain"
+            android:paddingTop="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#eeeeee"
+            android:textSize="11sp"
+            android:gravity="left"
+            android:lineSpacingExtra="3dp"
+            />
+    </ScrollView>
+    <TextView
+        android:layout_below="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#ffffff"/>
+    <TextView
+        android:id="@+id/tvYes"
+        android:layout_width="match_parent"
+        android:layout_height="39dp"
+        android:text="CLOSE"
+        android:gravity="center"
+        android:textSize="14sp"
+        android:textColor="#eeeeee"
+        android:layout_alignParentBottom="true"/>
+</RelativeLayout>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:scrollbars="none"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".huitu.PaintActivity"
+    android:padding="10dp"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/btnStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Style样式(FILL|STROKE|FILL_AND_STROKE)"/>
+
+    <com.androidui.huitu.view.PaintStyleView
+        android:layout_width="match_parent"
+        android:layout_height="150dp" />
+
+    <Button
+        android:id="@+id/btnCap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cap线帽(BUTT|ROUND|SQUARE)"/>
+
+    <com.androidui.huitu.view.PaintCapView
+        android:layout_width="match_parent"
+        android:layout_height="150dp" />
+
+    <Button
+        android:id="@+id/btnJoin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Join交点(BEVEL|MITER|ROUND)"/>
+
+    <com.androidui.huitu.view.PaintJoinView
+        android:layout_width="match_parent"
+        android:layout_height="180dp" />
+
+    <Button
+        android:id="@+id/btnDrawText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="绘制文字"/>
+
+    <Button
+        android:id="@+id/btnXfermode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Xfermode"/>
+
+
+</LinearLayout>
+</ScrollView>
