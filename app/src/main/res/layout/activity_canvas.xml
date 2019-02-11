@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".huitu.CanvasActivity">
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        
+        <com.androidui.view.Header1View
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:mainTitle1="绘制圆形drawCircle"/>
+        
+        <com.androidui.huitu.view.DrawCircleView
+            android:id="@+id/circle"
+            android:layout_width="match_parent"
+            android:layout_height="200dp" />
+
+        <TextView
+            android:text="drawCircle(float cx, float cy, float radius, @NonNull Paint paint)"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/tvSmallTitle"/>
+
+        <include layout="@layout/line"/>
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:text="cx"
+                style="@style/tvSmallTitle"/>
+            <SeekBar
+                android:id="@+id/sbCircleCx"
+                android:layout_gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:text="cy"
+                style="@style/tvSmallTitle"/>
+            <SeekBar
+                android:id="@+id/sbCircleCy"
+                android:layout_gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:text="radius"
+                style="@style/tvSmallTitle"/>
+            <SeekBar
+                android:id="@+id/sbCircleRadius"
+                android:layout_gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <include layout="@layout/line"/>
+
+        <TextView
+            style="@style/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="绘制矩形drawCircle"/>
+
+        
+    </LinearLayout>
+
+</ScrollView>

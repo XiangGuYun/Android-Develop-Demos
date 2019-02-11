@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="Header1View">
+        <attr name="mainTitle1" format="string"/>
+        <attr name="subTitle1" format="string"/>
+    </declare-styleable>
+</resources>

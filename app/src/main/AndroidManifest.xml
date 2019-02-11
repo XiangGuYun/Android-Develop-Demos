@@ -10,20 +10,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
         <activity android:name=".MainActivity">
+
+        </activity>
+        <activity android:name=".huitu.HuiTuActivity" />
+        <activity android:name=".huitu.BaseKnowledgeActivity" />
+        <activity android:name=".huitu.PaintActivity" />
+        <activity android:name=".huitu.XfermodeActivity" />
+        <activity android:name=".huitu.DrawTextActivity"></activity>
+        <activity android:name=".ImageViewerActivity" />
+        <activity android:name=".huitu.CanvasActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".huitu.HuiTuActivity" />
-        <activity android:name=".huitu.BaseKnowledgeActivity" />
-        <activity android:name=".huitu.PaintActivity" />
-        <activity android:name=".huitu.XfermodeActivity" />
-        <activity android:name=".huitu.DrawTextActivity">
-
-        </activity>
-        <activity android:name=".ImageViewerActivity"></activity>
     </application>
 
 </manifest>

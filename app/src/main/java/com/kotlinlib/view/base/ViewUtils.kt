@@ -83,6 +83,14 @@ interface ViewUtils {
     /**
      * 设置点击事件
      */
+    fun <T:View> T.click(func: (View)->Unit):T{
+        setOnClickListener(func)
+        return this
+    }
+
+    /**
+     * 设置点击事件
+     */
     fun <T:View> T.click1(func: (View)->Unit):T{
         setOnClickListener(func)
         return this
