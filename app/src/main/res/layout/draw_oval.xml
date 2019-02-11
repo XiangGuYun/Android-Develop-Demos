@@ -1,0 +1,89 @@
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.androidui.view.Header1View
+        android:id="@+id/headerOval"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:mainTitle1="绘制椭圆drawOval"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/tvSmallTitle"
+        android:text="drawOval(float left, float top, float right, float bottom, @NonNull Paint paint)"/>
+
+    <include layout="@layout/line"/>
+
+    <com.androidui.huitu.view.DrawOvalView
+        android:id="@+id/oval"
+        android:layout_width="match_parent"
+        android:layout_height="200dp" />
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:text="left"
+            style="@style/tvSmallTitle"/>
+        <SeekBar
+            android:id="@+id/sbOvalLeft"
+            android:layout_gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:text="top"
+            style="@style/tvSmallTitle"/>
+        <SeekBar
+            android:id="@+id/sbOvalTop"
+            android:layout_gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:text="right"
+            style="@style/tvSmallTitle"/>
+        <SeekBar
+            android:id="@+id/sbOvalRight"
+            android:layout_gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:text="bottom"
+            style="@style/tvSmallTitle"/>
+        <SeekBar
+            android:id="@+id/sbOvalBottom"
+            android:layout_gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <include layout="@layout/line"/>
+</merge>

@@ -4,6 +4,7 @@ import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import com.androidui.R
+import com.androidui.huitu.paint.PaintActivity
 import com.kotlinlib.view.recyclerview.RVInterface
 import com.kotlinlib.view.recyclerview.RVUtils
 import kotlinx.android.synthetic.main.activity_hui_tu.*
@@ -26,7 +27,7 @@ class HuiTuActivity : AppCompatActivity(),RVInterface {
             holder.tv(R.id.tvTitle).text = listPaint[pos]
         },R.layout.item_catalog)
         btnPaint.setOnClickListener {
-            startActivity(Intent(this,PaintActivity::class.java))
+            startActivity(Intent(this, PaintActivity::class.java))
         }
     }
 }

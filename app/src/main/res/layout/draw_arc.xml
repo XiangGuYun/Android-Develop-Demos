@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.androidui.view.Header1View
+        android:id="@+id/headerArc"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:mainTitle1="绘制圆弧和扇形drawArc"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/tvSmallTitle"
+        android:text="drawArc(float left, float top, float right, float bottom, float startAngle, float sweepAngle, boolean useCenter, @NonNull Paint paint)"/>
+
+    <include layout="@layout/line"/>
+
+    <com.androidui.huitu.view.DrawArcView
+        android:id="@+id/arc"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"/>
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:text="left"
+            style="@style/tvSmallTitle"/>
+        <SeekBar
+            android:id="@+id/sbArcLeft"
+            android:layout_gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:text="top"
+            style="@style/tvSmallTitle"/>
+        <SeekBar
+            android:id="@+id/sbArcTop"
+            android:layout_gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:text="right"
+            style="@style/tvSmallTitle"/>
+        <SeekBar
+            android:id="@+id/sbArcRight"
+            android:layout_gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:text="bottom"
+            style="@style/tvSmallTitle"/>
+        <SeekBar
+            android:id="@+id/sbArcBottom"
+            android:layout_gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="startAngle"
+            style="@style/tvSmallTitle"/>
+        <SeekBar
+            android:id="@+id/sbArcStartAngle"
+            android:layout_gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="sweepAngle"
+            style="@style/tvSmallTitle"/>
+        <SeekBar
+            android:id="@+id/sbArcSweepAngle"
+            android:layout_gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="userCenter"
+            style="@style/tvSmallTitle"/>
+        <RadioGroup
+            android:id="@+id/rgArcUseCenter"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <RadioButton
+                android:checked="true"
+                android:id="@+id/rbUseCenter1"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:text="true"/>
+            <RadioButton
+                android:id="@+id/rbUseCenter2"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:text="false"
+                />
+        </RadioGroup>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="paint style"
+            style="@style/tvSmallTitle"/>
+        <RadioGroup
+            android:id="@+id/rgPaintStyle"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <RadioButton
+                android:checked="true"
+                android:id="@+id/rbArcFill"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:text="fill"/>
+            <RadioButton
+                android:id="@+id/rbArcStroke"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:text="stroke"
+                />
+        </RadioGroup>
+    </LinearLayout>
+
+    <include layout="@layout/line"/>
+
+</merge>

@@ -14,11 +14,11 @@
         </activity>
         <activity android:name=".huitu.HuiTuActivity" />
         <activity android:name=".huitu.BaseKnowledgeActivity" />
-        <activity android:name=".huitu.PaintActivity" />
-        <activity android:name=".huitu.XfermodeActivity" />
-        <activity android:name=".huitu.DrawTextActivity"></activity>
+        <activity android:name=".huitu.paint.PaintActivity" />
+        <activity android:name=".huitu.paint.XfermodeActivity" />
+        <activity android:name=".huitu.paint.DrawTextActivity"></activity>
         <activity android:name=".ImageViewerActivity" />
-        <activity android:name=".huitu.CanvasActivity">
+        <activity android:name=".huitu.canvas.CanvasActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

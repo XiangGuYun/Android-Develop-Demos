@@ -1,4 +1,4 @@
-package com.androidui.huitu
+package com.androidui.huitu.paint
 
 import android.content.Intent
 import android.graphics.Color
