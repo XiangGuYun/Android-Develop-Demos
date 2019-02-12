@@ -28,6 +28,7 @@ class DrawPathView @JvmOverloads constructor(context: Context, attrs: AttributeS
         paint.color = Color.RED
         paint.strokeWidth = 5f
         paint.style = Paint.Style.STROKE
+        paint1.textSize = 25f
     }
 
     override fun onDraw(canvas: Canvas?) {

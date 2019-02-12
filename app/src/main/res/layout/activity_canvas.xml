@@ -18,7 +18,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="200dp" />
             <Button
-                android:layout_width="wrap_content"
+                android:layout_width="80dp"
                 android:layout_height="wrap_content"
                 android:text="close"
                 android:layout_gravity="right|bottom"
@@ -62,9 +62,13 @@
                 android:layout_height="match_parent" />
             <Button
                 android:id="@+id/btnLineTo"
-                android:layout_width="wrap_content"
+                android:layout_width="60dp"
                 android:layout_height="wrap_content"
                 android:text="生成"/>
+            <Button
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="讲解"/>
         </LinearLayout>
         <TextView
             style="@style/tvSmallTitle"
@@ -99,9 +103,13 @@
                 android:layout_height="match_parent" />
             <Button
                 android:id="@+id/btnRLineTo"
-                android:layout_width="wrap_content"
+                android:layout_width="60dp"
                 android:layout_height="wrap_content"
                 android:text="生成"/>
+            <Button
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="讲解"/>
         </LinearLayout>
         <include layout="@layout/line"/>
         <!--绘制点-->
