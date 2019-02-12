@@ -4,6 +4,8 @@ import android.content.Context
 import android.graphics.Canvas
 import android.graphics.Color
 import android.graphics.Paint
+import android.graphics.RectF
+import android.os.Build
 import android.util.AttributeSet
 import android.view.View
 import com.kotlinlib.activity.ContextUtils
@@ -17,6 +19,9 @@ class DrawRectView @JvmOverloads constructor(context: Context, attrs: AttributeS
     var top = 0f
     var right = context.srnWidth/2f
     var bottom = DensityUtil.dp2px(100f).toFloat()
+    var isRround = false //是否是圆角
+    var rx = 10f
+    var ry = 10f
 
     init {
         setBackgroundColor(Color.WHITE)
@@ -26,7 +31,15 @@ class DrawRectView @JvmOverloads constructor(context: Context, attrs: AttributeS
 
     override fun onDraw(canvas: Canvas?) {
         super.onDraw(canvas)
-        canvas?.drawRect(left, top, right, bottom, paint)
+        if(!isRround){
+            canvas?.drawRect(left, top, right, bottom, paint)
+        }else{
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                canvas?.drawRoundRect(left, top, right, bottom, rx, ry, paint)
+            }else{
+                canvas?.drawRoundRect(RectF(left, top, right, bottom), rx, ry, paint)
+            }
+        }
     }
 
 }

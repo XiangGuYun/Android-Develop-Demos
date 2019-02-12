@@ -14,6 +14,14 @@
 
     <include layout="@layout/line"/>
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/tvSmallTitle"
+        android:text="drawRoundRect(float left, float top, float right, float bottom, float rx, float ry, @NonNull Paint paint)"/>
+
+    <include layout="@layout/line"/>
+
     <com.androidui.huitu.view.DrawRectView
         android:id="@+id/rect"
         android:layout_width="match_parent"
@@ -69,7 +77,6 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_marginBottom="10dp"
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -80,6 +87,73 @@
             style="@style/tvSmallTitle"/>
         <SeekBar
             android:id="@+id/sbRectBottom"
+            android:layout_gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:text="边角"
+            style="@style/tvSmallTitle"/>
+        <RadioGroup
+            android:id="@+id/rgRectShape"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <RadioButton
+                android:checked="true"
+                android:id="@+id/rbRectSquare"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:text="直角"/>
+            <RadioButton
+                android:id="@+id/rbRectRound"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:text="圆角"
+                />
+        </RadioGroup>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llRectRx"
+        android:visibility="gone"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:text="rx"
+            style="@style/tvSmallTitle"/>
+        <SeekBar
+            android:id="@+id/sbRectRx"
+            android:layout_gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llRectRy"
+        android:layout_marginBottom="10dp"
+        android:visibility="gone"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:text="ry"
+            style="@style/tvSmallTitle"/>
+        <SeekBar
+            android:id="@+id/sbRectRy"
             android:layout_gravity="center_vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />

@@ -13,6 +13,7 @@ import kotlinx.android.synthetic.main.draw_arc.*
 import kotlinx.android.synthetic.main.draw_circle.*
 import kotlinx.android.synthetic.main.draw_line.*
 import kotlinx.android.synthetic.main.draw_oval.*
+import kotlinx.android.synthetic.main.draw_point.*
 import kotlinx.android.synthetic.main.draw_rect.*
 import kotlinx.android.synthetic.main.header_view1.view.*
 
@@ -23,11 +24,64 @@ class CanvasActivity : KotlinActivity() {
 
     override fun init(bundle: Bundle?) {
         codeDialog = CodeViewerDialog(this)
+        drawPoint()
         drawCircle()
         drawRect()
         drawOval()
         drawLine()
         drawArc()
+        drawPath()
+    }
+
+    private fun drawPath() {
+        btnClosePath.click {
+            path.isClose = true
+            path.invalidate()
+        }
+        btnLineTo.click {
+            if(etLineToX.textString.isNotEmpty()&&etLineToY.textString.isNotEmpty()){
+                path.nextX = etLineToX.textString.toFloat()
+                path.nextY = etLineToY.textString.toFloat()
+                path.invalidate()
+            }else{
+                "请输入正确的坐标值".toast()
+            }
+        }
+        btnRLineTo.click {
+            if(etRLineToX.textString.isNotEmpty()&&etRLineToY.textString.isNotEmpty()){
+                path.dx = etRLineToX.textString.toFloat()
+                path.dy = etRLineToY.textString.toFloat()
+                path.invalidate()
+            }else{
+                "请输入正确的偏移值".toast()
+            }
+        }
+    }
+
+    private fun drawPoint() {
+        //初始化设置
+        point.viewTreeObserver.addOnGlobalLayoutListener {
+            sbPointCx.max = point.width
+            sbPointCy.max = point.height
+            sbPointCx.progress = point.width/2
+            sbPointCy.progress = point.height/2
+        }
+
+        //cx变化更新
+        sbPointCx.setOnSeekBarChangeListener(object :OnSeekBarChange{
+            override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
+                point.cx = progress.toFloat()
+                point.invalidate()
+            }
+        })
+
+        //cy变化更新
+        sbPointCy.setOnSeekBarChangeListener(object :OnSeekBarChange{
+            override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
+                point.cy = progress.toFloat()
+                point.invalidate()
+            }
+        })
     }
 
     private fun drawArc() {
@@ -230,6 +284,8 @@ class CanvasActivity : KotlinActivity() {
             sbRectBottom.max = 200.dp2px()
             sbRectRight.progress = srnWidth/2
             sbRectBottom.progress = 100.dp2px()
+            sbRectRx.progress = 10
+            sbRectRy.progress = 10
         }
 
         sbRectLeft.setOnSeekBarChangeListener(object :OnSeekBarChange{
@@ -256,6 +312,36 @@ class CanvasActivity : KotlinActivity() {
         sbRectBottom.setOnSeekBarChangeListener(object :OnSeekBarChange{
             override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
                 rect.bottom = progress.toFloat()
+                rect.invalidate()
+            }
+        })
+
+        rgRectShape.check {
+            when(it){
+                R.id.rbRectSquare->{
+                    rect.isRround = false
+                    llRectRx.gone()
+                    llRectRy.gone()
+                }
+                R.id.rbRectRound->{
+                    rect.isRround = true
+                    llRectRx.show()
+                    llRectRy.show()
+                }
+            }
+            rect.invalidate()
+        }
+
+        sbRectRx.setOnSeekBarChangeListener(object :OnSeekBarChange{
+            override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
+                rect.rx = progress.toFloat()
+                rect.invalidate()
+            }
+        })
+
+        sbRectRy.setOnSeekBarChangeListener(object :OnSeekBarChange{
+            override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
+                rect.ry = progress.toFloat()
                 rect.invalidate()
             }
         })
