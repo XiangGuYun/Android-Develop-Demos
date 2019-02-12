@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".huitu.canvas.PathActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="线操作"
+            style="@style/tvTitle"/>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp">
+            <com.androidui.huitu.view.DrawPathView
+                android:id="@+id/path"
+                android:layout_width="match_parent"
+                android:layout_height="200dp" />
+            <Button
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:text="close"
+                android:layout_gravity="right|bottom"
+                android:id="@+id/btnClosePath"/>
+        </FrameLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/tvSmallTitle"
+            android:text="lineTo(float x, float y)"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                style="@style/tvSmallTitle"
+                android:text="x"/>
+            <EditText
+                android:inputType="number|numberDecimal"
+                android:id="@+id/etLineToX"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent" />
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                style="@style/tvSmallTitle"
+                android:text="y"/>
+            <EditText
+                android:inputType="number|numberDecimal"
+                android:id="@+id/etLineToY"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent" />
+            <Button
+                android:id="@+id/btnLineTo"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="生成"/>
+            <Button
+                android:id="@+id/btnTeachLineTo"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="讲解"/>
+        </LinearLayout>
+        <TextView
+            style="@style/tvSmallTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="rLineTo(float dx, float dy)"/>
+        <LinearLayout
+            android:layout_marginBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                style="@style/tvSmallTitle"
+                android:text="dx"/>
+            <EditText
+                android:inputType="number|numberDecimal"
+                android:id="@+id/etRLineToX"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent" />
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                style="@style/tvSmallTitle"
+                android:text="dy"/>
+            <EditText
+                android:inputType="number|numberDecimal"
+                android:id="@+id/etRLineToY"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent" />
+            <Button
+                android:id="@+id/btnRLineTo"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="生成"/>
+            <Button
+                android:id="@+id/btnTeachRLineTo"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="讲解"/>
+        </LinearLayout>
+
+        <include layout="@layout/line"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="点操作"
+            style="@style/tvTitle"/>
+
+        <TextView
+            style="@style/tvSmallTitleLeft"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="setLastPoint(float dx, float dy): 改变前一步操作点的位置，会改变前一步的操作" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/tvSmallTitleLeft"
+            android:text="moveTo(float x, float y): 改变接下来操作的起点位置为（x,y）"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/tvSmallTitleLeft"
+            android:text="rMoveTo(float dx, float dy): 接下来要操作的起点位置为（x+dx,y+dy）"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <com.androidui.huitu.view.Path1View
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"/>
+            <TextView
+                android:layout_width="1px"
+                android:layout_height="100dp"
+                android:background="#000000"/>
+            <com.androidui.huitu.view.Path2View
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"/>
+            <TextView
+                android:layout_width="1px"
+                android:layout_height="100dp"
+                android:background="#000000"/>
+            <com.androidui.huitu.view.Path3View
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                style="@style/tvSmallTitleLeft"
+                android:lineSpacingExtra="3dp"
+                android:id="@+id/tvPic1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+            <TextView
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:background="#000000"/>
+            <TextView
+                style="@style/tvSmallTitleLeft"
+                android:lineSpacingExtra="3dp"
+                android:id="@+id/tvPic2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+            <TextView
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:background="#000000"/>
+            <TextView
+                style="@style/tvSmallTitleLeft"
+                android:lineSpacingExtra="3dp"
+                android:id="@+id/tvPic3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
+        <include layout="@layout/line"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="绘制常规图形"
+            style="@style/tvTitle"/>
+
+        <TextView
+            android:id="@+id/tvGeometry"
+            android:lineSpacingExtra="6dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/tvSmallTitleLeft"/>
+        
+        <TextView
+            style="@style/tvTitle1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Direction"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/tvSmallTitleLeft"
+            android:id="@+id/tvDirection"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <com.androidui.huitu.view.Path4View
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                android:layout_weight="1"/>
+            <TextView
+                android:layout_width="1px"
+                android:layout_height="100dp"
+                android:background="#000000"/>
+            <com.androidui.huitu.view.Path5View
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

@@ -4,9 +4,12 @@ import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import com.androidui.R
-import com.androidui.huitu.paint.PaintActivity
+import com.androidui.huitu.canvas.GeometryActivity
+import com.androidui.huitu.canvas.PathActivity
+import com.androidui.huitu.paint.PaintPropertyActivity
+import com.androidui.huitu.paint.PaintTextActivity
+import com.androidui.huitu.paint.XfermodeActivity
 import com.kotlinlib.view.recyclerview.RVInterface
-import com.kotlinlib.view.recyclerview.RVUtils
 import kotlinx.android.synthetic.main.activity_hui_tu.*
 
 class HuiTuActivity : AppCompatActivity(),RVInterface {
@@ -15,19 +18,25 @@ class HuiTuActivity : AppCompatActivity(),RVInterface {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_hui_tu)
 
-        btnBaseKnowledge.setOnClickListener {
-            startActivity(Intent(this,BaseKnowledgeActivity::class.java))
+        btnPaintProperty.setOnClickListener {
+            startActivity(Intent(this, PaintPropertyActivity::class.java))
         }
-        /*
-        画笔
-         */
-        val listPaint = listOf("STYLE","CAP","JOIN","ALIGN","XFERMODE")
-        RVUtils(rvPaint).rvAdapter(listPaint,{
-            holder, pos ->
-            holder.tv(R.id.tvTitle).text = listPaint[pos]
-        },R.layout.item_catalog)
-        btnPaint.setOnClickListener {
-            startActivity(Intent(this, PaintActivity::class.java))
+
+        btnPaintText.setOnClickListener {
+            startActivity(Intent(this, PaintTextActivity::class.java))
         }
+
+        btnXfermode.setOnClickListener {
+            startActivity(Intent(this, XfermodeActivity::class.java))
+        }
+
+        btnGeometry.setOnClickListener {
+            startActivity(Intent(this, GeometryActivity::class.java))
+        }
+
+        btnPath.setOnClickListener {
+            startActivity(Intent(this, PathActivity::class.java))
+        }
+
     }
 }

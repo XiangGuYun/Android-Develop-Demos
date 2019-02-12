@@ -9,6 +9,7 @@ import android.support.v7.app.AppCompatActivity
 import android.util.Log
 import android.view.*
 import android.widget.Toast
+import com.androidui.dialog.CodeViewerDialog
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import com.kotlinlib.other.BaseInterface
@@ -80,6 +81,8 @@ open abstract class KotlinActivity : AppCompatActivity(), BaseInterface {
         }
     }
 
+    lateinit var codeDialog: CodeViewerDialog
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
@@ -91,6 +94,7 @@ open abstract class KotlinActivity : AppCompatActivity(), BaseInterface {
             EventBus.getDefault().register(this)
         }
         actList.add(this)
+        codeDialog = CodeViewerDialog(this)
     }
 
     /**

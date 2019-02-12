@@ -9,16 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
-        <activity android:name=".MainActivity">
-
-        </activity>
-        <activity android:name=".huitu.HuiTuActivity" />
-        <activity android:name=".huitu.BaseKnowledgeActivity" />
-        <activity android:name=".huitu.paint.PaintActivity" />
-        <activity android:name=".huitu.paint.XfermodeActivity" />
-        <activity android:name=".huitu.paint.DrawTextActivity"></activity>
-        <activity android:name=".ImageViewerActivity" />
-        <activity android:name=".huitu.canvas.CanvasActivity"
+        <activity android:name=".huitu.canvas.PathActivity"
             android:windowSoftInputMode="adjustResize|stateHidden">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -26,6 +17,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".MainActivity">
+
+        </activity>
+        <activity android:name=".huitu.HuiTuActivity" />
+        <activity android:name=".huitu.BaseKnowledgeActivity" />
+        <activity android:name=".huitu.paint.PaintPropertyActivity" />
+        <activity android:name=".huitu.paint.XfermodeActivity" />
+        <activity android:name=".huitu.paint.PaintTextActivity" />
+        <activity android:name=".ImageViewerActivity" />
+        <activity
+            android:name=".huitu.canvas.GeometryActivity"
+            android:windowSoftInputMode="adjustResize|stateHidden"></activity>
     </application>
 
 </manifest>

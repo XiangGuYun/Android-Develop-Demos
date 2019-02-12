@@ -18,44 +18,15 @@ import kotlinx.android.synthetic.main.draw_rect.*
 import kotlinx.android.synthetic.main.header_view1.view.*
 
 @LayoutId(R.layout.activity_canvas)
-class CanvasActivity : KotlinActivity() {
-
-    lateinit var codeDialog:CodeViewerDialog
+class GeometryActivity : KotlinActivity() {
 
     override fun init(bundle: Bundle?) {
-        codeDialog = CodeViewerDialog(this)
         drawPoint()
         drawCircle()
         drawRect()
         drawOval()
         drawLine()
         drawArc()
-        drawPath()
-    }
-
-    private fun drawPath() {
-        btnClosePath.click {
-            path.isClose = true
-            path.invalidate()
-        }
-        btnLineTo.click {
-            if(etLineToX.textString.isNotEmpty()&&etLineToY.textString.isNotEmpty()){
-                path.nextX = etLineToX.textString.toFloat()
-                path.nextY = etLineToY.textString.toFloat()
-                path.invalidate()
-            }else{
-                "请输入正确的坐标值".toast()
-            }
-        }
-        btnRLineTo.click {
-            if(etRLineToX.textString.isNotEmpty()&&etRLineToY.textString.isNotEmpty()){
-                path.dx = etRLineToX.textString.toFloat()
-                path.dy = etRLineToY.textString.toFloat()
-                path.invalidate()
-            }else{
-                "请输入正确的偏移值".toast()
-            }
-        }
     }
 
     private fun drawPoint() {

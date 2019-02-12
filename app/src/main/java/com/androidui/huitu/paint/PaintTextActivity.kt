@@ -16,7 +16,7 @@ import com.androidui.dialog.ListBtmDialog
 import com.kotlinlib.other.BaseInterface
 import kotlinx.android.synthetic.main.activity_draw_text.*
 
-class DrawTextActivity : AppCompatActivity(),BaseInterface {
+class PaintTextActivity : AppCompatActivity(),BaseInterface {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -342,14 +342,14 @@ class DrawTextActivity : AppCompatActivity(),BaseInterface {
         btnGetTextHeight.setOnClickListener {
             viewDrawText.paint.apply {
                 val height = descent()-ascent()
-                "当前文字的高度是$height".toast(this@DrawTextActivity)
+                "当前文字的高度是$height".toast(this@PaintTextActivity)
             }
         }
         btnGetTextHeightCode.setOnClickListener {
             codeDialog.text("""
                  viewDrawText.paint.apply {
                     val height = descent()-ascent()
-                    "当前文字的高度是'$'height".toast(this@DrawTextActivity)
+                    "当前文字的高度是'$'height".toast(this@PaintTextActivity)
                 }
             """.trimIndent())
         }

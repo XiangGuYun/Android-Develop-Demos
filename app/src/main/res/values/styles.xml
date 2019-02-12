@@ -21,6 +21,12 @@
         <item name="android:textSize">12sp</item>
     </style>
 
+    <style name="tvSmallTitleLeft">
+        <item name="android:gravity">left</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
     <style name="BottomDialog" parent="@android:style/Theme.Dialog">
         <!-- 背景透明 -->
         <item name="android:windowBackground">@android:color/transparent</item>

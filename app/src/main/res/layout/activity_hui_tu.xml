@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -20,25 +19,44 @@
             android:gravity="center"
             android:paddingTop="5dp"
             android:paddingBottom="5dp"/>
-        <Button
-            android:id="@+id/btnBaseKnowledge"
+        <TextView
+            style="@style/tvTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="基础知识"/>
+            android:text="第一部分 Paint画笔"/>
         <Button
-            android:id="@+id/btnPaint"
+            android:id="@+id/btnPaintProperty"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Paint画笔"/>
-        <android.support.v7.widget.RecyclerView
+            android:text="Paint常用属性"
+            />
+        <Button
+            android:id="@+id/btnPaintText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/rvPaint"/>
+            android:text="Paint与文字绘制"/>
         <Button
+            android:id="@+id/btnXfermode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="XFERMODE"/>
+        <TextView
+            style="@style/tvTitle"
             android:id="@+id/btnCanvas"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Canvas图层"/>
+            android:text="第二部分 Canvas图层"/>
+        <Button
+            android:id="@+id/btnGeometry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="基础几何的绘制"/>
+        <Button
+            android:id="@+id/btnPath"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Path的绘制"/>
+
     </LinearLayout>
 
 </ScrollView>

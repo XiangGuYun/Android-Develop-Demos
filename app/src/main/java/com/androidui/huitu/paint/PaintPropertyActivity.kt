@@ -6,14 +6,15 @@ import android.os.Bundle
 import com.androidui.R
 import com.androidui.dialog.CodeViewerDialog
 import kotlinx.android.synthetic.main.activity_paint.*
+import kotlinx.android.synthetic.main.header_view1.view.*
 
-class PaintActivity : AppCompatActivity() {
+class PaintPropertyActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_paint)
         val d1 = CodeViewerDialog(this)
-        btnStyle.setOnClickListener {
+        btnStyle.tvSubTitle.setOnClickListener {
             d1.text("""
                 /*
                 Paint.Style.FILL：填充内部
@@ -42,7 +43,7 @@ class PaintActivity : AppCompatActivity() {
             """.trimIndent())
         }
 
-        btnCap.setOnClickListener {
+        btnCap.tvSubTitle.setOnClickListener {
             d1.text("""
                 /*
                 主要是用来设置线条的末端，为了直观，下面三个线条我设置的比较粗
@@ -65,7 +66,7 @@ class PaintActivity : AppCompatActivity() {
             """.trimIndent())
         }
 
-        btnJoin.setOnClickListener {
+        btnJoin.tvSubTitle.setOnClickListener {
             d1.text("""
                 override fun onDraw(canvas: Canvas?) {
                     super.onDraw(canvas)
@@ -85,12 +86,5 @@ class PaintActivity : AppCompatActivity() {
             """.trimIndent())
         }
 
-        btnDrawText.setOnClickListener {
-            startActivity(Intent(this, DrawTextActivity::class.java))
-        }
-
-        btnXfermode.setOnClickListener {
-            startActivity(Intent(this, XfermodeActivity::class.java))
-        }
     }
 }
