@@ -38,6 +38,7 @@
             android:layout_height="wrap_content"
             android:text="View的滑动"/>
         <Button
+            android:id="@+id/btnSupportLibUI"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="支持库UI汇总"/>
@@ -45,10 +46,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Fragment"/>
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Xfermode"/>
     </LinearLayout>
 
 </ScrollView>

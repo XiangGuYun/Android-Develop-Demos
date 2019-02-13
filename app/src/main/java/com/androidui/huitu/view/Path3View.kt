@@ -21,7 +21,7 @@ class Path3View @JvmOverloads constructor(context: Context, attrs: AttributeSet?
         paint.color = Color.RED
         paint.strokeWidth = 5f
         paint.style = Paint.Style.STROKE
-        paint1.textSize = 20.sp().toFloat()
+        paint1.textSize = 20f
     }
 
     override fun onDraw(canvas: Canvas?) {

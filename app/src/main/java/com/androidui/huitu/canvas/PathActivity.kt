@@ -55,6 +55,61 @@ class PathActivity : KotlinActivity() {
             Path.Direction.CCW counter-clockwise ，沿逆时针方向绘制
             Path.Direction.CW  clockwise ，沿顺时针方向绘制
         """.trimIndent()
+        tvCCW.text = """
+            val path = Path()
+            path.addCircle(width/2f, height/2f, width/3f, Path.Direction.CCW)
+            //沿path绘制文字
+            canvas?.drawTextOnPath("A、B、C、D、E、F、G、H、I、J、K、L、M、N、O、P、Q、R、S、T、U、V、W、X、Y、Z。", path, 0f, 0f, paint)
+            canvas?.drawPath(path, paint)
+        """.trimIndent()
+        tvCW.text = """
+            val path = Path()
+            path.addCircle(width/2f, height/2f, width/3f, Path.Direction.CW)
+            //沿path绘制文字
+            canvas?.drawTextOnPath("A、B、C、D、E、F、G、H、I、J、K、L、M、N、O、P、Q、R、S、T、U、V、W、X、Y、Z。", path, 0f, 0f, paint)
+            canvas?.drawPath(path, paint)
+        """.trimIndent()
+        btnPathGeoCode.click {
+            codeDialog.text("""
+        val path = Path()
+        //以（400,200）为圆心，半径为100绘制圆
+        path.addCircle(400f, 200f, 100f, Path.Direction.CW)
+
+        //绘制椭圆
+        val rectF = RectF(100f, 350f, 500f, 600f)
+        //第一种方法绘制椭圆
+        path.addOval(rectF, Path.Direction.CW)
+        //第二种方法绘制椭圆
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            path.addOval(600f, 350f, 1000f, 600f, Path.Direction.CW)
+        }
+
+        //绘制矩形
+        val rect = RectF(100f, 650f, 500f, 900f)
+        //第一种方法绘制矩形
+        path.addRect(rect, Path.Direction.CW)
+        //第二种方法绘制矩形
+        path.addRect(600f, 650f, 1000f, 900f, Path.Direction.CCW)
+
+        //绘制圆角矩形
+        val roundRect = RectF(100f, 950f, 300f, 1100f)
+        //第一种方法绘制圆角矩形
+        path.addRoundRect(roundRect, 20f, 20f, Path.Direction.CW)
+        //第二种方法绘制圆角矩形
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            path.addRoundRect(350f, 950f, 550f, 1100f, 10f, 50f, Path.Direction.CCW)
+        }
+        //第三种方法绘制圆角矩形
+        //float[] radii中有8个值，依次为左上角，右上角，右下角，左下角的rx,ry
+        val roundRectT = RectF(600f, 950f, 800f, 1100f)
+        path.addRoundRect(roundRectT, floatArrayOf(50f, 50f, 50f, 50f, 50f, 50f, 0f, 0f), Path.Direction.CCW)
+        //第四种方法绘制圆角矩形
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            path.addRoundRect(850f, 950f, 1050f, 1100f, floatArrayOf(0f, 0f, 0f, 0f, 50f, 50f, 50f, 50f), Path.Direction.CCW)
+        }
+        canvas?.drawPath(path, paint)
+            """.trimIndent())
+        }
     }
 
     private fun drawPath() {

@@ -21,8 +21,8 @@ class Path5View @JvmOverloads constructor(context: Context, attrs: AttributeSet?
         paint.color = Color.RED
         paint.strokeWidth = 1f
         paint.style = Paint.Style.STROKE
-        paint.textSize = 20.sp().toFloat()
-        paint1.textSize = 20.sp().toFloat()
+        paint.textSize = 20f
+        paint1.textSize = 20f
     }
 
     override fun onDraw(canvas: Canvas?) {
@@ -30,7 +30,7 @@ class Path5View @JvmOverloads constructor(context: Context, attrs: AttributeSet?
         val path = Path()
         //以（600,600）为圆心，300为半径绘制圆
         //Path.Direction.CW顺时针绘制圆 Path.Direction.CCW逆时针绘制圆
-        path.addCircle(width/2f, height/2f, 90f, Path.Direction.CW)
+        path.addCircle(width/2f, height/2f, width/3f, Path.Direction.CW)
         //沿path绘制文字
         canvas?.drawTextOnPath("A、B、C、D、E、F、G、H、I、J、K、L、M、N、O、P、Q、R、S、T、U、V、W、X、Y、Z。", path, 0f, 0f, paint)
         canvas?.drawPath(path, paint)
