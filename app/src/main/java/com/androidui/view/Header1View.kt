@@ -3,6 +3,7 @@ package com.androidui.view
 import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
+import android.view.View
 import android.widget.FrameLayout
 import android.widget.TextView
 import com.androidui.R
@@ -12,13 +13,22 @@ class Header1View @JvmOverloads constructor(context: Context, attrs: AttributeSe
         FrameLayout(context, attrs, defStyleAttr){
 
     var subTitle:TextView
+    var parent:View
 
     init {
         val ta = context.obtainStyledAttributes(attrs, R.styleable.Header1View)
-        val parent = LayoutInflater.from(context).inflate(R.layout.header_view1, null)
+        parent = LayoutInflater.from(context).inflate(R.layout.header_view1, null)
         subTitle = parent.tvSubTitle
         parent.tvMainTitle.text = ta.getString(R.styleable.Header1View_mainTitle1)
         ta.recycle()
         addView(parent)
     }
+
+    fun setLeftClick(func:()->Unit){
+        parent.tvLeftTitle.visibility = View.VISIBLE
+        parent.tvLeftTitle.setOnClickListener {
+            func.invoke()
+        }
+    }
+
 }

@@ -32,15 +32,40 @@ class ViewPagerActivity : KotlinActivity() {
 
         initMagicIndidator()
 
+        header1.setLeftClick {
+            codeDialog.text("""
+                PageAdapter 必须重写的四个函数：
+
+                //一般返回arg0==arg1即可
+                boolean isViewFromObject(View arg0, Object arg1)
+
+                //返回要滑动的View的个数
+                int getCount() boolean
+
+                //从当前container中删除指定位置（position）的View
+                void destroyItem(ViewGroup container, int position,Object object)
+
+                //第一：将当前视图添加到container中，第二：返回当前View
+                Object instantiateItem(ViewGroup container, int position)
+            """.trimIndent())
+        }
+
         header1.subTitle.click {
             codeDialog.text("""
-                 val list = listOf(ImageView(this),ImageView(this),ImageView(this)).apply {
+                //数据源
+                val list = listOf(ImageView(this),
+                ImageView(this),
+                ImageView(this))
+                .apply {
                     forEach {
                         it.scaleType = ImageView.ScaleType.CENTER_CROP
                     }
                 }
+
+                //设置适配器
                 vp1.adapter = Vp1Adapter(list)
 
+                //定义适配器
                 class Vp1Adapter(var datas: List<ImageView>) : PagerAdapter() {
 
                     override fun isViewFromObject(p0: View, p1: Any): Boolean {
@@ -51,18 +76,26 @@ class ViewPagerActivity : KotlinActivity() {
                         return datas.size
                     }
 
+                    //初始化Item
                     override fun instantiateItem(container: ViewGroup, position: Int): Any {
+                        //获取到对应位置的视图
                         val view = datas[position]
 
+                        //对视图进行处理
                         view.setImageResource(when(position){
                             0->R.mipmap.header1
                             1->R.mipmap.header2
                             else->R.mipmap.header3
                         })
+
+                        //添加到容器中
                         container.addView(view)
+
+                        //将视图返回
                         return view
                     }
 
+                    //移除Item
                     override fun destroyItem(container: ViewGroup, position: Int, `object`: Any) {
                         container.removeView(datas[position])
                     }
