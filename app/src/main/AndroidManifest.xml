@@ -29,7 +29,8 @@
             android:name=".huitu.canvas.PathActivity"
             android:windowSoftInputMode="adjustResize|stateHidden" />
         <activity android:name=".supportlib.SupportLibUIActivity" />
-        <activity android:name=".supportlib.RecyclerViewActivity"></activity>
+        <activity android:name=".supportlib.RecyclerViewActivity" />
+        <activity android:name=".supportlib.ViewPagerActivity"></activity>
     </application>
 
 </manifest>

@@ -7,6 +7,7 @@ import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
@@ -228,11 +229,38 @@ public class FragPagerUtils<T extends Fragment>{
         return adapter;
     }
 
-    public class FragAdapter extends FragmentStatePagerAdapter {
+    public class FragStateAdapter extends FragmentStatePagerAdapter {
 
         private List<T> fragments;
 
-        public FragAdapter(FragmentManager fm, List<T> fragments) {
+        public FragStateAdapter(FragmentManager fm, List<T> fragments) {
+            super(fm);
+            this.fragments=fragments;
+        }
+
+        @Override
+        public Fragment getItem(int position) {
+            return fragments.get(position);
+        }
+
+        @Override
+        public int getCount() {
+            return fragments.size();
+        }
+
+        @Override
+        public int getItemPosition(Object object) {
+            // TODO Auto-generated method stub
+            return PagerAdapter.POSITION_NONE;
+        }
+
+    }
+
+    public class FragAdapter extends FragmentPagerAdapter {
+
+        private List<T> fragments;
+
+        FragAdapter(FragmentManager fm, List<T> fragments) {
             super(fm);
             this.fragments=fragments;
         }

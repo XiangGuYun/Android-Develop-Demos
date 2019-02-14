@@ -10,5 +10,6 @@ import kotlinx.android.synthetic.main.activity_support_lib_ui.*
 class SupportLibUIActivity : KotlinActivity() {
     override fun init(bundle: Bundle?) {
         btnRecyclerView.click { go(RecyclerViewActivity::class.java) }
+        btnViewPager.click { go(ViewPagerActivity::class.java) }
     }
 }
