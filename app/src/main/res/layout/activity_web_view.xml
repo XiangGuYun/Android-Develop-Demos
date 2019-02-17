@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".systemui.WebViewActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.androidui.view.Header1View
+            android:id="@+id/header1"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:mainTitle1="直接在Activity上加载一个WebView"/>
+
+        <Button
+            android:id="@+id/btnTest1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="测试一下"/>
+
+        <com.androidui.view.Header1View
+            android:id="@+id/header2"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:mainTitle1="布局代码中设置WebView"
+            />
+
+        <Button
+            android:id="@+id/btnTest2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="测试一下"/>
+
+        <com.androidui.view.Header1View
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:mainTitle1="WebView滚动事件的监听"
+            android:id="@+id/header3"/>
+
+        <Button
+            android:id="@+id/btnTest3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="测试一下"/>
+
+        <com.androidui.view.Header1View
+            android:id="@+id/header4"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:mainTitle1="设置缩放以及自适应屏幕"/>
+
+        <Button
+            android:id="@+id/btnTest4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="测试一下"/>
+
+        <com.androidui.view.Header1View
+            android:id="@+id/header5"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:mainTitle1="获取WebView的Cookie数据"/>
+
+
+        <com.androidui.view.Header1View
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:mainTitle1="WebChromeClient"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/tvSmallTitleLeft"
+            android:text="作用：辅助WebView处理Javascript的对话框、网站图标、网站title、加载进度等！"/>
+
+
+
+    </LinearLayout>
+
+</ScrollView>

@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import com.androidui.huitu.HuiTuActivity
 import com.androidui.supportlib.SupportLibUIActivity
+import com.androidui.systemui.SystemUIActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -15,6 +16,10 @@ class MainActivity : AppCompatActivity() {
 
         btnHuiTu.setOnClickListener {
             startActivity(Intent(this, HuiTuActivity::class.java))
+        }
+
+        btnSystemUI.setOnClickListener {
+            startActivity(Intent(this, SystemUIActivity::class.java))
         }
 
         btnSupportLibUI.setOnClickListener {

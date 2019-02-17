@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".systemui.ImageViewActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.androidui.view.Header1View
+            android:id="@+id/header1"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:mainTitle1="src属性和background属性的区别"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/bg1"
+            android:src="@mipmap/girl"
+            android:scaleType="center"
+            />
+
+        <com.androidui.view.Header1View
+            android:id="@+id/header2"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:mainTitle1="adjustViewBounds缩放是否保存原图长宽比"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/img1" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:maxHeight="200dp"
+            android:src="@mipmap/img1" />
+
+        <com.androidui.view.Header1View
+            android:id="@+id/header3"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:mainTitle1="scaleType设置缩放类型"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/tvSmallTitle"
+            android:text="原始图片"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/img2"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/tvSmallTitleLeft"
+            android:text="fitXY:不按比例缩放图片，目标是把图片塞满整个View"/>
+
+        <ImageView
+            android:scaleType="fitXY"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/img2"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/tvSmallTitleLeft"
+            android:text="fitStart:保持图片的横纵比缩放,直到该图片能够显示在ImageView组件上,并将缩放好的图片显示在imageView的左上角"/>
+
+        <ImageView
+            android:scaleType="fitStart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/img2"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/tvSmallTitleLeft"
+            android:text="fitCenter:保持图片的横纵比缩放,直到该图片能够显示在ImageView组件上,并将缩放好的图片显示在imageView的正中间"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/img2" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/tvSmallTitleLeft"
+            android:text="fitEnd:保持图片的横纵比缩放,直到该图片能够显示在ImageView组件上,并将缩放好的图片显示在imageView的右下角"/>
+
+        <ImageView
+            android:scaleType="fitEnd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/img2"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/tvSmallTitleLeft"
+            android:text="centerCrop:按横纵比缩放,直接完全覆盖整个ImageView"/>
+
+        <ImageView
+            android:scaleType="centerCrop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/img2"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/tvSmallTitleLeft"
+            android:text="centerInside:按横纵比缩放,使得ImageView能够完全显示这个图片"/>
+
+        <ImageView
+            android:scaleType="centerInside"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:src="@mipmap/img2"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/tvSmallTitleLeft"
+            android:text="matrix:从ImageView的左上角开始绘制原图，原图超过ImageView的部分作裁剪处理"/>
+
+        <ImageView
+            android:scaleType="matrix"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@mipmap/img2"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/tvSmallTitleLeft"
+            android:text="center:保持原图的大小，显示在ImageView的中心。当原图的size大于ImageView的size，超过部分裁剪处理。"/>
+
+        <ImageView
+            android:scaleType="center"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:src="@mipmap/img2"/>
+
+        <com.androidui.view.Header1View
+            android:id="@+id/header4"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:mainTitle1="最简单的绘制圆形的ImageView"/>
+
+        <com.androidui.systemui.view.RoundImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:id="@+id/imgRound"/>
+
+    </LinearLayout>
+
+</ScrollView>

@@ -1,6 +1,7 @@
 package com.androidui.view
 
 import android.content.Context
+import android.graphics.Color
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.view.View
@@ -20,13 +21,21 @@ class Header1View @JvmOverloads constructor(context: Context, attrs: AttributeSe
         parent = LayoutInflater.from(context).inflate(R.layout.header_view1, null)
         subTitle = parent.tvSubTitle
         parent.tvMainTitle.text = ta.getString(R.styleable.Header1View_mainTitle1)
+        parent.tvMainTitle.setTextColor(Color.GREEN)
         ta.recycle()
         addView(parent)
     }
 
-    fun setLeftClick(func:()->Unit){
+    fun setLeftClick(func:()->Unit): Header1View {
         parent.tvLeftTitle.visibility = View.VISIBLE
         parent.tvLeftTitle.setOnClickListener {
+            func.invoke()
+        }
+        return this
+    }
+
+    fun setRightClick(func: () -> Unit){
+        subTitle.setOnClickListener {
             func.invoke()
         }
     }

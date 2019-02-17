@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".systemui.EditTextActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <com.androidui.view.Header1View
+            android:id="@+id/header1"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:mainTitle1="获得焦点后全选组件内所有文本内容selectAllOnFocus"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="测试selectAllOnFocus"
+            android:selectAllOnFocus="true"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp" />
+
+        <com.androidui.view.Header1View
+            android:id="@+id/header2"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:mainTitle1="在XML中限制EditText输入类型"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number|numberSigned|numberDecimal"
+            android:hint="只能输入正负整数或小数"
+            android:layout_margin="10dp" />
+
+        <com.androidui.view.Header1View
+            android:id="@+id/header3"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:mainTitle1="设置最小行，最多行，单行，多行，自动换行"/>
+
+        <EditText
+            android:hint="限制为单行"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"/>
+
+        <EditText
+            android:hint="最低高度为两行"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minLines="2"/>
+
+        <EditText
+            android:hint="最高高度为两行"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="2"/>
+
+        <com.androidui.view.Header1View
+            android:id="@+id/header4"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:mainTitle1="设置文字间隔"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="hello world, happy!!"
+            android:textScaleX="1.0"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="hello world, happy!!"
+            android:textScaleX="1.5"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="hello world, happy!!"/>
+
+        <com.androidui.view.Header1View
+            android:id="@+id/header5"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:mainTitle1="避免EditText在进入Activity时自动弹出键盘"/>
+
+        <Button
+            android:id="@+id/btnET1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="设置windowSoftInputMode避免自动弹出"
+            />
+
+        <Button
+            android:id="@+id/btnET2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="在设置windowSoftInputMode后仍能自动弹出"
+            />
+
+        <com.androidui.view.Header1View
+            android:id="@+id/header6"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:mainTitle1="EditText光标位置的控制"/>
+
+        <Button
+            android:id="@+id/btnTestSelect"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="测试一下"/>
+
+        <com.androidui.view.Header1View
+            android:id="@+id/header7"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:mainTitle1="带表情的EditText"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="点击按钮来添加表情"
+            android:id="@+id/etFace"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="添加"
+            android:id="@+id/btnAddFace"/>
+
+    </LinearLayout>
+
+</ScrollView>

@@ -2,20 +2,45 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.androidui">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/launcher1"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/launcher1"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
-        <activity android:name=".MainActivity">
+        <activity android:name=".systemui.test.WV4Activity"></activity>
+        <activity android:name=".systemui.test.WV3Activity" />
+        <activity android:name=".systemui.test.WV2Activity" />
+        <activity android:name=".systemui.test.WV1Activity" />
+        <activity android:name=".systemui.test.SV1Activity" />
+        <activity android:name=".systemui.test.ET3Activity" />
+        <activity
+            android:name=".systemui.test.ET2Activity"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".systemui.test.ET1Activity"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity android:name=".supportlib.ConstraintActivity" />
+        <activity android:name=".systemui.TextureViewActivity" />
+        <activity android:name=".systemui.WebViewActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".systemui.EditTextActivity"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity android:name=".systemui.SurfaceViewActivity" />
+        <activity android:name=".systemui.ImageViewActivity" />
+        <activity android:name=".systemui.ScrollViewActivity" />
+        <activity android:name=".systemui.TextViewActivity" />
+        <activity android:name=".systemui.SystemUIActivity" />
+        <activity android:name=".MainActivity" />
         <activity android:name=".huitu.HuiTuActivity" />
         <activity android:name=".huitu.BaseKnowledgeActivity" />
         <activity android:name=".huitu.paint.PaintPropertyActivity" />
@@ -30,7 +55,7 @@
             android:windowSoftInputMode="adjustResize|stateHidden" />
         <activity android:name=".supportlib.SupportLibUIActivity" />
         <activity android:name=".supportlib.RecyclerViewActivity" />
-        <activity android:name=".supportlib.ViewPagerActivity"></activity>
+        <activity android:name=".supportlib.ViewPagerActivity" />
     </application>
 
 </manifest>

@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".systemui.TextViewActivity"
+    android:orientation="vertical">
+
+    <com.androidui.view.Header1View
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/headerSpacing"
+        app:mainTitle1="设置字间距和行间距"/>
+
+    <TextView
+        android:id="@+id/tvTextSpacing"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="改变了字间距的文字"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:lineSpacingExtra="10dp"
+        android:text="行间距为10dp的文字1测测测测测测测测测测测测测测测测测测测测测测测测测测测测测测测测测测测测测测"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:lineSpacingMultiplier="2.5"
+        android:text="行间距为2.5倍的文字2测测测测测测测测测测测测测测测测测测测测测测测测测测测测测测测测测测测测测测"/>
+
+    <include layout="@layout/line"/>
+
+    <com.androidui.view.Header1View
+        android:id="@+id/headerLink"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:mainTitle1="链接属性autoLink"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:text="http://www.baidu.com"
+        android:autoLink="web"
+        />
+
+    <include layout="@layout/line"/>
+
+    <com.androidui.view.Header1View
+        android:id="@+id/headerSingleLine"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:mainTitle1="单行属性singleLine"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="常温区哦草擦我额额啊是的但是打算打算撒打算打算打扫打扫打扫打扫的撒打死打伤"
+        android:singleLine="true"
+        />
+
+    <include layout="@layout/line"/>
+
+    <com.androidui.view.Header1View
+        android:id="@+id/headerLines"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:mainTitle1="行数属性lines,maxLines"/>
+
+    <!--lines表示不管文本大小都显示指定行数-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="饮料瓶身印着美女模特图。"
+        android:lines="2"
+        />
+
+    <!--maxLines表示最多显示指定行数-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="饮料瓶身印着美女模特图，加上“我从小喝到大”这句惹人遐想的广告语，最近，椰树牌椰汁2019年新包装成了众矢之的，不少网友直斥低俗；丁香医生也发文称“椰汁真不能丰胸”。13日，海口市工商部门宣布对海南椰树集团涉嫌发布低俗、虚假广告的行为进行立案调查。当晚，椰树集团作出回复：广告语的意思是代言模特从小时候就喝椰树椰汁，公司也从没有宣传过椰汁有丰胸效果。"
+        android:maxLines="2"
+        />
+
+    <include layout="@layout/line"/>
+
+    <com.androidui.view.Header1View
+        android:id="@+id/headerEllipsize"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:mainTitle1="省略号属性ellipsize"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="饮料瓶身印着美女模特图，加上“我从小喝到大”这句惹人遐想的广告语，最近，椰树牌椰汁2019年新包装成了众矢之的，不少网友直斥低俗；丁香医生也发文称“椰汁真不能丰胸”。13日，海口市工商部门宣布对海南椰树集团涉嫌发布低俗、虚假广告的行为进行立案调查。当晚，椰树集团作出回复：广告语的意思是代言模特从小时候就喝椰树椰汁，公司也从没有宣传过椰汁有丰胸效果。"
+        android:maxLines="2"
+        android:ellipsize="end"
+        />
+
+    <include layout="@layout/line"/>
+
+    <com.androidui.view.Header1View
+        android:id="@+id/headerFont"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:mainTitle1="自定义字体Typeface"
+        />
+
+    <TextView
+        android:id="@+id/tvCustomFont"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="自定义字体文字"
+        android:textSize="30sp"
+        android:padding="10dp"/>
+
+    <include layout="@layout/line"/>
+
+    <com.androidui.view.Header1View
+        android:id="@+id/headerHtml"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:mainTitle1="显示HTML文本Html.fromHtml()"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:id="@+id/tvHtml"/>
+
+    <include layout="@layout/line"/>
+
+    <com.androidui.view.Header1View
+        android:id="@+id/headerTVPic"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:mainTitle1="TextView中显示图片"/>
+
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:id="@+id/tvHtmlImg"/>
+
+    <include layout="@layout/line"/>
+
+    <com.androidui.view.Header1View
+        android:id="@+id/hearPartClick"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:mainTitle1="给部分TextView添加点击事件setSpan()"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:id="@+id/tvPartClick"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:id="@+id/tvPartClick1"/>
+
+    <include layout="@layout/line"/>
+
+    <com.androidui.view.Header1View
+        android:id="@+id/headerPaoMaDeng"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:mainTitle1="跑马灯效果"/>
+
+    <TextView
+        android:id="@+id/tvPaoMaDeng"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:singleLine="true"
+        android:ellipsize="marquee"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:text="菲律宾《每日问询者报》14日引述菲武装部队总参谋长马德里加尔的话称，不必对有关“中国船舰在中业岛(Thitu Island，菲律宾称Pag-asa，即希望之岛)附近活动增加”的报告产生担忧。此前一天，《马尼拉公报》也引述他的话强调，没有收到任何关于中国渔船在中业岛附近海域数量增加的报告。"
+        />
+
+    <include layout="@layout/line"/>
+
+    <com.androidui.view.Header1View
+        android:id="@+id/headerShadow"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:mainTitle1="带阴影的TextView" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:shadowColor="#F9F900"
+        android:shadowDx="10"
+        android:shadowDy="10"
+        android:shadowRadius="3"
+        android:text="带阴影的TextView"
+        android:textStyle="bold"
+        android:textSize="20sp" />
+
+    <include layout="@layout/line"/>
+
+    <com.androidui.view.Header1View
+        android:id="@+id/headerPicture"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:mainTitle1="带图片的TextView" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="花开花落"
+        android:textSize="30sp"
+        android:layout_gravity="center_horizontal"
+        android:drawablePadding="6dp"
+        android:drawableLeft="@mipmap/ic_launcher"
+        android:drawableTop="@mipmap/ic_launcher"
+        android:drawableRight="@mipmap/ic_launcher"
+        android:drawableBottom="@mipmap/ic_launcher"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:textSize="30sp"
+        android:text="花开花落"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/tvPic"/>
+
+</LinearLayout>
+</ScrollView>

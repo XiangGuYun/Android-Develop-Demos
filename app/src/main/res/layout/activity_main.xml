@@ -38,6 +38,11 @@
             android:layout_height="wrap_content"
             android:text="View的滑动"/>
         <Button
+            android:id="@+id/btnSystemUI"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="系统常用UI汇总"/>
+        <Button
             android:id="@+id/btnSupportLibUI"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
