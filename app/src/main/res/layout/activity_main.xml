@@ -7,50 +7,123 @@
     tools:context=".MainActivity">
 
     <LinearLayout
-        android:padding="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@mipmap/bg_girl"
         android:orientation="vertical">
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="20sp"
+            android:id="@+id/tvCatalog"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_gravity="center_horizontal"
+            android:textSize="35sp"
             android:text="目 录"
+            android:textColor="#333333"
+            android:drawableLeft="@mipmap/paint"
+            android:drawablePadding="10dp"
             android:textStyle="bold"
             android:gravity="center"
             android:paddingTop="5dp"
             android:paddingBottom="5dp"/>
-        <Button
-            android:id="@+id/btnHuiTu"
+
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="绘图"/>
-        <Button
+            android:orientation="horizontal">
+            <com.androidui.view.MyTextView
+                android:id="@+id/btnHuiTu"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="50dp"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:background="@drawable/circle_blue"
+                android:text="绘 图"/>
+            <com.androidui.view.MyTextView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:textSize="20sp"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="50dp"
+                android:gravity="center"
+                android:background="@drawable/circle_yellow"
+                android:text="动 画"/>
+        </RelativeLayout>
+
+        <com.androidui.view.MyTextView
+            android:layout_gravity="center"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:textSize="20sp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/circle3"
+            android:gravity="center"
+            android:text="手 势"/>
+
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="动画"/>
-        <Button
+            android:orientation="horizontal">
+            <com.androidui.view.MyTextView
+                android:id="@+id/btnSystemUI"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="50dp"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:background="@drawable/circle4"
+                android:text="系统UI"/>
+            <com.androidui.view.MyTextView
+                android:id="@+id/btnSupportLibUI"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="50dp"
+                android:layout_alignParentRight="true"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:background="@drawable/circle5"
+                android:text="支持库UI"/>
+        </RelativeLayout>
+
+        <com.androidui.view.MyTextView
+            android:layout_gravity="center"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:textSize="20sp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:background="@drawable/circle3"
+            android:text="View滑动"/>
+
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="手势"/>
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="View的滑动"/>
-        <Button
-            android:id="@+id/btnSystemUI"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="系统常用UI汇总"/>
-        <Button
-            android:id="@+id/btnSupportLibUI"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="支持库UI汇总"/>
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Fragment"/>
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
+            <com.androidui.view.MyTextView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="50dp"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:background="@drawable/circle4"
+                android:text="Fragment"/>
+            <com.androidui.view.MyTextView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="50dp"
+                android:gravity="center"
+                android:layout_alignParentRight="true"
+                android:textSize="20sp"
+                android:background="@drawable/circle5"
+                android:text="Activity"/>
+        </RelativeLayout>
     </LinearLayout>
 
 </ScrollView>

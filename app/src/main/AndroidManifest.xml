@@ -26,11 +26,7 @@
         <activity android:name=".supportlib.ConstraintActivity" />
         <activity android:name=".systemui.TextureViewActivity" />
         <activity android:name=".systemui.WebViewActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".systemui.EditTextActivity"
@@ -40,7 +36,13 @@
         <activity android:name=".systemui.ScrollViewActivity" />
         <activity android:name=".systemui.TextViewActivity" />
         <activity android:name=".systemui.SystemUIActivity" />
-        <activity android:name=".MainActivity" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".huitu.HuiTuActivity" />
         <activity android:name=".huitu.BaseKnowledgeActivity" />
         <activity android:name=".huitu.paint.PaintPropertyActivity" />

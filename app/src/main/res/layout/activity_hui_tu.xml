@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@mipmap/bg_girl1"
     tools:context=".MainActivity">
 
     <LinearLayout
@@ -24,21 +25,35 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="第一部分 Paint画笔"/>
-        <Button
+        <com.androidui.view.MyTextView
             android:id="@+id/btnPaintProperty"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:background="@drawable/rect3"
+            android:gravity="center"
+            android:textSize="18sp"
             android:text="Paint常用属性"
             />
-        <Button
+        <com.androidui.view.MyTextView
             android:id="@+id/btnPaintText"
-            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:background="@drawable/rect_blue"
+            android:gravity="center"
+            android:textSize="18sp"
             android:text="Paint与文字绘制"/>
-        <Button
+        <com.androidui.view.MyTextView
             android:id="@+id/btnXfermode"
-            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:background="@drawable/rect_yellow"
+            android:gravity="center"
+            android:textSize="18sp"
             android:text="XFERMODE"/>
         <TextView
             style="@style/tvTitle"
@@ -46,15 +61,25 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="第二部分 Canvas图层"/>
-        <Button
+        <com.androidui.view.MyTextView
             android:id="@+id/btnGeometry"
-            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:background="@drawable/rect4"
+            android:gravity="center"
+            android:textSize="18sp"
             android:text="基础几何的绘制"/>
-        <Button
+        <com.androidui.view.MyTextView
             android:id="@+id/btnPath"
-            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:background="@drawable/rect5"
+            android:gravity="center"
+            android:textSize="18sp"
             android:text="Path的绘制"/>
 
     </LinearLayout>
