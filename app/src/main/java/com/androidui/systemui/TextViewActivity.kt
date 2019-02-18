@@ -204,7 +204,7 @@ class TextViewActivity : KotlinActivity() {
 
             return@ImageGetter when(it){
                 "image1"->{
-                    resources.getDrawable(R.mipmap.ic_launcher).apply {
+                    resources.getDrawable(R.mipmap.icon).apply {
                         setBounds(0, 0, intrinsicWidth, intrinsicHeight)
                     }
                 }
@@ -382,7 +382,7 @@ android:shadowDy:设置阴影在竖直方向的偏移,就是竖直方向阴影�
 
 
 
-        val drawable = resources.getDrawable(R.mipmap.ic_launcher).apply {
+        val drawable = resources.getDrawable(R.mipmap.icon).apply {
             setBounds(0, 0, intrinsicWidth, intrinsicHeight)
         }
         tvPic.compoundDrawablePadding = 16

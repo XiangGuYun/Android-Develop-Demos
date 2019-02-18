@@ -14,10 +14,11 @@
         <com.androidui.view.Header1View
             android:id="@+id/header1"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="wrap_content"
             app:mainTitle1="滚动到底部或顶部"/>
 
         <Button
+            style="@style/btn_test"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="测试一下"

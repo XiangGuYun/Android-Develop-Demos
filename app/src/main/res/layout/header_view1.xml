@@ -1,22 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:background="@mipmap/headerbar"
-    android:layout_height="70dp">
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    android:layout_marginTop="5dp"
+    android:background="@drawable/rect_bg1"
+    android:minHeight="50dp">
+
+    <TextView
+        style="@style/tvSmallTitle"
+        android:textColor="#eeeeee"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="知识"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="15dp"
+        android:id="@+id/tvLeftTitle"/>
 
     <TextView
         style="@style/tvTitle"
         android:textSize="15sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
+        android:layout_weight="1"
         android:text="标题"
+        android:layout_gravity="center_vertical"
         android:id="@+id/tvMainTitle"/>
 
     <TextView
         style="@style/tvSmallTitle"
-        android:textColor="#663300"
+        android:textColor="#eeeeee"
+        android:layout_gravity="center_vertical"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
@@ -25,23 +47,5 @@
         android:layout_marginRight="15dp"
         android:id="@+id/tvSubTitle"/>
 
-    <TextView
-        style="@style/tvSmallTitle"
-        android:textColor="#663300"
-        android:visibility="invisible"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:text="知识点"
-        android:layout_centerVertical="true"
-        android:layout_marginLeft="15dp"
-        android:id="@+id/tvLeftTitle"/>
-
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="1px"
-        android:background="#eeeeee"
-        android:layout_alignParentBottom="true"/>
-
-</RelativeLayout>
+</LinearLayout>
+</FrameLayout>

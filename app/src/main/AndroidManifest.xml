@@ -10,8 +10,8 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/launcher1"
         android:supportsRtl="true"
-        android:theme="@style/Theme.AppCompat.NoActionBar">
-        <activity android:name=".systemui.test.WV4Activity"></activity>
+        android:theme="@style/Theme.Design.Light.NoActionBar">
+        <activity android:name=".systemui.test.WV4Activity" />
         <activity android:name=".systemui.test.WV3Activity" />
         <activity android:name=".systemui.test.WV2Activity" />
         <activity android:name=".systemui.test.WV1Activity" />
@@ -25,9 +25,7 @@
             android:windowSoftInputMode="adjustResize|stateHidden" />
         <activity android:name=".supportlib.ConstraintActivity" />
         <activity android:name=".systemui.TextureViewActivity" />
-        <activity android:name=".systemui.WebViewActivity">
-
-        </activity>
+        <activity android:name=".systemui.WebViewActivity" />
         <activity
             android:name=".systemui.EditTextActivity"
             android:windowSoftInputMode="adjustResize|stateHidden" />
@@ -58,6 +56,8 @@
         <activity android:name=".supportlib.SupportLibUIActivity" />
         <activity android:name=".supportlib.RecyclerViewActivity" />
         <activity android:name=".supportlib.ViewPagerActivity" />
+        <activity android:name=".systemui.test.WV5Activity" />
+        <activity android:name=".anim.AnimActivity"></activity>
     </application>
 
 </manifest>

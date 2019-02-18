@@ -2,10 +2,7 @@ package com.androidui.systemui
 
 import android.os.Bundle
 import com.androidui.R
-import com.androidui.systemui.test.WV1Activity
-import com.androidui.systemui.test.WV2Activity
-import com.androidui.systemui.test.WV3Activity
-import com.androidui.systemui.test.WV4Activity
+import com.androidui.systemui.test.*
 import com.kotlinlib.activity.KotlinActivity
 import com.kotlinlib.other.LayoutId
 import kotlinx.android.synthetic.main.activity_web_view.*
@@ -65,22 +62,6 @@ class WebViewActivity : KotlinActivity() {
             go(WV3Activity::class.java)
         }
 
-        header.setLeftClick {
-            codeDialog.text("""
-onJsAlert(WebView view,String url,String message,JsResult result)	处理Js中的Alert对话框
-
-onJsConfirm(WebView view,String url,String message,JsResult result)	处理Js中的Confirm对话框
-
-onJsPrompt(WebView view,String url,String message,String defaultValue,JsPromptResult result)	处理Js中的Prompt对话框
-
-onProgressChanged(WebView view,int newProgress)	当加载进度条发生改变时调用
-
-onReceivedIcon(WebView view, Bitmap icon) 获得网页的icon
-
-onReceivedTitle(WebView view, String title)	获得网页的标题
-            """.trimIndent())
-        }
-
         header3.setLeftClick {
             codeDialog.text("""
                 我们都知道监听滚动事件一般都是设置setOnScrollChangedListener，可惜的是 WebView并没有给我们提供这样的方法，但是我们可以重写WebView，覆盖里面的一个方法： protected void onScrollChanged(final int l, final int t, final int oldl,final int oldt){} 然后再对外提供一个接口
@@ -129,6 +110,77 @@ public void onPageFinished(WebView view, String url) {
 
         btnTest4.click {
             go(WV4Activity::class.java)
+        }
+
+        header6.setLeftClick {
+            codeDialog.text("""
+如何为WebView设置Cookie呢？ 我们可以在需要设置Cookie的地方加入下述代码：
+CookieSyncManager.createInstance(MainActivity.this);
+CookieManager cookieManager = CookieManager.getInstance();
+cookieManager.setAcceptCookie(true);
+cookieManager.setCookie(url, cookies);  //cookies是要设置的cookie字符串
+CookieSyncManager.getInstance().sync();
+            """.trimIndent())
+        }
+
+        header7.setLeftClick {
+            codeDialog.text("""
+首先，我们定义一个类，用于将数据暴露出来，JS通过该类暴露的方法(Public)来调用Android！
+
+接着，我们在WebView所在页面Activity，使用下述代码:
+webView.getSettings().setJavaScriptEnabled(true);
+webView.addJavascriptInterface(object,"name");
+
+然后js或者html中调用name.xxx调用对象里的暴露的方法：
+比如： < input type="button" value="Toast提示" onclick="name.showToast('呵呵');"/>
+另外，setJavaScriptEnabled是在Android 4.4以前的系统才有效！！！
+            """.trimIndent())
+        }.setRightClick {
+            codeDialog.text("""
+public class MyObject {
+    private Context context;
+    public MyObject(Context context) {
+        this.context = context;
+    }
+
+    //将显示Toast和对话框的方法暴露给JS脚本调用
+    @JavascriptInterface
+    public void showToast(String name) {
+        Toast.makeText(context, name, Toast.LENGTH_SHORT).show();
+    }
+
+    @JavascriptInterface
+    public void showDialog() {
+        new AlertDialog.Builder(context)
+                .setTitle("联系人列表").setIcon(R.mipmap.ic_launcher_round)
+                .setItems(new String[]{"基神", "B神", "曹神", "街神", "翔神"}, null)
+                .setPositiveButton("确定", null).create().show();
+    }
+}
+
+class WV5Activity : AppCompatActivity() {
+
+    @SuppressLint("JavascriptInterface")
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_wv5)
+
+        webView.apply {
+            loadUrl("file:///android_asset/html/demo1.html")
+            settings.apply {
+                javaScriptEnabled = true
+                defaultTextEncodingName = "UTF-8"
+            }
+            //添加JS接口
+            addJavascriptInterface(MyObject(this@WV5Activity),"myObj")
+        }
+    }
+}
+            """.trimIndent())
+        }
+
+        btnTest7.click {
+            go(WV5Activity::class.java)
         }
 
     }

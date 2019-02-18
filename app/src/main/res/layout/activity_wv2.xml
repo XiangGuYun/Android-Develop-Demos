@@ -14,26 +14,35 @@
 
         <Button
             android:id="@+id/btnBack"
-            android:layout_width="wrap_content"
+            android:layout_width="50dp"
             android:layout_height="match_parent"
+            android:background="@drawable/rect4"
+            android:layout_margin="5dp"
             android:text="back"/>
 
         <TextView
             android:id="@+id/tvTitle"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:background="@drawable/rect_yellow"
+            android:layout_margin="5dp"
+            android:gravity="center"
             android:layout_weight="1"/>
 
         <Button
             android:id="@+id/btnRefresh"
-            android:layout_width="wrap_content"
+            android:layout_width="50dp"
             android:layout_height="match_parent"
+            android:background="@drawable/rect5"
+            android:layout_margin="5dp"
             android:text="刷新"/>
 
         <Button
             android:id="@+id/btnTop"
-            android:layout_width="wrap_content"
+            android:layout_width="50dp"
             android:layout_height="match_parent"
+            android:background="@drawable/rect_blue"
+            android:layout_margin="5dp"
             android:text="TOP"/>
 
     </LinearLayout>

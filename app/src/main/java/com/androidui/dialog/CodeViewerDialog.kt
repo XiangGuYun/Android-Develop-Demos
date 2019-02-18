@@ -6,7 +6,7 @@ import com.kotlinlib.dialog.DialogInfo
 import com.kotlinlib.other.KotlinDialog
 
 //代码阅读对话框
-@DialogInfo(350,400, R.layout.dialog_info)
+@DialogInfo(320,400, R.layout.dialog_info)
 class CodeViewerDialog(ctx: Context): KotlinDialog(ctx){
     init {
         dv.tv(R.id.tvYes).setOnClickListener {

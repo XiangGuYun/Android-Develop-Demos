@@ -21,7 +21,7 @@ class Header1View @JvmOverloads constructor(context: Context, attrs: AttributeSe
         parent = LayoutInflater.from(context).inflate(R.layout.header_view1, null)
         subTitle = parent.tvSubTitle
         parent.tvMainTitle.text = ta.getString(R.styleable.Header1View_mainTitle1)
-        parent.tvMainTitle.setTextColor(Color.parseColor("#111111"))
+        parent.tvMainTitle.setTextColor(Color.parseColor("#ffff66"))
         ta.recycle()
         addView(parent)
     }

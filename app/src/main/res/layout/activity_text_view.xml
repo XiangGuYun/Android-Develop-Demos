@@ -43,7 +43,7 @@
     <com.androidui.view.Header1View
         android:id="@+id/headerLink"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="wrap_content"
         app:mainTitle1="链接属性autoLink"/>
 
     <TextView
@@ -61,7 +61,7 @@
     <com.androidui.view.Header1View
         android:id="@+id/headerSingleLine"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="wrap_content"
         app:mainTitle1="单行属性singleLine"/>
 
     <TextView
@@ -77,7 +77,7 @@
     <com.androidui.view.Header1View
         android:id="@+id/headerLines"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="wrap_content"
         app:mainTitle1="行数属性lines,maxLines"/>
 
     <!--lines表示不管文本大小都显示指定行数-->
@@ -103,7 +103,7 @@
     <com.androidui.view.Header1View
         android:id="@+id/headerEllipsize"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="wrap_content"
         app:mainTitle1="省略号属性ellipsize"/>
 
     <TextView
@@ -120,7 +120,7 @@
     <com.androidui.view.Header1View
         android:id="@+id/headerFont"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="wrap_content"
         app:mainTitle1="自定义字体Typeface"
         />
 
@@ -137,7 +137,7 @@
     <com.androidui.view.Header1View
         android:id="@+id/headerHtml"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="wrap_content"
         app:mainTitle1="显示HTML文本Html.fromHtml()"/>
 
     <TextView
@@ -151,13 +151,14 @@
     <com.androidui.view.Header1View
         android:id="@+id/headerTVPic"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="wrap_content"
         app:mainTitle1="TextView中显示图片"/>
 
     <TextView
-        android:layout_width="200dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="10dp"
+        android:textSize="20sp"
         android:id="@+id/tvHtmlImg"/>
 
     <include layout="@layout/line"/>
@@ -165,7 +166,7 @@
     <com.androidui.view.Header1View
         android:id="@+id/hearPartClick"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="wrap_content"
         app:mainTitle1="给部分TextView添加点击事件setSpan()"/>
 
     <TextView
@@ -185,7 +186,7 @@
     <com.androidui.view.Header1View
         android:id="@+id/headerPaoMaDeng"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="wrap_content"
         app:mainTitle1="跑马灯效果"/>
 
     <TextView
@@ -206,7 +207,7 @@
     <com.androidui.view.Header1View
         android:id="@+id/headerShadow"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="wrap_content"
         app:mainTitle1="带阴影的TextView" />
 
     <TextView
@@ -226,7 +227,7 @@
     <com.androidui.view.Header1View
         android:id="@+id/headerPicture"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="wrap_content"
         app:mainTitle1="带图片的TextView" />
 
     <TextView
@@ -235,12 +236,13 @@
         android:padding="10dp"
         android:text="花开花落"
         android:textSize="30sp"
+        android:gravity="center"
         android:layout_gravity="center_horizontal"
         android:drawablePadding="6dp"
-        android:drawableLeft="@mipmap/ic_launcher"
-        android:drawableTop="@mipmap/ic_launcher"
-        android:drawableRight="@mipmap/ic_launcher"
-        android:drawableBottom="@mipmap/ic_launcher"/>
+        android:drawableLeft="@mipmap/icon"
+        android:drawableTop="@mipmap/icon"
+        android:drawableRight="@mipmap/icon"
+        android:drawableBottom="@mipmap/icon"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -248,6 +250,7 @@
         android:padding="10dp"
         android:textSize="30sp"
         android:text="花开花落"
+        android:gravity="center"
         android:layout_gravity="center_horizontal"
         android:id="@+id/tvPic"/>
 

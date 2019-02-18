@@ -5,12 +5,69 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:paddingLeft="10dp"
+    android:background="@mipmap/bg_girl_sys_view"
     tools:context=".systemui.SystemUIActivity">
 
-    <Button
-        android:layout_width="match_parent"
+
+    <com.androidui.view.MyTextView
+        android:id="@+id/btnTextView"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="@drawable/rect3"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:textSize="18sp"
         android:text="TextView"
-        android:id="@+id/btnTextView"/>
+        />
+
+    <com.androidui.view.MyTextView
+        android:id="@+id/btnEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="@drawable/rect_blue"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:textSize="18sp"
+        android:text="EditText"
+        />
+
+    <com.androidui.view.MyTextView
+        android:id="@+id/btnImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="@drawable/rect_yellow"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:textSize="18sp"
+        android:text="ImageView"
+        />
+
+    <com.androidui.view.MyTextView
+        android:id="@+id/btnScrollView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="@drawable/rect4"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:textSize="18sp"
+        android:text="ScrollView"
+        />
+
+    <com.androidui.view.MyTextView
+        android:id="@+id/btnWebView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="@drawable/rect5"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:textSize="18sp"
+        android:text="WebView"
+        />
 
 </LinearLayout>

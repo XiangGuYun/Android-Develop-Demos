@@ -4,23 +4,31 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@mipmap/bg_anim"
     android:orientation="vertical"
-    android:background="@mipmap/bg_support_ui"
-    tools:context=".supportlib.SupportLibUIActivity">
+    tools:context=".anim.AnimActivity">
 
     <com.androidui.view.MyTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         style="@style/item"
-        android:background="@drawable/rect6"
-        android:id="@+id/btnRecyclerView"/>
+        android:text="帧动画"
+        android:background="@drawable/rect3"/>
 
     <com.androidui.view.MyTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         style="@style/item"
-        android:text="ViewPager"
-        android:background="@drawable/rect7"
-        android:id="@+id/btnViewPager"/>
+        android:text="补间动画"
+        android:background="@drawable/rect4"/>
+
+    <com.androidui.view.MyTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/item"
+        android:text="属性动画"
+        android:background="@drawable/rect_blue"/>
+
+
 
 </LinearLayout>

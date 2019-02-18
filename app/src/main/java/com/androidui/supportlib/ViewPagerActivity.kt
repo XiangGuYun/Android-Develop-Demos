@@ -1,9 +1,8 @@
 package com.androidui.supportlib
 
-import android.content.Context
-import android.graphics.*
 import android.os.Bundle
 import android.support.v4.view.ViewPager
+import android.util.Log
 import android.view.View
 import android.widget.ImageView
 import com.androidui.R
@@ -12,11 +11,7 @@ import com.androidui.supportlib.adapter.Vp2Adapter
 import com.kotlinlib.activity.KotlinActivity
 import com.kotlinlib.other.LayoutId
 import kotlinx.android.synthetic.main.activity_view_pager.*
-import android.opengl.ETC1.getHeight
-import android.opengl.ETC1.getWidth
-import java.nio.file.Files.size
-
-
+import kotlinx.android.synthetic.main.header_view1.view.*
 
 
 @LayoutId(R.layout.activity_view_pager)
@@ -29,8 +24,6 @@ class ViewPagerActivity : KotlinActivity() {
     }
 
     override fun init(bundle: Bundle?) {
-
-        initMagicIndidator()
 
         header1.setLeftClick {
             codeDialog.text("""
@@ -104,6 +97,57 @@ class ViewPagerActivity : KotlinActivity() {
             """.trimIndent())
         }
 
+        header2.setLeftClick {
+            codeDialog.text("""
+                知识点1：设置页面转换效果
+                setPageTransformer(boolean reverseDrawingOrder, @Nullable ViewPager.PageTransformer transformer)
+                参数reverseDrawingOrder：反转绘制顺序，一般设置为true，如果设置为false，那么当两个页面在转换中出现重叠时，上层页面会透明化。
+                参数transformer：是接口PageTransformer的对象，需要实现transformPage方法。
+
+                知识点2：transformPage(page: View, position: Float)
+
+
+
+            """.trimIndent())
+        }
+
+        header2.tvSubTitle.click {
+            codeDialog.text("""
+
+                vp2.setPageTransformer(true, ScalePageTransformer())
+
+                class ScalePageTransformer : ViewPager.PageTransformer {
+
+                    override fun transformPage(page: View, position: Float) {
+                        when {
+                            position < -1.0f -> {
+                                page.scaleX = MIN_SCALE
+                                page.scaleY = MIN_SCALE
+                            }
+                            position <= 0.0f -> {
+                                page.alpha = 1.0f
+                                page.translationX = 0.0f
+                                page.scaleX = 1.0f
+                                page.scaleY = 1.0f
+                            }
+                            position <= 1.0f -> {
+                                page.alpha = 1.0f - position
+                                page.translationX = -page.width * position
+                                val scale = MIN_SCALE + (1.0f - MIN_SCALE) * (1.0f - position)
+                                page.scaleX = scale
+                                page.scaleY = scale
+                            }
+                            else -> {
+                                page.scaleX = MIN_SCALE
+                                page.scaleY = MIN_SCALE
+                            }
+                        }
+                    }
+
+                }
+            """.trimIndent())
+        }
+
         val list = listOf(ImageView(this),ImageView(this),ImageView(this)).apply {
             forEach {
                 it.scaleType = ImageView.ScaleType.CENTER_CROP
@@ -135,34 +179,8 @@ class ViewPagerActivity : KotlinActivity() {
         vp4.pageMargin = 3
 
         vp2.setPageTransformer(true, ScalePageTransformer())
-        vp3.setPageTransformer(true, RotatePageTransformer())
-        vp4.setPageTransformer(true, GalleryPageTransformer())
-    }
-
-    private fun initMagicIndidator() {
-//        val magicIndicator = findViewById<View>(R.id.magic_indicator) as MagicIndicator
-//        val commonNavigator = CommonNavigator(this)
-//        commonNavigator.setAdapter(object : CommonNavigatorAdapter() {
-//
-//            val count: Int
-//                get() = if (mTitleDataList == null) 0 else mTitleDataList.size()
-//
-//            fun getTitleView(context: Context, index: Int): IPagerTitleView {
-//                val colorTransitionPagerTitleView = ColorTransitionPagerTitleView(context)
-//                colorTransitionPagerTitleView.setNormalColor(Color.GRAY)
-//                colorTransitionPagerTitleView.setSelectedColor(Color.BLACK)
-//                colorTransitionPagerTitleView.setText(mTitleDataList.get(index))
-//                colorTransitionPagerTitleView.setOnClickListener(View.OnClickListener { mViewPager.setCurrentItem(index) })
-//                return colorTransitionPagerTitleView
-//            }
-//
-//            fun getIndicator(context: Context): IPagerIndicator {
-//                val indicator = LinePagerIndicator(context)
-//                indicator.setMode(LinePagerIndicator.MODE_WRAP_CONTENT)
-//                return indicator
-//            }
-//        })
-//        magicIndicator.setNavigator(commonNavigator)
+        vp3.setPageTransformer(false, RotatePageTransformer())
+        vp4.setPageTransformer(false, GalleryPageTransformer())
     }
 
     inner class GalleryPageTransformer : ViewPager.PageTransformer {
@@ -217,28 +235,30 @@ class ViewPagerActivity : KotlinActivity() {
     class ScalePageTransformer : ViewPager.PageTransformer {
 
         override fun transformPage(page: View, position: Float) {
-            //Log.d("TAG", "<"+page.hashCode()+", "+position+">");
-            // out of left screen
-            if (position < -1.0f) {
-                page.scaleX = MIN_SCALE
-                page.scaleY = MIN_SCALE
-            } else if (position <= 0.0f) {
-                page.alpha = 1.0f
-                page.translationX = 0.0f
-                page.scaleX = 1.0f
-                page.scaleY = 1.0f
-            } else if (position <= 1.0f) {
-                page.alpha = 1.0f - position
-                page.translationX = -page.width * position
-                val scale = MIN_SCALE + (1.0f - MIN_SCALE) * (1.0f - position)
-                page.scaleX = scale
-                page.scaleY = scale
-            } else {
-                page.scaleX = MIN_SCALE
-                page.scaleY = MIN_SCALE
-            }// out of right screen
-            // slide right
-            // slide left
+            Log.d("Tdasdad", " "+position)
+            when {
+                position < -1.0f -> {
+                    page.scaleX = MIN_SCALE
+                    page.scaleY = MIN_SCALE
+                }
+                position <= 0.0f -> {
+                    page.alpha = 1.0f
+                    page.translationX = 0.0f
+                    page.scaleX = 1.0f
+                    page.scaleY = 1.0f
+                }
+                position <= 1.0f -> {
+                    page.alpha = 1.0f - position
+                    page.translationX = -page.width * position
+                    val scale = MIN_SCALE + (1.0f - MIN_SCALE) * (1.0f - position)
+                    page.scaleX = scale
+                    page.scaleY = scale
+                }
+                else -> {
+                    page.scaleX = MIN_SCALE
+                    page.scaleY = MIN_SCALE
+                }
+            }
         }
 
     }

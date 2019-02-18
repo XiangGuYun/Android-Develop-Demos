@@ -15,10 +15,11 @@
         <com.androidui.view.Header1View
             android:id="@+id/header1"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="wrap_content"
             app:mainTitle1="获得焦点后全选组件内所有文本内容selectAllOnFocus"/>
 
         <EditText
+            style="@style/bg_et"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
@@ -26,6 +27,7 @@
             android:selectAllOnFocus="true"/>
 
         <EditText
+            style="@style/bg_et"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp" />
@@ -33,10 +35,11 @@
         <com.androidui.view.Header1View
             android:id="@+id/header2"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="wrap_content"
             app:mainTitle1="在XML中限制EditText输入类型"/>
 
         <EditText
+            style="@style/bg_et"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="number|numberSigned|numberDecimal"
@@ -46,22 +49,25 @@
         <com.androidui.view.Header1View
             android:id="@+id/header3"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="wrap_content"
             app:mainTitle1="设置最小行，最多行，单行，多行，自动换行"/>
 
         <EditText
+            style="@style/bg_et"
             android:hint="限制为单行"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:singleLine="true"/>
 
         <EditText
+            style="@style/bg_et"
             android:hint="最低高度为两行"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:minLines="2"/>
 
         <EditText
+            style="@style/bg_et"
             android:hint="最高高度为两行"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -70,22 +76,25 @@
         <com.androidui.view.Header1View
             android:id="@+id/header4"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="wrap_content"
             app:mainTitle1="设置文字间隔"/>
 
         <EditText
+            style="@style/bg_et"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="hello world, happy!!"
             android:textScaleX="1.0"/>
 
         <EditText
+            style="@style/bg_et"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="hello world, happy!!"
             android:textScaleX="1.5"/>
 
         <EditText
+            style="@style/bg_et"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="hello world, happy!!"/>
@@ -93,10 +102,11 @@
         <com.androidui.view.Header1View
             android:id="@+id/header5"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="wrap_content"
             app:mainTitle1="避免EditText在进入Activity时自动弹出键盘"/>
 
         <Button
+            style="@style/btn_test"
             android:id="@+id/btnET1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -104,6 +114,7 @@
             />
 
         <Button
+            style="@style/btn_test"
             android:id="@+id/btnET2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -113,10 +124,11 @@
         <com.androidui.view.Header1View
             android:id="@+id/header6"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="wrap_content"
             app:mainTitle1="EditText光标位置的控制"/>
 
         <Button
+            style="@style/btn_test"
             android:id="@+id/btnTestSelect"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -125,16 +137,18 @@
         <com.androidui.view.Header1View
             android:id="@+id/header7"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="wrap_content"
             app:mainTitle1="带表情的EditText"/>
 
         <EditText
+            style="@style/bg_et"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="点击按钮来添加表情"
             android:id="@+id/etFace"/>
 
         <Button
+            style="@style/btn_test"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="添加"

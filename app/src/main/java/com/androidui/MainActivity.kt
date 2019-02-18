@@ -4,6 +4,7 @@ import android.content.Intent
 import android.graphics.Typeface
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import com.androidui.anim.AnimActivity
 import com.androidui.huitu.HuiTuActivity
 import com.androidui.supportlib.SupportLibUIActivity
 import com.androidui.systemui.SystemUIActivity
@@ -27,6 +28,10 @@ class MainActivity : AppCompatActivity() {
 
         btnSupportLibUI.setOnClickListener {
             startActivity(Intent(this, SupportLibUIActivity::class.java))
+        }
+
+        btnAnim.setOnClickListener {
+            startActivity(Intent(this, AnimActivity::class.java))
         }
 
     }
