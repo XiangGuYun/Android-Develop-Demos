@@ -9,6 +9,7 @@
     tools:context=".anim.AnimActivity">
 
     <com.androidui.view.MyTextView
+        android:id="@+id/btn1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         style="@style/item"
@@ -16,6 +17,15 @@
         android:background="@drawable/rect3"/>
 
     <com.androidui.view.MyTextView
+        android:id="@+id/btn2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/item"
+        android:text="插值器与估值器"
+        android:background="@drawable/rect7"/>
+
+    <com.androidui.view.MyTextView
+        android:id="@+id/btn3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         style="@style/item"
