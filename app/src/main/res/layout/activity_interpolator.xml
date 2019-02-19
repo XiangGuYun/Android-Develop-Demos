@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".anim.InterpolatorActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv1"
+            android:text="初步了解插值器（Interpolator）"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/info"/>
+
+        <com.androidui.view.Header1View
+            android:id="@+id/header1"
+            app:mainTitle1="系统自带的插值器"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+        <TextView
+            android:id="@+id/tvAnim1"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Accelerate"
+            android:padding="5dp"
+            android:background="#98FB98"/>
+        <TextView
+            android:id="@+id/tvAnim2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Overshoot"
+            android:padding="5dp"
+            android:background="#EEEE00"/>
+        <TextView
+            android:id="@+id/tvAnim3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="AccelerateDecelerate"
+            android:padding="5dp"
+            android:background="#8B658B"/>
+        <TextView
+            android:id="@+id/tvAnim4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Anticipate"
+            android:padding="5dp"
+            android:background="#D8BFD8"/>
+        <TextView
+            android:id="@+id/tvAnim5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="AnticipateOvershoot"
+            android:padding="5dp"
+            android:background="#FF7256"/>
+        <TextView
+            android:id="@+id/tvAnim6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bounce"
+            android:padding="5dp"
+            android:background="#FFDEAD"/>
+        <TextView
+            android:id="@+id/tvAnim7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cycle"
+            android:padding="5dp"
+            android:background="#EEA9B8"/>
+        <TextView
+            android:id="@+id/tvAnim8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Decelerate"
+            android:padding="5dp"
+            android:background="#8B7D7B"/>
+        <TextView
+            android:id="@+id/tvAnim9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Linear"
+            android:padding="5dp"
+            android:background="#7EC0EE"/>
+
+        <TextView
+            android:id="@+id/btnStart1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="开始动画"
+            style="@style/info"
+            android:background="@drawable/rect5"/>
+
+        <TextView
+            android:id="@+id/tv2"
+            android:text="了解自定义插值器"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/info"/>
+
+        <com.androidui.view.Header1View
+            android:id="@+id/header2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:mainTitle1="自定义先减速后加速插值器"/>
+
+        <ImageView
+            android:id="@+id/iv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/icon"
+            android:layout_margin="10dp"/>
+
+        <TextView
+            android:id="@+id/btnStart2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="开始动画"
+            style="@style/info"
+            android:background="@drawable/rect5"/>
+
+        <TextView
+            android:id="@+id/tv3"
+            android:text="初步了解估值器（TypeEvaluator）"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/info"/>
+
+        <com.androidui.view.Header1View
+            android:id="@+id/header3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:mainTitle1="开始使用估值器"/>
+
+        <ImageView
+            android:id="@+id/iv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/icon"
+            android:layout_margin="10dp"/>
+
+        <TextView
+            android:id="@+id/btnStart3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="开始动画"
+            style="@style/info"
+            android:background="@drawable/rect5"/>
+
+        <TextView
+            android:id="@+id/tv4"
+            android:text="了解自定义估值器"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/info"/>
+
+        <com.androidui.view.Header1View
+            android:id="@+id/header4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:mainTitle1="使用自定义估值器"/>
+        
+        
+        <com.androidui.anim.other.MyView
+            android:id="@+id/myView"
+            android:layout_width="match_parent"
+            android:layout_height="400dp" />
+
+    </LinearLayout>
+
+</ScrollView>

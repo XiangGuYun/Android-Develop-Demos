@@ -95,6 +95,16 @@
         <item name="android:text">RecyclerView</item>
     </style>
 
+    <style name="info">
+        <item name="android:background">@drawable/rect4</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
 
 
 </resources>

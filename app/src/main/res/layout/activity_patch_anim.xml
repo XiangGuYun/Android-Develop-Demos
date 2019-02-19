@@ -11,14 +11,10 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/tvTop"
+        <com.androidui.view.ReadMoreView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:padding="10dp"
-            android:background="@drawable/rect7"
-            />
+            android:id="@+id/readView"/>
 
         <com.androidui.view.Header1View
             android:id="@+id/header1"
@@ -235,6 +231,122 @@
             style="@style/btn_test"
             android:background="@drawable/rect4"
             android:text="了解动画监听"/>
+
+        <com.androidui.view.Header1View
+            android:id="@+id/header11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:mainTitle1="应用于Activity切换"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/btn_test"
+            android:text="FadeIN and FadeOut"
+            android:id="@+id/btn11"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/btn_test"
+            android:text="SLIDEIN and SLIDEOut"
+            android:id="@+id/btn12"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/btn_test"
+            android:text="自定义淡入淡出效果"
+            android:id="@+id/btn13"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/btn_test"
+            android:text="自定义上移下移效果"
+            android:id="@+id/btn14"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/btn_test"
+            android:text="自定义放大缩小效果"
+            android:id="@+id/btn15"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/btn_test"
+            android:text="自定义组合效果"
+            android:id="@+id/btn16"/>
+
+        <com.androidui.view.Header1View
+            android:id="@+id/header12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:mainTitle1="应用于Fragment切换"/>
+
+        <Button
+            android:id="@+id/btn17"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/btn_test"
+            android:text="TRANSIT_NONE 无动画"/>
+
+        <Button
+            android:id="@+id/btn18"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/btn_test"
+            android:text="TRANSIT_FRAGMENT_OPEN 标准的打开动画效果"/>
+
+        <Button
+            android:id="@+id/btn19"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/btn_test"
+            android:text="TRANSIT_FRAGMENT_CLOSE 标准的关闭动画效果"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/btn_test"
+            android:text="自定义淡入淡出效果"
+            android:id="@+id/btn20"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/btn_test"
+            android:text="自定义平移效果"
+            android:id="@+id/btn21"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/btn_test"
+            android:text="自定义缩放效果"
+            android:id="@+id/btn22"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/btn_test"
+            android:text="自定义组合效果"
+            android:id="@+id/btn23"/>
+
+        <com.androidui.view.Header1View
+            android:id="@+id/headerLast"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:mainTitle1="视图组（ViewGroup）中子元素的出场效果"/>
+
+        <Button
+            android:id="@+id/btn24"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/btn_test"
+            android:text="看看效果"/>
 
     </LinearLayout>
 

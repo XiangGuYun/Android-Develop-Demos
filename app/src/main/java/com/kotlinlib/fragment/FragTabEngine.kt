@@ -5,11 +5,12 @@ import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentActivity
 
 import com.kotlinlib.listener.OnTabSelected
+import com.kotlinlib.view.KotlinFragment
 
 class FragTabEngine {
 
 
-    private var fu: FragmentUtils
+    private var fu: FragmentUtils<Fragment>
 
     private val fragments: ArrayList<Fragment>
 
@@ -23,9 +24,12 @@ class FragTabEngine {
      * @param frags N个Fragment
      * @constructor
      */
-    constructor(act:FragmentActivity, tabLayout:TabLayout, setTab:(i:Int, tab:TabLayout.Tab)->TabLayout.Tab,
-                onSelected:(fu:FragmentUtils,frags:ArrayList<Fragment>, tab:TabLayout.Tab)->Unit,
-                onUnSelected: (tab: TabLayout.Tab) -> Unit,vararg frags:Fragment, id:Int){
+    constructor(act:FragmentActivity,
+                tabLayout:TabLayout,
+                id:Int,
+                setTab:(i:Int, tab:TabLayout.Tab)->TabLayout.Tab,
+                onSelected:(fu:FragmentUtils<Fragment>,frags:ArrayList<Fragment>, tab:TabLayout.Tab)->Unit,
+                onUnSelected: (tab: TabLayout.Tab) -> Unit,vararg frags:Fragment){
         fragments = ArrayList(frags.asList())
         fu = FragmentUtils(act, fragments, id)
         //创建N个自定义Tab
@@ -45,7 +49,7 @@ class FragTabEngine {
         })
     }
 
-    fun getFragUtils(): FragmentUtils {
+    fun getFragUtils(): FragmentUtils<Fragment> {
         return fu
     }
 

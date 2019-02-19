@@ -12,14 +12,14 @@ import android.view.animation.AlphaAnimation
 import android.view.animation.TranslateAnimation
 import android.view.animation.RotateAnimation
 import android.view.animation.AnimationSet
-
-
+import android.content.Intent
+import com.kotlinlib.view.recyclerview.RVUtils
 
 @LayoutId(R.layout.activity_patch_anim)
 class PatchAnimActivity : KotlinActivity() {
 
     override fun init(bundle: Bundle?) {
-        tvTop.text = """
+        readView.setText("""
 1. 作用对象
 视图控件（View）
 如Android的TextView、Button等等
@@ -41,7 +41,7 @@ class PatchAnimActivity : KotlinActivity() {
 补间动画的使用方式分为两种：在XML 代码 / Java 代码里设置
 前者优点：动画描述的可读性更好
 后者优点：动画效果可动态创建
-        """.trimIndent()
+        """.trimIndent())
 
         header1.setLeftClick {
             codeDialog.text("""
@@ -582,6 +582,226 @@ anim.addListener(new AnimatorListenerAdapter() {
 });
             """.trimIndent())
         }
+
+        header11.setLeftClick {
+            codeDialog.text("""
+启动动画
+Intent intent = new Intent (this,Acvtivity.class);
+startActivity(intent);
+overridePendingTransition(R.anim.enter_anim,R.anim.exit_anim);
+// 采用overridePendingTransition（int enterAnim, int exitAnim）进行设置
+// enterAnim：从Activity a跳转到Activity b，进入b时的动画效果资源ID
+// exitAnim：从Activity a跳转到Activity b，离开a时的动画效果资源Id
+
+// 特别注意
+// overridePendingTransition()必须要在startActivity(intent)后被调用才能生效
+
+退出动画
+@Override
+public void finish(){
+    super.finish();
+
+    overridePendingTransition(R.anim.enter_anim,R.anim.exit_anim);
+// 采用overridePendingTransition（int enterAnim, int exitAnim）进行设置
+// enterAnim：从Activity a跳转到Activity b，进入b时的动画效果资源ID
+// exitAnim：从Activity a跳转到Activity b，离开a时的动画效果资源Id
+
+// 特别注意
+// overridePendingTransition（）必须要在finish()后被调用才能生效
+
+}
+
+            """.trimIndent())
+        }
+
+        btn11.click {
+            val intent = Intent(this, SecondActivity::class.java)
+            startActivity(intent.putExtra("type",1))
+            // 淡入淡出的动画效果
+            //第二个Activity将会由浅到深淡入，当前Activity将会由深到浅淡出
+            overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
+        }
+
+        btn12.click {
+            val intent = Intent(this, SecondActivity::class.java)
+            startActivity(intent.putExtra("type",2))
+            // 从左向右滑动的效果
+            //第二个Activity将会从左边滑入，当前Activity将会向右边滑出
+            overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right)
+        }
+
+        btn13.click {
+            val intent = Intent(this, SecondActivity::class.java)
+            startActivity(intent.putExtra("type",3))
+            overridePendingTransition(R.anim.my_fade_in, R.anim.my_fade_out)
+        }
+
+        btn14.click {
+            val intent = Intent(this, SecondActivity::class.java)
+            startActivity(intent.putExtra("type",4))
+            overridePendingTransition(R.anim.my_up_in, R.anim.my_down_out)
+        }
+
+        btn15.click {
+            val intent = Intent(this, SecondActivity::class.java)
+            startActivity(intent.putExtra("type",5))
+            overridePendingTransition(R.anim.my_scale_in, R.anim.my_scale_out)
+        }
+
+        btn16.click {
+            val intent = Intent(this, SecondActivity::class.java)
+            startActivity(intent.putExtra("type",6))
+            overridePendingTransition(R.anim.my_set_in, R.anim.my_set_out)
+        }
+
+        header12.setLeftClick {
+            codeDialog.text("""
+系统自带的动画切换效果
+FragmentTransaction fragmentTransaction = mFragmentManager
+                .beginTransaction();
+
+fragmentTransaction.setTransition(int transit)；
+// 通过setTransition(int transit)进行设置
+// transit参数说明
+// 1. FragmentTransaction.TRANSIT_NONE：无动画
+// 2. FragmentTransaction.TRANSIT_FRAGMENT_OPEN：标准的打开动画效果
+// 3. FragmentTransaction.TRANSIT_FRAGMENT_CLOSE：标准的关闭动画效果
+
+// 标准动画设置好后，在Fragment添加和移除的时候都会有。
+
+自定义动画效果
+// 采用`FragmentTransavtion`的 `setCustomAnimations（）`进行设置
+
+FragmentTransaction fragmentTransaction = mFragmentManager
+                .beginTransaction();
+
+fragmentTransaction.setCustomAnimations(
+                R.anim.in_from_right,
+                R.anim.out_to_left);
+
+// 此处的自定义动画效果同Activity，此处不再过多描述
+            """.trimIndent())
+        }
+
+        btn17.click {
+            go(FragmentTransitionActivity::class.java, "type" to 1)
+        }
+
+        btn18.click {
+            go(FragmentTransitionActivity::class.java, "type" to 2)
+        }
+
+        btn19.click {
+            go(FragmentTransitionActivity::class.java, "type" to 3)
+        }
+
+        btn20.click {
+            go(FragmentTransitionActivity::class.java, "type" to 4)
+        }
+
+        btn21.click {
+            go(FragmentTransitionActivity::class.java, "type" to 5)
+        }
+
+        btn22.click {
+            go(FragmentTransitionActivity::class.java, "type" to 6)
+        }
+
+        btn23.click {
+            go(FragmentTransitionActivity::class.java, "type" to 7)
+        }
+
+        headerLast.setLeftClick {
+            codeDialog.text("""
+视图组（ViewGroup）中子元素可以具备出场时的补间动画效果
+常用需求场景：为ListView的 item 设置出场动画
+使用步骤：
+
+步骤1：设置子元素的出场动画
+res/anim/view_animation.xml
+<?xml version="1.0" encoding="utf-8"?>
+// 此处采用了组合动画
+<set xmlns:android="http://schemas.android.com/apk/res/android" >
+    android:duration="3000"
+
+    <alpha
+        android:duration="1500"
+        android:fromAlpha="1.0"
+        android:toAlpha="0.0" />
+
+    <translate
+        android:fromXDelta="500"
+        android:toXDelta="0"
+         />
+
+</set>
+
+步骤2：设置 视图组（ViewGroup）的动画文件
+res/ anim /anim_layout.xml
+<?xml version="1.0" encoding="utf-8"?>
+// 采用LayoutAnimation标签
+<layoutAnimation xmlns:android="http://schemas.android.com/apk/res/android"
+    android:delay="0.5"
+    // 子元素开始动画的时间延迟
+    // 如子元素入场动画的时间总长设置为300ms
+    // 那么 delay = "0.5" 表示每个子元素都会延迟150ms才会播放动画效果
+    // 第一个子元素延迟150ms播放入场效果；第二个延迟300ms，以此类推
+
+    android:animationOrder="normal"
+    // 表示子元素动画的顺序
+    // 可设置属性为：
+    // 1. normal ：顺序显示，即排在前面的子元素先播放入场动画
+    // 2. reverse：倒序显示，即排在后面的子元素先播放入场动画
+    // 3. random：随机播放入场动画
+
+    android:animation="@anim/view_animation"
+    // 设置入场的具体动画效果
+    // 将步骤1的子元素出场动画设置到这里
+
+
+    />
+
+
+步骤3：为视图组（ViewGroup）指定andorid:layoutAnimation属性
+指定的方式有两种： XML / Java代码设置
+方式1：在 XML 中指定
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical" >
+    <ListView
+        android:id="@+id/listView1"
+        android:layoutAnimation="@anim/anim_layout"
+        // 指定layoutAnimation属性用以指定子元素的入场动画
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>
+
+方式2：在Java代码中指定
+
+这样就不用额外设置res/ anim /anim_layout.xml该xml文件了
+
+        ListView lv = (ListView) findViewById(R.id.listView1);
+
+        Animation animation = AnimationUtils.loadAnimation(this,R.anim.anim_item);
+         // 加载子元素的出场动画
+
+        LayoutAnimationController controller = new LayoutAnimationController(animation);
+        controller.setDelay(0.5f);
+        controller.setOrder(LayoutAnimationController.ORDER_NORMAL);
+       // 设置LayoutAnimation的属性
+
+        lv.setLayoutAnimation(controller);
+        // 为ListView设置LayoutAnimation的属性
+
+上述二者的效果是一样的。0
+            """.trimIndent())
+        }
+
+        btn24.click { go(RVActivity::class.java) }
 
     }
 

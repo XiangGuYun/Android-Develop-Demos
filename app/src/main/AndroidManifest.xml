@@ -11,7 +11,7 @@
         android:roundIcon="@mipmap/launcher1"
         android:supportsRtl="true"
         android:theme="@style/Theme.Design.Light.NoActionBar">
-        <activity android:name=".anim.PatchAnimActivity"></activity>
+        <activity android:name=".anim.PatchAnimActivity" />
         <activity android:name=".anim.FrameAnimActivity" />
         <activity android:name=".systemui.test.WV4Activity" />
         <activity android:name=".systemui.test.WV3Activity" />
@@ -60,6 +60,10 @@
         <activity android:name=".supportlib.ViewPagerActivity" />
         <activity android:name=".systemui.test.WV5Activity" />
         <activity android:name=".anim.AnimActivity" />
+        <activity android:name=".anim.InterpolatorActivity" />
+        <activity android:name=".anim.SecondActivity" />
+        <activity android:name=".anim.FragmentTransitionActivity" />
+        <activity android:name=".anim.RVActivity"></activity>
     </application>
 
 </manifest>

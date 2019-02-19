@@ -4,4 +4,7 @@
         <attr name="mainTitle1" format="string"/>
         <attr name="subTitle1" format="string"/>
     </declare-styleable>
+    <declare-styleable name="ReadMoreView">
+        <attr name="text" format="string"/>
+    </declare-styleable>
 </resources>
