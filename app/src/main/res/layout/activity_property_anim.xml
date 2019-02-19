@@ -146,7 +146,7 @@
         <com.androidui.view.Header1View
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:mainTitle1="原本无set和get方法的属性实现属性动画"/>
+            app:mainTitle1="给自定义的color属性实现属性动画"/>
 
         <FrameLayout
             android:layout_width="match_parent"
