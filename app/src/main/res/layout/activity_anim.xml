@@ -33,6 +33,7 @@
         android:background="@drawable/rect4"/>
 
     <com.androidui.view.MyTextView
+        android:id="@+id/btn4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         style="@style/item"

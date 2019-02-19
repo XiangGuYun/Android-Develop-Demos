@@ -12,5 +12,6 @@ class AnimActivity : KotlinActivity() {
         btn1.click { go(FrameAnimActivity::class.java) }
         btn2.click { go(InterpolatorActivity::class.java) }
         btn3.click { go(PatchAnimActivity::class.java) }
+        btn4.click { go(PropertyAnimActivity::class.java) }
     }
 }

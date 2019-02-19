@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".anim.PropertyAnimActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.androidui.view.ReadMoreView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/readView"/>
+
+        <Button
+            android:id="@+id/b1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/btn_test"
+            android:background="@drawable/rect4"
+            android:text="了解ValueAnimator"/>
+
+        <com.androidui.view.Header1View
+            android:id="@+id/h1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:mainTitle1="ValueAnimator.ofInt(int values)"/>
+
+        <Button
+            android:id="@+id/btn1"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:text="动画"
+            android:background="@drawable/rect_yellow"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="20dp"/>
+
+        <ImageView
+            android:id="@+id/iv1"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/girl1"
+            android:scaleType="fitXY"
+            android:layout_gravity="center_horizontal"/>
+
+        <Button
+            android:id="@+id/b2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/btn_test"
+            android:text="开始动画"/>
+
+        <com.androidui.view.Header1View
+            android:id="@+id/h2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:mainTitle1="ValueAnimator.oFloat(float values)"/>
+
+        <ImageView
+            android:id="@+id/ivPlane"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            android:src="@mipmap/plane"/>
+
+        <Button
+            android:id="@+id/b3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/btn_test"
+            android:text="开始动画"/>
+
+        <com.androidui.view.Header1View
+            android:id="@+id/h3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:mainTitle1="ValueAnimator.ofObject()"/>
+
+        <ImageView
+            android:id="@+id/ivPlane1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            android:src="@mipmap/plane"/>
+
+        <Button
+            android:id="@+id/b4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/btn_test"
+            android:text="开始动画"/>
+
+        <Button
+            android:id="@+id/b5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/btn_test"
+            android:background="@drawable/rect4"
+            android:text="了解ObjectAnimator"/>
+
+        <com.androidui.view.Header1View
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:mainTitle1="类动画器实现四种基本动画"/>
+
+        <ImageView
+            android:id="@+id/girl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="30dp"
+            android:src="@mipmap/love"/>
+
+        <Button
+            android:id="@+id/b6"
+            android:text="透明度"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/btn_test"/>
+
+        <Button
+            android:id="@+id/b7"
+            android:text="平移"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/btn_test"/>
+
+        <Button
+            android:id="@+id/b8"
+            android:text="缩放"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/btn_test"/>
+
+        <Button
+            android:id="@+id/b9"
+            android:text="旋转"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/btn_test"/>
+
+        <com.androidui.view.Header1View
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:mainTitle1="原本无set和get方法的属性实现属性动画"/>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="340dp">
+            <com.androidui.anim.other.ColorView
+                android:id="@+id/myView"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:layout_gravity="center"
+                />
+            <com.androidui.anim.other.ColorView
+                android:id="@+id/myView1"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:layout_gravity="center"
+                />
+            <com.androidui.anim.other.ColorView
+                android:id="@+id/myView2"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center"
+                />
+            <com.androidui.anim.other.ColorView
+                android:id="@+id/myView3"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                />
+            <com.androidui.anim.other.ColorView
+                android:id="@+id/myView4"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                />
+            <com.androidui.anim.other.ColorView
+                android:id="@+id/myView5"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                />
+        </FrameLayout>
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/btn_test"
+            android:id="@+id/b10"
+            android:text="开始变色"/>
+
+    </LinearLayout>
+
+</ScrollView>
