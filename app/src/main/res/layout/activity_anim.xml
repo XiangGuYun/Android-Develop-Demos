@@ -40,6 +40,13 @@
         android:text="属性动画"
         android:background="@drawable/rect_blue"/>
 
+    <com.androidui.view.MyTextView
+        android:id="@+id/btn5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rect8"
+        style="@style/item"
+        android:text="框架-EasyAndroidAnimations"/>
 
 
 </LinearLayout>

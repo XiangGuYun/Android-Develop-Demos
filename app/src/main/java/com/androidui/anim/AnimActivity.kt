@@ -14,4 +14,9 @@ class AnimActivity : KotlinActivity() {
         btn3.click { go(PatchAnimActivity::class.java) }
         btn4.click { go(PropertyAnimActivity::class.java) }
     }
+
+    override fun finish() {
+        super.finish()
+        overridePendingTransition(R.anim.my_fade_in, R.anim.my_fade_out)
+    }
 }

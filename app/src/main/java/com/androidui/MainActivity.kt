@@ -24,6 +24,7 @@ class MainActivity : AppCompatActivity() {
 
         btnSystemUI.setOnClickListener {
             startActivity(Intent(this, SystemUIActivity::class.java))
+            overridePendingTransition(R.anim.my_fade_in, R.anim.my_fade_out)
         }
 
         btnSupportLibUI.setOnClickListener {
@@ -32,6 +33,7 @@ class MainActivity : AppCompatActivity() {
 
         btnAnim.setOnClickListener {
             startActivity(Intent(this, AnimActivity::class.java))
+            overridePendingTransition(R.anim.my_fade_in, R.anim.my_fade_out)
         }
 
     }
