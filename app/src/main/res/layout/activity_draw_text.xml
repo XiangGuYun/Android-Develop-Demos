@@ -22,6 +22,7 @@
            android:orientation="vertical">
 
            <Button
+               style="@style/btn_test"
                android:layout_width="match_parent"
                android:layout_height="wrap_content"
                android:text="文字绘制代码"
@@ -43,6 +44,8 @@
                    android:layout_weight="1"
                    android:layout_height="50dp" />
                <Button
+                   android:layout_margin="5dp"
+                   android:background="@drawable/rect8"
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
                    android:text="代码"
@@ -66,6 +69,8 @@
                    android:layout_weight="1"
                    android:layout_height="50dp" />
                <Button
+                   android:layout_margin="5dp"
+                   android:background="@drawable/rect8"
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
                    android:text="代码"
@@ -89,6 +94,8 @@
                    android:layout_weight="1"
                    android:layout_height="50dp" />
                <Button
+                   android:layout_margin="5dp"
+                   android:background="@drawable/rect8"
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
                    android:text="代码"
@@ -104,8 +111,11 @@
                    android:layout_width="0dp"
                    android:layout_weight="1"
                    android:layout_height="wrap_content"
+                   style="@style/btn_test"
                    android:text="设置字体颜色setTextColor"/>
                <Button
+                   android:layout_margin="5dp"
+                   android:background="@drawable/rect8"
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
                    android:text="代码"
@@ -143,6 +153,8 @@
                        android:text="无"/>
                </RadioGroup>
                <Button
+                   android:layout_margin="5dp"
+                   android:background="@drawable/rect8"
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
                    android:text="代码"
@@ -180,6 +192,8 @@
                        android:text="无"/>
                </RadioGroup>
                <Button
+                   android:layout_margin="5dp"
+                   android:background="@drawable/rect8"
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
                    android:text="代码"
@@ -191,12 +205,15 @@
                android:layout_height="wrap_content"
                android:orientation="horizontal">
                <Button
+                   style="@style/btn_test"
                    android:id="@+id/btnTypeface"
                    android:layout_width="0dp"
                    android:layout_weight="1"
                    android:layout_height="wrap_content"
                    android:text="设置字体类型setTypeface"/>
                <Button
+                   android:layout_margin="5dp"
+                   android:background="@drawable/rect8"
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
                    android:text="代码"
@@ -208,12 +225,15 @@
                android:layout_height="wrap_content"
                android:orientation="horizontal">
                <Button
+                   style="@style/btn_test"
                    android:id="@+id/btnTextAlign"
                    android:layout_width="0dp"
                    android:layout_weight="1"
                    android:layout_height="wrap_content"
                    android:text="设置对齐方式setTextAlign"/>
                <Button
+                   android:layout_margin="5dp"
+                   android:background="@drawable/rect8"
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
                    android:text="代码"
@@ -231,6 +251,7 @@
                android:layout_height="wrap_content"
                android:src="@mipmap/fontmetric"/>
            <Button
+               style="@style/btn_test"
                android:layout_width="match_parent"
                android:layout_height="wrap_content"
                android:text="基础理论"
@@ -240,12 +261,15 @@
                android:layout_height="wrap_content"
                android:orientation="horizontal">
                <Button
+                   style="@style/btn_test"
                    android:id="@+id/btnGetTextHeight"
                    android:layout_width="0dp"
                    android:layout_weight="1"
                    android:layout_height="wrap_content"
-                   android:text="使用descent()-ascent()来获取文本的height"/>
+                   android:text="使用descent()-ascent()\n来获取文本的height"/>
                <Button
+                   android:layout_margin="5dp"
+                   android:background="@drawable/rect8"
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
                    android:text="代码"
@@ -256,12 +280,15 @@
                android:layout_height="wrap_content"
                android:orientation="horizontal">
                <Button
+                   style="@style/btn_test"
                    android:id="@+id/btnGetTextMetric"
                    android:layout_width="0dp"
                    android:layout_weight="1"
                    android:layout_height="wrap_content"
-                   android:text="使用来paint和rect来获取文本的宽高"/>
+                   android:text="使用来paint和rect\n来获取文本的宽高"/>
                <Button
+                   android:layout_margin="5dp"
+                   android:background="@drawable/rect8"
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
                    android:text="代码"

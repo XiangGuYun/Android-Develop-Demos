@@ -22,15 +22,15 @@ class PaintCapView @JvmOverloads constructor(context: Context, attrs: AttributeS
 
         paint.color = Color.RED
         paint.strokeCap = Paint.Cap.BUTT
-        canvas?.drawLine(200f, 100f, 800f, 100f, paint)
+        canvas?.drawLine(50f, 50f, width.toFloat()-50, 50f, paint)
 
         paint.color = Color.GREEN
         paint.strokeCap = Paint.Cap.ROUND
-        canvas?.drawLine(200f, 200f, 800f, 200f, paint)
+        canvas?.drawLine(50f, height.toFloat()/2, width.toFloat()-50, height.toFloat()/2, paint)
 
         paint.color = Color.BLUE
         paint.strokeCap = Paint.Cap.SQUARE
-        canvas?.drawLine(200f, 300f, 800f, 300f, paint)
+        canvas?.drawLine(50f, height.toFloat()-50, width.toFloat()-50, height.toFloat()-50f, paint)
     }
 
 }

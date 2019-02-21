@@ -57,10 +57,19 @@
             android:text="XFERMODE"/>
         <TextView
             style="@style/tvTitle"
-            android:id="@+id/btnCanvas"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="第二部分 Canvas图层"/>
+        <com.androidui.view.MyTextView
+            android:id="@+id/btnCanvas"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:background="@drawable/rect8"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:text="Canvas类"/>
         <com.androidui.view.MyTextView
             android:id="@+id/btnGeometry"
             android:layout_marginTop="10dp"

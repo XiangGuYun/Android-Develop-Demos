@@ -4,6 +4,7 @@ import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import com.androidui.R
+import com.androidui.huitu.canvas.CanvasActivity
 import com.androidui.huitu.canvas.GeometryActivity
 import com.androidui.huitu.canvas.PathActivity
 import com.androidui.huitu.paint.PaintPropertyActivity
@@ -36,6 +37,10 @@ class HuiTuActivity : AppCompatActivity(),RVInterface {
 
         btnPath.setOnClickListener {
             startActivity(Intent(this, PathActivity::class.java))
+        }
+
+        btnCanvas.setOnClickListener {
+            startActivity(Intent(this, CanvasActivity::class.java))
         }
 
     }

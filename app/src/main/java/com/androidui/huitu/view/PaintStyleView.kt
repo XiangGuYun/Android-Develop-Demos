@@ -12,25 +12,23 @@ class PaintStyleView @JvmOverloads constructor(context: Context, attrs: Attribut
 
     private val paint:Paint = Paint()
 
-    init {
-
-    }
 
     override fun onDraw(canvas: Canvas?) {
         super.onDraw(canvas)
         setBackgroundColor(Color.WHITE)
         paint.color = Color.RED
         paint.style = Paint.Style.FILL
-        canvas?.drawRect(0f, 0f, width.toFloat(), 150f, paint)
+        canvas?.drawCircle(100f,height/2f,40f, paint)
         paint.reset()
         paint.color = Color.GREEN
         paint.style = Paint.Style.STROKE
         paint.strokeWidth = 15f
-        canvas?.drawRect(0f, 150f, width.toFloat(), 300f, paint)
+        canvas?.drawCircle(width/2f,height/2f,40f, paint)
         paint.reset()
         paint.color = Color.BLUE
         paint.style = Paint.Style.FILL_AND_STROKE
-        canvas?.drawRect(0f, 300f, width.toFloat(), 450f, paint)
+        paint.strokeWidth = 15f
+        canvas?.drawCircle(width.toFloat()-100,height/2f,40f, paint)
     }
 
 }

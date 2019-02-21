@@ -11,6 +11,7 @@
         android:roundIcon="@mipmap/launcher1"
         android:supportsRtl="true"
         android:theme="@style/Theme.Design.Light.NoActionBar">
+        <activity android:name=".huitu.canvas.CanvasActivity"></activity>
         <activity android:name=".anim.PropertyAnimActivity" />
         <activity android:name=".anim.PatchAnimActivity" />
         <activity android:name=".anim.FrameAnimActivity" />
@@ -72,7 +73,7 @@
         <activity android:name=".gesture.NewActivity" />
         <activity android:name=".gesture.DoubleTapListenerActivity" />
         <activity android:name=".gesture.DragImageActivity" />
-        <activity android:name=".gesture.MatrixActivity"></activity>
+        <activity android:name=".gesture.MatrixActivity" />
     </application>
 
 </manifest>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".huitu.canvas.CanvasActivity">
+
+    <com.androidui.view.ReadMoreView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/readView1"/>
+
+    <ImageView
+        android:id="@+id/ivDrawPicture"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/canvas_draw"/>
+
+    <com.androidui.view.Header1View
+        android:id="@+id/header1"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:mainTitle1="绘制颜色"
+        />
+
+    <com.androidui.huitu.view.CanvasColorView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_margin="10dp"/>
+
+    <com.androidui.view.Header1View
+        android:id="@+id/header2"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:mainTitle1="绘制基本形状(略)"
+        />
+
+    <com.androidui.view.Header1View
+        android:id="@+id/header3"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:mainTitle1="绘制文字(略)"
+        />
+
+    <com.androidui.view.Header1View
+        android:id="@+id/header4"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:mainTitle1="绘制图片之矢量图"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:background="@drawable/rect7"
+        android:text="将坐标系移动到(450,650)；绘制一个圆，将上述Canvas操作录制下来，并在某个时刻重新绘制出来。"/>
+
+</LinearLayout>
+</ScrollView>
