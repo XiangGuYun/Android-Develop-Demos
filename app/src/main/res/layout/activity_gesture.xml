@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/img1"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.androidui.view.ReadMoreView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/readView"/>
+
+            <com.androidui.view.MyTextView
+                android:id="@+id/btn1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/item"
+                android:text="GestureListener的回调方法"
+                android:background="@drawable/rect3"/>
+
+            <com.androidui.view.MyTextView
+                android:id="@+id/btn3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/item"
+                android:text="DoubleTapListener的回调方法"
+                android:background="@drawable/rect8"/>
+
+            <com.androidui.view.MyTextView
+                android:id="@+id/btnMatrix"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/item"
+                android:text="Matrix矩阵"
+                android:background="@drawable/rect_yellow"/>
+
+            <com.androidui.view.MyTextView
+                android:id="@+id/btn2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/item"
+                android:text="案例：手势上下滑打开关闭Activity"
+                android:background="@drawable/rect4"/>
+
+            <com.androidui.view.MyTextView
+                android:id="@+id/btn4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/item"
+                android:text="案例：利用手势拖拽图片"
+                android:background="@drawable/rect_btn"/>
+
+            <com.androidui.view.MyTextView
+                android:id="@+id/btn5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/item"
+                android:text="案例：利用手势旋转图片"
+                android:background="@drawable/rect_yellow"/>
+
+            <com.androidui.view.MyTextView
+                android:id="@+id/btn6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/item"
+                android:text="案例：利用手势缩放图片"
+                android:background="@drawable/rect_blue"/>
+
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

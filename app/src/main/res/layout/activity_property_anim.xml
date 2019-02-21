@@ -197,6 +197,37 @@
             android:id="@+id/b10"
             android:text="开始变色"/>
 
+        <TextView
+            android:id="@+id/tvQuestion1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:padding="10dp"
+            android:background="@drawable/rect7"
+            />
+
+        <com.androidui.view.Header1View
+            android:id="@+id/headerLast"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:mainTitle1="包装Button类，动画改变宽度"/>
+
+        <Button
+            android:id="@+id/btnWidth"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="我要变宽"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/rect_blue"
+            style="@style/btn_test"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/btn_test"
+            android:id="@+id/bLast"
+            android:text="开始变宽"/>
+
     </LinearLayout>
 
 </ScrollView>

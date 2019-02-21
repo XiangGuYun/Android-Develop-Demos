@@ -7,6 +7,7 @@ import com.androidui.R
 import com.androidui.anim.other.ColorEvaluator
 import com.androidui.anim.other.PlaneEvaluator
 import com.androidui.anim.other.Point
+import com.androidui.anim.other.ViewWrapper
 import com.kotlinlib.activity.KotlinActivity
 import com.kotlinlib.other.LayoutId
 import kotlinx.android.synthetic.main.activity_property_anim.*
@@ -96,7 +97,7 @@ ValueAnimator.ofObject（int values）
 
 // 步骤1：设置动画属性的初始值 & 结束值
 ValueAnimator anim = ValueAnimator.ofInt(0, 3);
-        // ofInt（）作用有两个
+        // ofInt()作用有两个
         // 1. 创建动画实例
         // 2. 将传入的多个Int参数进行平滑过渡:此处传入0和1,表示将值从0平滑过渡到1
         // 如果传入了3个Int参数 a,b,c ,则是先从a平滑过渡到b,再从b平滑过渡到C，以此类推
@@ -147,7 +148,7 @@ ValueAnimator anim = ValueAnimator.ofInt(0, 3);
         // 启动动画
     }
 
-// 关注1：ofInt（）源码分析
+// 关注1：ofInt()源码分析
     public static ValueAnimator ofInt(int... values) {
         // 允许传入一个或多个Int参数
         // 1. 输入一个的情况（如a）：从0过渡到a；
@@ -219,7 +220,7 @@ b3.click { anim.start() }
 作用：将初始值 以对象的形式 过渡到结束值
 即通过操作 对象 实现动画效果
 
-其实ValueAnimator.ofObject（）的本质还是操作 ** 值 **，只是是采用将 多个值 封装到一个对象里的方式 同时对多个值一起操作而已
+其实ValueAnimator.ofObject()的本质还是操作 ** 值 **，只是是采用将 多个值 封装到一个对象里的方式 同时对多个值一起操作而已
 就像上面的例子，本质还是操作坐标中的x，y两个值，只是将其封装到Point对象里，方便同时操作x，y两个值而已
 
 具体使用：
@@ -293,6 +294,56 @@ ObjectAnimator 类是先改变值，然后 自动赋值 给对象的属性从而
         case3()
         case4()
         case5()
+        case6()
+    }
+
+    private fun case6() {
+        tvQuestion1.text = """
+问题：上面的例子是给自己写的类添加set和get方法，但如果是系统的或是其他无法直接修改的类，应该如何添加？
+
+方案1：通过继承原始类，直接给类加上该属性的 get()&set()，从而实现给对象加上该属性的 get()&set()。
+
+方案2：通过包装原始动画对象，间接给对象加上该属性的 get()&set()，即用一个类来包装原始对象（接下来就讲这个方案）。
+        """.trimIndent()
+
+        headerLast.setRightClick {
+            codeDialog.text("""
+// 提供ViewWrapper类,用于包装View对象
+// 本例:包装Button对象
+public class ViewWrapper {
+
+    private View mTarget;
+
+    // 构造方法:传入需要包装的对象
+    public ViewWrapper(View target) {
+        mTarget = target;
+    }
+
+    // 为宽度设置get（） & set（）
+    public int getWidth() {
+        return mTarget.getLayoutParams().width;
+    }
+
+    public void setWidth(int width) {
+        mTarget.getLayoutParams().width = width;
+        mTarget.requestLayout();
+    }
+
+}
+
+val wrapper = ViewWrapper(btnWidth)
+
+bLast.click {
+    ObjectAnimator.ofInt(wrapper, "width", 80.dp2px(), 800, 80.dp2px()).setDuration(3000).start()
+}
+            """.trimIndent())
+        }
+
+        val wrapper = ViewWrapper(btnWidth)
+        bLast.click {
+            ObjectAnimator.ofInt(wrapper, "width", 80.dp2px(), 800, 80.dp2px()).setDuration(3000).start()
+        }
+
     }
 
     private fun case5() {
@@ -317,8 +368,8 @@ ObjectAnimator 类是先改变值，然后 自动赋值 给对象的属性从而
         // 设置自定义View对象、背景颜色属性值 & 颜色估值器
         // 本质逻辑：
         // 步骤1：根据颜色估值器不断 改变 值
-        // 步骤2：调用set（）设置背景颜色的属性值（实际上是通过画笔进行颜色设置）
-        // 步骤3：调用invalidate()刷新视图，即调用onDraw（）重新绘制，从而实现动画效果
+        // 步骤2：调用set()设置背景颜色的属性值（实际上是通过画笔进行颜色设置）
+        // 步骤3：调用invalidate()刷新视图，即调用onDraw()重新绘制，从而实现动画效果
         b10.click {
             anim1.start()
             anim2.start()

@@ -7,11 +7,9 @@ import android.support.annotation.RequiresApi
 import android.support.v7.widget.RecyclerView
 import android.view.View
 import android.view.ViewGroup
-import android.widget.EditText
-import android.widget.ImageView
-import android.widget.RadioGroup
-import android.widget.TextView
+import android.widget.*
 import com.jakewharton.rxbinding2.view.RxView
+import com.kotlinlib.listener.OnSeekBarChange
 import com.kotlinlib.view.edittext.ETUtils
 import io.reactivex.Observer
 import io.reactivex.disposables.Disposable
@@ -22,6 +20,14 @@ interface ViewUtils {
 
     val MP:Int get() = ViewGroup.LayoutParams.MATCH_PARENT
     val WC:Int get() = ViewGroup.LayoutParams.WRAP_CONTENT
+
+    fun SeekBar.change(callback:(seekBar: SeekBar?, progress: Int, fromUser: Boolean)->Unit){
+        setOnSeekBarChangeListener(object :OnSeekBarChange{
+            override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
+                callback.invoke(seekBar, progress, fromUser)
+            }
+        })
+    }
 
     /**
      * 设置View为不可见

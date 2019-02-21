@@ -19,7 +19,7 @@ class ReadMoreView @JvmOverloads constructor(context: Context, attrs: AttributeS
         view.tvTop.text = ta.getString(R.styleable.ReadMoreView_text)
         view.tvShowAll.setOnClickListener {
             if(view.tvTop.maxLines==5){
-                view.tvTop.maxLines = 100
+                view.tvTop.maxLines = 1000
                 view.tvShowAll.text = "收起"
             } else{
                 view.tvTop.maxLines = 5

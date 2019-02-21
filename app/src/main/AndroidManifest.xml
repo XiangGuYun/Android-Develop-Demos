@@ -11,7 +11,7 @@
         android:roundIcon="@mipmap/launcher1"
         android:supportsRtl="true"
         android:theme="@style/Theme.Design.Light.NoActionBar">
-        <activity android:name=".anim.PropertyAnimActivity"></activity>
+        <activity android:name=".anim.PropertyAnimActivity" />
         <activity android:name=".anim.PatchAnimActivity" />
         <activity android:name=".anim.FrameAnimActivity" />
         <activity android:name=".systemui.test.WV4Activity" />
@@ -37,13 +37,7 @@
         <activity android:name=".systemui.ScrollViewActivity" />
         <activity android:name=".systemui.TextViewActivity" />
         <activity android:name=".systemui.SystemUIActivity" />
-        <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".MainActivity" />
         <activity android:name=".huitu.HuiTuActivity" />
         <activity android:name=".huitu.BaseKnowledgeActivity" />
         <activity android:name=".huitu.paint.PaintPropertyActivity" />
@@ -65,6 +59,20 @@
         <activity android:name=".anim.SecondActivity" />
         <activity android:name=".anim.FragmentTransitionActivity" />
         <activity android:name=".anim.RVActivity" />
+        <activity android:name=".IntroActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".gesture.GestureActivity" />
+        <activity android:name=".gesture.GestureListenerActivity" />
+        <activity android:name=".gesture.DownCloseActivity" />
+        <activity android:name=".gesture.NewActivity" />
+        <activity android:name=".gesture.DoubleTapListenerActivity" />
+        <activity android:name=".gesture.DragImageActivity" />
+        <activity android:name=".gesture.MatrixActivity"></activity>
     </application>
 
 </manifest>

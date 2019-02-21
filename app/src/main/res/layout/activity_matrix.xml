@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".gesture.MatrixActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.androidui.view.Header1View
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:mainTitle1="矩阵的原理"/>
+
+        <ImageView
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:src="@mipmap/matrix"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/rect7"
+            android:id="@+id/tvMatrix"/>
+
+        <com.androidui.view.Header1View
+            android:id="@+id/headerTransMatrix"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:mainTitle1="setTranslate\n(float dx, float dy)"/>
+
+       <com.androidui.gesture.view.MatrixTransView
+           android:id="@+id/matrixTransView"
+           android:layout_margin="10dp"
+           android:layout_width="match_parent"
+           android:layout_height="200dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="dx"/>
+            <SeekBar
+                android:id="@+id/sbTransDx"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="dy"/>
+            <SeekBar
+                android:id="@+id/sbTransDy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <com.androidui.view.Header1View
+            android:id="@+id/headerScaleMatrix"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:mainTitle1="setScale"/>
+
+        <com.androidui.gesture.view.MatrixScaleView
+            android:id="@+id/matrixScaleView"
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="200dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="sx"/>
+            <SeekBar
+                android:id="@+id/sbScaleDx"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="sy"/>
+            <SeekBar
+                android:id="@+id/sbScaleDy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <com.androidui.view.Header1View
+            android:id="@+id/headerRotateMatrix"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:mainTitle1="setRotate"/>
+
+        <com.androidui.gesture.view.MatrixRotateView
+            android:id="@+id/matrixRotateView"
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="200dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="degree"/>
+            <SeekBar
+                android:id="@+id/sbDegree"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <com.androidui.view.Header1View
+            android:id="@+id/headerSkewMatrix"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:mainTitle1="setSkew"/>
+
+        <com.androidui.gesture.view.MatrixSkewView
+            android:id="@+id/matrixSkewView"
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="200dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="kx"/>
+            <SeekBar
+                android:id="@+id/sbSkewKx"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ky"/>
+            <SeekBar
+                android:id="@+id/sbSkewKy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <com.androidui.view.Header1View
+            android:id="@+id/headerSinCosMatrix"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:mainTitle1="setSinCos"/>
+
+        <com.androidui.gesture.view.MatrixSinCosView
+            android:id="@+id/matrixSinCosView"
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="200dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="sin"/>
+            <SeekBar
+                android:id="@+id/sbSin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="cos"/>
+            <SeekBar
+                android:id="@+id/sbCos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="px"/>
+            <SeekBar
+                android:id="@+id/sbPx"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="py"/>
+            <SeekBar
+                android:id="@+id/sbPy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

@@ -57,7 +57,7 @@ btnStop.click {
         }
 
         // 1. 设置动画
-        //iv1.setImageResource(R.drawable.frame1)
+        iv1.setImageResource(R.drawable.frame1)
         // 2. 获取动画对象
         val animationDrawable = iv1.drawable as AnimationDrawable
         // 3. 启动动画

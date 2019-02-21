@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.androidui.view.Header1View
+        android:id="@+id/header1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:mainTitle1="DoubleTapListener的回调方法"/>
+
+    <ImageView
+        android:id="@+id/ivGirl"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="270dp"
+        android:src="@mipmap/bg_girl"
+        android:scaleType="centerCrop"/>
+
+    <ScrollView
+        android:id="@+id/scrollText"
+        android:layout_width="match_parent"
+        android:background="@drawable/rect7"
+        android:layout_margin="5dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvLog"
+            android:minLines="6"
+            android:textSize="10sp"
+            android:padding="10dp"/>
+    </ScrollView>
+
+
+    <Button
+        android:id="@+id/btnClearLog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/btn_test"
+        android:text="清空日志"/>
+
+</LinearLayout>

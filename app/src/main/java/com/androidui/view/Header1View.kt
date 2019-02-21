@@ -35,6 +35,7 @@ class Header1View @JvmOverloads constructor(context: Context, attrs: AttributeSe
     }
 
     fun setRightClick(func: () -> Unit){
+        subTitle.visibility = View.VISIBLE
         subTitle.setOnClickListener {
             func.invoke()
         }
