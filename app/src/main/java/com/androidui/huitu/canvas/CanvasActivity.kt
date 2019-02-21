@@ -7,6 +7,9 @@ import com.kotlinlib.activity.KotlinActivity
 import com.kotlinlib.other.LayoutId
 import kotlinx.android.synthetic.main.activity_canvas2.*
 
+/**
+ * https://www.jianshu.com/p/762b490403c3
+ */
 @LayoutId(R.layout.activity_canvas2)
 class CanvasActivity : KotlinActivity() {
 
