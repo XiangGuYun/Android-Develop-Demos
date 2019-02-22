@@ -66,5 +66,18 @@
         android:background="@drawable/rect7"
         android:text="将坐标系移动到(450,650)；绘制一个圆，将上述Canvas操作录制下来，并在某个时刻重新绘制出来。"/>
 
+
+    <com.androidui.huitu.view.PictureView
+        android:layout_width="match_parent"
+        android:layout_height="100dp" />
+
+    <com.androidui.view.Header1View
+        android:id="@+id/header5"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:mainTitle1="绘制图片之位图"
+        />
+    
 </LinearLayout>
 </ScrollView>

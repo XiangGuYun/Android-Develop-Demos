@@ -7,6 +7,7 @@ import android.support.annotation.RequiresApi
 import android.support.v7.widget.RecyclerView
 import android.view.View
 import android.view.ViewGroup
+import android.webkit.WebView
 import android.widget.*
 import com.jakewharton.rxbinding2.view.RxView
 import com.kotlinlib.listener.OnSeekBarChange
@@ -308,6 +309,10 @@ interface ViewUtils {
     }
 
     fun View.et(id:Int): EditText {
+        return findViewById(id)
+    }
+
+    fun View.wv(id:Int): WebView {
         return findViewById(id)
     }
 

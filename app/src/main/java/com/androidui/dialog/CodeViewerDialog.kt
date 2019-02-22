@@ -1,6 +1,9 @@
 package com.androidui.dialog
 
 import android.content.Context
+import android.text.Html
+import android.text.Spannable
+import android.text.Spanned
 import com.androidui.R
 import com.kotlinlib.dialog.DialogInfo
 import com.kotlinlib.other.KotlinDialog
@@ -18,6 +21,11 @@ class CodeViewerDialog(ctx: Context): KotlinDialog(ctx){
 
     fun text(text:String){
         dv.tv(R.id.tvMain).text = text
+        show()
+    }
+
+    fun text(html: Spanned){
+        dv.tv(R.id.tvMain).text = html
         show()
     }
 

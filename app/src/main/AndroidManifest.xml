@@ -61,7 +61,11 @@
         <activity android:name=".anim.FragmentTransitionActivity" />
         <activity android:name=".anim.RVActivity" />
         <activity android:name=".IntroActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity android:name=".gesture.GestureActivity" />
         <activity android:name=".gesture.GestureListenerActivity" />
@@ -71,11 +75,7 @@
         <activity android:name=".gesture.DragImageActivity" />
         <activity android:name=".gesture.MatrixActivity" />
         <activity android:name=".test.TestVPActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="350dp"
+    android:background="#ffffff"
+    android:layout_height="440dp">
+    <WebView
+        android:id="@+id/webView"
+        android:layout_width="match_parent"
+        android:layout_height="400dp">
+    </WebView>
+    <TextView
+        android:layout_below="@+id/webView"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#000000"/>
+    <TextView
+        android:id="@+id/tvYes"
+        android:layout_width="match_parent"
+        android:layout_height="39dp"
+        android:text="Close"
+        android:gravity="center"
+        android:textSize="14sp"
+        android:textColor="#000000"
+        android:layout_alignParentBottom="true"/>
+</RelativeLayout>
