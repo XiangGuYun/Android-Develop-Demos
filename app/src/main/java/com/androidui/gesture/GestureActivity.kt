@@ -3,6 +3,7 @@ package com.androidui.gesture
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.view.ScaleGestureDetector
 import com.androidui.R
 import com.kotlinlib.activity.KotlinActivity
 import com.kotlinlib.other.LayoutId
@@ -38,6 +39,8 @@ GestureDetector的三个回调接口
         btn2.setOnClickListener { startActivity(Intent(this, DownCloseActivity::class.java)) }
         btn3.setOnClickListener { startActivity(Intent(this, DoubleTapListenerActivity::class.java)) }
         btnMatrix.setOnClickListener { startActivity(Intent(this, MatrixActivity::class.java)) }
+
+
     }
 
 }
