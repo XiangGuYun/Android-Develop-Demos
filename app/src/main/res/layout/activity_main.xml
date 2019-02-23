@@ -117,7 +117,7 @@
                 android:layout_marginLeft="10dp"
                 android:gravity="center"
                 android:background="@drawable/circle3"
-                android:text="View\n测量布局绘制\n滑动与事件分发机制"/>
+                android:text="View\n测绘布局滑动\n事件分发机制"/>
             <com.androidui.view.MyTextView
                 android:layout_width="100dp"
                 android:layout_height="100dp"
@@ -126,7 +126,7 @@
                 android:layout_marginLeft="10dp"
                 android:gravity="center"
                 android:layout_centerInParent="true"
-                android:background="@drawable/circle_blue"
+                android:background="@drawable/circle5"
                 android:text="RxJava"/>
             <com.androidui.view.MyTextView
                 android:layout_width="100dp"
@@ -136,7 +136,41 @@
                 android:gravity="center"
                 android:layout_alignParentRight="true"
                 android:background="@drawable/circle_yellow"
-                android:text="Java与Kotlin"/>
+                android:text="Java与Kotlin语言"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <com.androidui.view.MyTextView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:background="@drawable/circle_blue"
+                android:text="性能\n分析与优化"/>
+            <com.androidui.view.MyTextView
+                android:layout_centerHorizontal="true"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:textSize="20sp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/circle3"
+                android:gravity="center"
+                android:text="其他知识点"/>
+            <com.androidui.view.MyTextView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:textSize="20sp"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:gravity="center"
+                android:background="@drawable/circle_yellow"
+                android:text="面试题收集"/>
         </RelativeLayout>
 
 
