@@ -1,0 +1,55 @@
+﻿<!DOCTYPE HTML><html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<title>缩放（scale）</title>
+    
+<style id="wiz_custom_css">html, .wiz-editor-body {font-size: 12pt;}.wiz-editor-body {font-family: Helvetica, 'Hiragino Sans GB', '寰蒋闆呴粦', 'Microsoft YaHei UI', SimSun, SimHei, arial, sans-serif;line-height: 1.7;margin: 0 auto;padding: 20px 16px;padding: 1.25rem 1rem;}.wiz-editor-body h1,.wiz-editor-body h2,.wiz-editor-body h3,.wiz-editor-body h4,.wiz-editor-body h5,.wiz-editor-body h6 {margin:20px 0 10px;margin:1.25rem 0 0.625rem;padding: 0;font-weight: bold;}.wiz-editor-body h1 {font-size:20pt;font-size:1.67rem;}.wiz-editor-body h2 {font-size:18pt;font-size:1.5rem;}.wiz-editor-body h3 {font-size:15pt;font-size:1.25rem;}.wiz-editor-body h4 {font-size:14pt;font-size:1.17rem;}.wiz-editor-body h5 {font-size:12pt;font-size:1rem;}.wiz-editor-body h6 {font-size:12pt;font-size:1rem;color: #777777;margin: 1rem 0;}.wiz-editor-body div,.wiz-editor-body p,.wiz-editor-body ul,.wiz-editor-body ol,.wiz-editor-body dl,.wiz-editor-body li {margin:8px 0;}.wiz-editor-body blockquote,.wiz-editor-body table,.wiz-editor-body pre,.wiz-editor-body code {margin:8px 0;}.wiz-editor-body .CodeMirror pre {margin:0;}.wiz-editor-body ul,.wiz-editor-body ol {padding-left:32px;padding-left:2rem;}.wiz-editor-body ol.wiz-list-level1 > li {list-style-type:decimal;}.wiz-editor-body ol.wiz-list-level2 > li {list-style-type:lower-latin;}.wiz-editor-body ol.wiz-list-level3 > li {list-style-type:lower-roman;}.wiz-editor-body blockquote {padding: 0 12px;}.wiz-editor-body blockquote > :first-child {margin-top:0;}.wiz-editor-body blockquote > :last-child {margin-bottom:0;}.wiz-editor-body img {border:0;max-width:100%;height:auto !important;margin:2px 0;}.wiz-editor-body table {border-collapse:collapse;border:1px solid #bbbbbb;}.wiz-editor-body td,.wiz-editor-body th {padding:4px 8px;border-collapse:collapse;border:1px solid #bbbbbb;min-height:28px;word-break:break-word;box-sizing: border-box;}.wiz-hide {display:none !important;}</style></head>
+
+<body class="wiz-editor-body"  spellcheck="false" style="opacity: 1;"><div><h3>画布快照</h3><p>这里先理清几个概念</p><ul><li>画布状态：当前画布经过的一系列操作</li><li><p>状态栈：存放画布状态和图层的栈（后进先出）</p><br><div class="image-container"><br></div><div class="image-view" data-width="418" data-height="304"><img data-original-src="//upload-images.jianshu.io/upload_images/944365-94c10f0731911bea.png" data-original-width="418" data-original-height="304" data-original-format="image/png" data-original-filesize="21400" src="canvas_layer_files/0.19527027384342377.png"></div><div class="image-caption">状态栈</div></li><li>画布的构成：由多个图层构成，如下图</li></ul><blockquote><ol class="wiz-list-level1"><li>在画布上操作 = 在图层上操作</li><li>如无设置，绘制操作和画布操作是默认在默认图层上进行</li><li>在通常情况下，使用默认图层就可满足需求；若需要绘制复杂的内容（如地图），则需使用更多的图层</li><li>最终显示的结果 = 所有图层叠在一起的效果</li></ol></blockquote><div class="image-container"><br></div><div class="image-view" data-width="342" data-height="267"><img data-original-src="//upload-images.jianshu.io/upload_images/944365-9aac96190bc0a533.png" data-original-width="342" data-original-height="267" data-original-format="image/png" data-original-filesize="22556" src="canvas_layer_files/0.4836972365734642.png"></div><div class="image-caption">画布构成 - 图层</div><h3>a. 保存当前画布状态（save）</h3><ul><li>作用：保存画布状态（即保存画布的一系列操作）</li><li>应用场景：画布的操作是不可逆的，而且会影响后续的步骤，假如需要回到之前画布的状态去进行下一次操作，就需要对画布的状态进行保存和回滚</li></ul><pre class="hljs cpp"><code class="cpp">
+<span class="hljs-comment">// 方法1:</span>
+  <span class="hljs-comment">// 保存全部状态</span>
+  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">save</span> <span class="hljs-params">()</span>
+
+<span class="hljs-comment">// 方法2：</span>
+  <span class="hljs-comment">// 根据saveFlags参数保存一部分状态</span>
+  <span class="hljs-comment">// 使用该参数可以只保存一部分状态，更加灵活</span>
+  <span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">save</span> <span class="hljs-params">(<span class="hljs-keyword">int</span> saveFlags)</span>
+
+<span class="hljs-comment">// saveFlags参数说明：</span>
+<span class="hljs-comment">// 1.ALL_SAVE_FLAG（默认）：保存全部状态</span>
+<span class="hljs-comment">// 2. CLIP_SAVE_FLAG：保存剪辑区</span>
+<span class="hljs-comment">// 3. CLIP_TO_LAYER_SAVE_FLAG：剪裁区作为图层保存</span>
+<span class="hljs-comment">// 4. FULL_COLOR_LAYER_SAVE_FLAG：保存图层的全部色彩通道</span>
+<span class="hljs-comment">// 5. HAS_ALPHA_LAYER_SAVE_FLAG：保存图层的alpha(不透明度)通道</span>
+<span class="hljs-comment">// 6. MATRIX_SAVE_FLAG：保存Matrix信息(translate, rotate, scale, skew)</span>
+
+<span class="hljs-comment">// 每调用一次save（），都会在栈顶添加一条状态信息（入栈）</span>
+</span></code></pre><div class="image-container"><br></div><div class="image-view" data-width="418" data-height="304"><img data-original-src="//upload-images.jianshu.io/upload_images/944365-94c10f0731911bea.png" data-original-width="418" data-original-height="304" data-original-format="image/png" data-original-filesize="21400" src="canvas_layer_files/0.5712051486797858.png"></div><div class="image-caption">入栈</div><h3>b. 保存某个图层状态（saveLayer）</h3><ul><li>作用：新建一个图层，并放入特定的栈中</li><li>具体使用</li></ul><blockquote><p>使用起来非常复杂，因为图层之间叠加会导致计算量成倍增长，营尽量避免使用。</p></blockquote><pre class="hljs cpp"><code class="cpp"><span class="hljs-comment">// 无图层alpha(不透明度)通道</span>
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">saveLayer</span> <span class="hljs-params">(RectF bounds, Paint paint)</span>
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">saveLayer</span> <span class="hljs-params">(RectF bounds, Paint paint, <span class="hljs-keyword">int</span> saveFlags)</span>
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">saveLayer</span> <span class="hljs-params">(<span class="hljs-keyword">float</span> left, <span class="hljs-keyword">float</span> top, <span class="hljs-keyword">float</span> right, <span class="hljs-keyword">float</span> bottom, Paint paint)</span>
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">saveLayer</span> <span class="hljs-params">(<span class="hljs-keyword">float</span> left, <span class="hljs-keyword">float</span> top, <span class="hljs-keyword">float</span> right, <span class="hljs-keyword">float</span> bottom, Paint paint, <span class="hljs-keyword">int</span> saveFlags)</span>
+
+<span class="hljs-comment">// 有图层alpha(不透明度)通道</span>
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">saveLayerAlpha</span> <span class="hljs-params">(RectF bounds, <span class="hljs-keyword">int</span> alpha)</span>
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">saveLayerAlpha</span> <span class="hljs-params">(RectF bounds, <span class="hljs-keyword">int</span> alpha, <span class="hljs-keyword">int</span> saveFlags)</span>
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">saveLayerAlpha</span> <span class="hljs-params">(<span class="hljs-keyword">float</span> left, <span class="hljs-keyword">float</span> top, <span class="hljs-keyword">float</span> right, <span class="hljs-keyword">float</span> bottom, <span class="hljs-keyword">int</span> alpha)</span>
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">saveLayerAlpha</span> <span class="hljs-params">(<span class="hljs-keyword">float</span> left, <span class="hljs-keyword">float</span> top, <span class="hljs-keyword">float</span> right, <span class="hljs-keyword">float</span> bottom, <span class="hljs-keyword">int</span> alpha, <span class="hljs-keyword">int</span> saveFlags)</span>
+</span></code></pre><h3>c. 回滚上一次保存的状态（restore）</h3><ul><li>作用：恢复上一次保存的画布状态</li><li>具体使用</li></ul><pre class="hljs cpp"><code class="cpp">
+<span class="hljs-comment">// 采取状态栈的形式。即从栈顶取出一个状态进行恢复。</span>
+canvas.restore();
+</code></pre><div class="image-container"><br></div><div class="image-view" data-width="418" data-height="304"><img data-original-src="//upload-images.jianshu.io/upload_images/944365-94c10f0731911bea.png" data-original-width="418" data-original-height="304" data-original-format="image/png" data-original-filesize="21400" src="canvas_layer_files/0.582972086927865.png"></div><div class="image-caption">效果图</div><h3>d. 回滚指定保存的状态（restoreToCount）</h3><ul><li>作用：恢复指定状态；将指定位置以及以上所有状态出栈</li><li>具体使用：</li></ul><pre class="hljs cpp"><code class="cpp"> canvas.restoreToCount(<span class="hljs-number">3</span>) ；
+<span class="hljs-comment">// 弹出 3、4、5的状态，并恢复第3次保存的画布状态</span>
+</code></pre><div class="image-container"><br></div><div class="image-view" data-width="1049" data-height="263"><img data-original-src="//upload-images.jianshu.io/upload_images/944365-f9cd2f1d679520f6.png" data-original-width="1049" data-original-height="263" data-original-format="image/png" data-original-filesize="36993" src="canvas_layer_files/0.8578418950404856.png"></div><div class="image-caption">效果图</div><h3>e. 获取保存的次数（getSaveCount）</h3><ul><li>作用：获取保存过图层的次数</li></ul><blockquote><p>即获取状态栈中保存状态的数量</p></blockquote><pre class="hljs cpp"><code class="cpp">canvas.getSaveCount（）；
+<span class="hljs-comment">// 以上面栈为例，则返回5</span>
+<span class="hljs-comment">// 注：即使弹出所有的状态，返回值依旧为1，代表默认状态。（返回值最小为1）</span>
+</code></pre><h2>总结</h2><p>对于画布状态的保存和回滚的套路，一般如下：</p><pre class="hljs cpp"><code class="cpp"> <span class="hljs-comment">// 步骤1：保存当前状态</span>
+<span class="hljs-comment">//  把Canvas的当前状态信息入栈</span>
+ save();     
+
+ <span class="hljs-comment">// 步骤2：对画布进行各种操作（旋转、平移Blabla）</span>
+   ...      
+
+ <span class="hljs-comment">// 步骤3：回滚到之前的画布状态</span>
+  <span class="hljs-comment">// 把栈里面的信息出栈，取代当前的Canvas信息</span>
+   restore();  </code></pre></div><div><br></div></body></html>

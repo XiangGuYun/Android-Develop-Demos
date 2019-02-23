@@ -39,15 +39,7 @@
         android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:mainTitle1="绘制基本形状(略)"
-        />
-
-    <com.androidui.view.Header1View
-        android:id="@+id/header3"
-        android:layout_marginTop="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:mainTitle1="绘制文字(略)"
+        app:mainTitle1="绘制基本形状与文字(略)"
         />
 
     <com.androidui.view.Header1View
@@ -78,6 +70,187 @@
         android:layout_height="wrap_content"
         app:mainTitle1="绘制图片之位图"
         />
-    
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="方法1：public void drawBitmap (Bitmap bitmap, Matrix matrix, Paint paint)"
+        style="@style/margin_no_bottom"
+        android:gravity="center"
+        android:background="@drawable/rect7"/>
+
+    <com.androidui.huitu.view.Bitmap1View
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="200dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="方法2：public void drawBitmap (Bitmap bitmap, float left, float top, Paint paint)"
+        style="@style/margin_no_bottom"
+        android:gravity="center"
+        android:background="@drawable/rect7"/>
+
+    <com.androidui.huitu.view.Bitmap2View
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="200dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="方法3：public void drawBitmap (Bitmap bitmap, Rect src, Rect dst, Paint paint))
+\n// 参数（src，dst） = 两个矩形区域
+\n// Rect src：指定需要绘制图片的区域（即要绘制图片的哪一部分）
+\n// Rect dst 或RectF dst：指定图片在屏幕上显示(绘制)的区域"
+        style="@style/margin_no_bottom"
+        android:gravity="left"
+        android:background="@drawable/rect7"/>
+
+    <com.androidui.huitu.view.Bitmap3View
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="200dp" />
+
+    <com.androidui.huitu.view.Bitmap4View
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="200dp" />
+
+    <com.androidui.huitu.view.Bitmap5View
+        android:layout_width="match_parent"
+        android:layout_height="260dp" />
+
+    <com.androidui.view.Header1View
+        android:id="@+id/headerCanvasTranslate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:mainTitle1="画布平移"/>
+
+    <com.androidui.huitu.view.CanvasTranslateView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_margin="10dp"/>
+
+    <com.androidui.view.Header1View
+        android:id="@+id/headerCanvasScale"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:mainTitle1="画布缩放"/>
+
+    <com.androidui.huitu.view.CanvasScaleView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_margin="10dp"/>
+
+    <com.androidui.view.Header1View
+        android:id="@+id/headerSkewScale"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:mainTitle1="画布错切"/>
+
+    <com.androidui.huitu.view.CanvasSkewView
+        android:id="@+id/skewView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_margin="10dp"/>
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_margin="10dp"
+       android:orientation="horizontal">
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="sx"/>
+       <SeekBar
+           android:id="@+id/sbSkewSx"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content" />
+   </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="sy"/>
+        <SeekBar
+            android:id="@+id/sbSkewSy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <com.androidui.view.Header1View
+        android:id="@+id/headerClipScale"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:mainTitle1="画布裁剪"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:background="@drawable/rect7"
+        android:textSize="10sp"
+        android:text="首次裁剪区域颜色为红色，二次裁剪区域颜色为蓝色。"/>
+
+    <com.androidui.huitu.view.CanvasClipView
+        android:id="@+id/clipView"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        />
+
+    <RadioGroup
+        android:id="@+id/rgClip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RadioButton
+            android:id="@+id/rbClip1"
+            android:checked="true"
+            android:textSize="11sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Region.Op.DIFFERENCE：\n显示第一次裁剪与第二次裁剪不重叠的区域"/>
+        <RadioButton
+            android:id="@+id/rbClip2"
+            android:textSize="11sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Region.Op.REPLACE：显示第二次裁剪的区域"/>
+        <RadioButton
+            android:id="@+id/rbClip3"
+            android:textSize="11sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Region.Op.INTERSECT：\n显示第二次与第一次的重叠区域"/>
+    </RadioGroup>
+
+    <com.androidui.view.Header1View
+        android:id="@+id/headerClipLayer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:mainTitle1="画布快照"/>
+
+    <com.androidui.huitu.view.CanvasLayerView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_margin="10dp"/>
+    <TextView
+        android:id="@+id/tvAnalysisLayer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rect7"
+        android:layout_margin="10dp"
+        android:padding="10dp"/>
 </LinearLayout>
 </ScrollView>

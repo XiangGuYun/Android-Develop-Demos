@@ -22,13 +22,12 @@ class WebViewerDialog(ctx: Context): KotlinDialog(ctx){
     fun url(file:String){
         val web = dv.wv(R.id.webView)
         web.settings.textZoom = 70
-//        web.settings.apply {
+        web.settings.apply {
 //            useWideViewPort = true
 //            loadWithOverviewMode = true
-//            builtInZoomControls = true
-//            displayZoomControls = false
-//            textZoom = 200
-//        }.setSupportZoom(true)
+            builtInZoomControls = true
+            displayZoomControls = false
+        }.setSupportZoom(true)
 
         web.loadUrl("file:///android_asset/html/$file.html")
         show()

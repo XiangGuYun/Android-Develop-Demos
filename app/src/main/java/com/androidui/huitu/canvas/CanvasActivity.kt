@@ -1,5 +1,6 @@
 package com.androidui.huitu.canvas
 
+import android.graphics.Region
 import android.os.Bundle
 import android.text.Html
 import android.text.SpannableString
@@ -11,6 +12,7 @@ import com.androidui.dialog.WebViewerDialog
 import com.kotlinlib.activity.KotlinActivity
 import com.kotlinlib.other.LayoutId
 import kotlinx.android.synthetic.main.activity_canvas2.*
+import kotlinx.android.synthetic.main.activity_matrix.view.*
 
 /**
  * https://www.jianshu.com/p/762b490403c3
@@ -170,6 +172,103 @@ class PictureView @JvmOverloads constructor(context: Context, attrs: AttributeSe
         header5.setLeftClick {
             WebViewerDialog(this).url("canvas/bitmap")
         }
+
+        headerCanvasTranslate.setLeftClick {
+            codeDialog.text("""
+平移（translate）
+作用：移动画布（实际上是移动坐标系，如下图）
+
+具体使用
+// 将画布原点向右移200px，向下移100px
+canvas.translate(200, 100)
+// 注：位移是基于当前位置移动，而不是每次都是基于屏幕左上角的(0,0)点移动
+            """.trimIndent())
+        }.setRightClick {
+            codeDialog.text("""
+override fun onDraw(canvas: Canvas?) {
+    super.onDraw(canvas)
+    canvas?.drawColor(Color.CYAN)
+    canvas?.translate(width/2f,height/2f)
+    canvas?.drawCircle(0f,0f,100f,paint)
+}
+            """.trimIndent())
+        }
+
+        headerSkewScale.setLeftClick {
+            webDialog.url("canvas/canvas_skew")
+        }
+
+        sbSkewSx.change { seekBar, progress, fromUser ->
+            skewView.sx = progress/20f
+            skewView.invalidate()
+        }
+
+        sbSkewSy.change { seekBar, progress, fromUser ->
+            skewView.sy = progress/20f
+            skewView.invalidate()
+        }
+
+        headerClipScale.setLeftClick{
+            webDialog.url("canvas/canvas_clip")
+        }
+
+        rgClip.check {
+            when(it){
+                R.id.rbClip1->clipView.regionOption = Region.Op.DIFFERENCE
+                R.id.rbClip2->clipView.regionOption = Region.Op.REPLACE
+                R.id.rbClip3->clipView.regionOption = Region.Op.INTERSECT
+            }
+            clipView.invalidate()
+        }
+
+        headerClipLayer.setLeftClick {
+            webDialog.url("canvas/canvas_layer")
+        }.setRightClick {
+            codeDialog.text("""
+override fun onDraw(canvas: Canvas?) {
+    super.onDraw(canvas)
+    canvas?.drawColor(Color.CYAN)
+    mWidth = width
+    mHeight = height
+    paint.color = Color.BLACK
+    val text = "初始时图层数量是${'$'}'{canvas?.saveCount}"
+    val th = textPaint.getTextRect(text).height().toFloat()
+    canvas?.drawText(text,(width - paint.getTextRect(text).width())/2f,th,textPaint)
+
+    canvas?.drawLine(0f, height/2f, width.toFloat(), height/2f, paint)
+    canvas?.drawLine(width/2f, 0f, width/2f, height.toFloat(), paint)
+
+    canvas?.save()
+    val text1 = "调用save()后图层数量是${'$'}'{canvas?.saveCount}"
+    canvas?.drawText(text1,(width - paint.getTextRect(text1).width())/2f,th*2,textPaint)
+
+    paint.color = Color.RED
+    canvas?.translate(width/2f,height/2f)
+    canvas?.drawRect(0f,0f,100f,50f, paint)
+
+    canvas?.save()
+    val text2 = "再次调用save()后图层数量是${'$'}'{canvas?.saveCount}"
+    canvas?.drawText(text2,0f,th,textPaint)
+    canvas?.rotate(60f)
+    paint.color = Color.YELLOW
+    canvas?.drawRect(0f,0f,100f,50f, paint)
+
+    canvas?.restoreToCount(1)
+    val text3 = "最后调用restoreToCount(1)后图层数量是${'$'}'{canvas?.saveCount}"
+    canvas?.drawText(text3,(width - paint.getTextRect(text3).width())/2f,height-th,textPaint)
+
+    paint.color = Color.BLUE
+    canvas?.drawRect(0f,0f,100f,50f, paint)
+
+    canvas?.translate(width/2f,height/2f)
+
+}
+            """.trimIndent())
+        }
+
+        tvAnalysisLayer.text="""
+分析：我先新建一个图层，将坐标系移动到视图中央，在原点位置绘制一个红色矩形；接着将坐标系顺时针旋转60度，在原点位置绘制了一个黄色矩形，最后将上面两个图层弹出，在原点绘制了一个蓝色矩形。
+        """.trimIndent()
 
     }
 

@@ -1,16 +1,18 @@
 package com.kotlinlib.view.surfaceview
 
 import android.content.Context
-import android.graphics.Canvas
+import android.graphics.*
 import android.util.AttributeSet
 import android.view.SurfaceHolder
 import android.view.SurfaceView
+import com.androidui.R
 
 abstract class DrawView @JvmOverloads constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : SurfaceView(context, attrs, defStyleAttr), SurfaceHolder.Callback {
 
     private var mHolder: SurfaceHolder? = null
     private var canvas: Canvas? = null//画布
-    private var isDrawing: Boolean = false
+    public var isDrawing: Boolean = false
+    var i = 0
 
     protected val drawingSpeed: Int
         get() = 30
@@ -27,11 +29,19 @@ abstract class DrawView @JvmOverloads constructor(context: Context, attrs: Attri
         keepScreenOn = true
     }
 
+    /**
+     * 清空
+     * @param canvas Canvas
+     */
+    fun clearScreen(canvas: Canvas) {
+        canvas.drawColor(Color.TRANSPARENT, PorterDuff.Mode.CLEAR)
+//        canvas.drawColor(Color.BLACK)
+    }
+
     override fun surfaceCreated(holder: SurfaceHolder) {
         isDrawing = true
         Thread(Runnable {
             while (isDrawing) {
-                /**取得更新之前的时间 */
                 /**取得更新之前的时间 */
                 val startTime = System.currentTimeMillis()
 
@@ -43,18 +53,15 @@ abstract class DrawView @JvmOverloads constructor(context: Context, attrs: Attri
                     /**拿到当前画布 然后锁定 */
                     canvas = holder.lockCanvas()
                     if (canvas != null) {
-                        drawing(canvas!!)
-                        /**绘制结束后解锁显示在屏幕上 */
+                        drawing(canvas!!, i)
                         /**绘制结束后解锁显示在屏幕上 */
                         holder.unlockCanvasAndPost(canvas)
                     }
                 }
 
                 /**取得更新结束的时间 */
-                /**取得更新结束的时间 */
                 val endTime = System.currentTimeMillis()
 
-                /**计算出一次更新的毫秒数 */
                 /**计算出一次更新的毫秒数 */
                 var diffTime = (endTime - startTime).toInt()
 
@@ -67,11 +74,12 @@ abstract class DrawView @JvmOverloads constructor(context: Context, attrs: Attri
                     /**线程等待 */
                     Thread.yield()
                 }
+                i++
             }
         }).start()
     }
 
-    protected abstract fun drawing(canvas: Canvas)
+    protected abstract fun drawing(canvas: Canvas, index:Int)
 
     override fun surfaceChanged(holder: SurfaceHolder, format: Int, width: Int, height: Int) {
 

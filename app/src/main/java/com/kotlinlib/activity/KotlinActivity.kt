@@ -10,6 +10,7 @@ import android.util.Log
 import android.view.*
 import android.widget.Toast
 import com.androidui.dialog.CodeViewerDialog
+import com.androidui.dialog.WebViewerDialog
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import com.kotlinlib.other.BaseInterface
@@ -82,6 +83,7 @@ open abstract class KotlinActivity : AppCompatActivity(), BaseInterface {
     }
 
     lateinit var codeDialog: CodeViewerDialog
+    lateinit var webDialog:WebViewerDialog
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -95,6 +97,7 @@ open abstract class KotlinActivity : AppCompatActivity(), BaseInterface {
         }
         actList.add(this)
         codeDialog = CodeViewerDialog(this)
+        webDialog = WebViewerDialog(this)
     }
 
     /**

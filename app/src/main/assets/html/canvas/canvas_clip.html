@@ -1,0 +1,79 @@
+﻿<!DOCTYPE HTML><html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<title>缩放（scale）</title>
+    
+<style id="wiz_custom_css">html, .wiz-editor-body {font-size: 12pt;}.wiz-editor-body {font-family: Helvetica, 'Hiragino Sans GB', '寰蒋闆呴粦', 'Microsoft YaHei UI', SimSun, SimHei, arial, sans-serif;line-height: 1.7;margin: 0 auto;padding: 20px 16px;padding: 1.25rem 1rem;}.wiz-editor-body h1,.wiz-editor-body h2,.wiz-editor-body h3,.wiz-editor-body h4,.wiz-editor-body h5,.wiz-editor-body h6 {margin:20px 0 10px;margin:1.25rem 0 0.625rem;padding: 0;font-weight: bold;}.wiz-editor-body h1 {font-size:20pt;font-size:1.67rem;}.wiz-editor-body h2 {font-size:18pt;font-size:1.5rem;}.wiz-editor-body h3 {font-size:15pt;font-size:1.25rem;}.wiz-editor-body h4 {font-size:14pt;font-size:1.17rem;}.wiz-editor-body h5 {font-size:12pt;font-size:1rem;}.wiz-editor-body h6 {font-size:12pt;font-size:1rem;color: #777777;margin: 1rem 0;}.wiz-editor-body div,.wiz-editor-body p,.wiz-editor-body ul,.wiz-editor-body ol,.wiz-editor-body dl,.wiz-editor-body li {margin:8px 0;}.wiz-editor-body blockquote,.wiz-editor-body table,.wiz-editor-body pre,.wiz-editor-body code {margin:8px 0;}.wiz-editor-body .CodeMirror pre {margin:0;}.wiz-editor-body ul,.wiz-editor-body ol {padding-left:32px;padding-left:2rem;}.wiz-editor-body ol.wiz-list-level1 > li {list-style-type:decimal;}.wiz-editor-body ol.wiz-list-level2 > li {list-style-type:lower-latin;}.wiz-editor-body ol.wiz-list-level3 > li {list-style-type:lower-roman;}.wiz-editor-body blockquote {padding: 0 12px;}.wiz-editor-body blockquote > :first-child {margin-top:0;}.wiz-editor-body blockquote > :last-child {margin-bottom:0;}.wiz-editor-body img {border:0;max-width:100%;height:auto !important;margin:2px 0;}.wiz-editor-body table {border-collapse:collapse;border:1px solid #bbbbbb;}.wiz-editor-body td,.wiz-editor-body th {padding:4px 8px;border-collapse:collapse;border:1px solid #bbbbbb;min-height:28px;word-break:break-word;box-sizing: border-box;}.wiz-hide {display:none !important;}</style></head>
+
+<body class="wiz-editor-body"  spellcheck="false" style="opacity: 1;"><div><h3>画布裁剪</h3><p>即从画布上裁剪一块区域，之后仅能编辑该区域</p><blockquote><p>特别注意：其余的区域只是不能编辑，但是并没有消失，如下图</p></blockquote><div class="image-package"><div class="image-container"><br><div class="image-view" data-width="372" data-height="643"><img data-original-src="//upload-images.jianshu.io/upload_images/944365-958baa734c8197ad.png" data-original-width="372" data-original-height="643" data-original-format="image/png" data-original-filesize="24948" src="canvas_clip_files/0.5075989400007332.png"></div></div><div class="image-caption">Paste_Image.png</div></div><pre class="hljs java"><code class="java">裁剪共分为：裁剪路径、裁剪矩形、裁剪区域
+
+<span class="hljs-comment">// 裁剪路径</span>
+<span class="hljs-comment">// 方法1</span>
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">clipPath</span><span class="hljs-params">(@NonNull Path path)</span>
+<span class="hljs-comment">// 方法2</span>
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">clipPath</span><span class="hljs-params">(@NonNull Path path, @NonNull Region.Op op)</span>
+
+
+<span class="hljs-comment">// 裁剪矩形</span>
+<span class="hljs-comment">// 方法1</span>
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">clipRect</span><span class="hljs-params">(<span class="hljs-keyword">int</span> left, <span class="hljs-keyword">int</span> top, <span class="hljs-keyword">int</span> right, <span class="hljs-keyword">int</span> bottom)</span>
+<span class="hljs-comment">// 方法2</span>
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">clipRect</span><span class="hljs-params">(<span class="hljs-keyword">float</span> left, <span class="hljs-keyword">float</span> top, <span class="hljs-keyword">float</span> right, <span class="hljs-keyword">float</span> bottom)</span>
+<span class="hljs-comment">// 方法3</span>
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">clipRect</span><span class="hljs-params">(<span class="hljs-keyword">float</span> left, <span class="hljs-keyword">float</span> top, <span class="hljs-keyword">float</span> right, <span class="hljs-keyword">float</span> bottom,
+            @NonNull Region.Op op)</span> 
+
+<span class="hljs-comment">// 裁剪区域</span>
+<span class="hljs-comment">// 方法1</span>
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">clipRegion</span><span class="hljs-params">(@NonNull Region region)</span>
+<span class="hljs-comment">// 方法2</span>
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">clipRegion</span><span class="hljs-params">(@NonNull Region region, @NonNull Region.Op op)</span>
+
+</span></code></pre><p>这里特别说明一下参数<code>Region.Op op</code><br>
+作用：在剪下多个区域下来的情况，当这些区域有重叠的时候，这个参数决定重叠部分该如何处理，多次裁剪之后究竟获得了哪个区域，有以下几种参数：</p><div class="image-package"><div class="image-container"><br><div class="image-view" data-width="1114" data-height="900"><img data-original-src="//upload-images.jianshu.io/upload_images/944365-33ea3e07ef4659a0.png" data-original-width="1114" data-original-height="900" data-original-format="image/png" data-original-filesize="158531" src="canvas_clip_files/0.034788327537606634.png"></div></div><div class="image-caption">Paste_Image.png</div></div><p>以三个参数为例讲解：<br>
+Region.Op.DIFFERENCE：显示第一次裁剪与第二次裁剪不重叠的区域</p><div class="image-package"><div class="image-container"><br><div class="image-view" data-width="1277" data-height="721"><img data-original-src="//upload-images.jianshu.io/upload_images/944365-b9c272b158d7fb1e.png" data-original-width="1277" data-original-height="721" data-original-format="image/png" data-original-filesize="93335" src="canvas_clip_files/0.9478956631266846.png"></div></div><div class="image-caption">Paste_Image.png</div></div><pre class="hljs cpp"><code class="cpp">   <span class="hljs-comment">// 为了方便观察,我将坐标系移到屏幕中央</span>
+        canvas.translate(<span class="hljs-number">300</span>, <span class="hljs-number">500</span>);
+
+        <span class="hljs-comment">//原来画布设置为灰色</span>
+        canvas.drawColor(Color.GRAY);
+
+        <span class="hljs-comment">//第一次裁剪</span>
+        canvas.clipRect(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">600</span>, <span class="hljs-number">600</span>);
+
+        <span class="hljs-comment">//将第一次裁剪后的区域设置为红色</span>
+        canvas.drawColor(Color.RED);
+
+        <span class="hljs-comment">//第二次裁剪,并显示第一次裁剪与第二次裁剪不重叠的区域</span>
+        canvas.clipRect(<span class="hljs-number">0</span>, <span class="hljs-number">200</span>, <span class="hljs-number">600</span>, <span class="hljs-number">400</span>, Region.Op.DIFFERENCE);
+
+        <span class="hljs-comment">//将第一次裁剪与第二次裁剪不重叠的区域设置为黑色</span>
+        canvas.drawColor(Color.BLACK);
+</code></pre><p>Region.Op.REPLACE：显示第二次裁剪的区域</p><div class="image-package"><div class="image-container"><br><div class="image-view" data-width="1277" data-height="724"><img data-original-src="//upload-images.jianshu.io/upload_images/944365-b2741accd3b47952.png" data-original-width="1277" data-original-height="724" data-original-format="image/png" data-original-filesize="73063" src="canvas_clip_files/0.3957789996652721.png"></div></div><br></div><pre class="hljs cpp"><code class="cpp">     <span class="hljs-comment">//原来画布设置为灰色）</span>
+        canvas.drawColor(Color.GRAY);
+
+        <span class="hljs-comment">//第一次裁剪</span>
+        canvas.clipRect(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">600</span>, <span class="hljs-number">600</span>);
+
+        <span class="hljs-comment">//将第一次裁剪后的区域设置为红色</span>
+        canvas.drawColor(Color.RED);
+
+        <span class="hljs-comment">//第二次裁剪,并显示第二次裁剪的区域</span>
+        canvas.clipRect(<span class="hljs-number">0</span>, <span class="hljs-number">200</span>, <span class="hljs-number">600</span>, <span class="hljs-number">400</span>, Region.Op.REPLACE);
+
+        <span class="hljs-comment">//将第二次裁剪的区域设置为蓝色</span>
+        canvas.drawColor(Color.BLUE);
+</code></pre><p>Region.Op.INTERSECT：显示第二次与第一次的重叠区域</p><div class="image-package"><div class="image-container"><br><div class="image-view" data-width="1322" data-height="721"><img data-original-src="//upload-images.jianshu.io/upload_images/944365-dc72186158cfe5d2.png" data-original-width="1322" data-original-height="721" data-original-format="image/png" data-original-filesize="85988" src="canvas_clip_files/0.5340875136684444.png"></div></div><div class="image-caption">Paste_Image.png</div></div><pre class="hljs cpp"><code class="cpp"><span class="hljs-comment">//原来画布设置为灰色）</span>
+        canvas.drawColor(Color.GRAY);
+
+        <span class="hljs-comment">//第一次裁剪</span>
+        canvas.clipRect(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">600</span>, <span class="hljs-number">600</span>);
+
+        <span class="hljs-comment">//将第一次裁剪后的区域设置为红色</span>
+        canvas.drawColor(Color.RED);
+
+        <span class="hljs-comment">//第二次裁剪,并显示第一次裁剪与第二次裁剪重叠的区域</span>
+        canvas.clipRect(<span class="hljs-number">-100</span>, <span class="hljs-number">200</span>, <span class="hljs-number">600</span>, <span class="hljs-number">400</span>, Region.Op.INTERSECT);
+
+        <span class="hljs-comment">//将第一次裁剪与第二次裁剪重叠的区域设置为黑色</span>
+        canvas.drawColor(Color.BLACK);
+</code></pre></div><p>关于其他参数，较为简单，此处不作过多展示。</p></body></html>

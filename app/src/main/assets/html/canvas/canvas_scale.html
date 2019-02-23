@@ -1,0 +1,64 @@
+﻿<!DOCTYPE HTML><html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<title>缩放（scale）</title>
+    
+<style id="wiz_custom_css">html, .wiz-editor-body {font-size: 12pt;}.wiz-editor-body {font-family: Helvetica, 'Hiragino Sans GB', '寰蒋闆呴粦', 'Microsoft YaHei UI', SimSun, SimHei, arial, sans-serif;line-height: 1.7;margin: 0 auto;padding: 20px 16px;padding: 1.25rem 1rem;}.wiz-editor-body h1,.wiz-editor-body h2,.wiz-editor-body h3,.wiz-editor-body h4,.wiz-editor-body h5,.wiz-editor-body h6 {margin:20px 0 10px;margin:1.25rem 0 0.625rem;padding: 0;font-weight: bold;}.wiz-editor-body h1 {font-size:20pt;font-size:1.67rem;}.wiz-editor-body h2 {font-size:18pt;font-size:1.5rem;}.wiz-editor-body h3 {font-size:15pt;font-size:1.25rem;}.wiz-editor-body h4 {font-size:14pt;font-size:1.17rem;}.wiz-editor-body h5 {font-size:12pt;font-size:1rem;}.wiz-editor-body h6 {font-size:12pt;font-size:1rem;color: #777777;margin: 1rem 0;}.wiz-editor-body div,.wiz-editor-body p,.wiz-editor-body ul,.wiz-editor-body ol,.wiz-editor-body dl,.wiz-editor-body li {margin:8px 0;}.wiz-editor-body blockquote,.wiz-editor-body table,.wiz-editor-body pre,.wiz-editor-body code {margin:8px 0;}.wiz-editor-body .CodeMirror pre {margin:0;}.wiz-editor-body ul,.wiz-editor-body ol {padding-left:32px;padding-left:2rem;}.wiz-editor-body ol.wiz-list-level1 > li {list-style-type:decimal;}.wiz-editor-body ol.wiz-list-level2 > li {list-style-type:lower-latin;}.wiz-editor-body ol.wiz-list-level3 > li {list-style-type:lower-roman;}.wiz-editor-body blockquote {padding: 0 12px;}.wiz-editor-body blockquote > :first-child {margin-top:0;}.wiz-editor-body blockquote > :last-child {margin-bottom:0;}.wiz-editor-body img {border:0;max-width:100%;height:auto !important;margin:2px 0;}.wiz-editor-body table {border-collapse:collapse;border:1px solid #bbbbbb;}.wiz-editor-body td,.wiz-editor-body th {padding:4px 8px;border-collapse:collapse;border:1px solid #bbbbbb;min-height:28px;word-break:break-word;box-sizing: border-box;}.wiz-hide {display:none !important;}</style></head>
+
+<body class="wiz-editor-body"  spellcheck="false"><div><div><h3>缩放（scale）</h3><ul><li>作用：放大 / 缩小 画布的倍数</li><li>具体使用：</li></ul><pre class="hljs java"><code class="java"><span class="hljs-comment">// 共有两个方法</span>
+<span class="hljs-comment">// 方法1</span>
+<span class="hljs-comment">// 以(px,py)为中心，在x方向缩放sx倍，在y方向缩放sy倍</span>
+<span class="hljs-comment">// 缩放中心默认为（0,0）</span>
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">void</span> <span class="hljs-title">scale</span><span class="hljs-params">(<span class="hljs-keyword">float</span> sx, <span class="hljs-keyword">float</span> sy)</span>     
+
+<span class="hljs-comment">// 方法2</span>
+<span class="hljs-comment">// 比方法1多了两个参数（px,py），用于控制缩放中心位置</span>
+<span class="hljs-comment">// 缩放中心为（px,py）</span>
+ <span class="hljs-keyword">public</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">void</span> <span class="hljs-title">scale</span> <span class="hljs-params">(<span class="hljs-keyword">float</span> sx, <span class="hljs-keyword">float</span> sy, <span class="hljs-keyword">float</span> px, <span class="hljs-keyword">float</span> py)</span>
+
+</span></code></pre><p><strong>我将用下面的例子说明缩放的使用和缩放中心的意义。</strong></p><pre class="hljs cpp"><code class="cpp"><span class="hljs-comment">// 实例：画两个对比图</span>
+<span class="hljs-comment">// 相同：都有两个矩形，第1个= 正常大小，第2个 = 放大1.5倍 </span>
+<span class="hljs-comment">// 不同点：第1个缩放中心在（0，0），第2个在（px,py）</span>
+
+<span class="hljs-comment">// 第一个图</span>
+  <span class="hljs-comment">// 设置矩形大小</span>
+        RectF rect = <span class="hljs-keyword">new</span> RectF(<span class="hljs-number">0</span>,<span class="hljs-number">-200</span>,<span class="hljs-number">200</span>,<span class="hljs-number">0</span>);
+
+         <span class="hljs-comment">// 绘制矩形(蓝色)</span>
+        canvas.drawRect(rect, mPaint1);
+
+        <span class="hljs-comment">// 将画布放大到1.5倍</span>
+        <span class="hljs-comment">// 不移动缩放中心，即缩放中心默认为（0，0）</span>
+        canvas.scale(<span class="hljs-number">1.5f</span>, <span class="hljs-number">1.5f</span>);
+        <span class="hljs-comment">// 绘制放大1.5倍后的蓝色矩形(红色)</span>
+        canvas.drawRect(rect,mPaint2);
+
+<span class="hljs-comment">// 第二个图      </span>
+         <span class="hljs-comment">// 设置矩形大小</span>
+        RectF rect = <span class="hljs-keyword">new</span> RectF(<span class="hljs-number">0</span>,<span class="hljs-number">-200</span>,<span class="hljs-number">200</span>,<span class="hljs-number">0</span>);   
+
+         <span class="hljs-comment">// 绘制矩形(蓝色)</span>
+        canvas.drawRect(rect, mPaint1);
+       
+        <span class="hljs-comment">// 将画布放大到1.5倍,并将缩放中心移动到(100,0)</span>
+        canvas.scale(<span class="hljs-number">1.5f</span>, <span class="hljs-number">1.5f</span>, <span class="hljs-number">100</span>,<span class="hljs-number">0</span>);              
+        <span class="hljs-comment">// 绘制放大1.5倍后的蓝色矩形(红色)</span>
+        canvas.drawRect(rect,mPaint2);
+       
+<span class="hljs-comment">// 缩放的本质是：把形状先画到画布，然后再缩小/放大。所以当放大倍数很大时，会有明显锯齿</span>
+
+</code></pre><div class="image-package"><div class="image-container"><br><div class="image-view" data-width="936" data-height="700"><img data-original-src="//upload-images.jianshu.io/upload_images/944365-1802bb1d0a464bcb.png" data-original-width="936" data-original-height="700" data-original-format="image/png" data-original-filesize="51865" src="canvas_scale_files/0.22939319258872115.png"></div></div><div class="image-caption">效果图</div></div><p>当缩放倍数为负数时，会先进行缩放，然后根据不同情况进行<strong>图形翻转</strong>：</p><blockquote><p>（设缩放倍数为（a,b），旋转中心为（px，py））：</p></blockquote><ol class="wiz-list-level1"><li>a&lt;0，b&gt;0：以px为轴翻转</li><li>a&gt;0，b&lt;0：以py为轴翻转</li><li>a&lt;0，b&lt;0：以旋转中心翻转</li></ol><p>具体如下图：（缩放倍数为1.5，旋转中心为（0，0）为例）</p><div class="image-package"><div class="image-container"><br><div class="image-view" data-width="1243" data-height="694"><img data-original-src="//upload-images.jianshu.io/upload_images/944365-024ca0347bfff54c.png" data-original-width="1243" data-original-height="694" data-original-format="image/png" data-original-filesize="63016" src="canvas_scale_files/0.9096948937605762.png"></div></div><div class="image-caption">Paste_Image.png</div></div><h3>c.  旋转（rotate）</h3><p>注意：角度增加方向为顺时针（区别于数学坐标系）</p><div class="image-package"><div class="image-container"><br><div class="image-view" data-width="659" data-height="318"><img data-original-src="//upload-images.jianshu.io/upload_images/944365-50d76313f955b091.png" data-original-width="659" data-original-height="318" data-original-format="image/png" data-original-filesize="34277" src="canvas_scale_files/0.12381919776601502.png"></div></div><div class="image-caption">与数学坐标系对比</div></div><pre class="hljs java"><code class="java">
+<span class="hljs-comment">// 方法1</span>
+<span class="hljs-comment">// 以原点(0,0)为中心旋转 degrees 度</span>
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">void</span> <span class="hljs-title">rotate</span><span class="hljs-params">(<span class="hljs-keyword">float</span> degrees)</span>  
+  <span class="hljs-comment">// 以原点(0,0)为中心旋转 90 度</span>
+canvas.<span class="hljs-title">rotate</span><span class="hljs-params">(<span class="hljs-number">90</span>)</span></span>;
+
+<span class="hljs-comment">// 方法2</span>
+<span class="hljs-comment">// 以(px,py)点为中心旋转degrees度</span>
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">void</span> <span class="hljs-title">rotate</span><span class="hljs-params">(<span class="hljs-keyword">float</span> degrees, <span class="hljs-keyword">float</span> px, <span class="hljs-keyword">float</span> py)</span>  
+<span class="hljs-comment">// 以(30,50)为中心旋转 90 度</span>
+canvas.<span class="hljs-title">rotate</span><span class="hljs-params">(<span class="hljs-number">90</span>,<span class="hljs-number">30</span>,<span class="hljs-number">50</span>)</span></span>;                
+
+            
+</code></pre></div><div class="image-package"><div class="image-container"><br><div class="image-view" data-width="2025" data-height="495"><img data-original-src="//upload-images.jianshu.io/upload_images/944365-93fcdc0780a04145.png" data-original-width="2025" data-original-height="495" data-original-format="image/png" data-original-filesize="44207" src="canvas_scale_files/0.08041312119164723.png"></div></div></div><div class="image-caption">效果图</div><br></div></body></html>
