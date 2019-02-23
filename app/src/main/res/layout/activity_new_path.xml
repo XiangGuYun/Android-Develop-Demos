@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".huitu.canvas.NewPathActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/btn_test"
+            android:text="旧版入口"
+            android:id="@+id/btn1"/>
+
+        <ImageView
+            android:id="@+id/ivCatalog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/path_catalog"/>
+
+        <com.androidui.view.Header1View
+            android:id="@+id/headerSetPath"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:mainTitle1="设置路径"/>
+
+        <TextView
+            android:id="@+id/tv1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_margin="10dp"
+            android:text="关卡1：绘制一个六角星"
+            android:background="@drawable/rect7"
+            android:gravity="center"/>
+
+        <com.androidui.huitu.view.NewPath1View
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_margin="10dp"/>
+
+        <TextView
+            android:id="@+id/tv2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/rect7"
+            android:gravity="center"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <com.androidui.huitu.view.NewPath2View
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="200dp"
+                android:layout_margin="10dp"/>
+            <com.androidui.huitu.view.NewPath3View
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="200dp"
+                android:layout_margin="10dp"/>
+        </LinearLayout>
+
+        <com.androidui.view.Header1View
+            android:id="@+id/headerAddPath"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:mainTitle1="添加路径"/>
+
+    </LinearLayout>
+
+</ScrollView>

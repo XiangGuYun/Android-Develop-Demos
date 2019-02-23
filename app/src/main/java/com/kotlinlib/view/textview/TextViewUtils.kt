@@ -6,8 +6,14 @@ import android.graphics.Paint
 import android.graphics.Rect
 import android.graphics.drawable.Drawable
 import android.text.Html
+import android.text.SpannableString
+import android.text.Spanned
+import android.text.method.LinkMovementMethod
+import android.text.style.ClickableSpan
+import android.view.View
 import android.widget.TextView
 import com.kotlinlib.other.StringUtils
+import kotlinx.android.synthetic.main.activity_new_path.*
 
 /**
  * 文本工具类
@@ -16,6 +22,20 @@ import com.kotlinlib.other.StringUtils
 interface TextViewUtils:StringUtils {
     //返回文字内容
     val TextView.textString: String get()=text.toString()
+
+    /**
+     * 设置部分点击文本(仅限一部分)
+     */
+    fun TextView.setClickText(txt: String, start:Int, end:Int, callback:()->Unit){
+        val ss = SpannableString(txt)
+        ss.setSpan(object :ClickableSpan(){
+            override fun onClick(widget: View) {
+                callback.invoke()
+            }
+        },start,end,Spanned.SPAN_COMPOSING)
+        text = ss
+        movementMethod = LinkMovementMethod.getInstance()
+    }
 
     /**
      * 设置文本
