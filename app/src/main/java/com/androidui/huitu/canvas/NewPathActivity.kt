@@ -1,5 +1,6 @@
 package com.androidui.huitu.canvas
 
+import android.graphics.Paint
 import android.os.Bundle
 import com.androidui.ImageViewerActivity
 import com.androidui.R
@@ -67,6 +68,37 @@ canvas?.drawPath(path, paint)
                     """.trimIndent())
         }
 
+        /*
+        绘制弧形
+         */
+        tvArcTo.setSimpleClickText {
+            codeDialog.text("""
+canvas?.drawLine(width/2f,0f,width/2f,height.toFloat(),paint1)
+canvas?.drawLine(0f,height/2f,width.toFloat(),height/2f,paint1)
+
+path.moveTo(0f,0f)
+
+//初始化Path
+canvas?.translate(width/2f, height/2f)
+
+path.arcTo(RectF(-width/2f, -height/2f, width/2f, height/2f), 0f, 145f)
+canvas?.drawPath(path, paint)
+            """.trimIndent())
+        }
+
+        /*
+        合并路径
+         */
+        headerAddPath1.setLeftClick {
+            webDialog.url("canvas/path_contact")
+        }
+
+        /*
+        路径属性
+         */
+        headerPathProperty.setLeftClick {
+            webDialog.url("canvas/path_prop")
+        }
 
     }
 

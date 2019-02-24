@@ -1,0 +1,37 @@
+﻿<!DOCTYPE HTML><html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<title>缩放（scale）</title>
+    
+<style id="wiz_custom_css">html, .wiz-editor-body {font-size: 12pt;}.wiz-editor-body {font-family: Helvetica, 'Hiragino Sans GB', '寰蒋闆呴粦', 'Microsoft YaHei UI', SimSun, SimHei, arial, sans-serif;line-height: 1.7;margin: 0 auto;padding: 20px 16px;padding: 1.25rem 1rem;}.wiz-editor-body h1,.wiz-editor-body h2,.wiz-editor-body h3,.wiz-editor-body h4,.wiz-editor-body h5,.wiz-editor-body h6 {margin:20px 0 10px;margin:1.25rem 0 0.625rem;padding: 0;font-weight: bold;}.wiz-editor-body h1 {font-size:20pt;font-size:1.67rem;}.wiz-editor-body h2 {font-size:18pt;font-size:1.5rem;}.wiz-editor-body h3 {font-size:15pt;font-size:1.25rem;}.wiz-editor-body h4 {font-size:14pt;font-size:1.17rem;}.wiz-editor-body h5 {font-size:12pt;font-size:1rem;}.wiz-editor-body h6 {font-size:12pt;font-size:1rem;color: #777777;margin: 1rem 0;}.wiz-editor-body div,.wiz-editor-body p,.wiz-editor-body ul,.wiz-editor-body ol,.wiz-editor-body dl,.wiz-editor-body li {margin:8px 0;}.wiz-editor-body blockquote,.wiz-editor-body table,.wiz-editor-body pre,.wiz-editor-body code {margin:8px 0;}.wiz-editor-body .CodeMirror pre {margin:0;}.wiz-editor-body ul,.wiz-editor-body ol {padding-left:32px;padding-left:2rem;}.wiz-editor-body ol.wiz-list-level1 > li {list-style-type:decimal;}.wiz-editor-body ol.wiz-list-level2 > li {list-style-type:lower-latin;}.wiz-editor-body ol.wiz-list-level3 > li {list-style-type:lower-roman;}.wiz-editor-body blockquote {padding: 0 12px;}.wiz-editor-body blockquote > :first-child {margin-top:0;}.wiz-editor-body blockquote > :last-child {margin-bottom:0;}.wiz-editor-body img {border:0;max-width:100%;height:auto !important;margin:2px 0;}.wiz-editor-body table {border-collapse:collapse;border:1px solid #bbbbbb;}.wiz-editor-body td,.wiz-editor-body th {padding:4px 8px;border-collapse:collapse;border:1px solid #bbbbbb;min-height:28px;word-break:break-word;box-sizing: border-box;}.wiz-hide {display:none !important;}</style></head>
+
+<body class="wiz-editor-body" spellcheck="false" style="opacity: 1;" ><div><h2>添加路径</h2><ul><li>作用：合并路径</li></ul><blockquote><p>即将路径1加到路径2里</p></blockquote><ul><li>具体使用</li></ul><pre class="hljs java"><code class="java">    <span class="hljs-comment">// 方法1</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">addPath</span> <span class="hljs-params">(Path src)</span>
+
+    <span class="hljs-comment">// 方法2</span>
+    <span class="hljs-comment">// 先将src进行（x,y）位移之后再添加到当前path</span>
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">addPath</span> <span class="hljs-params">(Path src, <span class="hljs-keyword">float</span> dx, <span class="hljs-keyword">float</span> dy)</span>
+
+    <span class="hljs-comment">// 方法3</span>
+    <span class="hljs-comment">// 先将src进行Matrix变换再添加到当前path</span>
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">addPath</span> <span class="hljs-params">(Path src, Matrix matrix)</span>
+
+
+<span class="hljs-comment">// 实例：合并矩形路径和圆形路径</span>
+
+     <span class="hljs-comment">// 为了方便观察,平移坐标系</span>
+        canvas.<span class="hljs-title">translate</span><span class="hljs-params">(<span class="hljs-number">350</span>, <span class="hljs-number">500</span>)</span></span>;
+     <span class="hljs-comment">// 创建路径的对象</span>
+        Path pathRect = <span class="hljs-keyword">new</span> Path();
+        Path  pathCircle = <span class="hljs-keyword">new</span> Path();
+        <span class="hljs-comment">// 画一个矩形路径</span>
+        pathRect.addRect(-<span class="hljs-number">200</span>, -<span class="hljs-number">200</span>, <span class="hljs-number">200</span>, <span class="hljs-number">200</span>, Path.Direction.CW);
+        <span class="hljs-comment">// 画一个圆形路径</span>
+        pathCircle.addCircle(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">100</span>, Path.Direction.CW);
+
+        <span class="hljs-comment">// 将圆形路径移动(0,200),再添加到矩形路径里</span>
+        pathRect.addPath(pathCircle, <span class="hljs-number">0</span>, <span class="hljs-number">200</span>);
+
+        <span class="hljs-comment">// 绘制合并后的路径</span>
+        canvas.drawPath(pathRect,mPaint1);
+</code></pre></div><div class="image-package"></div><div class="image-container"><br></div><div class="image-view" data-width="373" data-height="649"><img data-original-src="//upload-images.jianshu.io/upload_images/944365-34a8450078cd0248.png" data-original-width="373" data-original-height="649" data-original-format="image/png" data-original-filesize="23242" src="path_contact_files/0.4782152881865367.png"></div><div><br></div></body></html>

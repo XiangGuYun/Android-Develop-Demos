@@ -77,6 +77,99 @@
             android:layout_height="wrap_content"
             app:mainTitle1="添加路径"/>
 
+        <TextView
+            style="@style/small_title"
+            android:text="添加圆弧addArc"/>
+        
+        <com.androidui.huitu.view.NewPath4View
+            android:id="@+id/path4View"
+            android:layout_width="match_parent"
+            android:layout_margin="10dp"
+            android:layout_height="200dp" />
+
+       <com.androidui.huitu.view.NewPath5View
+           android:layout_width="match_parent"
+           android:layout_margin="10dp"
+           android:layout_height="200dp" />
+
+        <TextView
+            style="@style/small_title"
+            android:id="@+id/tvArcTo"
+            android:text="添加圆弧arcTo：与上面方法唯一不同的是：如果圆弧的起点和上次最后一个坐标点不相同，就连接两个点。如下图所示，path是先moveTo了原点，但是圆弧是从右边开始画的，因此将两点相连。arcTo还有一个构造方法包含参数forceMoveTo，这个值设为true同addArc，设为false同arcTo。（代码）"/>
+
+        <com.androidui.huitu.view.NewPath6View
+            android:id="@+id/path6View"
+            android:layout_width="match_parent"
+            android:layout_margin="10dp"
+            android:layout_height="200dp" />
+
+        <TextView
+            style="@style/small_title"
+            android:id="@+id/tvAddCircle"
+            android:text="添加圆形：Path.Direction是指定绘制时是顺时针还是逆时针:CW为顺时针，CCW为逆时针"/>
+        
+        <com.androidui.huitu.view.NewPath7View
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="200dp" />
+
+        <TextView
+            style="@style/small_title"
+            android:id="@+id/tvAddOval"
+            android:text="添加椭圆addOval"/>
+
+        <com.androidui.huitu.view.NewPath8View
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="200dp" />
+
+        <TextView
+            style="@style/small_title"
+            android:id="@+id/tvAddRect"
+            android:text="添加矩形addRect"/>
+
+        <com.androidui.huitu.view.NewPath9View
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="200dp" />
+
+        <TextView
+            style="@style/small_title"
+            android:id="@+id/tvAddRoundRect"
+            android:text="添加圆角矩形addRoundRect"/>
+
+        <com.androidui.huitu.view.NewPath10View
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="200dp" />
+
+        <com.androidui.view.Header1View
+            android:id="@+id/headerAddPath1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:mainTitle1="合并路径addPath"/>
+
+        <com.androidui.huitu.view.AddPathView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_margin="10dp"/>
+
+        <com.androidui.huitu.view.AddPath1View
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_margin="10dp"/>
+
+        <com.androidui.view.Header1View
+            android:id="@+id/headerPathProperty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:mainTitle1="判断路径属性"/>
+
+        <TextView
+            style="@style/small_title"
+            android:id="@+id/tvPathIsEmpty"
+            android:text="Path.isEmpty()"/>
+
     </LinearLayout>
 
 </ScrollView>

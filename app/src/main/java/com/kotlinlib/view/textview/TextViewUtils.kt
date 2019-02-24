@@ -37,6 +37,12 @@ interface TextViewUtils:StringUtils {
         movementMethod = LinkMovementMethod.getInstance()
     }
 
+    fun TextView.setSimpleClickText(callback: () -> Unit){
+        setClickText(textString, textString.length-3,textString.length-1){
+           callback.invoke()
+        }
+    }
+
     /**
      * 设置文本
      */
