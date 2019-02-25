@@ -165,10 +165,83 @@
             android:layout_height="wrap_content"
             app:mainTitle1="判断路径属性"/>
 
+        <com.androidui.view.ReadMoreView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/readerPath"/>
+
+        <com.androidui.view.Header1View
+            android:id="@+id/headerPathFillColor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:mainTitle1="设置路径填充颜色"/>
+
+        <com.androidui.huitu.view.EvenOddView
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="200dp" />
+
         <TextView
-            style="@style/small_title"
-            android:id="@+id/tvPathIsEmpty"
-            android:text="Path.isEmpty()"/>
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="EvenOdd"
+            android:gravity="center"/>
+
+        <com.androidui.huitu.view.EvenOddInverseView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_margin="10dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="EvenOddInverse"
+            android:gravity="center"/>
+
+        <com.androidui.huitu.view.WendingView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_margin="10dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="Wending"
+            android:gravity="center"/>
+
+        <com.androidui.huitu.view.InverseWendingView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_margin="10dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="InverseWending"
+            android:gravity="center"/>
+
+        <com.androidui.view.Header1View
+            android:id="@+id/headerPathBoolOp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:mainTitle1="布尔操作"/>
+
+        <com.androidui.huitu.view.PathBoolOpView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_margin="10dp"/>
+
+        <com.androidui.view.Header1View
+            android:id="@+id/headerBezier"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:mainTitle1="贝塞尔曲线\n(高级内容，敬请期待)"/>
+
+
 
     </LinearLayout>
 

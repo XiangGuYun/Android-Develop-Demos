@@ -1,0 +1,35 @@
+﻿<!DOCTYPE HTML><html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<title>缩放（scale）</title>
+    
+<style id="wiz_custom_css">html, .wiz-editor-body {font-size: 12pt;}.wiz-editor-body {font-family: Helvetica, 'Hiragino Sans GB', '寰蒋闆呴粦', 'Microsoft YaHei UI', SimSun, SimHei, arial, sans-serif;line-height: 1.7;margin: 0 auto;padding: 20px 16px;padding: 1.25rem 1rem;}.wiz-editor-body h1,.wiz-editor-body h2,.wiz-editor-body h3,.wiz-editor-body h4,.wiz-editor-body h5,.wiz-editor-body h6 {margin:20px 0 10px;margin:1.25rem 0 0.625rem;padding: 0;font-weight: bold;}.wiz-editor-body h1 {font-size:20pt;font-size:1.67rem;}.wiz-editor-body h2 {font-size:18pt;font-size:1.5rem;}.wiz-editor-body h3 {font-size:15pt;font-size:1.25rem;}.wiz-editor-body h4 {font-size:14pt;font-size:1.17rem;}.wiz-editor-body h5 {font-size:12pt;font-size:1rem;}.wiz-editor-body h6 {font-size:12pt;font-size:1rem;color: #777777;margin: 1rem 0;}.wiz-editor-body div,.wiz-editor-body p,.wiz-editor-body ul,.wiz-editor-body ol,.wiz-editor-body dl,.wiz-editor-body li {margin:8px 0;}.wiz-editor-body blockquote,.wiz-editor-body table,.wiz-editor-body pre,.wiz-editor-body code {margin:8px 0;}.wiz-editor-body .CodeMirror pre {margin:0;}.wiz-editor-body ul,.wiz-editor-body ol {padding-left:32px;padding-left:2rem;}.wiz-editor-body ol.wiz-list-level1 > li {list-style-type:decimal;}.wiz-editor-body ol.wiz-list-level2 > li {list-style-type:lower-latin;}.wiz-editor-body ol.wiz-list-level3 > li {list-style-type:lower-roman;}.wiz-editor-body blockquote {padding: 0 12px;}.wiz-editor-body blockquote > :first-child {margin-top:0;}.wiz-editor-body blockquote > :last-child {margin-bottom:0;}.wiz-editor-body img {border:0;max-width:100%;height:auto !important;margin:2px 0;}.wiz-editor-body table {border-collapse:collapse;border:1px solid #bbbbbb;}.wiz-editor-body td,.wiz-editor-body th {padding:4px 8px;border-collapse:collapse;border:1px solid #bbbbbb;min-height:28px;word-break:break-word;box-sizing: border-box;}.wiz-hide {display:none !important;}</style></head>
+
+<body class="wiz-editor-body" spellcheck="false" style="opacity: 1;" ><div><h1>布尔操作</h1><ul><li>作用：两个路径Path之间的运算</li><li>应用场景：用简单的图形通过特定规则合成相对复杂的图形。</li><li>具体使用</li></ul><pre class="hljs java"><code class="java"><span class="hljs-comment">// 方法1</span>
+    <span class="hljs-function"><span class="hljs-keyword">boolean</span> <span class="hljs-title">op</span> <span class="hljs-params">(Path path, Path.Op op)</span>
+<span class="hljs-comment">// 举例</span>
+<span class="hljs-comment">// 对 path1 和 path2 执行布尔运算，运算方式由第二个参数指定</span>
+<span class="hljs-comment">// 运算结果存入到path1中。</span>
+    path1.<span class="hljs-title">op</span><span class="hljs-params">(path2, Path.Op.DIFFERENCE)</span></span>;
+
+
+<span class="hljs-comment">// 方法2</span>
+    <span class="hljs-function"><span class="hljs-keyword">boolean</span> <span class="hljs-title">op</span> <span class="hljs-params">(Path path1, Path path2, Path.Op op)</span>
+  <span class="hljs-comment">// 举例</span>
+    <span class="hljs-comment">// 对 path1 和 path2 执行布尔运算，运算方式由第三个参数指定</span>
+    <span class="hljs-comment">// 运算结果存入到path3中。</span>
+    path3.<span class="hljs-title">op</span><span class="hljs-params">(path1, path2, Path.Op.DIFFERENCE)</span>
+</span></code></pre><p>之间的运算方式（即Path.Op参数）如下</p><br><div class="image-container"><br></div><div class="image-view" data-width="1114" data-height="760"><img data-original-src="//upload-images.jianshu.io/upload_images/944365-69f344e5a0c786c0.png" data-original-width="1114" data-original-height="760" data-original-format="image/png" data-original-filesize="137584" src="path_bool_op_files/0.5070678296904996.png"></div><div class="image-caption">Paste_Image.png</div><p>举例：</p><pre class="hljs php"><code class="php">   <span class="hljs-comment">// 为了方便观察,平移坐标系</span>
+        canvas.translate(<span class="hljs-number">550</span>, <span class="hljs-number">550</span>);
+
+        <span class="hljs-comment">// 画两个圆</span>
+        <span class="hljs-comment">// 圆1:圆心 = (0,0),半径 = 100</span>
+        <span class="hljs-comment">// 圆2:圆心 = (50,0),半径 = 100</span>
+        path1.addCircle(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">100</span>, Path.Direction.CW);
+        path2.addCircle(<span class="hljs-number">50</span>, <span class="hljs-number">0</span>,<span class="hljs-number">100</span>, Path.Direction.CW);
+
+        <span class="hljs-comment">// 取两个路径的异或集</span>
+        path1.op(path2, Path.Op.<span class="hljs-keyword">XOR</span>);
+        <span class="hljs-comment">// 画出路径</span>
+        canvas.drawPath(path1, mPaint1);
+</code></pre></div><div class="image-package"></div><div class="image-container"><br></div><div class="image-view" data-width="362" data-height="629"><img data-original-src="//upload-images.jianshu.io/upload_images/944365-241703b0bf002f1a.png" data-original-width="362" data-original-height="629" data-original-format="image/png" data-original-filesize="22097" src="path_bool_op_files/0.5619785912873727.png"></div></body></html>

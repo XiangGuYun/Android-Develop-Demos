@@ -11,26 +11,52 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
-        <TextView
+
+        <com.androidui.huitu.view.Xfermode1View
+            android:id="@+id/study1View"
+            android:layout_width="wrap_content"
+            android:layout_height="220dp" />
+
+        <com.androidui.huitu.view.Xfermode2View
+            android:id="@+id/study2View"
+            android:layout_width="match_parent"
+            android:layout_height="220dp" />
+
+        <Spinner
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="官方示例图"
-            style="@style/tvTitle"
-           />
-        <ImageView
+            android:id="@+id/spinner"/>
+
+        <include layout="@layout/line"/>
+
+        <com.androidui.huitu.view.CircleImageView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:src="@mipmap/xfermode"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="代码实现示例图"
-            style="@style/tvTitle"
-            />
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:src="@mipmap/xfermode2"/>
+            android:layout_height="200dp"
+            android:layout_margin="10dp"
+            android:layout_gravity="center"
+            app:imageRes= "@mipmap/love"/>
+
+
+        <!--<TextView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="官方示例图"-->
+            <!--style="@style/tvTitle"-->
+           <!--/>-->
+        <!--<ImageView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:src="@mipmap/xfermode"/>-->
+        <!--<TextView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="代码实现示例图"-->
+            <!--style="@style/tvTitle"-->
+            <!--/>-->
+        <!--<ImageView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:src="@mipmap/xfermode2"/>-->
     </LinearLayout>
 
 </ScrollView>

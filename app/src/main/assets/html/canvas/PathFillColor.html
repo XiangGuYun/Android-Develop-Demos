@@ -1,0 +1,63 @@
+﻿<!DOCTYPE HTML><html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<title>缩放（scale）</title>
+    
+<style id="wiz_custom_css">html, .wiz-editor-body {font-size: 12pt;}.wiz-editor-body {font-family: Helvetica, 'Hiragino Sans GB', '寰蒋闆呴粦', 'Microsoft YaHei UI', SimSun, SimHei, arial, sans-serif;line-height: 1.7;margin: 0 auto;padding: 20px 16px;padding: 1.25rem 1rem;}.wiz-editor-body h1,.wiz-editor-body h2,.wiz-editor-body h3,.wiz-editor-body h4,.wiz-editor-body h5,.wiz-editor-body h6 {margin:20px 0 10px;margin:1.25rem 0 0.625rem;padding: 0;font-weight: bold;}.wiz-editor-body h1 {font-size:20pt;font-size:1.67rem;}.wiz-editor-body h2 {font-size:18pt;font-size:1.5rem;}.wiz-editor-body h3 {font-size:15pt;font-size:1.25rem;}.wiz-editor-body h4 {font-size:14pt;font-size:1.17rem;}.wiz-editor-body h5 {font-size:12pt;font-size:1rem;}.wiz-editor-body h6 {font-size:12pt;font-size:1rem;color: #777777;margin: 1rem 0;}.wiz-editor-body div,.wiz-editor-body p,.wiz-editor-body ul,.wiz-editor-body ol,.wiz-editor-body dl,.wiz-editor-body li {margin:8px 0;}.wiz-editor-body blockquote,.wiz-editor-body table,.wiz-editor-body pre,.wiz-editor-body code {margin:8px 0;}.wiz-editor-body .CodeMirror pre {margin:0;}.wiz-editor-body ul,.wiz-editor-body ol {padding-left:32px;padding-left:2rem;}.wiz-editor-body ol.wiz-list-level1 > li {list-style-type:decimal;}.wiz-editor-body ol.wiz-list-level2 > li {list-style-type:lower-latin;}.wiz-editor-body ol.wiz-list-level3 > li {list-style-type:lower-roman;}.wiz-editor-body blockquote {padding: 0 12px;}.wiz-editor-body blockquote > :first-child {margin-top:0;}.wiz-editor-body blockquote > :last-child {margin-bottom:0;}.wiz-editor-body img {border:0;max-width:100%;height:auto !important;margin:2px 0;}.wiz-editor-body table {border-collapse:collapse;border:1px solid #bbbbbb;}.wiz-editor-body td,.wiz-editor-body th {padding:4px 8px;border-collapse:collapse;border:1px solid #bbbbbb;min-height:28px;word-break:break-word;box-sizing: border-box;}.wiz-hide {display:none !important;}</style></head>
+
+<body class="wiz-editor-body" spellcheck="false" style="opacity: 1;" ><div><h3>设置路径填充颜色</h3><ul><li>在Android中，有四种填充模式，具体如下</li></ul><blockquote><p>均封装在Path类中</p></blockquote><div class="wiz-table-container" style="position: relative; padding: 0px;"><div class="wiz-table-body"><table><thead><tr><th>填充模式</th><th>介绍</th></tr></thead><tbody><tr><td>EVEN_ODD</td><td>奇偶规则</td></tr><tr><td>INVERSE_EVEN_ODD</td><td>反奇偶规则</td></tr><tr><td>WINDING</td><td>非零环绕数规则</td></tr><tr><td>INVERSE_WINDING</td><td>反非零环绕数规则</td></tr></tbody></table></div></div><p><strong>请记住两个填充规律：</strong></p><blockquote><p>从我之前的文章<a href="https://www.jianshu.com/p/146e5cec4863" target="_blank">（1）自定义View基础 - 最易懂的自定义View原理系列</a>提到，图形是存在方向的（画图 = 连接点成的线 = 有连接顺序）。</p></blockquote><div class="image-package"><div class="image-container"><br><div class="image-view" data-width="868" data-height="598"><img data-original-src="//upload-images.jianshu.io/upload_images/944365-a72a1c70f6ac6277.png" data-original-width="868" data-original-height="598" data-original-format="image/png" data-original-filesize="35420" src="PathFillColor_files/0.8195061788564268.png"></div></div><div class="image-caption">填充规则</div></div><ul><li>具体使用</li></ul><pre class="hljs cpp"><code class="cpp"><span class="hljs-comment">// 设置填充规则</span>
+path.setFillType（）
+<span class="hljs-comment">// 可填规则</span>
+<span class="hljs-comment">// 1. EVEN_ODD：奇偶规则</span>
+<span class="hljs-comment">// 2. INVERSE_EVEN_ODD：反奇偶规则</span>
+<span class="hljs-comment">// 3. WINDING ：非零环绕数规则</span>
+<span class="hljs-comment">// 4. INVERSE_WINDING：反非零环绕数规则</span>
+
+<span class="hljs-comment">// 理解奇偶规则和反奇偶规则：填充效果相反</span>
+<span class="hljs-comment">// 举例：对于一个矩形而言，使用奇偶规则会填充矩形内部，而使用反奇偶规则会填充矩形外部（下面会举例说明）</span>
+
+<span class="hljs-comment">// 获取当前填充规则</span>
+path.getFillType（）
+
+<span class="hljs-comment">// 判断是否是反向(INVERSE)规则</span>
+path.isInverseFillType（）
+
+<span class="hljs-comment">// 切换填充规则(即原有规则与反向规则之间相互切换)</span>
+path.toggleInverseFillType（）
+
+</code></pre><p><strong>实例1：（奇偶规则）</strong></p><pre class="hljs cpp"><code class="cpp">
+ <span class="hljs-comment">// 为了方便观察,平移坐标系</span>
+        canvas.translate(<span class="hljs-number">350</span>, <span class="hljs-number">500</span>);
+
+        <span class="hljs-comment">// 在Path中添加一个矩形</span>
+        path.addRect(<span class="hljs-number">-200</span>, <span class="hljs-number">-200</span>, <span class="hljs-number">200</span>, <span class="hljs-number">200</span>, Path.Direction.CW);
+
+        <span class="hljs-comment">// 设置Path填充模式为 奇偶规则</span>
+        path.setFillType(Path.FillType.EVEN_ODD);
+
+        <span class="hljs-comment">// 反奇偶规则</span>
+        <span class="hljs-comment">// path.setFillType(Path.FillType.INVERSE_EVEN_ODD);</span>
+
+        <span class="hljs-comment">// 画出路径</span>
+        canvas.drawPath(path, mPaint1);
+</code></pre><div class="image-package"><div class="image-container"><br><div class="image-view" data-width="795" data-height="705"><img data-original-src="//upload-images.jianshu.io/upload_images/944365-6d26da1d1d1fa155.png" data-original-width="795" data-original-height="705" data-original-format="image/png" data-original-filesize="35891" src="PathFillColor_files/0.18867558008517338.png"></div></div><br></div><p><strong>举例2：（非零环绕规则）</strong></p><pre class="hljs cpp"><code class="cpp">    <span class="hljs-comment">// 为了方便观察,平移坐标系</span>
+        canvas.translate(<span class="hljs-number">550</span>, <span class="hljs-number">550</span>);
+        <span class="hljs-comment">// 在路径中添加大正方形</span>
+        <span class="hljs-comment">// 逆时针</span>
+        path.addRect(<span class="hljs-number">-400</span>, <span class="hljs-number">-400</span>, <span class="hljs-number">400</span>, <span class="hljs-number">400</span>, Path.Direction.CCW);
+
+        <span class="hljs-comment">// 在路径中添加小正方形</span>
+        <span class="hljs-comment">// 顺时针</span>
+<span class="hljs-comment">//        path.addRect(-200, -200, 200, 200, Path.Direction.CW);</span>
+<span class="hljs-comment">//          设置为逆时针</span>
+          path.addRect(<span class="hljs-number">-200</span>, <span class="hljs-number">-200</span>, <span class="hljs-number">200</span>, <span class="hljs-number">200</span>, Path.Direction.CCW);
+
+
+        <span class="hljs-comment">// 设置Path填充模式为非零环绕规则</span>
+        path.setFillType(Path.FillType.WINDING);
+        <span class="hljs-comment">// 设置反非零环绕数规则</span>
+        <span class="hljs-comment">// path.setFillType(Path.FillType.INVERSE_WINDING);</span>
+
+        <span class="hljs-comment">// 绘制Path</span>
+        canvas.drawPath(path, mPaint1);               
+</code></pre></div><div class="image-package"></div><div class="image-container"><br></div><div class="image-view" data-width="833" data-height="1530"><img data-original-src="//upload-images.jianshu.io/upload_images/944365-9f168b99d6f00c97.png" data-original-width="833" data-original-height="1530" data-original-format="image/png" data-original-filesize="86750" src="PathFillColor_files/0.1725245373565214.png"></div><div><br></div></body></html>

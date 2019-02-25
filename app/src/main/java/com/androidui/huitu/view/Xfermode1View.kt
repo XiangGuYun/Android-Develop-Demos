@@ -5,42 +5,44 @@ import android.graphics.*
 import android.os.Build
 import android.support.annotation.RequiresApi
 import android.util.AttributeSet
-import android.util.Log
 import android.view.View
 import com.kotlinlib.activity.ContextUtils
 import com.kotlinlib.other.DensityUtils
 import com.kotlinlib.other.StringUtils
 import com.scwang.smartrefresh.layout.util.DensityUtil
+import android.R.attr.y
+import android.R.attr.x
 
 
-class AddPath1View @JvmOverloads constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) :
+
+
+class Xfermode1View @JvmOverloads constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) :
         View(context, attrs, defStyleAttr), ContextUtils, StringUtils{
 
     val paint:Paint = Paint()
-    val paint1:Paint = Paint()
     val path = Path()
-    val pathCircle = Path()
+    var mode:PorterDuff.Mode
 
     init {
+        //一定要加上这句代码，否则有可能绘制不出来
         setBackgroundColor(Color.CYAN)
+        setLayerType(View.LAYER_TYPE_SOFTWARE, null)
         paint.strokeWidth = 15f
         paint.color = Color.RED
-        paint.style = Paint.Style.STROKE
+        paint.style = Paint.Style.FILL
+        mode = PorterDuff.Mode.SRC
     }
 
     @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
     override fun onDraw(canvas: Canvas?) {
         super.onDraw(canvas)
-        canvas?.drawLine(width/2f,0f,width/2f,height.toFloat(),paint1)
-        canvas?.drawLine(0f,height/2f,width.toFloat(),height/2f,paint1)
-
-        //初始化Path
+        paint.color = Color.RED
         canvas?.translate(width/2f, height/2f)
-
-        path.addRoundRect(-width/2f+50,-height/2f+50,width/2f-50,height/2f-50, 50f,50f, Path.Direction.CW)
-        pathCircle.addCircle(0f, 0f, 200f, Path.Direction.CW)
-        path.addPath(pathCircle,100f,100f)
-        canvas?.drawPath(path, paint)
+        canvas?.drawCircle(-100f,0f,200f,paint)
+        paint.color = Color.GREEN
+        paint.xfermode = PorterDuffXfermode(mode)
+        canvas?.drawCircle(100f,0f,200f,paint)
+        paint.xfermode = null
     }
 
 }
