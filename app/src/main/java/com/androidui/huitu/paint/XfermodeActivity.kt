@@ -9,14 +9,13 @@ import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.SpinnerAdapter
 import com.androidui.R
+import com.kotlinlib.activity.KotlinActivity
+import com.kotlinlib.other.LayoutId
 import kotlinx.android.synthetic.main.activity_xfermode.*
 
-class XfermodeActivity : AppCompatActivity() {
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_xfermode)
-
+@LayoutId(R.layout.activity_xfermode)
+class XfermodeActivity : KotlinActivity() {
+    override fun init(bundle: Bundle?) {
         val listMode = listOf(
                 PorterDuff.Mode.SRC,
                 PorterDuff.Mode.SRC_IN,
@@ -36,7 +35,6 @@ class XfermodeActivity : AppCompatActivity() {
                 PorterDuff.Mode.LIGHTEN,
                 PorterDuff.Mode.OVERLAY,
                 PorterDuff.Mode.SCREEN)
-
         val listName = listOf(
                 "SRC",
                 "SRC_IN",
@@ -57,7 +55,6 @@ class XfermodeActivity : AppCompatActivity() {
                 "OVERLAY",
                 "SCREEN"
         )
-
         spinner.adapter =ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, listName)
         spinner.onItemSelectedListener = object :AdapterView.OnItemSelectedListener{
             override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
@@ -71,6 +68,10 @@ class XfermodeActivity : AppCompatActivity() {
 
             }
 
+        }
+
+        header1.setLeftClick {
+            webDialog.url("canvas/xfermode1")
         }
 
     }

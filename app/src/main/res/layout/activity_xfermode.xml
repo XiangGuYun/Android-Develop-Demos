@@ -12,8 +12,15 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
+        <com.androidui.view.Header1View
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:mainTitle1="PorterDuffXfermode"
+            android:id="@+id/header1"/>
+
         <com.androidui.huitu.view.Xfermode1View
             android:id="@+id/study1View"
+            android:layout_marginTop="10dp"
             android:layout_width="wrap_content"
             android:layout_height="220dp" />
 
@@ -29,13 +36,30 @@
 
         <include layout="@layout/line"/>
 
-        <com.androidui.huitu.view.CircleImageView
+        <com.androidui.huitu.view.Xfermode3View
             android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:layout_margin="10dp"
-            android:layout_gravity="center"
-            app:imageRes= "@mipmap/love"/>
+            android:layout_height="120dp"
+            android:layout_margin="10dp"/>
 
+        <com.androidui.huitu.view.Xfermode4View
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_margin="10dp"/>
+
+        <com.androidui.huitu.view.Xfermode5View
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_margin="10dp"/>
+
+        <com.androidui.huitu.view.Xfermode6View
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_margin="10dp"/>
+
+        <com.androidui.huitu.view.Xfermode7View
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_margin="10dp"/>
 
         <!--<TextView-->
             <!--android:layout_width="match_parent"-->

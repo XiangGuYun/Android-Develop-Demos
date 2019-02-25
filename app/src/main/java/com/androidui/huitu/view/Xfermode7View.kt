@@ -15,7 +15,7 @@ import android.R.attr.x
 import com.androidui.R
 
 
-class Xfermode2View @JvmOverloads constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) :
+class Xfermode7View @JvmOverloads constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) :
         View(context, attrs, defStyleAttr), ContextUtils, StringUtils{
 
     val paint:Paint = Paint()
@@ -24,7 +24,7 @@ class Xfermode2View @JvmOverloads constructor(context: Context, attrs: Attribute
 
     private var mMatirx: Matrix
 
-    private var bmp: Bitmap?
+    private var bmp: Bitmap
 
     init {
         //一定要加上这句代码，否则有可能绘制不出来
@@ -35,7 +35,7 @@ class Xfermode2View @JvmOverloads constructor(context: Context, attrs: Attribute
         paint.style = Paint.Style.FILL
         paint.isDither = true//设定是否使用图像抖动处理，会使绘制出来的图片颜色更加平滑和饱满，图像更加清晰
         paint.isFilterBitmap = true//加快显示速度，本设置项依赖于dither和xfermode的设置
-        mode = PorterDuff.Mode.SRC
+        mode = PorterDuff.Mode.SRC_ATOP
         mMatirx = Matrix()
         bmp = BitmapFactory.decodeResource(resources, R.mipmap.love)
     }
@@ -45,25 +45,20 @@ class Xfermode2View @JvmOverloads constructor(context: Context, attrs: Attribute
         super.onDraw(canvas)
         val sc = canvas?.saveLayer(0f, 0f, width.toFloat(), height.toFloat(), paint, Canvas.ALL_SAVE_FLAG)
         paint.color = Color.RED
+        val w = bmp.width/2f
+        val h = bmp.height/2f
         canvas?.translate(width/2f, height/2f)
-        canvas?.drawCircle(0f,0f,bmp?.width!!/2f,paint)
+        path.cubicTo(0f, 0f, w/2, -h, w, 0f)
+        path.cubicTo(w, 0f, w/2, h/2,0f,h)
+        path.lineTo(-w, 0f)
+        path.cubicTo(-w, 0f, -w/2, -h, 0f, 0f)
+        canvas?.drawPath(path, paint)
         paint.color = Color.GREEN
         paint.xfermode = PorterDuffXfermode(mode)
-        mMatirx.setTranslate(-bmp?.width!!/2f,-bmp?.height!!/2f)
+        mMatirx.setTranslate(-bmp.width/2f,-bmp.height/2f)
         canvas?.drawBitmap(bmp, mMatirx,paint)
         paint.xfermode = null
         canvas?.restoreToCount(sc!!)
-    }
-
-    private fun makeCircle(): Bitmap {
-        val bitmap = Bitmap.createBitmap(200, 200, Bitmap.Config.ARGB_8888)
-        val canvas = Canvas(bitmap)
-        val paint = Paint(Paint.ANTI_ALIAS_FLAG)
-        paint.color = Color.BLUE
-        paint.style = Paint.Style.FILL
-        val radius = 200 / 2
-        canvas.drawCircle((200 / 2).toFloat(), (200 / 2).toFloat(), radius * 1.5f, paint)
-        return bitmap
     }
 
 }
