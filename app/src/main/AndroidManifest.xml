@@ -11,9 +11,7 @@
         android:roundIcon="@mipmap/launcher1"
         android:supportsRtl="true"
         android:theme="@style/Theme.Design.Light.NoActionBar">
-        <activity android:name=".huitu.canvas.NewPathActivity">
-
-        </activity>
+        <activity android:name=".huitu.canvas.NewPathActivity" />
         <activity android:name=".huitu.canvas.CanvasActivity" />
         <activity android:name=".anim.PropertyAnimActivity" />
         <activity android:name=".anim.PatchAnimActivity" />
@@ -77,7 +75,12 @@
         <activity android:name=".gesture.DoubleTapListenerActivity" />
         <activity android:name=".gesture.DragImageActivity" />
         <activity android:name=".gesture.MatrixActivity" />
-        <activity android:name=".test.TestVPActivity"></activity>
+        <activity android:name=".test.TestVPActivity" />
+        <activity android:name=".gesture.ScaleGestureDetectorActivity" />
+        <activity android:name=".gesture.VelocityTrackerActivity" />
+        <activity android:name=".gesture.view.DragActivity" />
+        <activity android:name=".gesture.CaseGestureDragActivity" />
+        <activity android:name=".gesture.RotateImageActivity"></activity>
     </application>
 
 </manifest>

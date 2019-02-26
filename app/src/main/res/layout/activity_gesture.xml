@@ -18,6 +18,14 @@
                 android:id="@+id/readView"/>
 
             <com.androidui.view.MyTextView
+                android:id="@+id/btn0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/item"
+                android:text="VelocityTracker力度跟踪器"
+                android:background="@drawable/rect7"/>
+
+            <com.androidui.view.MyTextView
                 android:id="@+id/btn1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -31,7 +39,15 @@
                 android:layout_height="wrap_content"
                 style="@style/item"
                 android:text="DoubleTapListener的回调方法"
-                android:background="@drawable/rect8"/>
+                android:background="@drawable/rect9"/>
+
+            <com.androidui.view.MyTextView
+                android:id="@+id/btnScale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/item"
+                android:text="ScaleGestureDetector的回调方法"
+                android:background="@drawable/rect8" />
 
             <com.androidui.view.MyTextView
                 android:id="@+id/btnMatrix"
