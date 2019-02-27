@@ -30,6 +30,72 @@ PERSP：透视
         case3()
         case4()
         case5()
+        case6()
+    }
+
+    private fun case6() {
+        headerPolyToPoly.setLeftClick {
+            webDialog.url("poly_to_poly")
+        }
+        tvPTP1.text = """
+1个点，平移
+val src = floatArrayOf(0f, 0f)
+val dst = floatArrayOf(translateX, translateY)
+mMatrix.setPolyToPoly(src, 0, dst, 0, 1)
+canvas?.drawBitmap(bitmap, mMatrix, paint)
+        """.trimIndent()
+        sbPTPtransX.change { seekBar, progress, fromUser ->
+            ptp1View.translateX = progress*3f
+            ptp1View.invalidate()
+        }
+        sbPTPtransY.change { seekBar, progress, fromUser ->
+            ptp1View.translateY = progress*3f
+            ptp1View.invalidate()
+        }
+
+        tvPTP2.text = """
+两个点，可以达到旋转效果或者缩放效果，缩放比较简单，这里我们来看旋转效果，一个点指定中心，一点指出旋转的效果
+val bw = bitmap.width.toFloat()
+val bh = bitmap.height.toFloat()
+val src = floatArrayOf(bw, bh, 0f, 0f)
+val dst = floatArrayOf(bw, bh, bw + changeX, bh + changeY)
+mMatrix.setPolyToPoly(src, 0, dst, 0, 2)
+canvas?.drawBitmap(bitmap, mMatrix, paint)
+        """.trimIndent()
+
+        tvPTP3.text = """
+canvas?.translate(width/2f-bitmap.width/2f,height/2f-bitmap.height/2f)
+val bw = bitmap.width
+val bh = bitmap.height
+val src = floatArrayOf(0f, 0f, 0f, bh.toFloat(), bw.toFloat(), bh.toFloat())
+val dst = floatArrayOf(0f, 0f, 300f, bh.toFloat(), (bw + 300).toFloat(), bh.toFloat())
+mMatrix.setPolyToPoly(src, 0, dst, 0, 3)
+canvas?.drawBitmap(bitmap, mMatrix, paint)
+        """.trimIndent()
+
+        tvPTP4.text = """
+canvas?.translate(width/2f-bitmap.width/2f,height/2f-bitmap.height/2f)
+val bw = bitmap.width
+val bh = bitmap.height
+val src = floatArrayOf(0f, 0f, 0f, bh.toFloat(), bw.toFloat(), bh.toFloat(), bw.toFloat(), 0f)
+val dst = if(isPositive1){
+    floatArrayOf(change1, 0f, 0f, bh.toFloat(), bw.toFloat(), bh.toFloat(), (bw - change1), 0f)
+}else{
+    floatArrayOf(-change1, 0f, 0f, bh.toFloat(), bw.toFloat(), bh.toFloat(), (bw + change1), 0f)
+}
+mMatrix.setPolyToPoly(src, 0, dst, 0, 4)
+canvas?.drawBitmap(bitmap, mMatrix, paint)
+        """.trimIndent()
+
+        sbPTP4XY.change { seekBar, progress, fromUser ->
+            ptp4View.change1 = progress*0.6f
+            ptp4View.invalidate()
+        }
+
+        switch1.setOnCheckedChangeListener { buttonView, isChecked ->
+            ptp4View.isPositive1 = !isChecked
+        }
+
     }
 
     private fun case5() {
