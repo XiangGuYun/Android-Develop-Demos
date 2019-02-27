@@ -16,7 +16,7 @@ import java.util.*
 class FragmentUtils<T:Fragment> {
 
     private var manager: FragmentManager? = null
-    private var fragments = ArrayList<T>()
+    var fragments = ArrayList<T>()
     private var contentId: Int = 0
     private var act:FragmentActivity
 
@@ -70,7 +70,7 @@ class FragmentUtils<T:Fragment> {
     }
 
     fun switch(targetFragment: T, getTransaction:(FragmentTransaction)->Unit): Boolean {
-        fragments.remove(targetFragment)
+        //fragments.remove(targetFragment)
         val transaction = manager!!.beginTransaction()
         getTransaction.invoke(transaction)
         if (!targetFragment.isAdded) {    // 先判断是否被add过
@@ -84,13 +84,13 @@ class FragmentUtils<T:Fragment> {
             }
             transaction.show(targetFragment).commit() // 隐藏当前的fragment，显示下一个
         }
-        fragments.add(targetFragment)
+        //fragments.add(targetFragment)
         return true
     }
 
     fun switch(index: Int): Boolean {
         val targetFragment = fragments[index]
-        fragments.remove(targetFragment)
+        //fragments.remove(targetFragment)
         val transaction = manager!!.beginTransaction()
         if (!targetFragment.isAdded) {    // 先判断是否被add过
             for (i in fragments.indices) {
@@ -103,7 +103,7 @@ class FragmentUtils<T:Fragment> {
             }
             transaction.show(targetFragment).commit() // 隐藏当前的fragment，显示下一个
         }
-        fragments.add(targetFragment)
+        //fragments.add(targetFragment)
         return true
     }
 

@@ -11,16 +11,17 @@
         android:roundIcon="@mipmap/launcher1"
         android:supportsRtl="true"
         android:theme="@style/Theme.Design.Light.NoActionBar">
-        <activity android:name=".fragment.case2.Case2Activity">
+        <activity android:name=".fragment.case3.Case3Activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".fragment.case1.TestActivity">
+        <activity android:name=".fragment.case2.Case2Activity">
 
         </activity>
+        <activity android:name=".fragment.case1.TestActivity" />
         <activity android:name=".huitu.canvas.NewPathActivity" />
         <activity android:name=".huitu.canvas.CanvasActivity" />
         <activity android:name=".anim.PropertyAnimActivity" />
@@ -71,7 +72,7 @@
         <activity android:name=".anim.SecondActivity" />
         <activity android:name=".anim.FragmentTransitionActivity" />
         <activity android:name=".anim.RVActivity" />
-        <activity android:name=".IntroActivity"></activity>
+        <activity android:name=".IntroActivity" />
         <activity android:name=".gesture.GestureActivity" />
         <activity android:name=".gesture.GestureListenerActivity" />
         <activity android:name=".gesture.DownCloseActivity" />
@@ -79,7 +80,7 @@
         <activity android:name=".gesture.DoubleTapListenerActivity" />
         <activity android:name=".gesture.DragImageActivity" />
         <activity android:name=".gesture.MatrixActivity" />
-        <activity android:name=".test.TestVPActivity"></activity>
+        <activity android:name=".test.TestVPActivity" />
         <activity android:name=".gesture.ScaleGestureDetectorActivity" />
         <activity android:name=".gesture.VelocityTrackerActivity" />
         <activity android:name=".gesture.view.DragActivity" />
