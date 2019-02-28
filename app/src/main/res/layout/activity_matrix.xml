@@ -255,6 +255,111 @@
                 android:layout_height="wrap_content" />
         </LinearLayout>
 
+        <com.androidui.view.Header1View
+            android:id="@+id/headerPolyToPoly"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:mainTitle1="setPolyToPoly"
+            />
+
+        <TextView
+            android:id="@+id/tvPTP1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/small_title" />
+
+        <com.androidui.gesture.view.PTP1View
+            android:id="@+id/ptp1View"
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="200dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="transX"/>
+            <SeekBar
+                android:id="@+id/sbPTPtransX"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="transY"/>
+            <SeekBar
+                android:id="@+id/sbPTPtransY"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvPTP2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/small_title" />
+
+        <com.androidui.gesture.view.PTP2View
+            android:id="@+id/ptp2View"
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="200dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tvPTP3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/small_title" />
+
+        <com.androidui.gesture.view.PTP3View
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="120dp" />
+
+        <TextView
+            android:id="@+id/tvPTP4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/small_title" />
+        
+        <com.androidui.gesture.view.PTP4View
+            android:id="@+id/ptp4View"
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="120dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="change1"/>
+            <SeekBar
+                android:id="@+id/sbPTP4XY"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+            <Switch
+                android:id="@+id/switch1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
     </LinearLayout>
 
 </ScrollView>

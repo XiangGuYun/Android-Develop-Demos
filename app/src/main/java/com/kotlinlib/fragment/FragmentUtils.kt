@@ -4,6 +4,8 @@ import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentActivity
 import android.support.v4.app.FragmentManager
 import android.support.v4.app.FragmentTransaction
+import com.androidui.R
+import com.androidui.fragment.case1.SecondFragment
 import java.util.*
 
 
@@ -14,10 +16,12 @@ import java.util.*
 class FragmentUtils<T:Fragment> {
 
     private var manager: FragmentManager? = null
-    private var fragments = ArrayList<T>()
+    var fragments = ArrayList<T>()
     private var contentId: Int = 0
+    private var act:FragmentActivity
 
     constructor(a: FragmentActivity, fragment: T, contentId: Int) {
+        act = a
         manager = a.supportFragmentManager
         this.contentId = contentId
         val transaction = manager!!.beginTransaction()
@@ -27,6 +31,7 @@ class FragmentUtils<T:Fragment> {
     }
 
     constructor(a: FragmentActivity, list: ArrayList<T>, contentId: Int) {
+        act = a
         manager = a.supportFragmentManager
         this.contentId = contentId
         val transaction = manager!!.beginTransaction()
@@ -65,7 +70,7 @@ class FragmentUtils<T:Fragment> {
     }
 
     fun switch(targetFragment: T, getTransaction:(FragmentTransaction)->Unit): Boolean {
-        fragments.remove(targetFragment)
+        //fragments.remove(targetFragment)
         val transaction = manager!!.beginTransaction()
         getTransaction.invoke(transaction)
         if (!targetFragment.isAdded) {    // 先判断是否被add过
@@ -79,13 +84,13 @@ class FragmentUtils<T:Fragment> {
             }
             transaction.show(targetFragment).commit() // 隐藏当前的fragment，显示下一个
         }
-        fragments.add(targetFragment)
+        //fragments.add(targetFragment)
         return true
     }
 
     fun switch(index: Int): Boolean {
         val targetFragment = fragments[index]
-        fragments.remove(targetFragment)
+        //fragments.remove(targetFragment)
         val transaction = manager!!.beginTransaction()
         if (!targetFragment.isAdded) {    // 先判断是否被add过
             for (i in fragments.indices) {
@@ -98,7 +103,7 @@ class FragmentUtils<T:Fragment> {
             }
             transaction.show(targetFragment).commit() // 隐藏当前的fragment，显示下一个
         }
-        fragments.add(targetFragment)
+        //fragments.add(targetFragment)
         return true
     }
 
@@ -123,6 +128,23 @@ class FragmentUtils<T:Fragment> {
             transaction.show(targetFragment).commit() // 隐藏当前的fragment，显示下一个
         }
         fragments.add(targetFragment)
+    }
+
+    /**
+     * 切换到一个新的Fragment
+     * @param target Fragment
+     * @param isAddToBackStack Boolean
+     */
+    fun replace(target:Fragment, isAddToBackStack: Boolean, getTransaction:(FragmentTransaction)->Unit){
+        val manager = act.supportFragmentManager.beginTransaction()
+        getTransaction.invoke(manager)
+        if(isAddToBackStack){
+            manager.replace(R.id.flContainer, SecondFragment(),target.javaClass.simpleName)
+            manager.addToBackStack(target.javaClass.simpleName)
+        }else{
+            manager.replace(R.id.flContainer, SecondFragment())
+        }
+        manager.commit()
     }
 
 }

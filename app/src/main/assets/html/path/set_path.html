@@ -1,0 +1,64 @@
+﻿<!DOCTYPE HTML><html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<title>缩放（scale）</title>
+    
+<style id="wiz_custom_css">html, .wiz-editor-body {font-size: 12pt;}.wiz-editor-body {font-family: Helvetica, 'Hiragino Sans GB', '寰蒋闆呴粦', 'Microsoft YaHei UI', SimSun, SimHei, arial, sans-serif;line-height: 1.7;margin: 0 auto;padding: 20px 16px;padding: 1.25rem 1rem;}.wiz-editor-body h1,.wiz-editor-body h2,.wiz-editor-body h3,.wiz-editor-body h4,.wiz-editor-body h5,.wiz-editor-body h6 {margin:20px 0 10px;margin:1.25rem 0 0.625rem;padding: 0;font-weight: bold;}.wiz-editor-body h1 {font-size:20pt;font-size:1.67rem;}.wiz-editor-body h2 {font-size:18pt;font-size:1.5rem;}.wiz-editor-body h3 {font-size:15pt;font-size:1.25rem;}.wiz-editor-body h4 {font-size:14pt;font-size:1.17rem;}.wiz-editor-body h5 {font-size:12pt;font-size:1rem;}.wiz-editor-body h6 {font-size:12pt;font-size:1rem;color: #777777;margin: 1rem 0;}.wiz-editor-body div,.wiz-editor-body p,.wiz-editor-body ul,.wiz-editor-body ol,.wiz-editor-body dl,.wiz-editor-body li {margin:8px 0;}.wiz-editor-body blockquote,.wiz-editor-body table,.wiz-editor-body pre,.wiz-editor-body code {margin:8px 0;}.wiz-editor-body .CodeMirror pre {margin:0;}.wiz-editor-body ul,.wiz-editor-body ol {padding-left:32px;padding-left:2rem;}.wiz-editor-body ol.wiz-list-level1 > li {list-style-type:decimal;}.wiz-editor-body ol.wiz-list-level2 > li {list-style-type:lower-latin;}.wiz-editor-body ol.wiz-list-level3 > li {list-style-type:lower-roman;}.wiz-editor-body blockquote {padding: 0 12px;}.wiz-editor-body blockquote > :first-child {margin-top:0;}.wiz-editor-body blockquote > :last-child {margin-bottom:0;}.wiz-editor-body img {border:0;max-width:100%;height:auto !important;margin:2px 0;}.wiz-editor-body table {border-collapse:collapse;border:1px solid #bbbbbb;}.wiz-editor-body td,.wiz-editor-body th {padding:4px 8px;border-collapse:collapse;border:1px solid #bbbbbb;min-height:28px;word-break:break-word;box-sizing: border-box;}.wiz-hide {display:none !important;}</style></head>
+
+<body class="wiz-editor-body" spellcheck="false" style="opacity: 1;" ><div><h3>第一组：设置路径</h3><p>采用<code>moveTo（）、setLastPoint（）、lineTo（）、close()</code>组合</p><pre class="hljs cpp"><code class="cpp">
+    <span class="hljs-comment">// 设置当前点位置</span>
+    <span class="hljs-comment">// 后面的路径会从该点开始画</span>
+    moveTo(<span class="hljs-keyword">float</span> x, <span class="hljs-keyword">float</span> y) ；
+
+    <span class="hljs-comment">// 当前点（上次操作结束的点）会连接该点</span>
+    <span class="hljs-comment">// 如果没有进行过操作则默认点为坐标原点。</span>
+    lineTo(<span class="hljs-keyword">float</span> x, <span class="hljs-keyword">float</span> y)  ；
+
+    <span class="hljs-comment">// 闭合路径，即将当前点和起点连在一起</span>
+    <span class="hljs-comment">// 注：如果连接了最后一个点和第一个点仍然无法形成封闭图形，则close什么也不做</span>
+    close() ；
+
+</code></pre><div>可使用<code>setLastPoint（）</code>设置当前点位置（代替<code>moveTo（）</code>）</div><p>二者区别：</p><div><br></div><div class="image-view" data-width="462" data-height="170"><img data-original-src="//upload-images.jianshu.io/upload_images/944365-efcaa5b6867b84e8.png" data-original-width="462" data-original-height="170" data-original-format="image/png" data-original-filesize="9554" src="set_path_files/0.4698897295704596.png"></div><div class="image-caption">Paste_Image.png</div><p><strong>实例介绍：（含<code>setLastPoint（）</code>与<code>moveTo（）</code>）</strong></p><pre class="hljs cpp"><code class="cpp">
+ <span class="hljs-comment">// 使用moveTo（）</span>
+ <span class="hljs-comment">// 起点默认是(0,0)</span>
+        <span class="hljs-comment">//连接点(400,500)</span>
+        path.lineTo(<span class="hljs-number">400</span>, <span class="hljs-number">500</span>);
+
+        <span class="hljs-comment">// 将当前点移动到(300, 300)</span>
+        path.moveTo(<span class="hljs-number">300</span>, <span class="hljs-number">300</span>) ;
+
+        <span class="hljs-comment">//连接点(900, 800)</span>
+        path.lineTo(<span class="hljs-number">900</span>, <span class="hljs-number">800</span>);
+
+        <span class="hljs-comment">// 闭合路径，即连接当前点和起点</span>
+        <span class="hljs-comment">// 即连接(200,700)与起点2(300, 300)</span>
+        <span class="hljs-comment">// 注:此时起点已经进行变换</span>
+        path.close();
+
+        <span class="hljs-comment">// 画出路径</span>
+        canvas.drawPath(path, mPaint1);
+
+<span class="hljs-comment">// 使用setLastPoint（）</span>
+<span class="hljs-comment">// 起点默认是(0,0)</span>
+        <span class="hljs-comment">//连接点(400,500)</span>
+        path.lineTo(<span class="hljs-number">400</span>, <span class="hljs-number">500</span>);
+
+        <span class="hljs-comment">// 将当前点移动到(300, 300)</span>
+        <span class="hljs-comment">// 会影响之前的操作</span>
+        <span class="hljs-comment">// 但不将此设置为新起点</span>
+        path.setLastPoint(<span class="hljs-number">300</span>, <span class="hljs-number">300</span>) ;
+
+        <span class="hljs-comment">//连接点(900,800)</span>
+        path.lineTo(<span class="hljs-number">900</span>, <span class="hljs-number">800</span>);
+
+        <span class="hljs-comment">//连接点(200,700)</span>
+        path.lineTo(<span class="hljs-number">200</span>, <span class="hljs-number">700</span>);
+
+        <span class="hljs-comment">// 闭合路径，即连接当前点和起点</span>
+        <span class="hljs-comment">// 即连接(200,700)与起点(0，0)</span>
+        <span class="hljs-comment">// 注:起点一直没变化</span>
+        path.close();
+
+        <span class="hljs-comment">// 画出路径</span>
+        canvas.drawPath(path, mPaint1);
+</code></pre><div class="image-view" data-width="841" data-height="692"><img data-original-src="//upload-images.jianshu.io/upload_images/944365-234047a676a5f21e.png" data-original-width="841" data-original-height="692" data-original-format="image/png" data-original-filesize="115781" src="set_path_files/0.8741742544618625.png"></div><div class="image-caption">效果图</div><h3>关于重置路径</h3></div><div>重置Path有两个方法：<code>reset（）</code>和<code>rewind（）</code></div><div>两者区别在于：</div><div class="wiz-table-container" style="position: relative; padding: 0px;"><div class="wiz-table-body"><table><thead><tr><th>方法</th><th>是否保留FillType设置</th><th style="text-align:right;">是否保留原有数据结构</th></tr></thead><tbody><tr><td>Path.reset（）</td><td>是</td><td style="text-align:right;">否</td></tr><tr><td>Path.rewind（）</td><td>否</td><td style="text-align:right;">是</td></tr></tbody></table></div></div><div><code>FillType</code>影响显示效果；<code>数据结构</code>影响重建速度</div><div>所以一般选择<code>Path.reset（）</code></div><p>由于较简单，此处不作过多展示。</p></body></html>
