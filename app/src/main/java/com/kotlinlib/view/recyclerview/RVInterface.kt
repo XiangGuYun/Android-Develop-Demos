@@ -1,5 +1,6 @@
 package com.kotlinlib.view.recyclerview
 
+import android.support.v7.widget.GridLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.text.Html
 import android.view.View
@@ -76,6 +77,71 @@ interface RVInterface:StringUtils {
         adapter(data, RVUtils.onBindData(fun1),
                 RVUtils.SetMultiCellView(fun2),*itemId)
         return this
+    }
+
+    /**
+     * 设置带有HeaderView的适配器
+     * @receiver RVUtils
+     * @param data List<T>
+     * @param headerViewId Int
+     * @param handleHeaderView (holder:Holder)->Unit
+     * @param handleNormalView (holder:Holder,pos:Int)->Unit
+     * @param handleNormalLayoutIndex (pos:Int)->Int
+     * @param itemId IntArray
+     */
+    fun <T> RVUtils.rvHeaderAdapter(data:List<T>,
+                                     headerViewId:Int,
+                                     handleHeaderView:(holder:Holder)->Unit,
+                                     handleNormalView:(holder:Holder,pos:Int)->Unit,
+                                     handleNormalLayoutIndex:(pos:Int)->Int,
+                                     vararg itemId:Int){
+        needHeader = true
+        rvMultiAdapter(data, {
+            holder, pos ->
+            when(pos){
+                0->{handleHeaderView.invoke(holder)}
+                else->{handleNormalView.invoke(holder, pos)}
+            }
+        },{
+            when(it){
+                0->0
+                else->handleNormalLayoutIndex.invoke(it)
+            }
+        }, headerViewId, *itemId)
+    }
+
+    /**
+     * 设置带有HeaderView和FooterView的适配器
+     * @receiver RVUtils
+     * @param data List<T>
+     * @param headerViewId Int
+     * @param handleHeaderView (holder:Holder)->Unit
+     * @param handleNormalView (holder:Holder,pos:Int)->Unit
+     * @param handleNormalLayoutIndex (pos:Int)->Int
+     * @param itemId IntArray
+     */
+    fun <T> RVUtils.rvHeaderFooterAdapter(data:List<T>,
+                                    headerViewId:Int,
+                                    handleHeaderView:(holder:Holder,pos:Int)->Unit,
+                                    handleNormalView:(holder:Holder,pos:Int)->Unit,
+                                    handleNormalLayoutIndex:(pos:Int)->Int,
+                                    footerViewId:Int,
+                                    handleFooterView:(holder:Holder,pos:Int)->Unit,
+                                    vararg itemId:Int){
+        rvMultiAdapter(data, {
+            holder, pos ->
+            when(pos){
+                0->{handleHeaderView.invoke(holder, pos)}
+                data.lastIndex->{handleFooterView.invoke(holder, pos)}
+                else->{handleNormalView.invoke(holder, pos)}
+            }
+        },{
+            when(it){
+                0->0
+                1->1
+                else->handleNormalLayoutIndex.invoke(it)
+            }
+        }, headerViewId, footerViewId, *itemId)
     }
 
     /**
