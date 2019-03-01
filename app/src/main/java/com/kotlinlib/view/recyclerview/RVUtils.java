@@ -6,6 +6,7 @@ package com.kotlinlib.view.recyclerview;
 
 import android.content.Context;
 import android.graphics.Color;
+import android.support.annotation.NonNull;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
@@ -29,6 +30,8 @@ public class RVUtils {
     public Context context;
     private EasyRVAdapter adapter;
     public List dataList;
+    private int gridSpanCount = 1;
+    public boolean needHeader = false;
 
     public ItemTouchHelper getmItemTouchHelper() {
         return mItemTouchHelper;
@@ -204,9 +207,18 @@ public class RVUtils {
      * @return
      */
     public RVUtils gridManager(int spanCount, boolean isVertical) {
-        rv.setLayoutManager(new StaggeredGridLayoutManager(
-                spanCount,
-                isVertical ? StaggeredGridLayoutManager.VERTICAL : StaggeredGridLayoutManager.HORIZONTAL));
+        gridSpanCount = spanCount;
+        if(isVertical){
+            rv.setLayoutManager(new GridLayoutManager(context, spanCount));
+        }else {
+            rv.setLayoutManager(new GridLayoutManager(context, spanCount, LinearLayoutManager.HORIZONTAL, false));
+        }
+        return this;
+    }
+
+    public RVUtils gridManager(int spanCount) {
+        gridSpanCount = spanCount;
+        rv.setLayoutManager(new GridLayoutManager(context, spanCount));
         return this;
     }
 
@@ -284,6 +296,33 @@ public class RVUtils {
             @Override
             public int getLayoutIndex(int layoutIndex, T item) {
                 return cellView.setMultiCellView(layoutIndex);
+            }
+
+            @Override
+            public void onAttachedToRecyclerView(@NonNull RecyclerView recyclerView) {
+                RecyclerView.LayoutManager layoutManager = recyclerView.getLayoutManager();
+                if (layoutManager instanceof GridLayoutManager)
+                {
+                    final GridLayoutManager gridLayoutManager = (GridLayoutManager) layoutManager;
+                    gridLayoutManager.setSpanSizeLookup(new GridLayoutManager.SpanSizeLookup()
+                    {
+                        @Override
+                        public int getSpanSize(int position)
+                        {
+                            if(needHeader){
+                                switch (position){
+                                    case 0:
+                                        return gridSpanCount;
+                                    default:
+                                        return 1;
+                                }
+                            }else {
+                                return 1;
+                            }
+
+                        }
+                    });
+                }
             }
         };
         rv.setAdapter(adapter);

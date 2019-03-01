@@ -12,11 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Design.Light.NoActionBar">
         <activity android:name=".fragment.case3.Case3Activity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".fragment.case2.Case2Activity">
 
@@ -72,7 +68,13 @@
         <activity android:name=".anim.SecondActivity" />
         <activity android:name=".anim.FragmentTransitionActivity" />
         <activity android:name=".anim.RVActivity" />
-        <activity android:name=".IntroActivity" />
+        <activity android:name=".IntroActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".gesture.GestureActivity" />
         <activity android:name=".gesture.GestureListenerActivity" />
         <activity android:name=".gesture.DownCloseActivity" />
