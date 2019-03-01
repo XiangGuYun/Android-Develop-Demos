@@ -2,6 +2,7 @@ package com.androidui.supportlib
 
 import android.os.Bundle
 import com.androidui.R
+import com.androidui.supportlib.rv.RecyclerViewActivity
 import com.kotlinlib.activity.KotlinActivity
 import com.kotlinlib.other.LayoutId
 import kotlinx.android.synthetic.main.activity_support_lib_ui.*

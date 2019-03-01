@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".customview.drag.ViewDragHelperActivity">
+
+    <com.androidui.customview.drag.DragView
+        android:id="@+id/dragView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+        <TextView
+            android:id="@+id/tvDragMe"
+            android:gravity="center"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:background="@drawable/rect7"
+            android:tag="DragMe1"
+            android:text="Drag Me1"/>
+        <TextView
+            android:id="@+id/tvDragMe1"
+            android:layout_gravity="right"
+            android:gravity="center"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:background="@drawable/rect_blue"
+            android:tag="DragMe2"
+            android:text="Drag Me2"/>
+    </com.androidui.customview.drag.DragView>
+
+
+    <TextView
+        android:id="@+id/tv1"
+        style="@style/small_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tv2"
+        style="@style/small_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tv3"
+        style="@style/small_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

@@ -18,13 +18,11 @@ class RotateImageView @JvmOverloads constructor(context: Context, attrs: Attribu
     var paint = Paint()
     private var bmp: Bitmap
     var mMatrix = Matrix()
-    var cX = 0f
-    var cY = 0f
     var rotate = 0f
 
     init {
-        setBackgroundColor(Color.GRAY)
-        bmp = BitmapFactory.decodeResource(resources, R.mipmap.girl1)
+        setBackgroundColor(Color.BLACK)
+        bmp = BitmapFactory.decodeResource(resources, R.mipmap.img3)
         paint.color = Color.RED
         detector = GestureDetector(context, listener)
     }
@@ -38,29 +36,30 @@ class RotateImageView @JvmOverloads constructor(context: Context, attrs: Attribu
 
     override fun onDraw(canvas: Canvas?) {
         super.onDraw(canvas)
+        canvas?.translate(width/2f-bmp.width/2,height/2f-bmp.height/2)
+        canvas?.scale(width/bmp.width.toFloat(),width/bmp.width.toFloat(), bmp.width/2f,bmp.height/2f)
         canvas?.drawBitmap(bmp, mMatrix, null)
     }
 
     inner class DragGestureListener: GestureDetector.SimpleOnGestureListener(){
 
         override fun onDown(ev: MotionEvent?): Boolean {
-            if(ev!=null){
-                cX = ev.x
-                cY = ev.y
-                mMatrix.setTranslate(ev.x, ev.y)
-                invalidate()
-            }
             return false
         }
 
         override fun onScroll(e1: MotionEvent?, e2: MotionEvent?, distanceX: Float, distanceY: Float): Boolean {
-//            cX -= distanceX
-//            cY -= distanceY
-//            mMatrix.setTranslate(cX, cY)
-            Log.d("asdasd", "${e1?.x} ${e1?.y} ${e2?.x} ${e2?.y}")
-            rotate+=1f
-            mMatrix.setRotate(rotate)
-            invalidate()
+            if(e1!=null&&e2!=null){
+                val a = Math.sqrt(Math.pow(Math.abs(bmp.width/2f-e1.x).toDouble(),2.0)+Math.pow(Math.abs(bmp.height/2-e1.y).toDouble(),2.0))
+                val b = Math.sqrt(Math.pow(Math.abs(bmp.width/2-e2.x).toDouble(),2.0)+Math.pow(Math.abs(bmp.height/2-e2.y).toDouble(),2.0))
+                val c = Math.sqrt(Math.pow(Math.abs(e2.x-e1.x).toDouble(),2.0)+Math.pow(Math.abs(e2.y-e1.y).toDouble(),2.0))
+                val cosA = (c*c+b*b-a*a)/(2*b*c)
+                val cosB = (a*a+c*c-b*b)/(2*a*c)
+                val cosC = (a*a+b*b-c*c)/(2*a*b)
+                val all = Math.acos(cosA)+Math.acos(cosB)+Math.acos(cosC)
+                rotate+=(Math.acos(cosC)/all*180).toFloat()/20
+                mMatrix.setRotate(rotate, bmp.width/2f, bmp.height/2f)
+                invalidate()
+            }
             return false
         }
 

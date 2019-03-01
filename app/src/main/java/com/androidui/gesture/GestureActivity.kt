@@ -3,6 +3,7 @@ package com.androidui.gesture
 import android.content.Intent
 import android.os.Bundle
 import com.androidui.R
+import com.androidui.gesture.view.ScaleImageView
 import com.kotlinlib.activity.KotlinActivity
 import com.kotlinlib.other.LayoutId
 import kotlinx.android.synthetic.main.activity_gesture.*
@@ -41,6 +42,12 @@ GestureDetector的三个回调接口
         btn0.setOnClickListener { startActivity(Intent(this, VelocityTrackerActivity::class.java)) }
         btn4.setOnClickListener { startActivity(Intent(this, DragImageActivity::class.java)) }
         btn5.setOnClickListener { startActivity(Intent(this, RotateImageActivity::class.java)) }
+        btn6.setOnClickListener { startActivity(Intent(this, ImageScaleActivity::class.java)) }
+    }
+
+    override fun finish() {
+        super.finish()
+        overridePendingTransition(R.anim.my_fade_in, R.anim.my_fade_out)
     }
 
 }

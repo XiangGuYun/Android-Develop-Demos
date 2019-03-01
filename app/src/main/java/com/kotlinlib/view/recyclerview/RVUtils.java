@@ -32,6 +32,7 @@ public class RVUtils {
     public List dataList;
     private int gridSpanCount = 1;
     public boolean needHeader = false;
+    public boolean needFooter = false;
 
     public ItemTouchHelper getmItemTouchHelper() {
         return mItemTouchHelper;
@@ -309,12 +310,23 @@ public class RVUtils {
                         @Override
                         public int getSpanSize(int position)
                         {
-                            if(needHeader){
-                                switch (position){
-                                    case 0:
-                                        return gridSpanCount;
-                                    default:
-                                        return 1;
+                            if(needHeader&&!needFooter){
+                                if(position==0){
+                                    return gridSpanCount;
+                                }else {
+                                    return 1;
+                                }
+                            }else if(needHeader&&needFooter){
+                                if(position==0||position==dataList.size()-1){
+                                    return gridSpanCount;
+                                }else {
+                                    return 1;
+                                }
+                            }else if(!needHeader&&needFooter){
+                                if(position==dataList.size()-1){
+                                    return gridSpanCount;
+                                }else {
+                                    return 1;
                                 }
                             }else {
                                 return 1;

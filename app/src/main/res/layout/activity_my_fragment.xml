@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@mipmap/frag_girl"
+    tools:context=".fragment.MyFragmentActivity">
+
+    <com.androidui.view.MyTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/item"
+        android:text="Hello Fragment"
+        android:background="@drawable/rect6"
+        android:id="@+id/btnHelloFragment"/>
+
+    <com.androidui.view.MyTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/item"
+        android:text="Book Fragment"
+        android:background="@drawable/rect6"
+        android:id="@+id/btnBookFragment"/>
+
+    <com.androidui.view.MyTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/item"
+        android:text="Four Fragments"
+        android:background="@drawable/rect6"
+        android:id="@+id/btnFourFragments"/>
+
+    <com.androidui.view.MyTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/item"
+        android:textSize="15sp"
+        android:text="360News(与ViewPager搭配，自由增删，懒加载)"
+        android:background="@drawable/rect6"
+        android:id="@+id/btn360News"/>
+
+
+</LinearLayout>

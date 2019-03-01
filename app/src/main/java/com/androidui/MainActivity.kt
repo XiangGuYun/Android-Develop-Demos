@@ -17,12 +17,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-
-
         tvCatalog.typeface = Typeface.createFromAsset(assets, "font/myfont.ttf")
 
         btnHuiTu.setOnClickListener {
             startActivity(Intent(this, HuiTuActivity::class.java))
+            overridePendingTransition(R.anim.my_fade_in, R.anim.my_fade_out)
         }
 
         btnSystemUI.setOnClickListener {
@@ -32,6 +31,7 @@ class MainActivity : AppCompatActivity() {
 
         btnSupportLibUI.setOnClickListener {
             startActivity(Intent(this, SupportLibUIActivity::class.java))
+            overridePendingTransition(R.anim.my_fade_in, R.anim.my_fade_out)
         }
 
         btnAnim.setOnClickListener {

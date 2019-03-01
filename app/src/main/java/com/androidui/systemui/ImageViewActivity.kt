@@ -1,6 +1,7 @@
 package com.androidui.systemui
 
 import android.graphics.BitmapFactory
+import android.graphics.Matrix
 import android.os.Bundle
 import com.androidui.R
 import com.kotlinlib.activity.KotlinActivity
@@ -226,6 +227,11 @@ public class RoundImageView extends ImageView {
 }
             """.trimIndent())
         }
+
+//        val matrix = Matrix()
+//        matrix.preTranslate(100f,100f)
+//        matrix.setScale(0.1f,0.1f)
+//        img5.imageMatrix = matrix
 
     }
 }

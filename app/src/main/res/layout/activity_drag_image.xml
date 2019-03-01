@@ -12,10 +12,24 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"/>
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/btn_test"
+        android:text="查看代码"
+        android:id="@+id/btnViewCode1"/>
+
     <com.androidui.gesture.view.DragImage1View
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/btn_test"
+        android:text="查看代码"
+        android:id="@+id/btnViewCode2"/>
 
 
 </LinearLayout>

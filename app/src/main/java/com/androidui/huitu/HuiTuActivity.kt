@@ -45,4 +45,10 @@ class HuiTuActivity : AppCompatActivity(),RVInterface {
         }
 
     }
+
+    override fun finish() {
+        super.finish()
+        overridePendingTransition(R.anim.my_fade_in, R.anim.my_fade_out)
+    }
+
 }

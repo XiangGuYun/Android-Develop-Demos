@@ -2,6 +2,7 @@ package com.androidui.systemui
 
 import android.os.Bundle
 import com.androidui.R
+import android.support.v7.widget.CardView
 import com.kotlinlib.activity.KotlinActivity
 import com.kotlinlib.other.LayoutId
 import kotlinx.android.synthetic.main.activity_system_ui.*

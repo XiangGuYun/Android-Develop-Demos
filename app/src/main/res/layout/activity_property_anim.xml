@@ -103,6 +103,7 @@
             android:text="了解ObjectAnimator"/>
 
         <com.androidui.view.Header1View
+            android:id="@+id/header4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:mainTitle1="类动画器实现四种基本动画"/>
@@ -144,6 +145,7 @@
             style="@style/btn_test"/>
 
         <com.androidui.view.Header1View
+            android:id="@+id/headerCustomerColor"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:mainTitle1="给自定义的color属性实现属性动画"/>

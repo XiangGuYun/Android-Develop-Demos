@@ -347,6 +347,41 @@ bLast.click {
     }
 
     private fun case5() {
+        headerCustomerColor.setRightClick {
+            codeDialog.text("""
+myView.color = "#ffff33"
+myView1.color = "#ff3366"
+myView2.color = "#33ff66"
+myView3.color = "#00ccff"
+myView4.color = "#336666"
+myView5.color = "#FFA500"
+val anim1 = ObjectAnimator.ofObject(myView, "color", ColorEvaluator(),
+        "#ffff33", "#FFA500").apply { duration=8000 }
+val anim2 = ObjectAnimator.ofObject(myView1, "color", ColorEvaluator(),
+        "#ff3366", "#336666").apply { duration=8000 }
+val anim3 = ObjectAnimator.ofObject(myView2, "color", ColorEvaluator(),
+        "#33ff66", "#00ccff").apply { duration=8000 }
+val anim4 = ObjectAnimator.ofObject(myView3, "color", ColorEvaluator(),
+        "#00ccff", "#33ff66").apply { duration=8000 }
+val anim5 = ObjectAnimator.ofObject(myView4, "color", ColorEvaluator(),
+        "#336666", "#ff3366").apply { duration=8000 }
+val anim6 = ObjectAnimator.ofObject(myView5, "color", ColorEvaluator(),
+        "#FFA500", "#ffff33").apply { duration=8000 }
+// 设置自定义View对象、背景颜色属性值 & 颜色估值器
+// 本质逻辑：
+// 步骤1：根据颜色估值器不断 改变 值
+// 步骤2：调用set()设置背景颜色的属性值（实际上是通过画笔进行颜色设置）
+// 步骤3：调用invalidate()刷新视图，即调用onDraw()重新绘制，从而实现动画效果
+b10.click {
+    anim1.start()
+    anim2.start()
+    anim3.start()
+    anim4.start()
+    anim5.start()
+    anim6.start()
+}
+            """.trimIndent())
+        }
         myView.color = "#ffff33"
         myView1.color = "#ff3366"
         myView2.color = "#33ff66"
@@ -419,6 +454,50 @@ bLast.click {
         animator3.duration = 5000
         b9.click {
             animator3.start()
+        }
+
+        header4.setRightClick {
+            codeDialog.text("""
+val animator = ObjectAnimator.ofFloat(girl, "alpha", 1f, 0f, 1f)
+// 表示的是:
+// 动画作用对象是mButton
+// 动画作用的对象的属性是透明度alpha
+// 动画效果是:常规 - 全透明 - 常规
+animator.duration = 5000
+b6.click { animator.start() }
+
+val curTranslationX = girl.translationX
+// 获得当前按钮的位置
+val animator1 = ObjectAnimator.ofFloat(girl, "translationX", curTranslationX, 300f, curTranslationX)
+// 表示的是:
+// 动画作用对象是mButton
+// 动画作用的对象的属性是X轴平移（在Y轴上平移同理，采用属性"translationY"
+// 动画效果是:从当前位置平移到 x=1500 再平移到初始位置
+animator1.duration = 5000
+b7.click {
+    animator1.start()
+}
+
+val animator2 = ObjectAnimator.ofFloat(girl, "scaleX", 1f, 3f, 1f)
+// 表示的是:
+// 动画作用对象是mButton
+// 动画作用的对象的属性是X轴缩放
+// 动画效果是:放大到3倍,再缩小到初始大小
+animator2.duration = 5000
+b8.click {
+    animator2.start()
+}
+
+val animator3 = ObjectAnimator.ofFloat(girl, "rotation", 0f, 360f)
+// 表示的是:
+// 动画作用对象是mButton
+// 动画作用的对象的属性是旋转alpha
+// 动画效果是:0 - 360
+animator3.duration = 5000
+b9.click {
+    animator3.start()
+}
+            """.trimIndent())
         }
     }
 

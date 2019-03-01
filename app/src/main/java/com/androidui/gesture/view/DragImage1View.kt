@@ -21,8 +21,8 @@ class DragImage1View @JvmOverloads constructor(context: Context, attrs: Attribut
     var cY = 0f
 
     init {
-        setBackgroundColor(Color.GRAY)
-        bmp = BitmapFactory.decodeResource(resources, R.mipmap.girl1)
+        setBackgroundColor(Color.BLACK)
+        bmp = BitmapFactory.decodeResource(resources, R.mipmap.love)
         paint.color = Color.RED
         detector = GestureDetector(context, listener)
     }

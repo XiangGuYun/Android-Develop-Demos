@@ -89,7 +89,7 @@ interface RVInterface:StringUtils {
      * @param handleNormalLayoutIndex (pos:Int)->Int
      * @param itemId IntArray
      */
-    fun <T> RVUtils.rvHeaderAdapter(data:List<T>,
+    fun <T> RVUtils.rvAdapterH(data:List<T>,
                                      headerViewId:Int,
                                      handleHeaderView:(holder:Holder)->Unit,
                                      handleNormalView:(holder:Holder,pos:Int)->Unit,
@@ -105,7 +105,7 @@ interface RVInterface:StringUtils {
         },{
             when(it){
                 0->0
-                else->handleNormalLayoutIndex.invoke(it)
+                else->handleNormalLayoutIndex.invoke(it)+1
             }
         }, headerViewId, *itemId)
     }
@@ -120,26 +120,28 @@ interface RVInterface:StringUtils {
      * @param handleNormalLayoutIndex (pos:Int)->Int
      * @param itemId IntArray
      */
-    fun <T> RVUtils.rvHeaderFooterAdapter(data:List<T>,
+    fun <T> RVUtils.rvAdapterHF(data:List<T>,
                                     headerViewId:Int,
-                                    handleHeaderView:(holder:Holder,pos:Int)->Unit,
-                                    handleNormalView:(holder:Holder,pos:Int)->Unit,
-                                    handleNormalLayoutIndex:(pos:Int)->Int,
+                                    handleHeaderView:(headerHolder:Holder)->Unit,
                                     footerViewId:Int,
-                                    handleFooterView:(holder:Holder,pos:Int)->Unit,
+                                    handleFooterView:(footerHolder:Holder)->Unit,
+                                    handleNormalView:(normalHolder:Holder,pos:Int)->Unit,
+                                    handleNormalLayoutIndex:(pos:Int)->Int,
                                     vararg itemId:Int){
+        needHeader = true
+        needFooter = true
         rvMultiAdapter(data, {
             holder, pos ->
             when(pos){
-                0->{handleHeaderView.invoke(holder, pos)}
-                data.lastIndex->{handleFooterView.invoke(holder, pos)}
+                0->{handleHeaderView.invoke(holder)}
+                data.lastIndex->{handleFooterView.invoke(holder)}
                 else->{handleNormalView.invoke(holder, pos)}
             }
         },{
             when(it){
                 0->0
-                1->1
-                else->handleNormalLayoutIndex.invoke(it)
+                data.lastIndex->1
+                else->handleNormalLayoutIndex.invoke(it)+2
             }
         }, headerViewId, footerViewId, *itemId)
     }
@@ -207,8 +209,16 @@ interface RVInterface:StringUtils {
         return this
     }
 
-    fun Holder.itemClick(click:(view: View)->Unit){
+    fun Holder.itemClick(click:(view: View)->Unit): Holder {
         setOnItemViewClickListener(click)
+        return this
+    }
+
+    fun Holder.itemLongClick(click:(view: View)->Unit){
+        getItemView().setOnLongClickListener{
+            click.invoke(it)
+            return@setOnLongClickListener true
+        }
     }
 
     fun Holder.htmlText(id:Int, html:String){

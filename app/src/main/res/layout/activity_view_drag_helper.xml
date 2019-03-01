@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".customview.drag.ViewDragHelperActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/small_title"
+        android:text="先从最简单的例子入手，在本例中，我贴出了DragView的代码，并在DragView中放入两个子文本，你可以拖拽它们，来观察ViewDragHelper.Callback中三个回调函数的参数变化。"/>
+
+    <com.androidui.view.Header1View
+        android:id="@+id/header1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:mainTitle1="Hello ViewDragHelper"/>
+
+    <Button
+        android:id="@+id/btnViewResult1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/btn_test"
+        android:text="进入DEMO"/>
+
+    <com.androidui.view.ReadMoreView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvResult"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/small_title"
+        android:id="@+id/tv2"/>
+
+    <Button
+        android:id="@+id/btn2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/btn_test"
+        android:text="进入DEMO"/>
+
+</LinearLayout>
+</ScrollView>

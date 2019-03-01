@@ -16,7 +16,7 @@
         <TextView
             android:id="@+id/tvCatalog"
             android:layout_width="wrap_content"
-            android:layout_height="60dp"
+            android:layout_height="50dp"
             android:layout_gravity="center_horizontal"
             android:textSize="35sp"
             android:text="目 录"
@@ -90,7 +90,7 @@
                 android:gravity="center"
                 android:layout_centerHorizontal="true"
                 android:background="@drawable/circle_yellow"
-                android:text="Activity\nFragment"/>
+                android:text="自定义UI"/>
             <com.androidui.view.MyTextView
                 android:id="@+id/btnSupportLibUI"
                 android:layout_width="100dp"
@@ -113,11 +113,11 @@
                 android:layout_gravity="center"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:textSize="15sp"
+                android:textSize="20sp"
                 android:layout_marginLeft="10dp"
                 android:gravity="center"
                 android:background="@drawable/circle3"
-                android:text="View\n测绘布局滑动\n事件分发机制"/>
+                android:text="Activity\nFragment"/>
             <com.androidui.view.MyTextView
                 android:layout_width="100dp"
                 android:layout_height="100dp"
@@ -136,7 +136,7 @@
                 android:gravity="center"
                 android:layout_alignParentRight="true"
                 android:background="@drawable/circle_yellow"
-                android:text="Java与Kotlin语言"/>
+                android:text="Kotlin"/>
         </RelativeLayout>
 
         <RelativeLayout
@@ -151,7 +151,7 @@
                 android:textSize="20sp"
                 android:gravity="center"
                 android:background="@drawable/circle_blue"
-                android:text="性能\n分析与优化"/>
+                android:text="持久化"/>
             <com.androidui.view.MyTextView
                 android:layout_centerHorizontal="true"
                 android:layout_width="100dp"
@@ -160,7 +160,7 @@
                 android:layout_marginTop="10dp"
                 android:background="@drawable/circle3"
                 android:gravity="center"
-                android:text="其他知识点"/>
+                android:text="图片"/>
             <com.androidui.view.MyTextView
                 android:layout_width="100dp"
                 android:layout_height="100dp"
@@ -170,10 +170,42 @@
                 android:layout_marginRight="10dp"
                 android:gravity="center"
                 android:background="@drawable/circle_yellow"
-                android:text="面试题收集"/>
+                android:text="网络"/>
         </RelativeLayout>
 
-
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <com.androidui.view.MyTextView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:background="@drawable/circle_blue"
+                android:text="常用\n设计模式"/>
+            <com.androidui.view.MyTextView
+                android:layout_centerHorizontal="true"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:textSize="20sp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/circle3"
+                android:gravity="center"
+                android:text="进程、线程\n协程"/>
+            <com.androidui.view.MyTextView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:textSize="20sp"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:gravity="center"
+                android:background="@drawable/circle_yellow"
+                android:text="性能优化"/>
+        </RelativeLayout>
 
     </LinearLayout>
 

@@ -1,16 +1,88 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<LinearLayout
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".supportlib.RecyclerViewActivity"
     android:orientation="vertical">
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/rv1"
+    <TextView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        style="@style/small_title"
+        android:text="作为最常用的控件之一，我将封装一个RVUtils，以最简洁的代码来实现各种需求和效果。"/>
+
+    <com.androidui.view.Header1View
+        android:id="@+id/header0"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:mainTitle1="实现竖向列表\n并添加Header和Footer"/>
+
+    <com.androidui.view.ReadMoreView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/read0"/>
+
+    <Button
+        android:id="@+id/btnViewResult0"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/btn_test"
+        android:text="查看效果"/>
+
+    <com.androidui.view.Header1View
+        android:id="@+id/header1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:mainTitle1="实现2格网格列表\n并添加Header和Footer"/>
+
+    <com.androidui.view.ReadMoreView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/read1"/>
+
+    <Button
+        android:id="@+id/btnViewResult1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/btn_test"
+        android:text="查看效果"/>
+
+    <com.androidui.view.Header1View
+        android:id="@+id/header2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:mainTitle1="实现流式布局列表\n并支持拖拽换位"/>
+
+    <com.androidui.view.ReadMoreView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/read2"/>
+
+    <Button
+        android:id="@+id/btnViewResult2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/btn_test"
+        android:text="查看效果"/>
+
+    <com.androidui.view.Header1View
+        android:id="@+id/header3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:mainTitle1="向左拖动列表项删除"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/btn_test"
+        android:id="@+id/btnViewResult3"
+        android:text="查看效果"/>
 
 
 </LinearLayout>
+</ScrollView>

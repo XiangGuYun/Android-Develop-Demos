@@ -135,7 +135,7 @@ class FragmentUtils<T:Fragment> {
      * @param target Fragment
      * @param isAddToBackStack Boolean
      */
-    fun replace(target:Fragment, isAddToBackStack: Boolean, getTransaction:(FragmentTransaction)->Unit){
+    fun replace(target:Fragment, isAddToBackStack: Boolean, getTransaction:(FragmentTransaction)->Unit ){
         val manager = act.supportFragmentManager.beginTransaction()
         getTransaction.invoke(manager)
         if(isAddToBackStack){

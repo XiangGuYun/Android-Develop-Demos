@@ -170,6 +170,21 @@
             android:layout_marginBottom="20dp"
             android:id="@+id/imgRound"/>
 
+        <com.androidui.view.Header1View
+            android:id="@+id/header5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:mainTitle1="setImageMatrix设置图像矩阵"/>
+
+        <com.androidui.gesture.view.MyZoomImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/img3"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:id="@+id/img5"/>
+
     </LinearLayout>
 
 </ScrollView>
