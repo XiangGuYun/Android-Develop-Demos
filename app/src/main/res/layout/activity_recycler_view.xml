@@ -14,18 +14,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         style="@style/small_title"
-        android:text="作为最常用的控件之一，我将封装一个RVUtils，以最简洁的代码来实现各种需求和效果。"/>
+        android:text="RecyclerView作为最常用的控件之一，我将封装一个RVUtils，以最简洁的代码来实现各种需求和效果。"/>
 
     <com.androidui.view.Header1View
         android:id="@+id/header0"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:mainTitle1="实现竖向列表\n并添加Header和Footer"/>
-
-    <com.androidui.view.ReadMoreView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/read0"/>
+        app:mainTitle1="LinearLayoutManager竖向列表\n(添加Header和Footer)"/>
 
     <Button
         android:id="@+id/btnViewResult0"
@@ -35,15 +30,23 @@
         android:text="查看效果"/>
 
     <com.androidui.view.Header1View
+        android:id="@+id/headerHL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:mainTitle1="LinearLayoutManager横向列表\n(添加Header和Footer)"/>
+
+    <Button
+        android:id="@+id/btnViewResultHL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/btn_test"
+        android:text="查看效果"/>
+
+    <com.androidui.view.Header1View
         android:id="@+id/header1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:mainTitle1="实现2格网格列表\n并添加Header和Footer"/>
-
-    <com.androidui.view.ReadMoreView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/read1"/>
+        app:mainTitle1="GridLayoutManager网格列表\n(添加Header和Footer)"/>
 
     <Button
         android:id="@+id/btnViewResult1"
@@ -56,12 +59,7 @@
         android:id="@+id/header2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:mainTitle1="实现流式布局列表\n并支持拖拽换位"/>
-
-    <com.androidui.view.ReadMoreView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/read2"/>
+        app:mainTitle1="StaggeredGridLayoutManager\n瀑布流列表\n(支持拖拽换位)"/>
 
     <Button
         android:id="@+id/btnViewResult2"
@@ -70,17 +68,96 @@
         style="@style/btn_test"
         android:text="查看效果"/>
 
+
+    <com.androidui.view.Header1View
+        android:id="@+id/header4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:mainTitle1="SnapHelper"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/small_title"
+        android:gravity="center"
+        android:text="LinearSnapHelper"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_marginTop="10dp"
+        android:id="@+id/rvViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/small_title"
+        android:gravity="center"
+        android:text="PagerSnapHelper"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_marginTop="10dp"
+        android:id="@+id/rvViewPager1"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/btn_test"
+        android:id="@+id/btnMoreSnap"
+        android:text="更多效果"/>
+
+    <com.androidui.view.Header1View
+        android:id="@+id/headerAnim"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:mainTitle1="列表项增删动画"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/btn_test"
+        android:text="查看效果"
+        android:id="@+id/btnViewAnim"/>
+
+    <com.androidui.view.Header1View
+        android:id="@+id/header5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:mainTitle1="案例:横向滑动删除列表项\nenableDragDeleteItem"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/btn_test"
+        android:id="@+id/btnViewResult4"
+        android:text="查看效果"/>
+
     <com.androidui.view.Header1View
         android:id="@+id/header3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:mainTitle1="向左拖动列表项删除"/>
+        app:mainTitle1="案例:类短信列表\n(右滑已读左滑删除)"/>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         style="@style/btn_test"
         android:id="@+id/btnViewResult3"
+        android:text="查看效果"/>
+
+    <com.androidui.view.Header1View
+        android:id="@+id/headerContact"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:mainTitle1="案例:通讯录列表(顶部悬浮)"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/btn_test"
+        android:id="@+id/btnViewContact"
         android:text="查看效果"/>
 
 

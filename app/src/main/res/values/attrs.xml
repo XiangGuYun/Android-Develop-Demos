@@ -10,4 +10,5 @@
     <declare-styleable name="CircleImageView">
         <attr name="imageRes" format="integer"/>
     </declare-styleable>
+    <attr name="listDivider" format="color"/>
 </resources>

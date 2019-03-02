@@ -98,8 +98,10 @@ interface ViewUtils {
     /**
      * 设置点击事件
      */
-    fun <T:View> T.click1(func: (View)->Unit):T{
-        setOnClickListener(func)
+    fun <T:View> T.click1(func: ()->Unit):T{
+        setOnClickListener {
+            func.invoke()
+        }
         return this
     }
 

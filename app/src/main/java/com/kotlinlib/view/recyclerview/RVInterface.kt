@@ -1,13 +1,14 @@
 package com.kotlinlib.view.recyclerview
 
-import android.support.v7.widget.GridLayoutManager
-import android.support.v7.widget.RecyclerView
+import android.support.v7.widget.*
+import android.support.v7.widget.DividerItemDecoration
 import android.text.Html
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
 import com.kotlinlib.Holder
 import com.kotlinlib.other.StringUtils
+
 
 interface RVInterface:StringUtils {
     /**
@@ -127,7 +128,7 @@ interface RVInterface:StringUtils {
                                     handleFooterView:(footerHolder:Holder)->Unit,
                                     handleNormalView:(normalHolder:Holder,pos:Int)->Unit,
                                     handleNormalLayoutIndex:(pos:Int)->Int,
-                                    vararg itemId:Int){
+                                    vararg itemId:Int): RVUtils {
         needHeader = true
         needFooter = true
         rvMultiAdapter(data, {
@@ -135,7 +136,9 @@ interface RVInterface:StringUtils {
             when(pos){
                 0->{handleHeaderView.invoke(holder)}
                 data.lastIndex->{handleFooterView.invoke(holder)}
-                else->{handleNormalView.invoke(holder, pos)}
+                else->{
+                    handleNormalView.invoke(holder, pos)
+                }
             }
         },{
             when(it){
@@ -144,6 +147,7 @@ interface RVInterface:StringUtils {
                 else->handleNormalLayoutIndex.invoke(it)+2
             }
         }, headerViewId, footerViewId, *itemId)
+        return this
     }
 
     /**
@@ -169,8 +173,8 @@ interface RVInterface:StringUtils {
         return getView(id)
     }
 
-    fun ImageView.ir(imgId:Int): ImageView{
-        setImageResource(imgId)
+    fun Holder.ir(ivId:Int, imgId:Int): Holder{
+        setImageResource(ivId, imgId)
         return this
     }
 
@@ -184,25 +188,6 @@ interface RVInterface:StringUtils {
         return this
     }
 
-    fun Holder.text_(id:Int, text:String?):Holder{
-        if(text.isNullOrEmpty()){
-            setText(id, "-")
-        }else{
-            setText(id, text)
-        }
-
-        return this
-    }
-
-    fun Holder.text_phone(id:Int, text:String?):Holder{
-        if(text.isNullOrEmpty()){
-            setText(id, "-")
-        }else{
-            setText(id, text?.encryptPhone())
-        }
-
-        return this
-    }
 
     fun Holder.textColor(id:Int, color:Int):Holder{
         setTextColor(id, color)
@@ -223,6 +208,122 @@ interface RVInterface:StringUtils {
 
     fun Holder.htmlText(id:Int, html:String){
         getView<TextView>(id).text = Html.fromHtml(html)
+    }
+
+    /**
+     * 添加分割线
+     * @receiver RVUtils
+     * @param drawableId Int
+     * @param isVertical Boolean
+     * @return RVUtils
+     */
+    fun RVUtils.decorate(drawableId:Int, isVertical:Boolean=true): RVUtils {
+        val divider = DividerItemDecoration(context, if(isVertical)DividerItemDecoration.VERTICAL else DividerItemDecoration.HORIZONTAL)
+        divider.setDrawable(context.resources.getDrawable(drawableId))
+        rv.addItemDecoration(divider)
+        return this
+    }
+
+    fun RVUtils.decorate(isVertical:Boolean=true): RVUtils {
+        rv.addItemDecoration(DividerItemDecoration(context, if(isVertical)DividerItemDecoration.VERTICAL else DividerItemDecoration.HORIZONTAL))
+        return this
+    }
+
+    fun RVUtils.decorate(decoration: RecyclerView.ItemDecoration): RVUtils {
+        rv.addItemDecoration(decoration)
+        return this
+    }
+
+    /**
+     * 设置吸附
+     * @receiver RVUtils
+     * @return RVUtils
+     */
+    fun RVUtils.snapLinear(): RVUtils {
+        val helper = LinearSnapHelper()
+        helper.attachToRecyclerView(rv)
+        return this
+    }
+
+    /**
+     * 设置吸附
+     * @receiver RVUtils
+     * @return RVUtils
+     */
+    fun RVUtils.snapPager(): RVUtils {
+        val helper = PagerSnapHelper()
+        helper.attachToRecyclerView(rv)
+        return this
+    }
+
+    /**
+     * 设置吸附
+     * @receiver RVUtils
+     * @return RVUtils
+     */
+    fun RVUtils.customSnap(set:(rv:RecyclerView)->Unit): RVUtils {
+        set.invoke(rv)
+        return this
+    }
+
+    fun RVUtils.customSnap(snapHelper: SnapHelper): RVUtils {
+        snapHelper.attachToRecyclerView(rv)
+        return this
+    }
+
+    /**
+     * 设置增删动画
+     *
+Cool
+LandingAnimator
+
+Scale
+ScaleInAnimator, ScaleInTopAnimator, ScaleInBottomAnimator
+ScaleInLeftAnimator, ScaleInRightAnimator
+
+Fade
+FadeInAnimator, FadeInDownAnimator, FadeInUpAnimator
+FadeInLeftAnimator, FadeInRightAnimator
+
+Flip
+FlipInTopXAnimator, FlipInBottomXAnimator
+FlipInLeftYAnimator, FlipInRightYAnimator
+
+Slide
+SlideInLeftAnimator, SlideInRightAnimator, OvershootInLeftAnimator, OvershootInRightAnimator
+SlideInUpAnimator, SlideInDownAnimator
+     * @receiver RVUtils
+     * @param anim T?
+     * @return RVUtils
+     */
+    fun <T:RecyclerView.ItemAnimator> RVUtils.anim(anim:T?): RVUtils{
+        if(anim==null){
+            rv.itemAnimator = DefaultItemAnimator()
+        } else{
+            rv.itemAnimator = anim
+        }
+        return this
+    }
+
+    /**
+     * 滚动到指定位置，指定位置会完整地出现在屏幕的最下方
+     * @receiver RecyclerView
+     * @param position Int
+     * @param list List<T>
+     */
+    fun <T> RecyclerView.scrollTo(position:Int, list:List<T>){
+        if (position >= 0 && position <= list.size - 1) {
+            val firstItem = (layoutManager as LinearLayoutManager).findFirstVisibleItemPosition()
+            val lastItem = (layoutManager as LinearLayoutManager).findLastVisibleItemPosition()
+            if (position <= firstItem) {
+                scrollToPosition(position)
+            } else if (position <= lastItem) {
+                val top = getChildAt(position - firstItem).top
+                scrollBy(0, top)
+            } else {
+                scrollToPosition(position)
+            }
+        }
     }
 
 }

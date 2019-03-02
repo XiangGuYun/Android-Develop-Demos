@@ -20,7 +20,7 @@ class RVTest2Activity : KotlinActivity() {
             heights.add((100 + Math.random() * 300).toInt())
         }
         rvUtils.staggerManager(4,true)
-                .animator(null)
+                .anim(null)
                 .enableDraggableItem(list,true)
                 .rvAdapter(list, { holder, pos ->
                     holder.tv(R.id.tv_cell).let {

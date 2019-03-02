@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.androidui.customview.drag.Drag3View xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".customview.drag.Case3Activity">
+    <TextView
+        android:id="@+id/tvDragMe"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:background="@drawable/rect7"
+        android:text="Drag Me"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/tvDragMe1"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:background="@drawable/rect_blue"
+        android:text="Drag Me1"
+        android:layout_gravity="right"
+        android:gravity="center"/>
+</com.androidui.customview.drag.Drag3View>

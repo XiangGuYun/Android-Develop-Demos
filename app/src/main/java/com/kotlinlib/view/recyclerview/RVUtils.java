@@ -5,6 +5,7 @@ package com.kotlinlib.view.recyclerview;
  */
 
 import android.content.Context;
+import android.graphics.Canvas;
 import android.graphics.Color;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.DefaultItemAnimator;
@@ -45,23 +46,6 @@ public class RVUtils {
         context = recyclerView.getContext();
     }
 
-    /**
-     * 滑动到RV的指定位置
-     */
-    public void scrollToPosition(int position, List list) {
-        if (position >= 0 && position <= list.size() - 1) {
-            int firstItem = ((LinearLayoutManager) rv.getLayoutManager()).findFirstVisibleItemPosition();
-            int lastItem = ((LinearLayoutManager) rv.getLayoutManager()).findLastVisibleItemPosition();
-            if (position <= firstItem) {
-                rv.scrollToPosition(position);
-            } else if (position <= lastItem) {
-                int top = rv.getChildAt(position - firstItem).getTop();
-                rv.scrollBy(0, top);
-            } else {
-                rv.scrollToPosition(position);
-            }
-        }
-    }
 
     /**
      * 获取第一个可见的位置
@@ -83,6 +67,107 @@ public class RVUtils {
         android.view.View firstVisiableChildView = layoutManager.findViewByPosition(position);
         int itemHeight = firstVisiableChildView.getHeight();
         return (position) * itemHeight - firstVisiableChildView.getTop();
+    }
+
+    /**
+     * 支持滑动删除列表项
+     * 需要注意数据集合不能是List，必须是ArrayList之类的有删除方法的
+     * @param orientation 允许向哪些方向拖拽 仅限ItemTouchHelper.LEFT和ItemTouchHelper.RIGHT
+     * @param onSelectBg 被选中的Item背景DrawableId，填入0表示无
+     * @param onUnSelectBg 未被选中的Item背景DrawableId，填入0表示默认
+     * @return
+     */
+    public RVUtils enableDragDeleteItem(int orientation, int onSelectBg, int onUnSelectBg){
+        //创建列表项触摸助手
+        mItemTouchHelper = new ItemTouchHelper(new ItemTouchHelper.Callback(){
+            /**
+             * 设置滑动类型标记
+             */
+            @Override
+            public int getMovementFlags(RecyclerView recyclerView, RecyclerView.ViewHolder viewHolder) {
+                int dragFlags = 0;  // 禁止上下拖动
+                int swipeFlags = orientation;  // 只允许从右向左滑动
+                return makeMovementFlags(dragFlags, swipeFlags);
+            }
+
+            @Override
+            public boolean onMove(RecyclerView recyclerView, RecyclerView.ViewHolder viewHolder, RecyclerView.ViewHolder target) {
+                return false;
+            }
+
+            /**
+             * 滑动删除 Item 的操作
+             */
+            @Override
+            public void onSwiped(RecyclerView.ViewHolder viewHolder, int direction) {
+                int pos = viewHolder.getAdapterPosition();
+                if (pos < 0 || pos > dataList.size()) {
+                    return;
+                }
+
+                dataList.remove(pos);
+                adapter.notifyItemRemoved(pos);
+
+                // 解决 RecyclerView 删除 Item 导致位置错乱的问题
+                if (pos != dataList.size()) {
+                    adapter.notifyItemRangeChanged(pos, dataList.size() - pos);
+                }
+            }
+
+            /**
+             * 设置 Item 不支持长按拖动
+             */
+            @Override
+            public boolean isLongPressDragEnabled() {
+                return false;
+            }
+
+            /**
+             * 设置 Item 支持滑动
+             */
+            @Override
+            public boolean isItemViewSwipeEnabled() {
+                return true;
+            }
+
+            /**
+             * Item 被选中时候，改变 Item 的背景
+             */
+            @Override
+            public void onSelectedChanged(RecyclerView.ViewHolder viewHolder, int actionState) {
+                // item 被选中的操作
+                if (actionState != ItemTouchHelper.ACTION_STATE_IDLE) {
+                    viewHolder.itemView.setBackgroundResource(onSelectBg);
+                }
+                super.onSelectedChanged(viewHolder, actionState);
+            }
+
+            /**
+             * 移动过程中重新绘制 Item，随着滑动的距离，设置 Item 的透明度
+             */
+            @Override
+            public void onChildDraw(Canvas c, RecyclerView recyclerView, RecyclerView.ViewHolder viewHolder, float dX, float dY, int actionState, boolean isCurrentlyActive) {
+                float x = Math.abs(dX) + 0.5f;
+                float width = viewHolder.itemView.getWidth();
+                float alpha = 1f - x / width;
+                viewHolder.itemView.setAlpha(alpha);
+                super.onChildDraw(c, recyclerView, viewHolder, dX, dY, actionState, isCurrentlyActive);
+            }
+
+            /**
+             * 用户操作完毕或者动画完毕后调用，恢复 item 的背景和透明度
+             */
+            @Override
+            public void clearView(RecyclerView recyclerView, RecyclerView.ViewHolder viewHolder) {
+                // 操作完毕后恢复颜色
+                viewHolder.itemView.setBackgroundResource(onUnSelectBg);
+                viewHolder.itemView.setAlpha(1.0f);
+                super.clearView(recyclerView, viewHolder);
+            }
+
+        });
+        mItemTouchHelper.attachToRecyclerView(rv);
+        return this;
     }
 
     /**
@@ -255,25 +340,13 @@ public class RVUtils {
     }
 
     /**
-     * 设置添加和删除动画
-     * 可参考 implementation 'jp.wasabeef:recyclerview-animators:2.3.0'
-     */
-    public RVUtils animator(RecyclerView.ItemAnimator animator) {
-        if (animator == null) {
-            rv.setItemAnimator(new DefaultItemAnimator());
-        } else {
-            rv.setItemAnimator(animator);
-        }
-        return this;
-    }
-
-    /**
      * 设置是否固定大小列表项
      */
     public RVUtils fixed(boolean b) {
         rv.setHasFixedSize(b);
         return this;
     }
+
 
     /**
      * 设置适配器

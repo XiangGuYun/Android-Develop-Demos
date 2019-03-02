@@ -11,13 +11,17 @@ import kotlinx.android.synthetic.main.activity_rvtest3.*
 
 @LayoutId(R.layout.activity_rvtest3)
 class RVTest3Activity : KotlinActivity() {
+
+    val testData = listOf(R.mipmap.img1, R.mipmap.bg_girl1, R.mipmap.img3, R.mipmap.bg_girl, R.mipmap.header1,
+            R.mipmap.header2,R.mipmap.header3,R.mipmap.header5,R.mipmap.header6,R.mipmap.header7)
+
     override fun init(bundle: Bundle?) {
-        val data = (0..30).toList().map { "Item$it" }
         RVUtils(rv3)//传入RecyclerView对象
-                .rvAdapter(data, //数据源
+                .decorate(R.drawable.rect_line, true)
+                .rvAdapter(testData, //数据源
                         {
                             normalHolder, pos ->
-                            normalHolder.text(R.id.tvItem, data[pos])//处理普通ItemView
+                            normalHolder.ir(R.id.ivItem, testData[pos])//处理普通ItemView
                         }, R.layout.rv_item1)//普通ItemView布局
 //        ItemTouchHelper(object :ItemTouchHelper.Callback(){
 //            override fun getMovementFlags(p0: RecyclerView, p1: RecyclerView.ViewHolder): Int {

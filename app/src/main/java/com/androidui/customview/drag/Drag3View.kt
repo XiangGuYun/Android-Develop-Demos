@@ -13,7 +13,9 @@ import android.widget.FrameLayout
 import android.widget.TextView
 import com.androidui.R
 
-class Drag1View @JvmOverloads constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) :
+
+
+class Drag3View @JvmOverloads constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) :
         FrameLayout(context, attrs, defStyleAttr){
 
     private var dragHelper: ViewDragHelper?=null
@@ -23,44 +25,53 @@ class Drag1View @JvmOverloads constructor(context: Context, attrs: AttributeSet?
         dragHelper = ViewDragHelper.create( this, object :ViewDragHelper.Callback(){
 
             override fun tryCaptureView(child: View, pointerId: Int): Boolean {
-                return false
-//                child.tag == "DragMe1"
+                return true
             }
 
             override fun clampViewPositionHorizontal(child: View, left: Int, dx: Int): Int {
-                if(left<0){
-                    return 0//禁止超过左边界
-                }
-                if(left>width/2-child.width){
-                    return width/2-child.width//禁止超过右边界
-                }
                 return left
             }
 
             override fun clampViewPositionVertical(child: View, top: Int, dy: Int): Int {
-                if(top<0){
-                    return 0//禁止超过上边界
-                }
-                if(top>height/2-child.height){
-                    return height/2-child.height//禁止超过下边界
-                }
                 return top
             }
 
-            override fun onEdgeDragStarted(edgeFlags: Int, pointerId: Int) {
-                dragHelper?.captureChildView(viewTest, pointerId)
+            override fun onViewReleased(releasedChild: View, xvel: Float, yvel: Float) {
+                if (releasedChild == viewTest)
+                {
+                    dragHelper?.smoothSlideViewTo(viewTest,width-viewTest.width,height-viewTest.height)
+                    //
+                    invalidate()
+                }
             }
 
         })
 
-        dragHelper?.setEdgeTrackingEnabled(ViewDragHelper.EDGE_LEFT)
     }
 
     lateinit var viewTest:View
+    lateinit var viewTest1:View
+
+    override fun computeScroll() {
+        if (dragHelper?.continueSettling(true)!!)
+        {
+            invalidate()
+        }
+    }
+
+    var autoBackViewOriginLeft: Int = 0
+    var autoBackViewOriginTop: Int = 0
+
+    override fun onLayout(changed: Boolean, left: Int, top: Int, right: Int, bottom: Int) {
+        super.onLayout(changed, left, top, right, bottom)
+        autoBackViewOriginLeft = viewTest.left
+        autoBackViewOriginTop = viewTest.top
+    }
 
     override fun onFinishInflate() {
         super.onFinishInflate()
         viewTest = findViewById(R.id.tvDragMe)
+        viewTest1 = findViewById(R.id.tvDragMe1)
     }
 
     override fun onInterceptTouchEvent(ev: MotionEvent?): Boolean {
@@ -72,8 +83,5 @@ class Drag1View @JvmOverloads constructor(context: Context, attrs: AttributeSet?
         return true
     }
 
-    override fun onDraw(canvas: Canvas?) {
-        super.onDraw(canvas)
-    }
 
 }

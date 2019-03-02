@@ -2,7 +2,14 @@
 <com.androidui.supportlib.rv.SlideLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="50dp">
+    android:layout_height="70dp">
+    <TextView
+        android:layout_width="60dp"
+        android:layout_height="match_parent"
+        android:text="已读"
+        android:gravity="center"
+        android:background="#00ff00"
+        />
     <TextView
         android:layout_width="60dp"
         android:layout_height="match_parent"
@@ -10,11 +17,12 @@
         android:gravity="center"
         android:background="#ff0000"
         android:layout_gravity="right"/>
-    <TextView
+    <ImageView
+        android:tag="drag"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/tvItem"
-        android:background="#66ff66"
-        android:textSize="15sp"
-        android:gravity="center"/>
+        android:id="@+id/ivItem"
+        android:scaleType="centerCrop"
+        />
 </com.androidui.supportlib.rv.SlideLayout>
+    <!--android:background="@drawable/rect_line"-->

@@ -186,14 +186,14 @@ matrix:默认值，不改变原图的大小，从ImageView的左上角开始绘�
 
 imgRound.setBitmap(BitmapFactory.decodeResource(resources, R.mipmap.img3))
 
-public class RoundImageView extends ImageView {
+public class RoundShaping extends ImageView {
 
     private Bitmap mBitmap;
     private Rect mRect = new Rect();
     private PaintFlagsDrawFilter pdf = new PaintFlagsDrawFilter(0, Paint.ANTI_ALIAS_FLAG);
     private Paint mPaint = new Paint();
     private Path mPath=new Path();
-    public RoundImageView(Context context, AttributeSet attrs) {
+    public RoundShaping(Context context, AttributeSet attrs) {
         super(context, attrs);
         init();
     }

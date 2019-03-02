@@ -13,7 +13,7 @@ import android.widget.FrameLayout
 import android.widget.TextView
 import com.androidui.R
 
-class Drag1View @JvmOverloads constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) :
+class Drag2View @JvmOverloads constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) :
         FrameLayout(context, attrs, defStyleAttr){
 
     private var dragHelper: ViewDragHelper?=null
@@ -24,26 +24,13 @@ class Drag1View @JvmOverloads constructor(context: Context, attrs: AttributeSet?
 
             override fun tryCaptureView(child: View, pointerId: Int): Boolean {
                 return false
-//                child.tag == "DragMe1"
             }
 
             override fun clampViewPositionHorizontal(child: View, left: Int, dx: Int): Int {
-                if(left<0){
-                    return 0//禁止超过左边界
-                }
-                if(left>width/2-child.width){
-                    return width/2-child.width//禁止超过右边界
-                }
                 return left
             }
 
             override fun clampViewPositionVertical(child: View, top: Int, dy: Int): Int {
-                if(top<0){
-                    return 0//禁止超过上边界
-                }
-                if(top>height/2-child.height){
-                    return height/2-child.height//禁止超过下边界
-                }
                 return top
             }
 

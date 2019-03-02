@@ -12,7 +12,7 @@ import android.widget.TextView
 class DragView @JvmOverloads constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) :
         FrameLayout(context, attrs, defStyleAttr){
 
-    private var dragHelper: ViewDragHelper
+    var dragHelper: ViewDragHelper?=null
     var tv1:TextView?=null//记录参数
     var tv2:TextView?=null//记录参数
     var tv3:TextView?=null//记录参数
@@ -34,15 +34,18 @@ class DragView @JvmOverloads constructor(context: Context, attrs: AttributeSet? 
                 tv3?.text = "child's tag is ${child.tag}, top is $top, dy is $dy"
                 return top
             }
+
         })
+
     }
 
+
     override fun onInterceptTouchEvent(ev: MotionEvent?): Boolean {
-        return dragHelper.shouldInterceptTouchEvent(ev!!)
+        return dragHelper?.shouldInterceptTouchEvent(ev!!)!!
     }
 
     override fun onTouchEvent(event: MotionEvent?): Boolean {
-        dragHelper.processTouchEvent(event!!)
+        dragHelper?.processTouchEvent(event!!)
         return true
     }
 

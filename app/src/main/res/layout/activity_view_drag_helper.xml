@@ -48,5 +48,37 @@
         style="@style/btn_test"
         android:text="进入DEMO"/>
 
+    <com.androidui.view.Header1View
+        android:id="@+id/header2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:mainTitle1="setEdgeTrackingEnabled"/>
+
+    <Button
+        android:id="@+id/btn3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/btn_test"
+        android:text="进入DEMO"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/small_title"
+        android:id="@+id/tv3"/>
+
+    <com.androidui.view.Header1View
+        android:id="@+id/header3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:mainTitle1="onViewReleased"/>
+
+    <Button
+        android:id="@+id/btn4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/btn_test"
+        android:text="进入DEMO"/>
+
 </LinearLayout>
 </ScrollView>

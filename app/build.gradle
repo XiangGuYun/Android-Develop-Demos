@@ -70,4 +70,12 @@ dependencies {
     //kotlin反射注解支持
     implementation 'com.fasterxml.jackson.module:jackson-module-kotlin:2.9.6'
 
+    //rv snap
+    //implementation 'com.github.rubensousa:gravitysnaphelper:2.0'
+    implementation 'com.github.rubensousa:gravitysnaphelper-compat:2.0'
+
+    implementation 'jp.wasabeef:recyclerview-animators:2.3.0'
+
+    implementation 'com.contrarywind:Android-PickerView:4.1.7'
+
 }
