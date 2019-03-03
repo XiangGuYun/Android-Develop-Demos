@@ -8,6 +8,7 @@ import android.widget.ImageView
 import com.androidui.R
 import com.androidui.supportlib.adapter.Vp1Adapter
 import com.androidui.supportlib.adapter.Vp2Adapter
+import com.kotlinlib.IV
 import com.kotlinlib.activity.KotlinActivity
 import com.kotlinlib.other.LayoutId
 import kotlinx.android.synthetic.main.activity_view_pager.*
@@ -148,23 +149,23 @@ class ViewPagerActivity : KotlinActivity() {
             """.trimIndent())
         }
 
-        val list = listOf(ImageView(this),ImageView(this),ImageView(this)).apply {
-            forEach {
-                it.scaleType = ImageView.ScaleType.CENTER_CROP
-            }
-        }
+        val list = listOf(
+                inf(R.layout.snaphelper_recycle_item_alpha).apply {findViewById<IV>(R.id.iv).setImageResource(R.mipmap.header1)  },
+                inf(R.layout.snaphelper_recycle_item_alpha).apply { findViewById<IV>(R.id.iv).setImageResource(R.mipmap.header2) },
+                inf(R.layout.snaphelper_recycle_item_alpha).apply { findViewById<IV>(R.id.iv).setImageResource(R.mipmap.header3) }
+        )
 
-        val list1 = listOf(ImageView(this),ImageView(this),ImageView(this)).apply {
-            forEach {
-                it.scaleType = ImageView.ScaleType.CENTER_CROP
-            }
-        }
+        val list1 = listOf(
+                inf(R.layout.snaphelper_recycle_item_alpha).apply {findViewById<IV>(R.id.iv).setImageResource(R.mipmap.header1)  },
+                inf(R.layout.snaphelper_recycle_item_alpha).apply { findViewById<IV>(R.id.iv).setImageResource(R.mipmap.header2) },
+                inf(R.layout.snaphelper_recycle_item_alpha).apply { findViewById<IV>(R.id.iv).setImageResource(R.mipmap.header3) }
+        )
 
-        val list2 = listOf(ImageView(this),ImageView(this),ImageView(this)).apply {
-            forEach {
-                it.scaleType = ImageView.ScaleType.CENTER_CROP
-            }
-        }
+        val list2 = listOf(
+                inf(R.layout.snaphelper_recycle_item_alpha).apply {findViewById<IV>(R.id.iv).setImageResource(R.mipmap.header1)  },
+                inf(R.layout.snaphelper_recycle_item_alpha).apply { findViewById<IV>(R.id.iv).setImageResource(R.mipmap.header2) },
+                inf(R.layout.snaphelper_recycle_item_alpha).apply { findViewById<IV>(R.id.iv).setImageResource(R.mipmap.header3) }
+        )
 
         val list4 = listOf(ImageView(this),ImageView(this),ImageView(this),ImageView(this),ImageView(this),ImageView(this),ImageView(this)).apply {
             forEach {

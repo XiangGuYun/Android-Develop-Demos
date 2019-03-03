@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="240dp"
+    android:layout_width="120dp"
     android:background="#000000"
     android:layout_height="match_parent">
     <FrameLayout
@@ -11,13 +11,13 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_margin="15dp"
+            android:layout_margin="5dp"
             android:scaleType="centerCrop"
             android:id="@+id/iv"/>
         <com.kotlinlib.view.imageview.RoundShaping
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_margin="15dp"
+            android:layout_margin="5dp"
             android:id="@+id/iv1"/>
     </FrameLayout>
 </FrameLayout>

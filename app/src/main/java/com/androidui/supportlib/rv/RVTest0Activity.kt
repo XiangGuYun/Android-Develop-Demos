@@ -47,10 +47,10 @@ class RVTest0Activity : KotlinActivity() {
         rv1.addOnScrollListener(object :RecyclerView.OnScrollListener(){
             override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
                 tvScrollY.text = "Y轴滑动距离：${rvUtils.scollYDistance}"
-                tv1.text = "第一个可见的Item位置：${(rv1.layoutManager as LinearLayoutManager).findFirstVisibleItemPosition()}"
-                tv2.text = "第一个完整可见的Item位置：${(rv1.layoutManager as LinearLayoutManager).findFirstCompletelyVisibleItemPosition()}"
-                tv3.text = "最后一个可见的Item位置：${(rv1.layoutManager as LinearLayoutManager).findLastVisibleItemPosition()}"
-                tv4.text = "最后一个完整可见的Item位置：${(rv1.layoutManager as LinearLayoutManager).findLastCompletelyVisibleItemPosition()}"
+                tv1.text = "FirstVisible：${(rv1.layoutManager as LinearLayoutManager).findFirstVisibleItemPosition()}"
+                tv2.text = "FirstCompletelyVisible：${(rv1.layoutManager as LinearLayoutManager).findFirstCompletelyVisibleItemPosition()}"
+                tv3.text = "LastVisible：${(rv1.layoutManager as LinearLayoutManager).findLastVisibleItemPosition()}"
+                tv4.text = "LastCompletelyVisible：${(rv1.layoutManager as LinearLayoutManager).findLastCompletelyVisibleItemPosition()}"
             }
         })
 

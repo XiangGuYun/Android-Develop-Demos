@@ -11,13 +11,13 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_margin="15dp"
             android:scaleType="centerCrop"
+            android:layout_margin="30dp"
             android:id="@+id/iv"/>
         <com.kotlinlib.view.imageview.RoundShaping
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_margin="15dp"
+            android:layout_margin="30dp"
             android:id="@+id/iv1"/>
     </FrameLayout>
 </FrameLayout>

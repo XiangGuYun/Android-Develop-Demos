@@ -157,9 +157,6 @@ interface RVInterface:StringUtils {
         return getView<View>(id)
     }
 
-    fun <T:View> View.view(id:Int): T {
-        return findViewById(id)
-    }
 
     fun <T:View> Holder.view(id:Int): T {
         return getView(id)
@@ -251,8 +248,8 @@ interface RVInterface:StringUtils {
      * @return RVUtils
      */
     fun RVUtils.snapPager(): RVUtils {
-        val helper = PagerSnapHelper()
-        helper.attachToRecyclerView(rv)
+        pagerHelper = PagerSnapHelper()
+        pagerHelper.attachToRecyclerView(rv)
         return this
     }
 

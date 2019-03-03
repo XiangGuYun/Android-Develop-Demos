@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import com.androidui.R
 
-class Vp1Adapter(var datas: List<ImageView>) : PagerAdapter() {
+class Vp1Adapter(var datas: List<View>) : PagerAdapter() {
 
     override fun isViewFromObject(p0: View, p1: Any): Boolean {
         return p0 == p1
@@ -18,12 +18,6 @@ class Vp1Adapter(var datas: List<ImageView>) : PagerAdapter() {
 
     override fun instantiateItem(container: ViewGroup, position: Int): Any {
         val view = datas[position]
-
-        view.setImageResource(when(position){
-            0-> R.mipmap.header1
-            1-> R.mipmap.header2
-            else-> R.mipmap.header3
-        })
         container.addView(view)
         return view
     }

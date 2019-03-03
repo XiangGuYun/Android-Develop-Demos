@@ -22,6 +22,14 @@ interface ViewUtils {
     val MP:Int get() = ViewGroup.LayoutParams.MATCH_PARENT
     val WC:Int get() = ViewGroup.LayoutParams.WRAP_CONTENT
 
+    fun <T:View> View.view(id:Int): T {
+        return findViewById(id)
+    }
+
+    fun View.v(id:Int): View {
+        return findViewById(id)
+    }
+
     fun SeekBar.change(callback:(seekBar: SeekBar?, progress: Int, fromUser: Boolean)->Unit){
         setOnSeekBarChangeListener(object :OnSeekBarChange{
             override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {

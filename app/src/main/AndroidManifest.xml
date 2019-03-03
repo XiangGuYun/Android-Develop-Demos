@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/launcher1"
         android:supportsRtl="true"
         android:theme="@style/Theme.Design.Light.NoActionBar">
-        <activity android:name=".supportlib.rv.RVAnimActivity"></activity>
+        <activity android:name=".supportlib.rv.StudyRVActivity"></activity>
+        <activity android:name=".supportlib.rv.RVAnimActivity" />
         <activity android:name=".supportlib.rv.MoreSnapActivity" />
         <activity android:name=".supportlib.rv.HLActivity" />
         <activity android:name=".supportlib.rv.RVTest4Activity" />

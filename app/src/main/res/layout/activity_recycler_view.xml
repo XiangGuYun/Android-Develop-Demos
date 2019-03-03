@@ -109,6 +109,25 @@
         android:text="更多效果"/>
 
     <com.androidui.view.Header1View
+        android:id="@+id/headeGallery"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:mainTitle1="addOnScrollListener\n与SnapHelper搭配理解"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_marginTop="10dp"
+        android:id="@+id/rvViewPager2"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/btn_test"
+        android:text="开始学习"
+        android:id="@+id/btnStudy1"/>
+
+    <com.androidui.view.Header1View
         android:id="@+id/headerAnim"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

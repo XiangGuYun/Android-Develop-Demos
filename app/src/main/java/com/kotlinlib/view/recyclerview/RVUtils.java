@@ -11,6 +11,7 @@ import android.support.annotation.NonNull;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.PagerSnapHelper;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.support.v7.widget.helper.ItemTouchHelper;
@@ -18,6 +19,8 @@ import android.support.v7.widget.helper.ItemTouchHelper;
 import com.scwang.smartrefresh.layout.SmartRefreshLayout;
 import com.yuyh.easyadapter.recyclerview.EasyRVAdapter;
 import com.yuyh.easyadapter.recyclerview.EasyRVHolder;
+
+import org.jetbrains.annotations.NotNull;
 
 import java.util.Collections;
 import java.util.List;
@@ -34,6 +37,8 @@ public class RVUtils {
     private int gridSpanCount = 1;
     public boolean needHeader = false;
     public boolean needFooter = false;
+    @NotNull
+    public PagerSnapHelper pagerHelper;
 
     public ItemTouchHelper getmItemTouchHelper() {
         return mItemTouchHelper;
@@ -58,15 +63,27 @@ public class RVUtils {
     }
 
      /**
-     * 获取滑动方向Y轴的距离
+     * 获取滑动方向Y轴的距离，如果分割线是独立的，不要采用此方法
      * @return
      */
     public int getScollYDistance() {
         LinearLayoutManager layoutManager = (LinearLayoutManager) rv.getLayoutManager();
         int position = layoutManager.findFirstVisibleItemPosition();
-        android.view.View firstVisiableChildView = layoutManager.findViewByPosition(position);
-        int itemHeight = firstVisiableChildView.getHeight();
-        return (position) * itemHeight - firstVisiableChildView.getTop();
+        android.view.View firstVisibleChildView = layoutManager.findViewByPosition(position);
+        int itemHeight = firstVisibleChildView.getHeight();
+        return (position) * itemHeight - firstVisibleChildView.getTop();
+    }
+
+    /**
+     * 获取滑动方向X轴的距离，如果分割线是独立的，不要采用此方法
+     * @return
+     */
+    public int getScollXDistance() {
+        LinearLayoutManager layoutManager = (LinearLayoutManager) rv.getLayoutManager();
+        int position = layoutManager.findFirstVisibleItemPosition();
+        android.view.View firstVisibleChildView = layoutManager.findViewByPosition(position);
+        int itemWidth = firstVisibleChildView.getWidth();
+        return (position) * itemWidth - firstVisibleChildView.getLeft();
     }
 
     /**

@@ -15,10 +15,18 @@
         app:mainTitle1="ViewPager的简单实现"
         android:id="@+id/header1"/>
 
-    <android.support.v4.view.ViewPager
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:id="@+id/vp1"/>
+        android:layout_height="wrap_content"
+        android:background="#000000"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:layout_marginTop="10dp">
+        <android.support.v4.view.ViewPager
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:id="@+id/vp1"/>
+    </FrameLayout>
 
     <com.androidui.view.Header1View
         android:layout_width="match_parent"
@@ -26,10 +34,18 @@
         app:mainTitle1="ViewPager的浮现特效"
         android:id="@+id/header2"/>
 
-    <android.support.v4.view.ViewPager
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:id="@+id/vp2"/>
+        android:layout_height="wrap_content"
+        android:background="#000000"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:layout_marginTop="10dp">
+        <android.support.v4.view.ViewPager
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:id="@+id/vp2"/>
+    </FrameLayout>
 
     <com.androidui.view.Header1View
         android:layout_width="match_parent"
@@ -37,10 +53,19 @@
         app:mainTitle1="ViewPager的旋转特效"
         android:id="@+id/header3"/>
 
-    <android.support.v4.view.ViewPager
+
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:id="@+id/vp3"/>
+        android:layout_height="wrap_content"
+        android:background="#000000"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:layout_marginTop="10dp">
+        <android.support.v4.view.ViewPager
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:id="@+id/vp3"/>
+    </FrameLayout>
 
     <com.androidui.view.Header1View
         android:layout_width="match_parent"
@@ -50,12 +75,16 @@
     <FrameLayout
         android:clipChildren="false"
         android:layout_width="match_parent"
+        android:background="#000000"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:layout_marginTop="10dp"
         android:layout_height="wrap_content">
         <android.support.v4.view.ViewPager
             android:layout_width="match_parent"
-            android:layout_height="500dp"
-            android:layout_marginLeft="60dp"
-            android:layout_marginRight="0dp"
+            android:layout_height="300dp"
+            android:layout_marginLeft="100dp"
+            android:layout_marginRight="40dp"
             android:id="@+id/vp4"/>
     </FrameLayout>
 
