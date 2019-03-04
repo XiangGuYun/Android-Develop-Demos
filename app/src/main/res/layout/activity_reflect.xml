@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".kotlin.ReflectActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.androidui.view.Header1View
+            app:mainTitle1="反射获取Canvas类的信息"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/small_title"
+            android:id="@+id/tv1"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/small_title"
+            android:id="@+id/tv2"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/small_title"
+            android:id="@+id/tv3"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/small_title"
+            android:id="@+id/tv4"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/small_title"
+            android:id="@+id/tv5"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/small_title"
+            android:id="@+id/tv6"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/small_title"
+            android:id="@+id/tv7"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/small_title"
+            android:id="@+id/tv8"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/small_title"
+            android:id="@+id/tv9"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/small_title"
+            android:id="@+id/tv10"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/small_title"
+            android:id="@+id/tv11"/>
+
+        <com.androidui.view.Header1View
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:mainTitle1="反射创建Paint类对象"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/small_title"
+            android:id="@+id/tv12"/>
+
+        <com.androidui.view.Header1View
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:mainTitle1="构造器引用"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/small_title"
+            android:id="@+id/tv12B"/>
+
+        <com.androidui.view.Header1View
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:mainTitle1="反射调用非私有方法"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/small_title"
+            android:id="@+id/tv14"/>
+
+        <com.androidui.view.Header1View
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:mainTitle1="反射访问非私有属性"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/small_title"
+            android:id="@+id/tv15"/>
+
+
+    </LinearLayout>
+
+</ScrollView>

@@ -5,8 +5,10 @@ import android.graphics.Typeface
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import com.androidui.anim.AnimActivity
+import com.androidui.customview.CustomViewActivity
 import com.androidui.gesture.GestureActivity
 import com.androidui.huitu.HuiTuActivity
+import com.androidui.kotlin.KotlinStudyActivity
 import com.androidui.supportlib.SupportLibUIActivity
 import com.androidui.systemui.SystemUIActivity
 import kotlinx.android.synthetic.main.activity_main.*
@@ -41,6 +43,16 @@ class MainActivity : AppCompatActivity() {
 
         btnGesture.setOnClickListener {
             startActivity(Intent(this, GestureActivity::class.java))
+            overridePendingTransition(R.anim.my_fade_in, R.anim.my_fade_out)
+        }
+
+        btnKotlin.setOnClickListener {
+            startActivity(Intent(this, KotlinStudyActivity::class.java))
+            overridePendingTransition(R.anim.my_fade_in, R.anim.my_fade_out)
+        }
+
+        btnCustomUI.setOnClickListener {
+            startActivity(Intent(this, CustomViewActivity::class.java))
             overridePendingTransition(R.anim.my_fade_in, R.anim.my_fade_out)
         }
 

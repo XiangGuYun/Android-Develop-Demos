@@ -31,4 +31,13 @@
         android:background="@drawable/rect7"
         android:id="@+id/btnCardView"/>
 
+    <com.androidui.view.MyTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/item"
+        android:text="Toolbar"
+        android:background="@drawable/rect7"
+        android:id="@+id/btnToolbar"/>
+
+
 </LinearLayout>

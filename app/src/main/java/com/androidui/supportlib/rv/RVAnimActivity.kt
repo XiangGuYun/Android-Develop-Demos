@@ -13,7 +13,7 @@ import com.kotlinlib.view.recyclerview.RVUtils
 import jp.wasabeef.recyclerview.animators.*
 import kotlinx.android.synthetic.main.activity_rvanim.*
 import kotlinx.android.synthetic.main.dialog_input.*
-import kotlin.random.Random
+import java.util.*
 
 
 @LayoutId(R.layout.activity_rvanim)
@@ -86,7 +86,7 @@ class RVAnimActivity : KotlinActivity() {
 
 
         btnInsert.click {
-            testData.add(testData.size,testDataCopy[Random.nextInt(0,testDataCopy.size)])
+            testData.add(testData.size,testDataCopy[Random().nextInt(testDataCopy.size)])
             rv1.adapter?.notifyItemInserted(testData.lastIndex)
             rv1.adapter?.notifyItemRangeChanged(testData.size-1, 1)
         }

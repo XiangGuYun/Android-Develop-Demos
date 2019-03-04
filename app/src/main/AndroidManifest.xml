@@ -11,7 +11,7 @@
         android:roundIcon="@mipmap/launcher1"
         android:supportsRtl="true"
         android:theme="@style/Theme.Design.Light.NoActionBar">
-        <activity android:name=".supportlib.rv.StudyRVActivity"></activity>
+        <activity android:name=".supportlib.rv.StudyRVActivity" />
         <activity android:name=".supportlib.rv.RVAnimActivity" />
         <activity android:name=".supportlib.rv.MoreSnapActivity" />
         <activity android:name=".supportlib.rv.HLActivity" />
@@ -38,7 +38,7 @@
         <activity
             android:name=".systemui.test.ET1Activity"
             android:windowSoftInputMode="adjustResize|stateHidden" />
-        <activity android:name=".supportlib.ConstraintActivity" />
+        <activity android:name=".supportlib.constraint.ConstraintActivity" />
         <activity android:name=".systemui.TextureViewActivity" />
         <activity android:name=".systemui.WebViewActivity" />
         <activity
@@ -65,7 +65,7 @@
         <activity android:name=".supportlib.SupportLibUIActivity" />
         <activity android:name=".supportlib.rv.RecyclerViewActivity" />
         <activity android:name=".supportlib.rv.test.SnapHelperActivity" />
-        <activity android:name=".supportlib.ViewPagerActivity" />
+        <activity android:name=".supportlib.viewpager.ViewPagerActivity" />
         <activity android:name=".systemui.test.WV5Activity" />
         <activity android:name=".anim.AnimActivity" />
         <activity android:name=".anim.InterpolatorActivity" />
@@ -102,6 +102,10 @@
         <activity android:name=".customview.drag.ViewDragHelperActivity" />
         <activity android:name=".customview.drag.Case1Activity" />
         <activity android:name=".customview.drag.Case2Activity" />
+        <activity android:name=".supportlib.cardview.CardViewActivity" />
+        <activity android:name=".supportlib.toolbar.ToolbarActivity" />
+        <activity android:name=".kotlin.KotlinStudyActivity" />
+        <activity android:name=".kotlin.ReflectActivity"></activity>
     </application>
 
 </manifest>
