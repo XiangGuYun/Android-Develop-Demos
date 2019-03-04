@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<FrameLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/bg_support_ui"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="@mipmap/bg_support_ui"
-    tools:context=".supportlib.SupportLibUIActivity">
+    android:orientation="vertical">
 
     <com.androidui.view.MyTextView
         android:layout_width="wrap_content"
@@ -28,7 +32,7 @@
         android:layout_height="wrap_content"
         style="@style/item"
         android:text="CardView"
-        android:background="@drawable/rect7"
+        android:background="@drawable/rect8"
         android:id="@+id/btnCardView"/>
 
     <com.androidui.view.MyTextView
@@ -36,8 +40,122 @@
         android:layout_height="wrap_content"
         style="@style/item"
         android:text="Toolbar"
-        android:background="@drawable/rect7"
+        android:background="@drawable/rect9"
         android:id="@+id/btnToolbar"/>
 
+    <com.androidui.view.MyTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/item"
+        android:text="CoordinatorLayout与AppBarLayout"
+        android:background="@drawable/rect1"
+        android:id="@+id/btnCLAPL"/>
 
+    <com.androidui.view.MyTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/item"
+        android:text="FloatingActionButton"
+        android:background="@drawable/rect2"
+        android:id="@+id/btnFloatingActionButton"/>
+
+    <com.androidui.view.MyTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/item"
+        android:text="TextInputLayout"
+        android:background="@drawable/rect3"
+        android:id="@+id/btnTextInputLayout"/>
+
+    <com.androidui.view.MyTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/item"
+        android:text="Snackbar"
+        android:background="@drawable/rect4"
+        android:id="@+id/btnSnackbar"/>
+
+    <com.androidui.view.MyTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/item"
+        android:text="TabLayout"
+        android:background="@drawable/rect5"
+        android:id="@+id/btnTabLayout"/>
+
+    <com.androidui.view.MyTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/item"
+        android:text="NavigationView"
+        android:background="@drawable/rect6"
+        android:id="@+id/btnNavigationView"/>
+
+
+    <com.androidui.view.MyTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/item"
+        android:text="CollapsingToolbarLayout"
+        android:background="@drawable/rect7"
+        android:id="@+id/btnCollapsingToolbarLayout"/>
+
+    <com.androidui.view.MyTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/item"
+        android:text="NestedScrollView"
+        android:background="@drawable/rect8"
+        android:id="@+id/btnNestedScrollView"/>
+
+    <com.androidui.view.MyTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/item"
+        android:text="DrawerLayout"
+        android:background="@drawable/rect9"
+        android:id="@+id/btnDrawerLayout"/>
+
+    <com.androidui.view.MyTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/item"
+        android:text="SwipeRefreshLayout"
+        android:background="@drawable/rect1"
+        android:id="@+id/btnSwipeRefreshLayout"/>
+
+    <com.androidui.view.MyTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/item"
+        android:text="SlidingPaneLayout"
+        android:background="@drawable/rect2"
+        android:id="@+id/btnSlidingPaneLayout"/>
+
+    <com.androidui.view.MyTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/item"
+        android:text="ConstraintLayout"
+        android:background="@drawable/rect3"
+        android:id="@+id/btnConstraintLayout"/>
+
+    <com.androidui.view.MyTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/item"
+        android:text="BottomSheetDialog"
+        android:background="@drawable/rect4"
+        android:id="@+id/btnBottomSheetDialog"/>
+
+    <com.androidui.view.MyTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/item"
+        android:text="SearchView"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/rect5"
+        android:id="@+id/btnSearchView"/>
 </LinearLayout>
+</ScrollView>
+</FrameLayout>

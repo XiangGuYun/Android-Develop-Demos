@@ -16,7 +16,7 @@
         android:layout_height="wrap_content"
         app:mainTitle1="Style样式\n(FILL|STROKE|FILL_AND_STROKE)"/>
 
-    <com.androidui.huitu.view.PaintStyleView
+    <com.androidui.draw.view.PaintStyleView
         android:layout_margin="10dp"
         android:layout_width="match_parent"
         android:layout_height="150dp" />
@@ -27,7 +27,7 @@
         android:layout_height="wrap_content"
         app:mainTitle1="Cap线帽\n(BUTT|ROUND|SQUARE)"/>
 
-    <com.androidui.huitu.view.PaintCapView
+    <com.androidui.draw.view.PaintCapView
         android:layout_margin="10dp"
         android:layout_width="match_parent"
         android:layout_height="150dp" />
@@ -38,7 +38,7 @@
         android:layout_height="wrap_content"
         app:mainTitle1="Join交点\n(BEVEL|MITER|ROUND)"/>
 
-    <com.androidui.huitu.view.PaintJoinView
+    <com.androidui.draw.view.PaintJoinView
         android:layout_margin="10dp"
         android:layout_width="match_parent"
         android:layout_height="180dp" />

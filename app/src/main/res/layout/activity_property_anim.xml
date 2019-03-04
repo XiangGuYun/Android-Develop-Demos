@@ -35,7 +35,7 @@
             android:layout_width="70dp"
             android:layout_height="wrap_content"
             android:text="动画"
-            android:background="@drawable/rect_yellow"
+            android:background="@drawable/rect2"
             android:layout_gravity="center_horizontal"
             android:layout_margin="20dp"/>
 
@@ -220,7 +220,7 @@
             android:layout_height="wrap_content"
             android:text="我要变宽"
             android:layout_gravity="center_horizontal"
-            android:background="@drawable/rect_blue"
+            android:background="@drawable/rect1"
             style="@style/btn_test"/>
 
         <Button

@@ -30,7 +30,7 @@
             android:gravity="center"
             android:layout_width="100dp"
             android:layout_height="50dp"
-            android:background="@drawable/rect_blue"
+            android:background="@drawable/rect1"
             android:tag="DragMe2"
             android:text="Drag Me2"/>
     </com.androidui.customview.drag.Drag1View>

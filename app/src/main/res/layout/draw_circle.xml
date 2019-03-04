@@ -9,7 +9,7 @@
         android:layout_height="50dp"
         app:mainTitle1="绘制圆形drawCircle"/>
 
-    <com.androidui.huitu.view.DrawCircleView
+    <com.androidui.draw.view.DrawCircleView
         android:id="@+id/circle"
         android:layout_width="match_parent"
         android:layout_height="200dp" />

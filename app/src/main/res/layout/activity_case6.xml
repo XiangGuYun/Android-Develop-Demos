@@ -17,7 +17,7 @@
         android:id="@+id/tvDragMe1"
         android:layout_width="100dp"
         android:layout_height="50dp"
-        android:background="@drawable/rect_blue"
+        android:background="@drawable/rect1"
         android:text="Drag Me1"
         android:layout_gravity="right"
         android:gravity="center"/>

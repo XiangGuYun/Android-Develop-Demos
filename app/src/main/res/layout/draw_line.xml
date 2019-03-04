@@ -16,7 +16,7 @@
         style="@style/tvSmallTitle"
         android:text="drawLine(float startX, float startY, float stopX, float stopY, @NonNull Paint paint)"/>
 
-    <com.androidui.huitu.view.DrawLineView
+    <com.androidui.draw.view.DrawLineView
         android:id="@+id/line"
         android:layout_width="match_parent"
         android:layout_height="200dp" />

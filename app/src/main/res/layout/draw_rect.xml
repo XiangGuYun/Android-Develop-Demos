@@ -22,7 +22,7 @@
 
     <include layout="@layout/line"/>
 
-    <com.androidui.huitu.view.DrawRectView
+    <com.androidui.draw.view.DrawRectView
         android:id="@+id/rect"
         android:layout_width="match_parent"
         android:layout_height="200dp" />

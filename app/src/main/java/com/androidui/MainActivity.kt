@@ -6,13 +6,18 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import com.androidui.anim.AnimActivity
 import com.androidui.customview.CustomViewActivity
+import com.androidui.fragment.MyFragmentActivity
 import com.androidui.gesture.GestureActivity
-import com.androidui.huitu.HuiTuActivity
+import com.androidui.draw.HuiTuActivity
 import com.androidui.kotlin.KotlinStudyActivity
 import com.androidui.supportlib.SupportLibUIActivity
 import com.androidui.systemui.SystemUIActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
+/**
+ * 颜色对照表
+ * https://www.sioe.cn/yingyong/yanse-rgb-16/
+ */
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -53,6 +58,11 @@ class MainActivity : AppCompatActivity() {
 
         btnCustomUI.setOnClickListener {
             startActivity(Intent(this, CustomViewActivity::class.java))
+            overridePendingTransition(R.anim.my_fade_in, R.anim.my_fade_out)
+        }
+
+        btnFragment.setOnClickListener {
+            startActivity(Intent(this, MyFragmentActivity::class.java))
             overridePendingTransition(R.anim.my_fade_in, R.anim.my_fade_out)
         }
 

@@ -56,6 +56,22 @@
         android:text="设置标题外边距"
         android:id="@+id/btnTitleMargin"/>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="主标题字体"
+            android:padding="10dp"/>
+        <SeekBar
+            android:id="@+id/sbMainTitleSize"
+            android:layout_gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -67,5 +83,8 @@
         android:layout_height="wrap_content"
         style="@style/small_title"
         android:id="@+id/tvQuestion2"/>
+
+
+
 
 </LinearLayout>

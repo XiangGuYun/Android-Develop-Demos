@@ -14,7 +14,7 @@
 
     <include layout="@layout/line"/>
 
-    <com.androidui.huitu.view.DrawOvalView
+    <com.androidui.draw.view.DrawOvalView
         android:id="@+id/oval"
         android:layout_width="match_parent"
         android:layout_height="200dp" />

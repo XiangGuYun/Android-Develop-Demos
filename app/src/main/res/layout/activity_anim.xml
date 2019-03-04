@@ -38,7 +38,15 @@
         android:layout_height="wrap_content"
         style="@style/item"
         android:text="属性动画"
-        android:background="@drawable/rect_blue"/>
+        android:background="@drawable/rect1"/>
+
+    <com.androidui.view.MyTextView
+        android:id="@+id/btnSVG"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/item"
+        android:text="SVG动画"
+        android:background="@drawable/rect3"/>
 
     <com.androidui.view.MyTextView
         android:id="@+id/btn5"

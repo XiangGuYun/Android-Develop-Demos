@@ -124,12 +124,12 @@
 
     <!--主标题-->
     <style name="ToolbarTitle" parent="@style/TextAppearance.Widget.AppCompat.Toolbar.Title">
-        <item name="android:textSize">30sp</item>
+        <item name="android:textSize">20sp</item>
     </style>
 
     <!--子标题-->
     <style name="ToolbarSubtitle" parent="@style/TextAppearance.Widget.AppCompat.Toolbar.Subtitle">
-        <item name="android:textSize">9sp</item>
+        <item name="android:textSize">10sp</item>
     </style>
 
 </resources>

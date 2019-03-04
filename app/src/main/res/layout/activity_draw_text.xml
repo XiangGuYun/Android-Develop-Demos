@@ -3,11 +3,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".huitu.paint.PaintTextActivity"
+    tools:context=".draw.paint.PaintTextActivity"
     android:padding="10dp"
     android:orientation="vertical">
 
-    <com.androidui.huitu.view.DrawTextView
+    <com.androidui.draw.view.DrawTextView
         android:id="@+id/viewDrawText"
         android:layout_width="match_parent"
         android:layout_height="200dp" />

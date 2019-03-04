@@ -17,9 +17,6 @@ import android.view.Gravity
 import android.widget.TextView
 import android.support.v4.content.ContextCompat
 
-
-
-
 /**
  * https://blog.csdn.net/da_caoyuan/article/details/79557704
  * @property currentColor Int
@@ -34,7 +31,7 @@ class ToolbarActivity : KotlinActivity() {
 
         toolbar.title = "标题"
         toolbar.setTitleTextColor(Color.WHITE)
-        toolbar.setNavigationIcon(R.mipmap.arrow_back)
+        toolbar.setNavigationIcon(R.mipmap.back)
 
         //点击左边返回按钮监听事件
         toolbar.setNavigationOnClickListener {
@@ -175,10 +172,16 @@ val titles = getTitleViews(toolbar)
 titles[0].text("你好呀").size(12)
             """.trimIndent())
         }
+
         setTitleCenter(toolbar)
 
-        val titles = getTitleViews(toolbar)
-        titles[0].text("你好呀").size(12)
+        val main = getTitleViews(toolbar)[0]
+
+        sbMainTitleSize.max = 40
+        sbMainTitleSize.progress = 20
+        sbMainTitleSize.change { seekBar, progress, fromUser ->
+            main.textSize = progress.toFloat()
+        }
     }
 
     fun getTitleViews(toolbar: Toolbar): ArrayList<TextView> {

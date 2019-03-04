@@ -22,6 +22,7 @@
             android:paddingBottom="5dp"/>
         <TextView
             style="@style/tvTitle"
+            android:textColor="#cccccc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="第一部分 Paint画笔"/>
@@ -41,7 +42,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="10dp"
-            android:background="@drawable/rect_blue"
+            android:background="@drawable/rect1"
             android:gravity="center"
             android:textSize="18sp"
             android:text="Paint与文字绘制"/>
@@ -51,12 +52,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="10dp"
-            android:background="@drawable/rect_yellow"
+            android:background="@drawable/rect2"
             android:gravity="center"
             android:textSize="18sp"
             android:text="XFERMODE"/>
         <TextView
             style="@style/tvTitle"
+            android:textColor="#cccccc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="第二部分 Canvas图层"/>
@@ -90,6 +92,35 @@
             android:gravity="center"
             android:textSize="18sp"
             android:text="Path的绘制"/>
+
+        <TextView
+            style="@style/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#cccccc"
+            android:text="第三部分 其它"/>
+
+        <com.androidui.view.MyTextView
+            android:id="@+id/btnShadow"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:background="@drawable/rect8"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:text="阴影的绘制"/>
+
+        <com.androidui.view.MyTextView
+            android:id="@+id/btnXMLDraw"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:background="@drawable/rect3"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:text="XML绘图"/>
 
     </LinearLayout>
 

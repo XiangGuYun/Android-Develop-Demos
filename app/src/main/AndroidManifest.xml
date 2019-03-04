@@ -11,18 +11,33 @@
         android:roundIcon="@mipmap/launcher1"
         android:supportsRtl="true"
         android:theme="@style/Theme.Design.Light.NoActionBar">
-        <activity android:name=".supportlib.rv.StudyRVActivity" />
-        <activity android:name=".supportlib.rv.RVAnimActivity" />
-        <activity android:name=".supportlib.rv.MoreSnapActivity" />
-        <activity android:name=".supportlib.rv.HLActivity" />
-        <activity android:name=".supportlib.rv.RVTest4Activity" />
+        <activity android:name=".supportlib.swipe_refresh_layout.SwipeRefreshLayoutActivity"></activity>
+        <activity android:name=".supportlib.searchview.SearchViewActivity" />
+        <activity android:name=".supportlib.bottom_sheet_dialog.BottomSheetDialogActivity" />
+        <activity android:name=".supportlib.sliding_pane_layout.SlidingPaneLayoutActivity" />
+        <activity android:name=".supportlib.drawerlayout.DrawerLayoutActivity" />
+        <activity android:name=".supportlib.collapsing_toolbar_layout.CTLActivity" />
+        <activity android:name=".supportlib.navigationview.NavigationViewActivity" />
+        <activity android:name=".supportlib.tablayout.TabLayoutActivity" />
+        <activity android:name=".supportlib.snackbar.SnackBarActivity" />
+        <activity android:name=".supportlib.textinput.TextInputActivity" />
+        <activity android:name=".supportlib.fab.FABActivity" />
+        <activity android:name=".supportlib.nestedsv.NestedSVCase1Activity" />
+        <activity android:name=".supportlib.nestedsv.NestedScrollViewActivity" />
+        <activity android:name=".draw.ShadowActivity" />
+        <activity android:name=".supportlib.coordinate.CoordinateActivity" />
+        <activity android:name=".supportlib.recyclerview.StudyRVActivity" />
+        <activity android:name=".supportlib.recyclerview.RVAnimActivity" />
+        <activity android:name=".supportlib.recyclerview.MoreSnapActivity" />
+        <activity android:name=".supportlib.recyclerview.HLActivity" />
+        <activity android:name=".supportlib.recyclerview.RVTest4Activity" />
         <activity android:name=".customview.drag.Case4Activity" />
         <activity android:name=".customview.drag.Case3Activity" />
         <activity android:name=".fragment.case3.Case3Activity" />
         <activity android:name=".fragment.case2.Case2Activity" />
         <activity android:name=".fragment.case1.TestActivity" />
-        <activity android:name=".huitu.canvas.NewPathActivity" />
-        <activity android:name=".huitu.canvas.CanvasActivity" />
+        <activity android:name=".draw.canvas.NewPathActivity" />
+        <activity android:name=".draw.canvas.CanvasActivity" />
         <activity android:name=".anim.PropertyAnimActivity" />
         <activity android:name=".anim.PatchAnimActivity" />
         <activity android:name=".anim.FrameAnimActivity" />
@@ -50,21 +65,21 @@
         <activity android:name=".systemui.TextViewActivity" />
         <activity android:name=".systemui.SystemUIActivity" />
         <activity android:name=".MainActivity" />
-        <activity android:name=".huitu.HuiTuActivity" />
-        <activity android:name=".huitu.BaseKnowledgeActivity" />
-        <activity android:name=".huitu.paint.PaintPropertyActivity" />
-        <activity android:name=".huitu.paint.XfermodeActivity" />
-        <activity android:name=".huitu.paint.PaintTextActivity" />
+        <activity android:name=".draw.HuiTuActivity" />
+        <activity android:name=".draw.BaseKnowledgeActivity" />
+        <activity android:name=".draw.paint.PaintPropertyActivity" />
+        <activity android:name=".draw.paint.XfermodeActivity" />
+        <activity android:name=".draw.paint.PaintTextActivity" />
         <activity android:name=".ImageViewerActivity" />
         <activity
-            android:name=".huitu.canvas.GeometryActivity"
+            android:name=".draw.canvas.GeometryActivity"
             android:windowSoftInputMode="adjustResize|stateHidden" />
         <activity
-            android:name=".huitu.canvas.PathActivity"
+            android:name=".draw.canvas.PathActivity"
             android:windowSoftInputMode="adjustResize|stateHidden" />
         <activity android:name=".supportlib.SupportLibUIActivity" />
-        <activity android:name=".supportlib.rv.RecyclerViewActivity" />
-        <activity android:name=".supportlib.rv.test.SnapHelperActivity" />
+        <activity android:name=".supportlib.recyclerview.RecyclerViewActivity" />
+        <activity android:name=".supportlib.recyclerview.test.SnapHelperActivity" />
         <activity android:name=".supportlib.viewpager.ViewPagerActivity" />
         <activity android:name=".systemui.test.WV5Activity" />
         <activity android:name=".anim.AnimActivity" />
@@ -94,10 +109,10 @@
         <activity android:name=".gesture.RotateImageActivity" />
         <activity android:name=".gesture.ImageScaleActivity" />
         <activity android:name=".fragment.MyFragmentActivity" />
-        <activity android:name=".supportlib.rv.RVTest1Activity" />
-        <activity android:name=".supportlib.rv.RVTest0Activity" />
-        <activity android:name=".supportlib.rv.RVTest2Activity" />
-        <activity android:name=".supportlib.rv.RVTest3Activity" />
+        <activity android:name=".supportlib.recyclerview.RVTest1Activity" />
+        <activity android:name=".supportlib.recyclerview.RVTest0Activity" />
+        <activity android:name=".supportlib.recyclerview.RVTest2Activity" />
+        <activity android:name=".supportlib.recyclerview.RVTest3Activity" />
         <activity android:name=".customview.CustomViewActivity" />
         <activity android:name=".customview.drag.ViewDragHelperActivity" />
         <activity android:name=".customview.drag.Case1Activity" />
@@ -105,7 +120,7 @@
         <activity android:name=".supportlib.cardview.CardViewActivity" />
         <activity android:name=".supportlib.toolbar.ToolbarActivity" />
         <activity android:name=".kotlin.KotlinStudyActivity" />
-        <activity android:name=".kotlin.ReflectActivity"></activity>
+        <activity android:name=".kotlin.ReflectActivity" />
     </application>
 
 </manifest>

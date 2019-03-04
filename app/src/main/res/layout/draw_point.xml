@@ -15,7 +15,7 @@
         android:layout_height="wrap_content"
         style="@style/tvSmallTitle"/>
 
-    <com.androidui.huitu.view.DrawPointView
+    <com.androidui.draw.view.DrawPointView
         android:id="@+id/point"
         android:layout_width="match_parent"
         android:layout_height="200dp" />

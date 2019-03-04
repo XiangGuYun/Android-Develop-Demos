@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#000000"
-    tools:context=".supportlib.rv.HLActivity">
+    tools:context=".supportlib.recyclerview.HLActivity">
 
     <android.support.v7.widget.RecyclerView
         android:background="#ffffff"

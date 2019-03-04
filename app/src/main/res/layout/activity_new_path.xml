@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".huitu.canvas.NewPathActivity">
+    tools:context=".draw.canvas.NewPathActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -41,7 +41,7 @@
             android:background="@drawable/rect7"
             android:gravity="center"/>
 
-        <com.androidui.huitu.view.NewPath1View
+        <com.androidui.draw.view.NewPath1View
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:layout_margin="10dp"/>
@@ -59,12 +59,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
-            <com.androidui.huitu.view.NewPath2View
+            <com.androidui.draw.view.NewPath2View
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="200dp"
                 android:layout_margin="10dp"/>
-            <com.androidui.huitu.view.NewPath3View
+            <com.androidui.draw.view.NewPath3View
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="200dp"
@@ -81,13 +81,13 @@
             style="@style/small_title"
             android:text="添加圆弧addArc"/>
         
-        <com.androidui.huitu.view.NewPath4View
+        <com.androidui.draw.view.NewPath4View
             android:id="@+id/path4View"
             android:layout_width="match_parent"
             android:layout_margin="10dp"
             android:layout_height="200dp" />
 
-       <com.androidui.huitu.view.NewPath5View
+       <com.androidui.draw.view.NewPath5View
            android:layout_width="match_parent"
            android:layout_margin="10dp"
            android:layout_height="200dp" />
@@ -97,7 +97,7 @@
             android:id="@+id/tvArcTo"
             android:text="添加圆弧arcTo：与上面方法唯一不同的是：如果圆弧的起点和上次最后一个坐标点不相同，就连接两个点。如下图所示，path是先moveTo了原点，但是圆弧是从右边开始画的，因此将两点相连。arcTo还有一个构造方法包含参数forceMoveTo，这个值设为true同addArc，设为false同arcTo。（代码）"/>
 
-        <com.androidui.huitu.view.NewPath6View
+        <com.androidui.draw.view.NewPath6View
             android:id="@+id/path6View"
             android:layout_width="match_parent"
             android:layout_margin="10dp"
@@ -108,7 +108,7 @@
             android:id="@+id/tvAddCircle"
             android:text="添加圆形：Path.Direction是指定绘制时是顺时针还是逆时针:CW为顺时针，CCW为逆时针"/>
         
-        <com.androidui.huitu.view.NewPath7View
+        <com.androidui.draw.view.NewPath7View
             android:layout_margin="10dp"
             android:layout_width="match_parent"
             android:layout_height="200dp" />
@@ -118,7 +118,7 @@
             android:id="@+id/tvAddOval"
             android:text="添加椭圆addOval"/>
 
-        <com.androidui.huitu.view.NewPath8View
+        <com.androidui.draw.view.NewPath8View
             android:layout_margin="10dp"
             android:layout_width="match_parent"
             android:layout_height="200dp" />
@@ -128,7 +128,7 @@
             android:id="@+id/tvAddRect"
             android:text="添加矩形addRect"/>
 
-        <com.androidui.huitu.view.NewPath9View
+        <com.androidui.draw.view.NewPath9View
             android:layout_margin="10dp"
             android:layout_width="match_parent"
             android:layout_height="200dp" />
@@ -138,7 +138,7 @@
             android:id="@+id/tvAddRoundRect"
             android:text="添加圆角矩形addRoundRect"/>
 
-        <com.androidui.huitu.view.NewPath10View
+        <com.androidui.draw.view.NewPath10View
             android:layout_margin="10dp"
             android:layout_width="match_parent"
             android:layout_height="200dp" />
@@ -149,12 +149,12 @@
             android:layout_height="wrap_content"
             app:mainTitle1="合并路径addPath"/>
 
-        <com.androidui.huitu.view.AddPathView
+        <com.androidui.draw.view.AddPathView
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:layout_margin="10dp"/>
 
-        <com.androidui.huitu.view.AddPath1View
+        <com.androidui.draw.view.AddPath1View
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:layout_margin="10dp"/>
@@ -176,7 +176,7 @@
             android:layout_height="wrap_content"
             app:mainTitle1="设置路径填充颜色"/>
 
-        <com.androidui.huitu.view.EvenOddView
+        <com.androidui.draw.view.EvenOddView
             android:layout_margin="10dp"
             android:layout_width="match_parent"
             android:layout_height="200dp" />
@@ -188,7 +188,7 @@
             android:text="EvenOdd"
             android:gravity="center"/>
 
-        <com.androidui.huitu.view.EvenOddInverseView
+        <com.androidui.draw.view.EvenOddInverseView
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:layout_margin="10dp"/>
@@ -200,7 +200,7 @@
             android:text="EvenOddInverse"
             android:gravity="center"/>
 
-        <com.androidui.huitu.view.WendingView
+        <com.androidui.draw.view.WendingView
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:layout_margin="10dp"/>
@@ -212,7 +212,7 @@
             android:text="Wending"
             android:gravity="center"/>
 
-        <com.androidui.huitu.view.InverseWendingView
+        <com.androidui.draw.view.InverseWendingView
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:layout_margin="10dp"/>
@@ -230,7 +230,7 @@
             android:layout_height="wrap_content"
             app:mainTitle1="布尔操作"/>
 
-        <com.androidui.huitu.view.PathBoolOpView
+        <com.androidui.draw.view.PathBoolOpView
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:layout_margin="10dp"/>
