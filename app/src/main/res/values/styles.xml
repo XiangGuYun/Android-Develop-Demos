@@ -77,6 +77,17 @@
         <item name="android:textStyle">bold</item>
     </style>
 
+    <style name="btn_test1">
+        <item name="android:background">@drawable/rect_btn_select</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginRight">10dp</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">#66ffff</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
     <style name="bg_et">
         <item name="android:background">@drawable/bg_et</item>
         <item name="android:layout_marginLeft">20dp</item>

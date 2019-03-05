@@ -11,7 +11,7 @@
         android:roundIcon="@mipmap/launcher1"
         android:supportsRtl="true"
         android:theme="@style/Theme.Design.Light.NoActionBar">
-        <activity android:name=".supportlib.swipe_refresh_layout.SwipeRefreshLayoutActivity"></activity>
+        <activity android:name=".supportlib.swipe_refresh_layout.SwipeRefreshLayoutActivity" />
         <activity android:name=".supportlib.searchview.SearchViewActivity" />
         <activity android:name=".supportlib.bottom_sheet_dialog.BottomSheetDialogActivity" />
         <activity android:name=".supportlib.sliding_pane_layout.SlidingPaneLayoutActivity" />
@@ -121,6 +121,8 @@
         <activity android:name=".supportlib.toolbar.ToolbarActivity" />
         <activity android:name=".kotlin.KotlinStudyActivity" />
         <activity android:name=".kotlin.ReflectActivity" />
+        <activity android:name=".rxjava.RXJavaActivity" />
+        <activity android:name=".supportlib.snackbar.SnackBarCase1Activity"></activity>
     </application>
 
 </manifest>

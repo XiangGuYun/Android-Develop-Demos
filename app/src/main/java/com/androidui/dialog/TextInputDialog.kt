@@ -9,7 +9,7 @@ import com.kotlinlib.other.KotlinDialog
 import kotlinx.android.synthetic.main.dialog_input.view.*
 
 //代码阅读对话框
-@DialogInfo(240,150, R.layout.dialog_input)
+@DialogInfo(240,150, R.layout.dialog_input_text)
 class TextInputDialog(ctx: Context): KotlinDialog(ctx){
     init {
         dv.tv(R.id.tvYes).setOnClickListener {

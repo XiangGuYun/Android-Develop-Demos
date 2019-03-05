@@ -2,6 +2,7 @@ package com.kotlinlib.activity
 
 import android.app.Activity
 import android.content.pm.ActivityInfo
+import android.graphics.Color
 import android.os.Build
 import android.os.Bundle
 import android.support.v4.view.ViewCompat
@@ -10,7 +11,10 @@ import android.util.Log
 import android.view.*
 import android.widget.Toast
 import com.androidui.dialog.CodeViewerDialog
+import com.androidui.dialog.TextInputDialog
 import com.androidui.dialog.WebViewerDialog
+import com.flask.colorpicker.ColorPickerView
+import com.flask.colorpicker.builder.ColorPickerDialogBuilder
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import com.kotlinlib.other.BaseInterface
@@ -22,6 +26,24 @@ open abstract class KotlinActivity : AppCompatActivity(), BaseInterface {
 
     val ACTIVITY_NAME = "ac_name"
     var startEventBus = false
+
+    fun colorPicker(title:String,callback:(Int)->Unit){
+        ColorPickerDialogBuilder
+                .with(this)
+                .setTitle(title)
+                .initialColor(Color.WHITE)
+                .wheelType(ColorPickerView.WHEEL_TYPE.FLOWER)
+                .density(12)
+                .setOnColorSelectedListener {
+                    callback.invoke(it)
+                }
+                .setPositiveButton("ok") { p0, p1, p2 ->
+
+                }
+                .setNegativeButton("cancel") { dialog, which -> }
+                .build()
+                .show()
+    }
 
     companion object {
         var gson = Gson()//All activities share a GSON
@@ -85,6 +107,8 @@ open abstract class KotlinActivity : AppCompatActivity(), BaseInterface {
     lateinit var codeDialog: CodeViewerDialog
     lateinit var webDialog:WebViewerDialog
 
+    lateinit var textDialog: TextInputDialog
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
@@ -98,6 +122,7 @@ open abstract class KotlinActivity : AppCompatActivity(), BaseInterface {
         actList.add(this)
         codeDialog = CodeViewerDialog(this)
         webDialog = WebViewerDialog(this)
+        textDialog = TextInputDialog(this)
     }
 
     /**

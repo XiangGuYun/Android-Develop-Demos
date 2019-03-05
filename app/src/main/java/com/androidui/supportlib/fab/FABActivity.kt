@@ -1,9 +1,13 @@
 package com.androidui.supportlib.fab
 
+import android.graphics.Color
 import android.os.Bundle
 import com.androidui.R
+import com.flask.colorpicker.ColorPickerView
+import com.flask.colorpicker.builder.ColorPickerDialogBuilder
 import com.kotlinlib.activity.KotlinActivity
 import com.kotlinlib.other.LayoutId
+import com.kotlinlib.view.recyclerview.RVUtils
 import kotlinx.android.synthetic.main.activity_fab.*
 
 /**
@@ -15,16 +19,55 @@ class FABActivity : KotlinActivity() {
     override fun init(bundle: Bundle?) {
         header1.setLeftClick {
             codeDialog.text("""
-app:backgroundTint - 设置FAB的背景颜色。
-app:rippleColor - 设置FAB点击时的背景颜色。
-app:borderWidth - 该属性尤为重要，如果不设置0dp，那么在4.1的sdk上FAB会显示为正方形，而且在5.0以后的sdk没有阴影效果。所以设置为borderWidth="0dp"。
-app:elevation - 默认状态下FAB的阴影大小。
-app:pressedTranslationZ - 点击时候FAB的阴影大小。
-app:fabSize - 设置FAB的大小，该属性有两个值，分别为normal和mini，对应的FAB大小分别为56dp和40dp。
-src - 设置FAB的图标，Google建议符合Design设计的该图标大小为24dp。
-app:layout_anchor - 设置FAB的锚点，即以哪个控件为参照点设置位置。
-app:layout_anchorGravity - 设置FAB相对锚点的位置，值有 bottom、center、right、left、top等。""")
+android:src：FAB中显示的图标.
+app:backgroundTint：正常的背景颜色 ，这里是ColorStateList类型
+app:rippleColor：按下时的背景颜色
+app:elevation：正常的阴影大小
+app:pressedTranslationZ：按下时的阴影大小
+app:layout_anchor：设置FAB的锚点，即以哪个控件为参照设置位置
+app:layout_anchorGravity：FAB相对于锚点的位置
+app:fabSize：FAB的大小，normal或mini（分别对应56dp和40dp）
+app:borderWidth：边框大小，最好设置成0dp否则会有边框
+android:clickable：一定要设置成true否则没有点击效果
+""")
         }
+        val settings = listOf("rippleColor","elevation+","elevation-","compatPressed\nTranslationZ+",
+                "compatPressed\nTranslationZ-")
+        RVUtils(rvSetting).gridManager(2).rvAdapter(settings,{
+            holder, pos ->
+            holder.setText(R.id.btnCell, settings[pos])
+            holder.v(R.id.btnCell).click {
+               when(pos){
+                   0->{
+                       colorPicker("设置点击时背景色"){
+                           fab.rippleColor = it
+                       }
+                   }
+                   1->{
+                       fab.elevation = fab.elevation+5
+                   }
+                   2->{
+                       if(fab.elevation>=0){
+                           fab.elevation = fab.elevation-5
+                       }else{
+                           "阴影已经没有了".toast()
+                       }
+                   }
+                   3->{
+                       fab.compatPressedTranslationZ  = fab.compatPressedTranslationZ+5
+                   }
+                   4->{
+                       if(fab.compatPressedTranslationZ>=0){
+                           fab.compatPressedTranslationZ = fab.compatPressedTranslationZ-5
+                       }else{
+                           "按下时的阴影已经没有了".toast()
+                       }
+                   }
+               }
+            }
+        },R.layout.item_btn_setting)
     }
+
+
 
 }

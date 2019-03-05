@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="240dp"
+    android:layout_height="150dp"
+    android:background="@drawable/rect_bg">
+    <FrameLayout
+        android:id="@+id/flInput"
+        android:layout_width="match_parent"
+        android:layout_height="110dp">
+        <EditText
+            android:id="@+id/etMain"
+            android:gravity="center"
+            android:background="@drawable/rect_et"
+            android:textColor="#333333"
+            android:layout_gravity="center"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:inputType="text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+    </FrameLayout>
+    <TextView
+        android:layout_below="@+id/flInput"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#ffffff"/>
+    <TextView
+        android:id="@+id/tvYes"
+        android:layout_width="match_parent"
+        android:layout_height="39dp"
+        android:text="确定"
+        android:gravity="center"
+        android:textSize="14sp"
+        android:textColor="#eeeeee"
+        android:layout_alignParentBottom="true"/>
+</RelativeLayout>

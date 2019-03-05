@@ -22,7 +22,7 @@ import com.androidui.supportlib.swipe_refresh_layout.SwipeRefreshLayoutActivity
 import com.androidui.supportlib.tablayout.TabLayoutActivity
 import com.androidui.supportlib.textinput.TextInputActivity
 import com.androidui.supportlib.toolbar.ToolbarActivity
-//import com.androidui.supportlib.viewpager.ViewPagerActivity
+import com.androidui.supportlib.viewpager.ViewPagerActivity
 import com.kotlinlib.activity.KotlinActivity
 import com.kotlinlib.other.LayoutId
 import kotlinx.android.synthetic.main.activity_support_lib_ui.*
@@ -31,7 +31,7 @@ import kotlinx.android.synthetic.main.activity_support_lib_ui.*
 class SupportLibUIActivity : KotlinActivity() {
     override fun init(bundle: Bundle?) {
         btnRecyclerView.click { go(RecyclerViewActivity::class.java) }
-//        btnViewPager.click { go(ViewPagerActivity::class.java) }
+        btnViewPager.click { go(ViewPagerActivity::class.java) }
         btnCardView.click { go(CardViewActivity::class.java) }
         btnToolbar.click { go(ToolbarActivity::class.java) }
         btnCLAPL.click { go(CoordinateActivity::class.java) }
