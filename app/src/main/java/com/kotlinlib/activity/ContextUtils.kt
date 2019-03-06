@@ -236,7 +236,30 @@ interface ContextUtils {
                 }
     }
 
-
+    fun <T: Activity> Activity.go(cls:Class<T>, vararg pairs:Pair<String,Any>, addTransition:()->Pair<Int, Int>){
+        val intent = Intent(this,cls)
+        pairs.forEach {
+            when(it.second::class){
+                String::class->{
+                    intent.putExtra(it.first,it.second.toString())
+                }
+                Int::class->{
+                    intent.putExtra(it.first,it.second as Int)
+                }
+                Boolean::class->{
+                    intent.putExtra(it.first,it.second as Boolean)
+                }
+                Double::class->{
+                    intent.putExtra(it.first,it.second as Double)
+                }
+//                Serializable::class->intent.putExtra(it.first,it.second as Serializable) 无效
+            }
+            Log.d("T_BUNDLE", ("${it.first} ${it.second}"))
+        }
+        startActivity(intent)
+        val anims = addTransition.invoke()
+        overridePendingTransition(anims.first, anims.second)
+    }
 
 
 }

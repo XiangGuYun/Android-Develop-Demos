@@ -1,6 +1,7 @@
 package com.kotlinlib.activity
 
 import android.app.Activity
+import android.content.Intent
 import android.content.pm.ActivityInfo
 import android.graphics.Color
 import android.os.Build
@@ -22,7 +23,8 @@ import com.kotlinlib.other.DensityUtils
 import com.kotlinlib.other.LayoutId
 import org.greenrobot.eventbus.EventBus
 
-open abstract class KotlinActivity : AppCompatActivity(), BaseInterface {
+open abstract class
+KotlinActivity : AppCompatActivity(), BaseInterface {
 
     val ACTIVITY_NAME = "ac_name"
     var startEventBus = false
@@ -215,4 +217,7 @@ open abstract class KotlinActivity : AppCompatActivity(), BaseInterface {
     fun inf(id:Int): View {
        return inflater.inflate(id, null)
     }
+
+
+
 }
