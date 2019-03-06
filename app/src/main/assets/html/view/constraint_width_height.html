@@ -1,0 +1,26 @@
+﻿<!DOCTYPE HTML><html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<title>c_2</title>
+    
+<style id="wiz_custom_css">html, .wiz-editor-body {font-size: 12pt;}.wiz-editor-body {font-family: Helvetica, 'Hiragino Sans GB', '寰蒋闆呴粦', 'Microsoft YaHei UI', SimSun, SimHei, arial, sans-serif;line-height: 1.7;margin: 0 auto;padding: 20px 16px;padding: 1.25rem 1rem;}.wiz-editor-body h1,.wiz-editor-body h2,.wiz-editor-body h3,.wiz-editor-body h4,.wiz-editor-body h5,.wiz-editor-body h6 {margin:20px 0 10px;margin:1.25rem 0 0.625rem;padding: 0;font-weight: bold;}.wiz-editor-body h1 {font-size:20pt;font-size:1.67rem;}.wiz-editor-body h2 {font-size:18pt;font-size:1.5rem;}.wiz-editor-body h3 {font-size:15pt;font-size:1.25rem;}.wiz-editor-body h4 {font-size:14pt;font-size:1.17rem;}.wiz-editor-body h5 {font-size:12pt;font-size:1rem;}.wiz-editor-body h6 {font-size:12pt;font-size:1rem;color: #777777;margin: 1rem 0;}.wiz-editor-body div,.wiz-editor-body p,.wiz-editor-body ul,.wiz-editor-body ol,.wiz-editor-body dl,.wiz-editor-body li {margin:8px 0;}.wiz-editor-body blockquote,.wiz-editor-body table,.wiz-editor-body pre,.wiz-editor-body code {margin:8px 0;}.wiz-editor-body .CodeMirror pre {margin:0;}.wiz-editor-body ul,.wiz-editor-body ol {padding-left:32px;padding-left:2rem;}.wiz-editor-body ol.wiz-list-level1 > li {list-style-type:decimal;}.wiz-editor-body ol.wiz-list-level2 > li {list-style-type:lower-latin;}.wiz-editor-body ol.wiz-list-level3 > li {list-style-type:lower-roman;}.wiz-editor-body blockquote {padding: 0 12px;}.wiz-editor-body blockquote > :first-child {margin-top:0;}.wiz-editor-body blockquote > :last-child {margin-bottom:0;}.wiz-editor-body img {border:0;max-width:100%;height:auto !important;margin:2px 0;}.wiz-editor-body table {border-collapse:collapse;border:1px solid #bbbbbb;}.wiz-editor-body td,.wiz-editor-body th {padding:4px 8px;border-collapse:collapse;border:1px solid #bbbbbb;min-height:28px;word-break:break-word;box-sizing: border-box;}.wiz-hide {display:none !important;}</style></head>
+
+<body class="wiz-editor-body"  spellcheck="false"><div><div class="image-container"><br></div><div class="image-view" data-width="370" data-height="169"><img data-original-src="//upload-images.jianshu.io/upload_images/2258857-ad087966cadb79bc" data-original-width="370" data-original-height="169" data-original-format="image/png" data-original-filesize="8835" src="constraint_width_height_files/0.783006886222243.png"></div><div class="image-package"></div><div><p><code>B</code> 控件位于 <code>A</code> 控件右侧与屏幕右侧的中间。代码如下：</p><pre class="hljs objectivec"><code class="objectivec">    &lt;Button
+        android:<span class="hljs-keyword">id</span>=<span class="hljs-string">"@+id/bt_1"</span>
+        android:layout_width=<span class="hljs-string">"wrap_content"</span>
+        android:layout_height=<span class="hljs-string">"wrap_content"</span>
+        android:layout_marginLeft=<span class="hljs-string">"16dp"</span>
+        android:text=<span class="hljs-string">"A"</span>
+        app:layout_constraintLeft_toLeftOf=<span class="hljs-string">"parent"</span>/&gt;
+
+    &lt;Button
+        android:<span class="hljs-keyword">id</span>=<span class="hljs-string">"@+id/bt_2"</span>
+        android:layout_width=<span class="hljs-string">"wrap_content"</span>
+        android:layout_height=<span class="hljs-string">"wrap_content"</span>
+        android:text=<span class="hljs-string">"B"</span>
+        app:layout_constraintLeft_toRightOf=<span class="hljs-string">"@+id/bt_1"</span>
+        app:layout_constraintRight_toRightOf=<span class="hljs-string">"parent"</span>
+        app:layout_constraintTop_toBottomOf=<span class="hljs-string">"@id/bt_1"</span>/&gt;
+</code></pre><p>那么我改变 <code>B</code> 控件的内容，使宽度增大：</p><div class="image-package"><div class="image-container"><br></div><div class="image-view" data-width="1252" data-height="342"><img data-original-src="//upload-images.jianshu.io/upload_images/2258857-5abaeb180a41f1be" data-original-width="1252" data-original-height="342" data-original-format="image/png" data-original-filesize="47549" src="constraint_width_height_files/0.61834908467847.png"></div></div><p>通过效果图可以得出，给 <code>B</code> 控件添加的左右约束失效。为了防止约束失效，在 <code>1.1.0</code> 版本中新增了<code>app:layout_constrainedWidth="true"</code>属性。注意控件的左右都应该有约束条件， 如下：</p><pre class="hljs cpp"><code class="cpp">app:layout_constraintLeft_toRightOf=<span class="hljs-string">"@+id/bt_1"</span> <span class="hljs-comment">//控件的左边位于xx控件的右边</span>
+app:layout_constraintRight_toRightOf=<span class="hljs-string">"parent"</span>   <span class="hljs-comment">//控件的右边位于xx控件的右边</span>
+</code></pre><p>效果图如下：</p><div class="image-package"><div class="image-container"><br></div><div class="image-view" data-width="1236" data-height="345"><img data-original-src="//upload-images.jianshu.io/upload_images/2258857-82f52f7d712da1d1" data-original-width="1236" data-original-height="345" data-original-format="image/png" data-original-filesize="48385" src="constraint_width_height_files/0.7680771939352267.png"></div></div></div><p>app:layout_constrainedWidth="true" 会导致渲染变慢，变慢时长可忽略不计。</p><br></div></body></html>

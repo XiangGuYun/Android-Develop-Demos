@@ -112,7 +112,20 @@
         app:mainTitle1="比例属性\nlayout_constraintDimensionRatio"/>
 
     <TextView
+        android:id="@+id/tvRatio1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_marginTop="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:background="#ff6666"
+        android:text="4:1"
+        android:gravity="center"
+        android:textSize="30sp"
+        app:layout_constraintTop_toBottomOf="@+id/header2"
+        app:layout_constraintDimensionRatio="W,1:4"/>
+
+    <TextView
         android:id="@+id/btn8"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -121,25 +134,24 @@
         android:text="3:1"
         app:layout_constraintHorizontal_weight="1"
         android:gravity="center"
-        android:textSize="25sp"
+        android:textSize="30sp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toLeftOf="@id/btn9"
-        app:layout_constraintTop_toBottomOf="@id/header2"/>
+        app:layout_constraintTop_toBottomOf="@id/tvRatio1"/>
 
     <TextView
         android:id="@+id/btn9"
-        android:layout_marginTop="10dp"
         app:layout_constraintDimensionRatio="1:1"
         android:layout_height="0dp"
         android:layout_width="0dp"
         android:background="#6666ff"
         app:layout_constraintHorizontal_weight="1"
         android:gravity="center"
-        android:textSize="25sp"
+        android:textSize="30sp"
         android:text="1:1"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toRightOf="@id/btn8"
-        app:layout_constraintTop_toBottomOf="@id/header2"/>
+        app:layout_constraintTop_toBottomOf="@id/tvRatio1"/>
 
     <TextView
         android:id="@+id/tvRatio2"
@@ -150,7 +162,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         android:text="3:2"
         android:gravity="center"
-        android:textSize="25sp"
+        android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="@id/btn9"
         app:layout_constraintTop_toBottomOf="@id/btn8"
         />
@@ -341,16 +353,278 @@
         app:layout_constraintTop_toBottomOf="@+id/tv6"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:mainTitle1="导航线"/>
-
-    <com.androidui.view.Header1View
-        android:id="@+id/header6"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/header5"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         app:mainTitle1="圆形定位"/>
 
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_h"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
+
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline_w"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.6" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/flower"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header5"
+        app:layout_constraintCircle="@+id/love"
+        app:layout_constraintCircleRadius="100dp"
+        app:layout_constraintCircleAngle="0" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/flower"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header5"
+        app:layout_constraintCircle="@+id/love"
+        app:layout_constraintCircleRadius="100dp"
+        app:layout_constraintCircleAngle="90" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/flower"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header5"
+        app:layout_constraintCircle="@+id/love"
+        app:layout_constraintCircleRadius="100dp"
+        app:layout_constraintCircleAngle="135" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/flower"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header5"
+        app:layout_constraintCircle="@+id/love"
+        app:layout_constraintCircleRadius="100dp"
+        app:layout_constraintCircleAngle="180" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/flower"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header5"
+        app:layout_constraintCircle="@+id/love"
+        app:layout_constraintCircleRadius="100dp"
+        app:layout_constraintCircleAngle="225" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/flower"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header5"
+        app:layout_constraintCircle="@+id/love"
+        app:layout_constraintCircleRadius="100dp"
+        app:layout_constraintCircleAngle="270" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/flower"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header5"
+        app:layout_constraintCircle="@+id/love"
+        app:layout_constraintCircleRadius="100dp"
+        app:layout_constraintCircleAngle="315" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/flower"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header5"
+        app:layout_constraintCircle="@+id/love"
+        app:layout_constraintCircleRadius="100dp"
+        app:layout_constraintCircleAngle="45" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/love"
+        app:layout_constraintTop_toBottomOf="@+id/header5"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="70dp"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:src="@mipmap/love"
+        app:civ_border_width="2dp"
+        app:civ_border_color="#FF000000"/>
+
+    <com.androidui.view.Header1View
+        android:layout_marginTop="90dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/love"
+        android:id="@+id/header6"
+        app:mainTitle1="约束宽高属性"/>
+
+    <TextView
+        android:id="@+id/tvCons1"
+        android:layout_marginTop="10dp"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:background="#ff6666"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header6"/>
+
+    <TextView
+        android:id="@+id/tvCons2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#66ff66"
+        android:padding="10dp"
+        android:text="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+        app:layout_constraintLeft_toRightOf="@+id/tvCons1"
+        app:layout_constraintTop_toBottomOf="@+id/tvCons1"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvCons3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#6666ff"
+        android:padding="10dp"
+        android:text="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+        app:layout_constraintLeft_toRightOf="@+id/tvCons1"
+        app:layout_constraintTop_toBottomOf="@+id/tvCons2"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvFenXiCons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/small_title"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvCons3"
+        android:text="分析：蓝色方框相对于绿色方框新增了一条app:layout_constrainedWidth='true'的属性，因此蓝色方框不会像红色方框那样在宽度上超出约束的限制。"/>
+
+
+    <com.androidui.view.Header1View
+        android:id="@+id/header7"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvFenXiCons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:mainTitle1="Chains关系链"/>
+
+    <com.androidui.view.Header1View
+        android:id="@+id/header8"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:mainTitle1="设置最小（大）尺寸\n设置相对于父容器的百分比"/>
+
+    <TextView
+        android:id="@+id/tvPercent"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header8"
+        android:background="#ff6666"
+        app:layout_constraintWidth_percent="0.5"/>
+
+    <com.androidui.view.Header1View
+        android:id="@+id/header9"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvPercent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:mainTitle1="goneMargin（隐藏边距）"/>
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header9"
+        android:background="#ff6666"
+        android:id="@+id/tvRedGone"/>
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        app:layout_constraintLeft_toRightOf="@+id/tvRedGone"
+        app:layout_constraintTop_toBottomOf="@id/header9"
+        android:background="#66ff66"
+        app:layout_goneMarginLeft="100dp"
+        android:id="@+id/tvRedShow"/>
+
+    <com.androidui.view.Header1View
+        app:mainTitle1="Guideline"
+        android:id="@+id/headerGuideline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvRedShow"/>
+
+    <com.androidui.view.Header1View
+        app:mainTitle1="Barrier"
+        android:id="@+id/headerBarrier"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/headerGuideline"/>
+
+    <Button
+        android:id="@+id/btnBarrier"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/btn_test"
+        android:text="查看效果"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/headerBarrier"/>
+
+    <com.androidui.view.Header1View
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:mainTitle1="Group"
+        android:id="@+id/headerGroup"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnBarrier"/>
+
+    <android.support.constraint.Group
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        app:constraint_referenced_ids="tvVisible1"/>
+
+    <TextView
+        android:id="@+id/tvVisible1"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:background="#FF6666"
+        android:layout_marginTop="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/headerGroup"/>
+
+    <TextView
+        android:id="@+id/tvVisible2"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:background="#66ff66"
+        android:layout_marginTop="10dp"
+        app:layout_constraintLeft_toRightOf="@+id/tvVisible1"
+        app:layout_constraintTop_toBottomOf="@id/headerGroup"/>
 
 
 </android.support.constraint.ConstraintLayout>

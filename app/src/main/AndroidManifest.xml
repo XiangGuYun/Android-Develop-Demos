@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/launcher1"
         android:supportsRtl="true"
         android:theme="@style/Theme.Design.Light.NoActionBar">
-        <activity android:name=".supportlib.constraint.ConstraintCase1Activity"></activity>
+        <activity android:name=".supportlib.constraint.ConstraintCase2Activity"></activity>
+        <activity android:name=".supportlib.constraint.ConstraintCase1Activity" />
         <activity android:name=".supportlib.swipe_refresh_layout.SwipeRefreshLayoutActivity" />
         <activity android:name=".supportlib.searchview.SearchViewActivity" />
         <activity android:name=".supportlib.bottom_sheet_dialog.BottomSheetDialogActivity" />

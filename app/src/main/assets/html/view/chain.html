@@ -1,0 +1,25 @@
+﻿<!DOCTYPE HTML><html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<title>c_2</title>
+    
+<style id="wiz_custom_css">html, .wiz-editor-body {font-size: 12pt;}.wiz-editor-body {font-family: Helvetica, 'Hiragino Sans GB', '寰蒋闆呴粦', 'Microsoft YaHei UI', SimSun, SimHei, arial, sans-serif;line-height: 1.7;margin: 0 auto;padding: 20px 16px;padding: 1.25rem 1rem;}.wiz-editor-body h1,.wiz-editor-body h2,.wiz-editor-body h3,.wiz-editor-body h4,.wiz-editor-body h5,.wiz-editor-body h6 {margin:20px 0 10px;margin:1.25rem 0 0.625rem;padding: 0;font-weight: bold;}.wiz-editor-body h1 {font-size:20pt;font-size:1.67rem;}.wiz-editor-body h2 {font-size:18pt;font-size:1.5rem;}.wiz-editor-body h3 {font-size:15pt;font-size:1.25rem;}.wiz-editor-body h4 {font-size:14pt;font-size:1.17rem;}.wiz-editor-body h5 {font-size:12pt;font-size:1rem;}.wiz-editor-body h6 {font-size:12pt;font-size:1rem;color: #777777;margin: 1rem 0;}.wiz-editor-body div,.wiz-editor-body p,.wiz-editor-body ul,.wiz-editor-body ol,.wiz-editor-body dl,.wiz-editor-body li {margin:8px 0;}.wiz-editor-body blockquote,.wiz-editor-body table,.wiz-editor-body pre,.wiz-editor-body code {margin:8px 0;}.wiz-editor-body .CodeMirror pre {margin:0;}.wiz-editor-body ul,.wiz-editor-body ol {padding-left:32px;padding-left:2rem;}.wiz-editor-body ol.wiz-list-level1 > li {list-style-type:decimal;}.wiz-editor-body ol.wiz-list-level2 > li {list-style-type:lower-latin;}.wiz-editor-body ol.wiz-list-level3 > li {list-style-type:lower-roman;}.wiz-editor-body blockquote {padding: 0 12px;}.wiz-editor-body blockquote > :first-child {margin-top:0;}.wiz-editor-body blockquote > :last-child {margin-bottom:0;}.wiz-editor-body img {border:0;max-width:100%;height:auto !important;margin:2px 0;}.wiz-editor-body table {border-collapse:collapse;border:1px solid #bbbbbb;}.wiz-editor-body td,.wiz-editor-body th {padding:4px 8px;border-collapse:collapse;border:1px solid #bbbbbb;min-height:28px;word-break:break-word;box-sizing: border-box;}.wiz-hide {display:none !important;}</style></head>
+
+<body class="wiz-editor-body"  spellcheck="false" style="opacity: 1;"><p>链使我们能够对一组在水平或竖直方向互相关联的控件的属性进行统一管理。成为链的条件：<strong>一组控件它们通过一个双向的约束关系链接起来。</strong> 并且链的属性是由一条链的头结点控制的，如下：</p><div><div class="image-package"><div class="image-container"><br></div><div class="image-view" data-width="677" data-height="117"><img data-original-src="//upload-images.jianshu.io/upload_images/2258857-f5dbb60c29139a86" data-original-width="677" data-original-height="117" data-original-format="image/png" data-original-filesize="10576" src="chain_files/0.03261708574044686.png"></div></div><p>代码如下：</p><pre class="hljs objectivec"><code class="objectivec">    &lt;Button
+        android:<span class="hljs-keyword">id</span>=<span class="hljs-string">"@+id/bt_1"</span>
+        android:layout_width=<span class="hljs-string">"wrap_content"</span>
+        android:layout_height=<span class="hljs-string">"wrap_content"</span>
+        android:text=<span class="hljs-string">"A"</span>
+        <span class="hljs-comment">//默认样式</span>
+        app:layout_constraintHorizontal_chainStyle=<span class="hljs-string">"spread"</span>
+        app:layout_constraintLeft_toLeftOf=<span class="hljs-string">"parent"</span>
+        app:layout_constraintRight_toLeftOf=<span class="hljs-string">"@+id/bt_2"</span> /&gt;
+
+    &lt;Button
+        android:<span class="hljs-keyword">id</span>=<span class="hljs-string">"@+id/bt_2"</span>
+        android:layout_width=<span class="hljs-string">"wrap_content"</span>
+        android:layout_height=<span class="hljs-string">"wrap_content"</span>
+        android:text=<span class="hljs-string">"B"</span>
+        app:layout_constraintLeft_toRightOf=<span class="hljs-string">"@+id/bt_1"</span>
+        app:layout_constraintRight_toRightOf=<span class="hljs-string">"parent"</span> /&gt;
+</code></pre><p>那么链有哪些样式，以下图来诠释：</p><div class="image-package"><div class="image-container"><br></div><div class="image-view" data-width="775" data-height="289"><img data-original-src="//upload-images.jianshu.io/upload_images/2258857-5803cbea741358a4" data-original-width="775" data-original-height="289" data-original-format="image/png" data-original-filesize="48710" src="chain_files/0.7588997305138871.png"></div></div></div><p><code>Weighted</code> 样式下，宽或高的维度应设置为<code>match_parent（0dp）</code></p></body></html>

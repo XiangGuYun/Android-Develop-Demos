@@ -23,7 +23,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         style="@style/item"
-        android:text="ViewPager"
+        android:text="ViewPager与TabLayout"
         android:background="@drawable/rect7"
         android:id="@+id/btnViewPager"/>
 
@@ -63,7 +63,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         style="@style/item"
-        android:text="TextInputLayout"
+        android:text="TextInputLayout与TextInputEditText"
         android:background="@drawable/rect3"
         android:id="@+id/btnTextInputLayout"/>
 
@@ -74,14 +74,6 @@
         android:text="Snackbar"
         android:background="@drawable/rect4"
         android:id="@+id/btnSnackbar"/>
-
-    <com.androidui.view.MyTextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        style="@style/item"
-        android:text="TabLayout"
-        android:background="@drawable/rect5"
-        android:id="@+id/btnTabLayout"/>
 
     <com.androidui.view.MyTextView
         android:layout_width="wrap_content"

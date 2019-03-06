@@ -1,10 +1,6 @@
 package com.androidui.supportlib
 
 import android.os.Bundle
-import android.support.design.widget.BottomSheetDialog
-import android.support.design.widget.CollapsingToolbarLayout
-import android.support.v4.widget.DrawerLayout
-import android.support.v4.widget.SwipeRefreshLayout
 import com.androidui.R
 import com.androidui.supportlib.bottom_sheet_dialog.BottomSheetDialogActivity
 import com.androidui.supportlib.cardview.CardViewActivity
@@ -19,7 +15,6 @@ import com.androidui.supportlib.searchview.SearchViewActivity
 import com.androidui.supportlib.sliding_pane_layout.SlidingPaneLayoutActivity
 import com.androidui.supportlib.snackbar.SnackBarActivity
 import com.androidui.supportlib.swipe_refresh_layout.SwipeRefreshLayoutActivity
-import com.androidui.supportlib.tablayout.TabLayoutActivity
 import com.androidui.supportlib.textinput.TextInputActivity
 import com.androidui.supportlib.toolbar.ToolbarActivity
 import com.androidui.supportlib.viewpager.ViewPagerActivity
@@ -38,7 +33,6 @@ class SupportLibUIActivity : KotlinActivity() {
         btnFloatingActionButton.click { go(FABActivity::class.java) }
         btnTextInputLayout.click { go(TextInputActivity::class.java) }
         btnSnackbar.click { go(SnackBarActivity::class.java) }
-        btnTabLayout.click { go(TabLayoutActivity::class.java) }
         btnNavigationView.click { go(NestedScrollViewActivity::class.java) }
         btnCollapsingToolbarLayout.click { go(CTLActivity::class.java) }
         btnNestedScrollView.click { go(NestedScrollViewActivity::class.java) }
