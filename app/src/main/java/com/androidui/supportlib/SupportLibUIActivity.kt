@@ -32,7 +32,6 @@ class SupportLibUIActivity : KotlinActivity() {
         btnFloatingActionButton.click { go(FABActivity::class.java) }
         btnTextInputLayout.click { go(TextInputActivity::class.java) }
         btnSnackbar.click { go(SnackBarActivity::class.java) }
-        btnNavigationView.click { go(NestedScrollViewActivity::class.java) }
         btnCollapsingToolbarLayout.click { go(CTLActivity::class.java) }
         btnNestedScrollView.click { go(NestedScrollViewActivity::class.java) }
         btnDrawerLayout.click { go(DrawerLayoutActivity::class.java) }

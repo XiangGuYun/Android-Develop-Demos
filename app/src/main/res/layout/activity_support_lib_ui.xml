@@ -79,15 +79,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         style="@style/item"
-        android:text="NavigationView"
-        android:background="@drawable/rect6"
-        android:id="@+id/btnNavigationView"/>
-
-
-    <com.androidui.view.MyTextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        style="@style/item"
         android:text="CollapsingToolbarLayout"
         android:background="@drawable/rect7"
         android:id="@+id/btnCollapsingToolbarLayout"/>
@@ -140,14 +131,6 @@
         android:background="@drawable/rect4"
         android:id="@+id/btnBottomSheetDialog"/>
 
-    <com.androidui.view.MyTextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        style="@style/item"
-        android:text="SearchView"
-        android:layout_marginBottom="10dp"
-        android:background="@drawable/rect5"
-        android:id="@+id/btnSearchView"/>
 </LinearLayout>
 </ScrollView>
 </FrameLayout>

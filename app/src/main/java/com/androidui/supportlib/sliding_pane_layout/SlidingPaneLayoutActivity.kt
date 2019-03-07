@@ -81,6 +81,10 @@ SlidingPaneLayout和DrawerLayout的区别
             go(SlidingPaneLayoutCase2Activity::class.java)
         }
 
+        btn3.click {
+            go(SlidingPaneLayoutCase3Activity::class.java)
+        }
+
     }
 
 }

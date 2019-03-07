@@ -11,9 +11,18 @@
         android:roundIcon="@mipmap/launcher1"
         android:supportsRtl="true"
         android:theme="@style/Theme.Design.Light.NoActionBar">
+        <activity
+            android:name=".supportlib.navigationview.TestNavigationActivity"
+            android:label="@string/title_activity_test_navigation"></activity>
+        <activity
+            android:name=".supportlib.navigationview.NavigationDrawerActivity"
+            android:label="@string/title_activity_navigation_drawer" />
+        <activity
+            android:name=".supportlib.sliding_pane_layout.SlidingPaneLayoutCase3Activity"
+            android:theme="@style/DIY.SlideClose.Transparent.Theme" />
+        <activity android:name=".supportlib.swipe_refresh_layout.SwipeRefreshLayoutCase1Activity" />
         <activity android:name=".supportlib.constraint.ConstraintCase1Activity" />
         <activity android:name=".supportlib.constraint.ConstraintCase2Activity" />
-        <activity android:name=".supportlib.constraint.ConstraintCase1Activity" />
         <activity android:name=".supportlib.swipe_refresh_layout.SwipeRefreshLayoutActivity" />
         <activity android:name=".supportlib.bottom_sheet_dialog.BottomSheetDialogActivity" />
         <activity android:name=".supportlib.sliding_pane_layout.SlidingPaneLayoutActivity" />
@@ -127,7 +136,7 @@
         <activity android:name=".supportlib.drawerlayout.DrawerLayoutCase1Activity" />
         <activity android:name=".supportlib.drawerlayout.DrawerLayoutCase2Activity" />
         <activity android:name=".supportlib.sliding_pane_layout.SlidingPaneLayoutCase1Activity" />
-        <activity android:name=".supportlib.sliding_pane_layout.SlidingPaneLayoutCase2Activity"></activity>
+        <activity android:name=".supportlib.sliding_pane_layout.SlidingPaneLayoutCase2Activity" />
     </application>
 
 </manifest>
