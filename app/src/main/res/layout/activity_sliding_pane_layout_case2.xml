@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SlidingPaneLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/spl_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <fragment
+        android:id="@+id/fragment_leftmenu"
+        android:name="com.androidui.supportlib.sliding_pane_layout.LeftMenuFragment"
+        android:layout_width="200dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="left"/>
+    <fragment
+        android:id="@+id/fragment_rightcontent"
+        android:name="com.androidui.supportlib.sliding_pane_layout.RightContentFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_gravity="right"/>
+</android.support.v4.widget.SlidingPaneLayout>

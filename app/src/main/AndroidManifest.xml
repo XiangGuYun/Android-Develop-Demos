@@ -11,16 +11,15 @@
         android:roundIcon="@mipmap/launcher1"
         android:supportsRtl="true"
         android:theme="@style/Theme.Design.Light.NoActionBar">
-        <activity android:name=".supportlib.constraint.ConstraintCase2Activity"></activity>
+        <activity android:name=".supportlib.constraint.ConstraintCase1Activity" />
+        <activity android:name=".supportlib.constraint.ConstraintCase2Activity" />
         <activity android:name=".supportlib.constraint.ConstraintCase1Activity" />
         <activity android:name=".supportlib.swipe_refresh_layout.SwipeRefreshLayoutActivity" />
-        <activity android:name=".supportlib.searchview.SearchViewActivity" />
         <activity android:name=".supportlib.bottom_sheet_dialog.BottomSheetDialogActivity" />
         <activity android:name=".supportlib.sliding_pane_layout.SlidingPaneLayoutActivity" />
         <activity android:name=".supportlib.drawerlayout.DrawerLayoutActivity" />
         <activity android:name=".supportlib.collapsing_toolbar_layout.CTLActivity" />
         <activity android:name=".supportlib.navigationview.NavigationViewActivity" />
-        <activity android:name=".supportlib.tablayout.TabLayoutActivity" />
         <activity android:name=".supportlib.snackbar.SnackBarActivity" />
         <activity android:name=".supportlib.textinput.TextInputActivity" />
         <activity android:name=".supportlib.fab.FABActivity" />
@@ -125,6 +124,10 @@
         <activity android:name=".kotlin.ReflectActivity" />
         <activity android:name=".rxjava.RXJavaActivity" />
         <activity android:name=".supportlib.snackbar.SnackBarCase1Activity" />
+        <activity android:name=".supportlib.drawerlayout.DrawerLayoutCase1Activity" />
+        <activity android:name=".supportlib.drawerlayout.DrawerLayoutCase2Activity" />
+        <activity android:name=".supportlib.sliding_pane_layout.SlidingPaneLayoutCase1Activity" />
+        <activity android:name=".supportlib.sliding_pane_layout.SlidingPaneLayoutCase2Activity"></activity>
     </application>
 
 </manifest>

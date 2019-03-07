@@ -11,7 +11,6 @@ import com.androidui.supportlib.drawerlayout.DrawerLayoutActivity
 import com.androidui.supportlib.fab.FABActivity
 import com.androidui.supportlib.nestedsv.NestedScrollViewActivity
 import com.androidui.supportlib.recyclerview.RecyclerViewActivity
-import com.androidui.supportlib.searchview.SearchViewActivity
 import com.androidui.supportlib.sliding_pane_layout.SlidingPaneLayoutActivity
 import com.androidui.supportlib.snackbar.SnackBarActivity
 import com.androidui.supportlib.swipe_refresh_layout.SwipeRefreshLayoutActivity
@@ -41,6 +40,5 @@ class SupportLibUIActivity : KotlinActivity() {
         btnSlidingPaneLayout.click { go(SlidingPaneLayoutActivity::class.java) }
         btnConstraintLayout.click { go(ConstraintActivity::class.java) }
         btnBottomSheetDialog.click { go(BottomSheetDialogActivity::class.java) }
-        btnSearchView.click { go(SearchViewActivity::class.java) }
     }
 }

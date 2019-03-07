@@ -6,4 +6,38 @@
     android:layout_height="match_parent"
     tools:context=".supportlib.drawerlayout.DrawerLayoutActivity">
 
+    <com.androidui.view.Header1View
+        android:id="@+id/header1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:mainTitle1="实现左侧抽屉菜单"/>
+
+    <Button
+        style="@style/btn_test"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header1"
+        android:text="查看效果"
+        android:id="@+id/btnView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.androidui.view.Header1View
+        android:id="@+id/header2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:mainTitle1="实现多层抽屉"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnView1"/>
+
+    <Button
+        style="@style/btn_test"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header2"
+        android:text="查看效果"
+        android:id="@+id/btnView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
 </android.support.constraint.ConstraintLayout>

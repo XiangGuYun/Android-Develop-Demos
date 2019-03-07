@@ -94,4 +94,28 @@
         android:text="TextureView"
         />
 
+    <com.androidui.view.MyTextView
+        android:id="@+id/btnStatusBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="@drawable/rect3"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:textSize="18sp"
+        android:text="状态栏"
+        />
+
+    <com.androidui.view.MyTextView
+        android:id="@+id/btnPopupWindow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="@drawable/rect4"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:textSize="18sp"
+        android:text="PopupWindow"
+        />
+
 </LinearLayout>

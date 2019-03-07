@@ -4,10 +4,7 @@ import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentActivity
 import android.support.v4.app.FragmentManager
 import android.support.v4.app.FragmentTransaction
-import com.androidui.R
-import com.androidui.fragment.case1.SecondFragment
 import java.util.*
-
 
 /**
  * Created by asus on 2016/7/20.
@@ -107,6 +104,26 @@ class FragmentUtils<T:Fragment> {
         return true
     }
 
+    fun switch(index: Int, getTransaction:(FragmentTransaction)->Unit): Boolean {
+        val targetFragment = fragments[index]
+        //fragments.remove(targetFragment)
+        val transaction = manager!!.beginTransaction()
+        getTransaction.invoke(transaction)
+        if (!targetFragment.isAdded) {    // 先判断是否被add过
+            for (i in fragments.indices) {
+                if (fragments[i].isAdded) transaction.hide(fragments[i])
+            }
+            transaction.add(contentId, targetFragment).commit() // 隐藏当前的fragment，add下一个到Activity中
+        } else {
+            for (i in fragments.indices) {
+                if (fragments[i].isAdded) transaction.hide(fragments[i])
+            }
+            transaction.show(targetFragment).commit() // 隐藏当前的fragment，显示下一个
+        }
+        //fragments.add(targetFragment)
+        return true
+    }
+
     /**
      * 切换到对应的Fragment并将其加入到回退栈中
      */
@@ -139,10 +156,10 @@ class FragmentUtils<T:Fragment> {
         val manager = act.supportFragmentManager.beginTransaction()
         getTransaction.invoke(manager)
         if(isAddToBackStack){
-            manager.replace(R.id.flContainer, SecondFragment(),target.javaClass.simpleName)
+            manager.replace(contentId, target,target.javaClass.simpleName)
             manager.addToBackStack(target.javaClass.simpleName)
         }else{
-            manager.replace(R.id.flContainer, SecondFragment())
+            manager.replace(contentId, target)
         }
         manager.commit()
     }

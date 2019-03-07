@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".supportlib.drawerlayout.DrawerLayoutCase1Activity">
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@mipmap/bg_girl1"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btn1"
+                style="@style/btn_test"
+                android:text="打开"
+                android:layout_gravity="right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tvSlideOrientation"
+                android:layout_width="wrap_content"
+                android:gravity="right"
+                android:layout_gravity="right"
+                android:layout_height="wrap_content"
+                android:background="#ff6666"
+                android:layout_margin="10dp"
+                android:padding="10dp"/>
+
+            <TextView
+                android:id="@+id/tvSlideOffset"
+                android:layout_width="wrap_content"
+                android:layout_gravity="right"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:background="#66ff66"
+                android:layout_margin="10dp"
+                android:padding="10dp"/>
+
+            <TextView
+                android:id="@+id/tvState"
+                android:layout_width="wrap_content"
+                android:layout_gravity="right"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:background="#6666ff"
+                android:layout_margin="10dp"
+                android:padding="10dp"/>
+
+        </LinearLayout>
+        <!--侧滑界面-->
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/drawerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="left"
+            android:background="@mipmap/bg_girl"
+            android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn2"
+            style="@style/btn_test"
+            android:text="关闭"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    </android.support.v4.widget.DrawerLayout>
+
+</android.support.constraint.ConstraintLayout>

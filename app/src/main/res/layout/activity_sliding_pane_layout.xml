@@ -6,4 +6,57 @@
     android:layout_height="match_parent"
     tools:context=".supportlib.sliding_pane_layout.SlidingPaneLayoutActivity">
 
+    <com.androidui.view.Header1View
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/header1"
+        app:mainTitle1="Hello SlidingPaneLayout"/>
+
+    <Button
+        android:id="@+id/btn1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/btn_test"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header1"
+        android:text="查看效果"/>
+
+    <com.androidui.view.Header1View
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn1"
+        android:id="@+id/header2"
+        app:mainTitle1="结合Fragment使用"/>
+
+    <Button
+        android:id="@+id/btn2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/btn_test"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header2"
+        android:text="查看效果"/>
+
+    <com.androidui.view.Header1View
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn2"
+        android:id="@+id/header3"
+        app:mainTitle1="案例：滑动关闭Activity"/>
+
+    <Button
+        android:id="@+id/btn3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/btn_test"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header3"
+        android:text="查看效果"/>
+
 </android.support.constraint.ConstraintLayout>
