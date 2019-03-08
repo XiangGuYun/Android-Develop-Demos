@@ -23,8 +23,7 @@ import com.kotlinlib.other.DensityUtils
 import com.kotlinlib.other.LayoutId
 import org.greenrobot.eventbus.EventBus
 
-open abstract class
-KotlinActivity : AppCompatActivity(), BaseInterface {
+open abstract class KotlinActivity : AppCompatActivity(), BaseInterface {
 
     val ACTIVITY_NAME = "ac_name"
     var startEventBus = false

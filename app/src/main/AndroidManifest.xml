@@ -13,7 +13,7 @@
         android:theme="@style/Theme.Design.Light.NoActionBar">
         <activity
             android:name=".supportlib.navigationview.TestNavigationActivity"
-            android:label="@string/title_activity_test_navigation"></activity>
+            android:label="@string/title_activity_test_navigation" />
         <activity
             android:name=".supportlib.navigationview.NavigationDrawerActivity"
             android:label="@string/title_activity_navigation_drawer" />
@@ -28,9 +28,10 @@
         <activity android:name=".supportlib.sliding_pane_layout.SlidingPaneLayoutActivity" />
         <activity android:name=".supportlib.drawerlayout.DrawerLayoutActivity" />
         <activity android:name=".supportlib.collapsing_toolbar_layout.CTLActivity" />
-        <activity android:name=".supportlib.navigationview.NavigationViewActivity" />
         <activity android:name=".supportlib.snackbar.SnackBarActivity" />
-        <activity android:name=".supportlib.textinput.TextInputActivity" />
+        <activity
+            android:name=".supportlib.textinput.TextInputActivity"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
         <activity android:name=".supportlib.fab.FABActivity" />
         <activity android:name=".supportlib.nestedsv.NestedSVCase1Activity" />
         <activity android:name=".supportlib.nestedsv.NestedScrollViewActivity" />
@@ -137,6 +138,11 @@
         <activity android:name=".supportlib.drawerlayout.DrawerLayoutCase2Activity" />
         <activity android:name=".supportlib.sliding_pane_layout.SlidingPaneLayoutCase1Activity" />
         <activity android:name=".supportlib.sliding_pane_layout.SlidingPaneLayoutCase2Activity" />
+        <activity android:name=".customview.slide_mothod.ViewSlideMethodActivity" />
+        <activity android:name=".customview.event.EventActivity" />
+        <activity android:name=".customview.function_read.FunctionReadActivity" />
+        <activity android:name=".customview.attr_read.AttrReadActivity" />
+        <activity android:name=".customview.measure_layout.MeasureLayoutActivity"></activity>
     </application>
 
 </manifest>

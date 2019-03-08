@@ -12,9 +12,48 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         style="@style/item"
+        android:text="View的重要属性(含attr列表)全解析"
+        android:background="@drawable/rect9"
+        android:id="@+id/btnViewAttrRead"/>
+
+    <com.androidui.view.MyTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/item"
+        android:text="View的重要方法(含Listener列表)全解析"
+        android:background="@drawable/rect8"
+        android:id="@+id/btnViewFunctionRead"/>
+
+    <com.androidui.view.MyTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/item"
+        android:text="实现View滑动的几种方式"
+        android:background="@drawable/rect1"
+        android:id="@+id/btnViewSlideMethod"/>
+
+    <com.androidui.view.MyTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/item"
         android:text="ViewDragHelper"
-        android:background="@drawable/rect7"
+        android:background="@drawable/rect2"
         android:id="@+id/btnViewDragHelper"/>
 
+    <com.androidui.view.MyTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/item"
+        android:text="View的测量和布局"
+        android:background="@drawable/rect3"
+        android:id="@+id/btnViewMeasureLayout"/>
+
+    <com.androidui.view.MyTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/item"
+        android:text="事件分发拦截机制"
+        android:background="@drawable/rect4"
+        android:id="@+id/btnViewEvent"/>
 
 </LinearLayout>
