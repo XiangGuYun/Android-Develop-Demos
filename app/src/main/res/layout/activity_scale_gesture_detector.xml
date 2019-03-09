@@ -11,13 +11,13 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <com.androidui.view.Header1View
+        <com.android.view.Header1View
             android:id="@+id/headerMethod"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:mainTitle1="ScaleGestureDetector\n常用方法"/>
 
-        <com.androidui.gesture.view.ScaleImageView
+        <com.android.gesture.view.ScaleImageView
             android:id="@+id/iv1"
             android:layout_width="match_parent"
             android:layout_height="260dp"

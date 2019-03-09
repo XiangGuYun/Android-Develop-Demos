@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".customview.slide_mothod.demo.LayoutSlideActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.android.customview.slide_mothod.view.LayoutView
+            android:id="@+id/view1"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="#ff6666" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.android.customview.slide_mothod.view.LayoutView
+            android:id="@+id/view2"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="100dp"
+            android:background="#66ff66" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.android.customview.slide_mothod.view.LayoutView
+            android:id="@+id/view3"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="200dp"
+            android:background="#6666ff" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.android.customview.slide_mothod.view.LayoutView
+            android:id="@+id/view4"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="300dp"
+            android:background="#f6f66f" />
+
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/btn1"
+        style="@style/btn_test"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="160dp"
+        android:text="渐进滑动(ScrollBy)" />
+
+    <Button
+        android:id="@+id/btn2"
+        style="@style/btn_test"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="110dp"
+        android:text="瞬间滑动(ScrollBy)" />
+
+    <Button
+        android:id="@+id/btn3"
+        style="@style/btn_test"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="60dp"
+        android:text="渐进滑动(ScrollTo)" />
+
+    <Button
+        android:id="@+id/btn4"
+        style="@style/btn_test"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="10dp"
+        android:text="瞬间滑动(ScrollTo)" />
+
+</FrameLayout>

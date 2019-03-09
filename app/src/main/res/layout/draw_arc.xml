@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.androidui.view.Header1View
+    <com.android.view.Header1View
         android:id="@+id/headerArc"
         android:layout_width="match_parent"
         android:layout_height="50dp"
@@ -18,7 +18,7 @@
 
     <include layout="@layout/line"/>
 
-    <com.androidui.draw.view.DrawArcView
+    <com.android.draw.view.DrawArcView
         android:id="@+id/arc"
         android:layout_width="match_parent"
         android:layout_height="200dp"/>

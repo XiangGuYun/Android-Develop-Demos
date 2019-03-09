@@ -13,7 +13,7 @@
         android:orientation="vertical">
 
 
-        <com.androidui.view.Header1View
+        <com.android.view.Header1View
             android:id="@+id/header1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -27,7 +27,7 @@
             android:scaleType="center"
             />
 
-        <com.androidui.view.Header1View
+        <com.android.view.Header1View
             android:id="@+id/header2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -45,7 +45,7 @@
             android:maxHeight="200dp"
             android:src="@mipmap/img1" />
 
-        <com.androidui.view.Header1View
+        <com.android.view.Header1View
             android:id="@+id/header3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -158,13 +158,13 @@
             android:layout_height="100dp"
             android:src="@mipmap/img2"/>
 
-        <com.androidui.view.Header1View
+        <com.android.view.Header1View
             android:id="@+id/header4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:mainTitle1="最简单的绘制圆形的ImageView"/>
 
-        <com.androidui.systemui.view.RoundImageView
+        <com.android.systemui.view.RoundImageView
             android:layout_width="200dp"
             android:layout_height="200dp"
             android:layout_gravity="center_horizontal"
@@ -172,13 +172,13 @@
             android:layout_marginBottom="20dp"
             android:id="@+id/imgRound"/>
 
-        <com.androidui.view.Header1View
+        <com.android.view.Header1View
             android:id="@+id/header5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:mainTitle1="setImageMatrix设置图像矩阵"/>
 
-        <com.androidui.gesture.view.MyZoomImageView
+        <com.android.gesture.view.MyZoomImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@mipmap/img3"

@@ -12,19 +12,19 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <com.androidui.view.Header1View
+        <com.android.view.Header1View
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:mainTitle1="PorterDuffXfermode"
             android:id="@+id/header1"/>
 
-        <com.androidui.draw.view.Xfermode1View
+        <com.android.draw.view.Xfermode1View
             android:id="@+id/study1View"
             android:layout_marginTop="10dp"
             android:layout_width="wrap_content"
             android:layout_height="220dp" />
 
-        <com.androidui.draw.view.Xfermode2View
+        <com.android.draw.view.Xfermode2View
             android:id="@+id/study2View"
             android:layout_width="match_parent"
             android:layout_height="220dp" />
@@ -36,32 +36,32 @@
 
         <include layout="@layout/line"/>
 
-        <com.androidui.draw.view.Xfermode3View
+        <com.android.draw.view.Xfermode3View
             android:layout_width="match_parent"
             android:layout_height="120dp"
             android:layout_margin="10dp"/>
 
-        <com.androidui.draw.view.Xfermode4View
+        <com.android.draw.view.Xfermode4View
             android:layout_width="match_parent"
             android:layout_height="120dp"
             android:layout_margin="10dp"/>
 
-        <com.androidui.draw.view.Xfermode5View
+        <com.android.draw.view.Xfermode5View
             android:layout_width="match_parent"
             android:layout_height="120dp"
             android:layout_margin="10dp"/>
 
-        <com.androidui.draw.view.Xfermode6View
+        <com.android.draw.view.Xfermode6View
             android:layout_width="match_parent"
             android:layout_height="120dp"
             android:layout_margin="10dp"/>
 
-        <com.androidui.draw.view.Xfermode7View
+        <com.android.draw.view.Xfermode7View
             android:layout_width="match_parent"
             android:layout_height="120dp"
             android:layout_margin="10dp"/>
 
-        <com.androidui.draw.view.LogoLoadingView
+        <com.android.draw.view.LogoLoadingView
             android:layout_width="match_parent"
             android:layout_height="120dp"
             android:layout_margin="10dp"/>

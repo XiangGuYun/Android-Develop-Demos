@@ -10,35 +10,35 @@
     android:padding="10dp"
     android:orientation="vertical">
 
-    <com.androidui.view.Header1View
+    <com.android.view.Header1View
         android:id="@+id/btnStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:mainTitle1="Style样式\n(FILL|STROKE|FILL_AND_STROKE)"/>
 
-    <com.androidui.draw.view.PaintStyleView
+    <com.android.draw.view.PaintStyleView
         android:layout_margin="10dp"
         android:layout_width="match_parent"
         android:layout_height="150dp" />
 
-    <com.androidui.view.Header1View
+    <com.android.view.Header1View
         android:id="@+id/btnCap"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:mainTitle1="Cap线帽\n(BUTT|ROUND|SQUARE)"/>
 
-    <com.androidui.draw.view.PaintCapView
+    <com.android.draw.view.PaintCapView
         android:layout_margin="10dp"
         android:layout_width="match_parent"
         android:layout_height="150dp" />
 
-    <com.androidui.view.Header1View
+    <com.android.view.Header1View
         android:id="@+id/btnJoin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:mainTitle1="Join交点\n(BEVEL|MITER|ROUND)"/>
 
-    <com.androidui.draw.view.PaintJoinView
+    <com.android.draw.view.PaintJoinView
         android:layout_margin="10dp"
         android:layout_width="match_parent"
         android:layout_height="180dp" />

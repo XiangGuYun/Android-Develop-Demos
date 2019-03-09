@@ -10,7 +10,7 @@
     tools:context=".systemui.SystemUIActivity">
 
 
-    <com.androidui.view.MyTextView
+    <com.android.view.MyTextView
         android:id="@+id/btnTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -22,7 +22,7 @@
         android:text="TextView"
         />
 
-    <com.androidui.view.MyTextView
+    <com.android.view.MyTextView
         android:id="@+id/btnEditText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -34,7 +34,7 @@
         android:text="EditText"
         />
 
-    <com.androidui.view.MyTextView
+    <com.android.view.MyTextView
         android:id="@+id/btnImageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -46,7 +46,7 @@
         android:text="ImageView"
         />
 
-    <com.androidui.view.MyTextView
+    <com.android.view.MyTextView
         android:id="@+id/btnScrollView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -58,7 +58,7 @@
         android:text="ScrollView"
         />
 
-    <com.androidui.view.MyTextView
+    <com.android.view.MyTextView
         android:id="@+id/btnWebView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -70,7 +70,7 @@
         android:text="WebView"
         />
 
-    <com.androidui.view.MyTextView
+    <com.android.view.MyTextView
         android:id="@+id/btnSurfaceView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -82,7 +82,7 @@
         android:text="SurfaceView"
         />
 
-    <com.androidui.view.MyTextView
+    <com.android.view.MyTextView
         android:id="@+id/btnTextureView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -94,7 +94,7 @@
         android:text="TextureView"
         />
 
-    <com.androidui.view.MyTextView
+    <com.android.view.MyTextView
         android:id="@+id/btnStatusBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -106,7 +106,7 @@
         android:text="状态栏"
         />
 
-    <com.androidui.view.MyTextView
+    <com.android.view.MyTextView
         android:id="@+id/btnPopupWindow"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

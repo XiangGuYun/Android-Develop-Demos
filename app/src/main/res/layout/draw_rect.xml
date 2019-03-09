@@ -1,6 +1,6 @@
 <merge xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-    <com.androidui.view.Header1View
+    <com.android.view.Header1View
         android:id="@+id/headerRect"
         android:layout_width="match_parent"
         android:layout_height="50dp"
@@ -22,7 +22,7 @@
 
     <include layout="@layout/line"/>
 
-    <com.androidui.draw.view.DrawRectView
+    <com.android.draw.view.DrawRectView
         android:id="@+id/rect"
         android:layout_width="match_parent"
         android:layout_height="200dp" />

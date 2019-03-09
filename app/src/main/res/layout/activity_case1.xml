@@ -7,7 +7,7 @@
     android:orientation="vertical"
     tools:context=".customview.drag.ViewDragHelperActivity">
 
-    <com.androidui.customview.drag.DragView
+    <com.android.customview.drag.DragView
         android:id="@+id/dragView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -29,7 +29,7 @@
             android:background="@drawable/rect1"
             android:tag="DragMe2"
             android:text="Drag Me2"/>
-    </com.androidui.customview.drag.DragView>
+    </com.android.customview.drag.DragView>
 
 
     <TextView

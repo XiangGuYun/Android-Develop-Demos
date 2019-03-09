@@ -26,7 +26,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="第一部分 Paint画笔"/>
-        <com.androidui.view.MyTextView
+        <com.android.view.MyTextView
             android:id="@+id/btnPaintProperty"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -36,7 +36,7 @@
             android:textSize="18sp"
             android:text="Paint常用属性"
             />
-        <com.androidui.view.MyTextView
+        <com.android.view.MyTextView
             android:id="@+id/btnPaintText"
             android:layout_marginTop="10dp"
             android:layout_width="wrap_content"
@@ -46,7 +46,7 @@
             android:gravity="center"
             android:textSize="18sp"
             android:text="Paint与文字绘制"/>
-        <com.androidui.view.MyTextView
+        <com.android.view.MyTextView
             android:id="@+id/btnXfermode"
             android:layout_marginTop="10dp"
             android:layout_width="wrap_content"
@@ -62,7 +62,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="第二部分 Canvas图层"/>
-        <com.androidui.view.MyTextView
+        <com.android.view.MyTextView
             android:id="@+id/btnCanvas"
             android:layout_marginTop="10dp"
             android:layout_width="wrap_content"
@@ -72,7 +72,7 @@
             android:gravity="center"
             android:textSize="18sp"
             android:text="Canvas类"/>
-        <com.androidui.view.MyTextView
+        <com.android.view.MyTextView
             android:id="@+id/btnGeometry"
             android:layout_marginTop="10dp"
             android:layout_width="wrap_content"
@@ -82,7 +82,7 @@
             android:gravity="center"
             android:textSize="18sp"
             android:text="基础几何的绘制"/>
-        <com.androidui.view.MyTextView
+        <com.android.view.MyTextView
             android:id="@+id/btnPath"
             android:layout_marginTop="10dp"
             android:layout_width="wrap_content"
@@ -100,7 +100,7 @@
             android:textColor="#cccccc"
             android:text="第三部分 其它"/>
 
-        <com.androidui.view.MyTextView
+        <com.android.view.MyTextView
             android:id="@+id/btnShadow"
             android:layout_marginTop="10dp"
             android:layout_width="wrap_content"
@@ -111,7 +111,7 @@
             android:textSize="18sp"
             android:text="阴影的绘制"/>
 
-        <com.androidui.view.MyTextView
+        <com.android.view.MyTextView
             android:id="@+id/btnXMLDraw"
             android:layout_marginTop="10dp"
             android:layout_width="wrap_content"

@@ -7,7 +7,7 @@
     android:orientation="vertical"
     tools:context=".gesture.DragImageActivity">
 
-    <com.androidui.gesture.view.DragImageView
+    <com.android.gesture.view.DragImageView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"/>
@@ -19,7 +19,7 @@
         android:text="查看代码"
         android:id="@+id/btnViewCode1"/>
 
-    <com.androidui.gesture.view.DragImage1View
+    <com.android.gesture.view.DragImage1View
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"/>

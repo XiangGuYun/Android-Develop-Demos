@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".supportlib.bottom_sheet_dialog.BottomSheetDialogActivity">
 
-    <com.androidui.view.Header1View
+    <com.android.view.Header1View
         android:id="@+id/header1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     
-    <com.androidui.view.Header1View
+    <com.android.view.Header1View
         android:id="@+id/headerLine"
         android:layout_width="match_parent"
         android:layout_height="50dp"
@@ -16,7 +16,7 @@
         style="@style/tvSmallTitle"
         android:text="drawLine(float startX, float startY, float stopX, float stopY, @NonNull Paint paint)"/>
 
-    <com.androidui.draw.view.DrawLineView
+    <com.android.draw.view.DrawLineView
         android:id="@+id/line"
         android:layout_width="match_parent"
         android:layout_height="200dp" />

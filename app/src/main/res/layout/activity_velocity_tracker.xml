@@ -11,18 +11,18 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <com.androidui.view.ReadMoreView
+        <com.android.view.ReadMoreView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/read1"/>
 
-        <com.androidui.view.Header1View
+        <com.android.view.Header1View
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/header1"
             app:mainTitle1="试验"/>
 
-        <com.androidui.gesture.view.VelocityTrackImageView
+        <com.android.gesture.view.VelocityTrackImageView
             android:id="@+id/iv1"
             android:layout_width="match_parent"
             android:layout_height="300dp"

@@ -9,7 +9,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <com.androidui.view.Header1View
+    <com.android.view.Header1View
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:mainTitle1="layout"
@@ -26,30 +26,12 @@
         app:layout_constraintTop_toBottomOf="@id/header1"
         android:text="查看效果"/>
 
-    <com.androidui.view.Header1View
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:mainTitle1="LayoutParams"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btn1"
-        android:layout_marginTop="10dp"
-        android:id="@+id/header2"/>
-
-    <Button
-        android:id="@+id/btn2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        style="@style/btn_test"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/header2"
-        android:text="查看效果"/>
-
-    <com.androidui.view.Header1View
+    <com.android.view.Header1View
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:mainTitle1="offsetLeftAndRight()\noffsetTopAndBottom()"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btn2"
+        app:layout_constraintTop_toBottomOf="@id/btn1"
         android:layout_marginTop="10dp"
         android:id="@+id/header3"/>
 
@@ -62,7 +44,7 @@
         app:layout_constraintTop_toBottomOf="@id/header3"
         android:text="查看效果"/>
 
-    <com.androidui.view.Header1View
+    <com.android.view.Header1View
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:mainTitle1="scrollTo和scrollBy"
@@ -80,35 +62,36 @@
         app:layout_constraintTop_toBottomOf="@id/header4"
         android:text="查看效果"/>
 
-    <com.androidui.view.Header1View
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:mainTitle1="Scroller"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btn4"
-        android:layout_marginTop="10dp"
-        android:id="@+id/header5"/>
-
-    <Button
-        android:id="@+id/btn5"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        style="@style/btn_test"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/header5"
-        android:text="查看效果"/>
-
-    <com.androidui.view.Header1View
+    <com.android.view.Header1View
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:mainTitle1="属性动画"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btn5"
+        app:layout_constraintTop_toBottomOf="@id/btn4"
         android:layout_marginTop="10dp"
         android:id="@+id/header6"/>
 
     <Button
         android:id="@+id/btn6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/btn_test"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header5"
+        android:layout_marginBottom="10dp"
+        android:text="查看效果"/>
+
+    <com.android.view.Header1View
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:mainTitle1="Scroller"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn5"
+        android:layout_marginTop="10dp"
+        android:id="@+id/header5"/>
+
+    <Button
+        android:id="@+id/btn5"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         style="@style/btn_test"

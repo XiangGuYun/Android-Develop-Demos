@@ -6,13 +6,13 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <com.androidui.view.Header1View
+    <com.android.view.Header1View
         android:id="@+id/header1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:mainTitle1="GestureListener的回调方法"/>
 
-    <com.androidui.gesture.other.GestureImageView
+    <com.android.gesture.other.GestureImageView
         android:layout_marginTop="5dp"
         android:layout_width="match_parent"
         android:layout_height="270dp"

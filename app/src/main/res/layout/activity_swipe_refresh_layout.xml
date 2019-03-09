@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".supportlib.swipe_refresh_layout.SwipeRefreshLayoutActivity">
 
-    <com.androidui.view.Header1View
+    <com.android.view.Header1View
         android:id="@+id/header"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

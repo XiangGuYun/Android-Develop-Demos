@@ -7,7 +7,7 @@
     android:padding="10dp"
     android:orientation="vertical">
 
-    <com.androidui.draw.view.DrawTextView
+    <com.android.draw.view.DrawTextView
         android:id="@+id/viewDrawText"
         android:layout_width="match_parent"
         android:layout_height="200dp" />

@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <com.androidui.view.Header1View
+        <com.android.view.Header1View
             app:mainTitle1="反射获取Canvas类的信息"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
@@ -82,7 +82,7 @@
             style="@style/small_title"
             android:id="@+id/tv11"/>
 
-        <com.androidui.view.Header1View
+        <com.android.view.Header1View
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:mainTitle1="反射创建Paint类对象"/>
@@ -93,7 +93,7 @@
             style="@style/small_title"
             android:id="@+id/tv12"/>
 
-        <com.androidui.view.Header1View
+        <com.android.view.Header1View
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:mainTitle1="构造器引用"/>
@@ -104,7 +104,7 @@
             style="@style/small_title"
             android:id="@+id/tv12B"/>
 
-        <com.androidui.view.Header1View
+        <com.android.view.Header1View
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:mainTitle1="反射调用非私有方法"/>
@@ -115,7 +115,7 @@
             style="@style/small_title"
             android:id="@+id/tv14"/>
 
-        <com.androidui.view.Header1View
+        <com.android.view.Header1View
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:mainTitle1="反射访问非私有属性"/>

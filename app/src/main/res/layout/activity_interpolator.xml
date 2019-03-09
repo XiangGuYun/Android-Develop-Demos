@@ -19,7 +19,7 @@
             android:layout_height="wrap_content"
             style="@style/info"/>
 
-        <com.androidui.view.Header1View
+        <com.android.view.Header1View
             android:id="@+id/header1"
             app:mainTitle1="系统自带的插值器"
             android:layout_width="match_parent"
@@ -106,7 +106,7 @@
             android:layout_height="wrap_content"
             style="@style/info"/>
 
-        <com.androidui.view.Header1View
+        <com.android.view.Header1View
             android:id="@+id/header2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -134,7 +134,7 @@
             android:layout_height="wrap_content"
             style="@style/info"/>
 
-        <com.androidui.view.Header1View
+        <com.android.view.Header1View
             android:id="@+id/header3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -162,14 +162,14 @@
             android:layout_height="wrap_content"
             style="@style/info"/>
 
-        <com.androidui.view.Header1View
+        <com.android.view.Header1View
             android:id="@+id/header4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:mainTitle1="使用自定义估值器"/>
         
         
-        <com.androidui.anim.other.MyView
+        <com.android.anim.other.MyView
             android:id="@+id/myView"
             android:layout_width="match_parent"
             android:layout_height="400dp" />

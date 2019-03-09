@@ -3,13 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <com.androidui.view.Header1View
+    <com.android.view.Header1View
         android:id="@+id/header"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         app:mainTitle1="绘制圆形drawCircle"/>
 
-    <com.androidui.draw.view.DrawCircleView
+    <com.android.draw.view.DrawCircleView
         android:id="@+id/circle"
         android:layout_width="match_parent"
         android:layout_height="200dp" />

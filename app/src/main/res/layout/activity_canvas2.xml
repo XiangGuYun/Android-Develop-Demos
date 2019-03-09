@@ -10,7 +10,7 @@
     android:orientation="vertical"
     tools:context=".draw.canvas.CanvasActivity">
 
-    <com.androidui.view.ReadMoreView
+    <com.android.view.ReadMoreView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/readView1"/>
@@ -21,7 +21,7 @@
         android:layout_height="wrap_content"
         android:src="@mipmap/canvas_draw"/>
 
-    <com.androidui.view.Header1View
+    <com.android.view.Header1View
         android:id="@+id/header1"
         android:layout_marginTop="10dp"
         android:layout_width="match_parent"
@@ -29,12 +29,12 @@
         app:mainTitle1="绘制颜色"
         />
 
-    <com.androidui.draw.view.CanvasColorView
+    <com.android.draw.view.CanvasColorView
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:layout_margin="10dp"/>
 
-    <com.androidui.view.Header1View
+    <com.android.view.Header1View
         android:id="@+id/header2"
         android:layout_marginTop="10dp"
         android:layout_width="match_parent"
@@ -42,7 +42,7 @@
         app:mainTitle1="绘制基本形状与文字(略)"
         />
 
-    <com.androidui.view.Header1View
+    <com.android.view.Header1View
         android:id="@+id/header4"
         android:layout_marginTop="10dp"
         android:layout_width="match_parent"
@@ -59,11 +59,11 @@
         android:text="将坐标系移动到(450,650)；绘制一个圆，将上述Canvas操作录制下来，并在某个时刻重新绘制出来。"/>
 
 
-    <com.androidui.draw.view.PictureView
+    <com.android.draw.view.PictureView
         android:layout_width="match_parent"
         android:layout_height="100dp" />
 
-    <com.androidui.view.Header1View
+    <com.android.view.Header1View
         android:id="@+id/header5"
         android:layout_marginTop="10dp"
         android:layout_width="match_parent"
@@ -79,7 +79,7 @@
         android:gravity="center"
         android:background="@drawable/rect7"/>
 
-    <com.androidui.draw.view.Bitmap1View
+    <com.android.draw.view.Bitmap1View
         android:layout_margin="10dp"
         android:layout_width="match_parent"
         android:layout_height="200dp" />
@@ -92,7 +92,7 @@
         android:gravity="center"
         android:background="@drawable/rect7"/>
 
-    <com.androidui.draw.view.Bitmap2View
+    <com.android.draw.view.Bitmap2View
         android:layout_margin="10dp"
         android:layout_width="match_parent"
         android:layout_height="200dp" />
@@ -108,49 +108,49 @@
         android:gravity="left"
         android:background="@drawable/rect7"/>
 
-    <com.androidui.draw.view.Bitmap3View
+    <com.android.draw.view.Bitmap3View
         android:layout_margin="10dp"
         android:layout_width="match_parent"
         android:layout_height="200dp" />
 
-    <com.androidui.draw.view.Bitmap4View
+    <com.android.draw.view.Bitmap4View
         android:layout_margin="10dp"
         android:layout_width="match_parent"
         android:layout_height="200dp" />
 
-    <com.androidui.draw.view.Bitmap5View
+    <com.android.draw.view.Bitmap5View
         android:layout_width="match_parent"
         android:layout_height="260dp" />
 
-    <com.androidui.view.Header1View
+    <com.android.view.Header1View
         android:id="@+id/headerCanvasTranslate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:mainTitle1="画布平移"/>
 
-    <com.androidui.draw.view.CanvasTranslateView
+    <com.android.draw.view.CanvasTranslateView
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:layout_margin="10dp"/>
 
-    <com.androidui.view.Header1View
+    <com.android.view.Header1View
         android:id="@+id/headerCanvasScale"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:mainTitle1="画布缩放"/>
 
-    <com.androidui.draw.view.CanvasScaleView
+    <com.android.draw.view.CanvasScaleView
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:layout_margin="10dp"/>
 
-    <com.androidui.view.Header1View
+    <com.android.view.Header1View
         android:id="@+id/headerSkewScale"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:mainTitle1="画布错切"/>
 
-    <com.androidui.draw.view.CanvasSkewView
+    <com.android.draw.view.CanvasSkewView
         android:id="@+id/skewView"
         android:layout_width="match_parent"
         android:layout_height="200dp"
@@ -186,7 +186,7 @@
             android:layout_height="wrap_content" />
     </LinearLayout>
 
-    <com.androidui.view.Header1View
+    <com.android.view.Header1View
         android:id="@+id/headerClipScale"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -201,7 +201,7 @@
         android:textSize="10sp"
         android:text="首次裁剪区域颜色为红色，二次裁剪区域颜色为蓝色。"/>
 
-    <com.androidui.draw.view.CanvasClipView
+    <com.android.draw.view.CanvasClipView
         android:id="@+id/clipView"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
@@ -235,13 +235,13 @@
             android:text="Region.Op.INTERSECT：\n显示第二次与第一次的重叠区域"/>
     </RadioGroup>
 
-    <com.androidui.view.Header1View
+    <com.android.view.Header1View
         android:id="@+id/headerClipLayer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:mainTitle1="画布快照"/>
 
-    <com.androidui.draw.view.CanvasLayerView
+    <com.android.draw.view.CanvasLayerView
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:layout_margin="10dp"/>

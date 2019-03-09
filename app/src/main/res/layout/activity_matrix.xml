@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <com.androidui.view.Header1View
+        <com.android.view.Header1View
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:mainTitle1="矩阵的原理"/>
@@ -30,13 +30,13 @@
             android:background="@drawable/rect7"
             android:id="@+id/tvMatrix"/>
 
-        <com.androidui.view.Header1View
+        <com.android.view.Header1View
             android:id="@+id/headerTransMatrix"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:mainTitle1="setTranslate\n(float dx, float dy)"/>
 
-       <com.androidui.gesture.view.MatrixTransView
+       <com.android.gesture.view.MatrixTransView
            android:id="@+id/matrixTransView"
            android:layout_margin="10dp"
            android:layout_width="match_parent"
@@ -72,13 +72,13 @@
                 android:layout_height="wrap_content" />
         </LinearLayout>
 
-        <com.androidui.view.Header1View
+        <com.android.view.Header1View
             android:id="@+id/headerScaleMatrix"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:mainTitle1="setScale"/>
 
-        <com.androidui.gesture.view.MatrixScaleView
+        <com.android.gesture.view.MatrixScaleView
             android:id="@+id/matrixScaleView"
             android:layout_margin="10dp"
             android:layout_width="match_parent"
@@ -114,13 +114,13 @@
                 android:layout_height="wrap_content" />
         </LinearLayout>
 
-        <com.androidui.view.Header1View
+        <com.android.view.Header1View
             android:id="@+id/headerRotateMatrix"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:mainTitle1="setRotate"/>
 
-        <com.androidui.gesture.view.MatrixRotateView
+        <com.android.gesture.view.MatrixRotateView
             android:id="@+id/matrixRotateView"
             android:layout_margin="10dp"
             android:layout_width="match_parent"
@@ -141,13 +141,13 @@
                 android:layout_height="wrap_content" />
         </LinearLayout>
 
-        <com.androidui.view.Header1View
+        <com.android.view.Header1View
             android:id="@+id/headerSkewMatrix"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:mainTitle1="setSkew"/>
 
-        <com.androidui.gesture.view.MatrixSkewView
+        <com.android.gesture.view.MatrixSkewView
             android:id="@+id/matrixSkewView"
             android:layout_margin="10dp"
             android:layout_width="match_parent"
@@ -183,13 +183,13 @@
                 android:layout_height="wrap_content" />
         </LinearLayout>
 
-        <com.androidui.view.Header1View
+        <com.android.view.Header1View
             android:id="@+id/headerSinCosMatrix"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:mainTitle1="setSinCos"/>
 
-        <com.androidui.gesture.view.MatrixSinCosView
+        <com.android.gesture.view.MatrixSinCosView
             android:id="@+id/matrixSinCosView"
             android:layout_margin="10dp"
             android:layout_width="match_parent"
@@ -255,7 +255,7 @@
                 android:layout_height="wrap_content" />
         </LinearLayout>
 
-        <com.androidui.view.Header1View
+        <com.android.view.Header1View
             android:id="@+id/headerPolyToPoly"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -268,7 +268,7 @@
             android:layout_height="wrap_content"
             style="@style/small_title" />
 
-        <com.androidui.gesture.view.PTP1View
+        <com.android.gesture.view.PTP1View
             android:id="@+id/ptp1View"
             android:layout_margin="10dp"
             android:layout_width="match_parent"
@@ -308,7 +308,7 @@
             android:layout_height="wrap_content"
             style="@style/small_title" />
 
-        <com.androidui.gesture.view.PTP2View
+        <com.android.gesture.view.PTP2View
             android:id="@+id/ptp2View"
             android:layout_margin="10dp"
             android:layout_width="match_parent"
@@ -324,7 +324,7 @@
             android:layout_height="wrap_content"
             style="@style/small_title" />
 
-        <com.androidui.gesture.view.PTP3View
+        <com.android.gesture.view.PTP3View
             android:layout_margin="10dp"
             android:layout_width="match_parent"
             android:layout_height="120dp" />
@@ -335,7 +335,7 @@
             android:layout_height="wrap_content"
             style="@style/small_title" />
         
-        <com.androidui.gesture.view.PTP4View
+        <com.android.gesture.view.PTP4View
             android:id="@+id/ptp4View"
             android:layout_margin="10dp"
             android:layout_width="match_parent"

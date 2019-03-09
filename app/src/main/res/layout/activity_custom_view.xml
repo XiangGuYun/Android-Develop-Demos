@@ -8,23 +8,23 @@
     android:orientation="vertical"
     tools:context=".customview.CustomViewActivity">
 
-    <com.androidui.view.MyTextView
+    <com.android.view.MyTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         style="@style/item"
-        android:text="View的重要属性(含attr列表)全解析"
+        android:text="View"
         android:background="@drawable/rect9"
-        android:id="@+id/btnViewAttrRead"/>
+        android:id="@+id/btnView"/>
 
-    <com.androidui.view.MyTextView
+    <com.android.view.MyTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         style="@style/item"
-        android:text="View的重要方法(含Listener列表)全解析"
-        android:background="@drawable/rect8"
-        android:id="@+id/btnViewFunctionRead"/>
+        android:text="ViewConfiguration"
+        android:background="@drawable/rect7"
+        android:id="@+id/btnViewConfiguration"/>
 
-    <com.androidui.view.MyTextView
+    <com.android.view.MyTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         style="@style/item"
@@ -32,7 +32,7 @@
         android:background="@drawable/rect1"
         android:id="@+id/btnViewSlideMethod"/>
 
-    <com.androidui.view.MyTextView
+    <com.android.view.MyTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         style="@style/item"
@@ -40,7 +40,7 @@
         android:background="@drawable/rect2"
         android:id="@+id/btnViewDragHelper"/>
 
-    <com.androidui.view.MyTextView
+    <com.android.view.MyTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         style="@style/item"
@@ -48,7 +48,7 @@
         android:background="@drawable/rect3"
         android:id="@+id/btnViewMeasureLayout"/>
 
-    <com.androidui.view.MyTextView
+    <com.android.view.MyTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         style="@style/item"

@@ -8,7 +8,7 @@
     android:orientation="vertical"
     tools:context=".anim.AnimActivity">
 
-    <com.androidui.view.MyTextView
+    <com.android.view.MyTextView
         android:id="@+id/btn1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -16,7 +16,7 @@
         android:text="帧动画"
         android:background="@drawable/rect3"/>
 
-    <com.androidui.view.MyTextView
+    <com.android.view.MyTextView
         android:id="@+id/btn2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -24,7 +24,7 @@
         android:text="插值器与估值器"
         android:background="@drawable/rect7"/>
 
-    <com.androidui.view.MyTextView
+    <com.android.view.MyTextView
         android:id="@+id/btn3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -32,7 +32,7 @@
         android:text="补间动画"
         android:background="@drawable/rect4"/>
 
-    <com.androidui.view.MyTextView
+    <com.android.view.MyTextView
         android:id="@+id/btn4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -40,7 +40,7 @@
         android:text="属性动画"
         android:background="@drawable/rect1"/>
 
-    <com.androidui.view.MyTextView
+    <com.android.view.MyTextView
         android:id="@+id/btnSVG"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -48,7 +48,7 @@
         android:text="SVG动画"
         android:background="@drawable/rect3"/>
 
-    <com.androidui.view.MyTextView
+    <com.android.view.MyTextView
         android:id="@+id/btn5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

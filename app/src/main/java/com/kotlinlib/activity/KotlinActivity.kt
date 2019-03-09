@@ -1,7 +1,6 @@
 package com.kotlinlib.activity
 
 import android.app.Activity
-import android.content.Intent
 import android.content.pm.ActivityInfo
 import android.graphics.Color
 import android.os.Build
@@ -11,9 +10,9 @@ import android.support.v7.app.AppCompatActivity
 import android.util.Log
 import android.view.*
 import android.widget.Toast
-import com.androidui.dialog.CodeViewerDialog
-import com.androidui.dialog.TextInputDialog
-import com.androidui.dialog.WebViewerDialog
+import com.android.dialog.CodeViewerDialog
+import com.android.dialog.TextInputDialog
+import com.android.dialog.WebViewerDialog
 import com.flask.colorpicker.ColorPickerView
 import com.flask.colorpicker.builder.ColorPickerDialogBuilder
 import com.google.gson.Gson

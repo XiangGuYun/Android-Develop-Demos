@@ -8,7 +8,7 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 
-;import com.androidui.R;
+;import com.android.R;
 
 /**
  * Created by Administrator on 2018/5/7 0007.

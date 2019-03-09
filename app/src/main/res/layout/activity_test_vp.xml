@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".test.TestVPActivity">
 
-    <com.androidui.test.InsideViewPager
+    <com.android.test.InsideViewPager
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/vpOutside"/>

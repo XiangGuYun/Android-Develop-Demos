@@ -16,7 +16,7 @@
         style="@style/small_title"
         android:text="RecyclerView作为最常用的控件之一，我将封装一个RVUtils，以最简洁的代码来实现各种需求和效果。"/>
 
-    <com.androidui.view.Header1View
+    <com.android.view.Header1View
         android:id="@+id/header0"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -29,7 +29,7 @@
         style="@style/btn_test"
         android:text="查看效果"/>
 
-    <com.androidui.view.Header1View
+    <com.android.view.Header1View
         android:id="@+id/headerHL"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -42,7 +42,7 @@
         style="@style/btn_test"
         android:text="查看效果"/>
 
-    <com.androidui.view.Header1View
+    <com.android.view.Header1View
         android:id="@+id/header1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -55,7 +55,7 @@
         style="@style/btn_test"
         android:text="查看效果"/>
 
-    <com.androidui.view.Header1View
+    <com.android.view.Header1View
         android:id="@+id/header2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -69,7 +69,7 @@
         android:text="查看效果"/>
 
 
-    <com.androidui.view.Header1View
+    <com.android.view.Header1View
         android:id="@+id/header4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -108,7 +108,7 @@
         android:id="@+id/btnMoreSnap"
         android:text="更多效果"/>
 
-    <com.androidui.view.Header1View
+    <com.android.view.Header1View
         android:id="@+id/headeGallery"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -127,7 +127,7 @@
         android:text="开始学习"
         android:id="@+id/btnStudy1"/>
 
-    <com.androidui.view.Header1View
+    <com.android.view.Header1View
         android:id="@+id/headerAnim"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -140,7 +140,7 @@
         android:text="查看效果"
         android:id="@+id/btnViewAnim"/>
 
-    <com.androidui.view.Header1View
+    <com.android.view.Header1View
         android:id="@+id/header5"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -153,7 +153,7 @@
         android:id="@+id/btnViewResult4"
         android:text="查看效果"/>
 
-    <com.androidui.view.Header1View
+    <com.android.view.Header1View
         android:id="@+id/header3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -166,7 +166,7 @@
         android:id="@+id/btnViewResult3"
         android:text="查看效果"/>
 
-    <com.androidui.view.Header1View
+    <com.android.view.Header1View
         android:id="@+id/headerContact"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

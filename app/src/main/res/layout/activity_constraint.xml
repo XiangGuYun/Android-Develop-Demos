@@ -11,7 +11,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.androidui.view.Header1View
+    <com.android.view.Header1View
         android:id="@+id/header"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -102,7 +102,7 @@
         app:layout_constraintBaseline_toBaselineOf="@+id/btn7"
         />
 
-    <com.androidui.view.Header1View
+    <com.android.view.Header1View
         android:id="@+id/header2"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btn7"
@@ -180,7 +180,7 @@
         app:layout_constraintTop_toBottomOf="@id/btn9"/>
 
 
-    <com.androidui.view.Header1View
+    <com.android.view.Header1View
         android:id="@+id/header3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -201,7 +201,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         />
 
-    <com.androidui.view.Header1View
+    <com.android.view.Header1View
         android:id="@+id/header4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -347,7 +347,7 @@
         android:gravity="center"
         android:text="spread_inside样式"/>
 
-    <com.androidui.view.Header1View
+    <com.android.view.Header1View
         android:id="@+id/header5"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv6"
@@ -463,7 +463,7 @@
         app:civ_border_width="2dp"
         app:civ_border_color="#FF000000"/>
 
-    <com.androidui.view.Header1View
+    <com.android.view.Header1View
         android:layout_marginTop="90dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -514,7 +514,7 @@
         android:text="分析：蓝色方框相对于绿色方框新增了一条app:layout_constrainedWidth='true'的属性，因此蓝色方框不会像红色方框那样在宽度上超出约束的限制。"/>
 
 
-    <com.androidui.view.Header1View
+    <com.android.view.Header1View
         android:id="@+id/header7"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvFenXiCons"
@@ -522,7 +522,7 @@
         android:layout_height="wrap_content"
         app:mainTitle1="Chains关系链"/>
 
-    <com.androidui.view.Header1View
+    <com.android.view.Header1View
         android:id="@+id/header8"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/header7"
@@ -541,7 +541,7 @@
         android:background="#ff6666"
         app:layout_constraintWidth_percent="0.5"/>
 
-    <com.androidui.view.Header1View
+    <com.android.view.Header1View
         android:id="@+id/header9"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvPercent"
@@ -569,7 +569,7 @@
         app:layout_goneMarginLeft="100dp"
         android:id="@+id/tvRedShow"/>
 
-    <com.androidui.view.Header1View
+    <com.android.view.Header1View
         app:mainTitle1="Guideline"
         android:id="@+id/headerGuideline"
         android:layout_width="match_parent"
@@ -577,7 +577,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvRedShow"/>
 
-    <com.androidui.view.Header1View
+    <com.android.view.Header1View
         app:mainTitle1="Barrier"
         android:id="@+id/headerBarrier"
         android:layout_width="match_parent"
@@ -594,7 +594,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/headerBarrier"/>
 
-    <com.androidui.view.Header1View
+    <com.android.view.Header1View
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:mainTitle1="Group"

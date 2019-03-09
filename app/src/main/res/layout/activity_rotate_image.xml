@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".gesture.RotateImageActivity">
 
-    <com.androidui.gesture.view.RotateImageView
+    <com.android.gesture.view.RotateImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
