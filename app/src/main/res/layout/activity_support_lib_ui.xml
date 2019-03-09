@@ -12,14 +12,14 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <com.android.view.MyTextView
+    <com.android.common.view.MyTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         style="@style/item"
         android:background="@drawable/rect6"
         android:id="@+id/btnRecyclerView"/>
 
-    <com.android.view.MyTextView
+    <com.android.common.view.MyTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         style="@style/item"
@@ -27,7 +27,7 @@
         android:background="@drawable/rect7"
         android:id="@+id/btnViewPager"/>
 
-    <com.android.view.MyTextView
+    <com.android.common.view.MyTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         style="@style/item"
@@ -35,7 +35,7 @@
         android:background="@drawable/rect8"
         android:id="@+id/btnCardView"/>
 
-    <com.android.view.MyTextView
+    <com.android.common.view.MyTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         style="@style/item"
@@ -43,7 +43,7 @@
         android:background="@drawable/rect9"
         android:id="@+id/btnToolbar"/>
 
-    <com.android.view.MyTextView
+    <com.android.common.view.MyTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         style="@style/item"
@@ -51,7 +51,7 @@
         android:background="@drawable/rect1"
         android:id="@+id/btnCLAPL"/>
 
-    <com.android.view.MyTextView
+    <com.android.common.view.MyTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         style="@style/item"
@@ -59,7 +59,7 @@
         android:background="@drawable/rect2"
         android:id="@+id/btnFloatingActionButton"/>
 
-    <com.android.view.MyTextView
+    <com.android.common.view.MyTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         style="@style/item"
@@ -67,7 +67,7 @@
         android:background="@drawable/rect3"
         android:id="@+id/btnTextInputLayout"/>
 
-    <com.android.view.MyTextView
+    <com.android.common.view.MyTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         style="@style/item"
@@ -75,7 +75,7 @@
         android:background="@drawable/rect4"
         android:id="@+id/btnSnackbar"/>
 
-    <com.android.view.MyTextView
+    <com.android.common.view.MyTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         style="@style/item"
@@ -83,7 +83,7 @@
         android:background="@drawable/rect7"
         android:id="@+id/btnCollapsingToolbarLayout"/>
 
-    <com.android.view.MyTextView
+    <com.android.common.view.MyTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         style="@style/item"
@@ -91,7 +91,7 @@
         android:background="@drawable/rect8"
         android:id="@+id/btnNestedScrollView"/>
 
-    <com.android.view.MyTextView
+    <com.android.common.view.MyTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         style="@style/item"
@@ -99,7 +99,7 @@
         android:background="@drawable/rect9"
         android:id="@+id/btnDrawerLayout"/>
 
-    <com.android.view.MyTextView
+    <com.android.common.view.MyTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         style="@style/item"
@@ -107,7 +107,7 @@
         android:background="@drawable/rect1"
         android:id="@+id/btnSwipeRefreshLayout"/>
 
-    <com.android.view.MyTextView
+    <com.android.common.view.MyTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         style="@style/item"
@@ -115,7 +115,7 @@
         android:background="@drawable/rect2"
         android:id="@+id/btnSlidingPaneLayout"/>
 
-    <com.android.view.MyTextView
+    <com.android.common.view.MyTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         style="@style/item"
@@ -123,7 +123,7 @@
         android:background="@drawable/rect3"
         android:id="@+id/btnConstraintLayout"/>
 
-    <com.android.view.MyTextView
+    <com.android.common.view.MyTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         style="@style/item"

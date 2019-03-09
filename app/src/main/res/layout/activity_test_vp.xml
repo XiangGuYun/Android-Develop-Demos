@@ -4,9 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".test.TestVPActivity">
+    tools:context="com.android.common.test.TestVPActivity">
 
-    <com.android.test.InsideViewPager
+    <com.android.common.test.InsideViewPager
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/vpOutside"/>

@@ -84,13 +84,13 @@
         <activity android:name="com.android.systemui.ScrollViewActivity" />
         <activity android:name="com.android.systemui.TextViewActivity" />
         <activity android:name="com.android.systemui.SystemUIActivity" />
-        <activity android:name="com.android.MainActivity" />
+        <activity android:name="com.android.common.MainActivity" />
         <activity android:name="com.android.draw.HuiTuActivity" />
         <activity android:name="com.android.draw.BaseKnowledgeActivity" />
         <activity android:name="com.android.draw.paint.PaintPropertyActivity" />
         <activity android:name="com.android.draw.paint.XfermodeActivity" />
         <activity android:name="com.android.draw.paint.PaintTextActivity" />
-        <activity android:name="com.android.ImageViewerActivity" />
+        <activity android:name="com.android.common.ImageViewerActivity" />
         <activity
             android:name="com.android.draw.canvas.GeometryActivity"
             android:windowSoftInputMode="adjustResize|stateHidden" />
@@ -107,7 +107,7 @@
         <activity android:name="com.android.anim.SecondActivity" />
         <activity android:name="com.android.anim.FragmentTransitionActivity" />
         <activity android:name="com.android.anim.RVActivity" />
-        <activity android:name="com.android.IntroActivity">
+        <activity android:name="com.android.common.IntroActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -121,7 +121,7 @@
         <activity android:name="com.android.gesture.DoubleTapListenerActivity" />
         <activity android:name="com.android.gesture.DragImageActivity" />
         <activity android:name="com.android.gesture.MatrixActivity" />
-        <activity android:name="com.android.test.TestVPActivity" />
+        <activity android:name="com.android.common.test.TestVPActivity" />
         <activity android:name="com.android.gesture.ScaleGestureDetectorActivity" />
         <activity android:name="com.android.gesture.VelocityTrackerActivity" />
         <activity android:name="com.android.gesture.view.DragActivity" />

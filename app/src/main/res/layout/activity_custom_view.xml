@@ -8,7 +8,7 @@
     android:orientation="vertical"
     tools:context=".customview.CustomViewActivity">
 
-    <com.android.view.MyTextView
+    <com.android.common.view.MyTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         style="@style/item"
@@ -16,7 +16,7 @@
         android:background="@drawable/rect9"
         android:id="@+id/btnView"/>
 
-    <com.android.view.MyTextView
+    <com.android.common.view.MyTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         style="@style/item"
@@ -24,7 +24,7 @@
         android:background="@drawable/rect7"
         android:id="@+id/btnViewConfiguration"/>
 
-    <com.android.view.MyTextView
+    <com.android.common.view.MyTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         style="@style/item"
@@ -32,7 +32,7 @@
         android:background="@drawable/rect1"
         android:id="@+id/btnViewSlideMethod"/>
 
-    <com.android.view.MyTextView
+    <com.android.common.view.MyTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         style="@style/item"
@@ -40,7 +40,7 @@
         android:background="@drawable/rect2"
         android:id="@+id/btnViewDragHelper"/>
 
-    <com.android.view.MyTextView
+    <com.android.common.view.MyTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         style="@style/item"
@@ -48,7 +48,7 @@
         android:background="@drawable/rect3"
         android:id="@+id/btnViewMeasureLayout"/>
 
-    <com.android.view.MyTextView
+    <com.android.common.view.MyTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         style="@style/item"

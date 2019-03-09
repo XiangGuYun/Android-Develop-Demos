@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <com.android.view.ReadMoreView
+        <com.android.common.view.ReadMoreView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/readView"/>
@@ -24,7 +24,7 @@
             android:background="@drawable/rect4"
             android:text="了解ValueAnimator"/>
 
-        <com.android.view.Header1View
+        <com.android.common.view.Header1View
             android:id="@+id/h1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -54,7 +54,7 @@
             style="@style/btn_test"
             android:text="开始动画"/>
 
-        <com.android.view.Header1View
+        <com.android.common.view.Header1View
             android:id="@+id/h2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -74,7 +74,7 @@
             style="@style/btn_test"
             android:text="开始动画"/>
 
-        <com.android.view.Header1View
+        <com.android.common.view.Header1View
             android:id="@+id/h3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -102,7 +102,7 @@
             android:background="@drawable/rect4"
             android:text="了解ObjectAnimator"/>
 
-        <com.android.view.Header1View
+        <com.android.common.view.Header1View
             android:id="@+id/header4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -144,7 +144,7 @@
             android:layout_height="wrap_content"
             style="@style/btn_test"/>
 
-        <com.android.view.Header1View
+        <com.android.common.view.Header1View
             android:id="@+id/headerCustomerColor"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -208,7 +208,7 @@
             android:background="@drawable/rect7"
             />
 
-        <com.android.view.Header1View
+        <com.android.common.view.Header1View
             android:id="@+id/headerLast"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

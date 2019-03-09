@@ -8,7 +8,7 @@
     android:background="@mipmap/frag_girl"
     tools:context=".fragment.MyFragmentActivity">
 
-    <com.android.view.MyTextView
+    <com.android.common.view.MyTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         style="@style/item"
@@ -16,7 +16,7 @@
         android:background="@drawable/rect6"
         android:id="@+id/btnHelloFragment"/>
 
-    <com.android.view.MyTextView
+    <com.android.common.view.MyTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         style="@style/item"
@@ -24,7 +24,7 @@
         android:background="@drawable/rect6"
         android:id="@+id/btnBookFragment"/>
 
-    <com.android.view.MyTextView
+    <com.android.common.view.MyTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         style="@style/item"
@@ -32,7 +32,7 @@
         android:background="@drawable/rect6"
         android:id="@+id/btnFourFragments"/>
 
-    <com.android.view.MyTextView
+    <com.android.common.view.MyTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         style="@style/item"

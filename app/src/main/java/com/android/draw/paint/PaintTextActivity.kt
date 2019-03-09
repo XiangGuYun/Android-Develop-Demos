@@ -9,10 +9,10 @@ import android.os.Build
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.widget.SeekBar
-import com.android.ImageViewerActivity
+import com.android.common.ImageViewerActivity
 import com.android.R
-import com.android.dialog.CodeViewerDialog
-import com.android.dialog.ListBtmDialog
+import com.android.common.dialog.CodeViewerDialog
+import com.android.common.dialog.ListBtmDialog
 import com.kotlinlib.other.BaseInterface
 import kotlinx.android.synthetic.main.activity_draw_text.*
 

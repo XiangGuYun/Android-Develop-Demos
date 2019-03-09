@@ -8,7 +8,7 @@
     android:orientation="vertical"
     android:background="@mipmap/bg_rxjava">
 
-    <com.android.view.MyTextView
+    <com.android.common.view.MyTextView
         android:id="@+id/btnReflect"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

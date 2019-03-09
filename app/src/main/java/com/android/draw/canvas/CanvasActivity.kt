@@ -2,9 +2,9 @@ package com.android.draw.canvas
 
 import android.graphics.Region
 import android.os.Bundle
-import com.android.ImageViewerActivity
+import com.android.common.ImageViewerActivity
 import com.android.R
-import com.android.dialog.WebViewerDialog
+import com.android.common.dialog.WebViewerDialog
 import com.kotlinlib.activity.KotlinActivity
 import com.kotlinlib.other.LayoutId
 import kotlinx.android.synthetic.main.activity_canvas2.*

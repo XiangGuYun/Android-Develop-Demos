@@ -3,7 +3,7 @@ package com.android.draw.paint
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import com.android.R
-import com.android.dialog.CodeViewerDialog
+import com.android.common.dialog.CodeViewerDialog
 import kotlinx.android.synthetic.main.activity_paint.*
 import kotlinx.android.synthetic.main.header_view1.view.*
 
