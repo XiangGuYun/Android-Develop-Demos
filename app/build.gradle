@@ -83,4 +83,6 @@ dependencies {
 
     implementation 'de.hdodenhof:circleimageview:3.0.0'
 
+    implementation 'com.githang:status-bar-compat:0.7'
+
 }

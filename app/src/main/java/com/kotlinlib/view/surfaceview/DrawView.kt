@@ -13,8 +13,8 @@ abstract class DrawView @JvmOverloads constructor(context: Context, attrs: Attri
     public var isDrawing: Boolean = false
     var i = 0
 
-    protected val drawingSpeed: Int
-        get() = 30
+    protected var drawingSpeed: Int = 30
+
 
     init {
         init()

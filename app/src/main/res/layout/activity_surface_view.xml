@@ -1,9 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".systemui.SurfaceViewActivity">
 
-</android.support.constraint.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.android.common.view.Header1View
+            android:id="@+id/header1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:mainTitle1="绘制正弦曲线"/>
+
+        <com.android.systemui.view.SurfaceViewSinFun
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="10dp"/>
+
+        <com.android.common.view.Header1View
+            android:id="@+id/header2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:mainTitle1="画板"/>
+
+        <com.android.systemui.view.SurfaceViewHandWriting
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="10dp"/>
+
+        <com.android.common.view.Header1View
+            android:id="@+id/header3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:mainTitle1="音乐动效"/>
+        
+        <com.android.systemui.view.MySurfaceView
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="270dp" />
+
+    </LinearLayout>
+
+</ScrollView>

@@ -10,6 +10,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
+import com.kotlinlib.activity.AbstractKotlinActivity
 import com.kotlinlib.activity.KotlinActivity
 import com.kotlinlib.other.BaseInterface
 import com.kotlinlib.other.DensityUtils
@@ -30,7 +31,7 @@ abstract class KotlinFragment:Fragment(), BaseInterface{
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val viewInject = this::class.annotations[0] as LayoutId
         fragView = inflater.inflate(viewInject.id,container,false)
-        gson = KotlinActivity.gson
+        gson = AbstractKotlinActivity.gson
         return fragView
     }
 
