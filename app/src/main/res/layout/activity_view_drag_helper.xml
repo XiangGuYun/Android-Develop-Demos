@@ -80,5 +80,17 @@
         style="@style/btn_test"
         android:text="进入DEMO"/>
 
+    <com.android.common.view.Header1View
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:mainTitle1="弹簧式"/>
+
+    <Button
+        android:id="@+id/btn5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/btn_test"
+        android:text="进入DEMO"/>
+
 </LinearLayout>
 </ScrollView>

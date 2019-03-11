@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.android">
+    package="com.android" >
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -10,8 +10,9 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/launcher1"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Design.Light.NoActionBar">
-        <activity android:name=".systemui.status_bar.StatusBarActivity"></activity>
+        android:testOnly="true"
+        android:theme="@style/Theme.Design.Light.NoActionBar" >
+        <activity android:name=".systemui.status_bar.StatusBarActivity" />
         <activity android:name=".systemui.popupwindow.PopupWindowActivity" />
         <activity android:name=".customview.view_config.ViewConfigActivity" />
         <activity android:name=".customview.slide_mothod.demo.ScrollerCase2Activity" />
@@ -109,7 +110,7 @@
         <activity android:name=".anim.SecondActivity" />
         <activity android:name=".anim.FragmentTransitionActivity" />
         <activity android:name=".anim.RVActivity" />
-        <activity android:name=".common.IntroActivity">
+        <activity android:name=".common.IntroActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -154,6 +155,13 @@
         <activity android:name=".customview.function_read.FunctionReadActivity" />
         <activity android:name=".customview.view_study.ViewActivity" />
         <activity android:name=".customview.measure_layout.MeasureLayoutActivity" />
+        <activity android:name=".customview.drag.Case5Activity" />
+        <activity android:name=".draw.xml.ShapeActivity" />
+        <activity android:name=".draw.xml.XMLDrawActivity" />
+        <activity android:name=".draw.xml.LayerActivity" />
+        <activity android:name=".draw.xml.SelectorActivity" />
+        <activity android:name=".draw.xml.BitmapActivity" >
+        </activity>
     </application>
 
 </manifest>

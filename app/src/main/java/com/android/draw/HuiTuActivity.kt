@@ -10,6 +10,8 @@ import com.android.draw.canvas.NewPathActivity
 import com.android.draw.paint.PaintPropertyActivity
 import com.android.draw.paint.PaintTextActivity
 import com.android.draw.paint.XfermodeActivity
+import com.android.draw.xml.ShapeActivity
+import com.android.draw.xml.XMLDrawActivity
 import com.kotlinlib.view.recyclerview.RVInterface
 import kotlinx.android.synthetic.main.activity_hui_tu.*
 
@@ -41,6 +43,10 @@ class HuiTuActivity : AppCompatActivity(),RVInterface {
 
         btnCanvas.setOnClickListener {
             startActivity(Intent(this, CanvasActivity::class.java))
+        }
+
+        btnXMLDraw.setOnClickListener {
+            startActivity(Intent(this, XMLDrawActivity::class.java))
         }
 
     }

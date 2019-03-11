@@ -57,11 +57,12 @@ class MySurfaceView @JvmOverloads constructor(context: Context, attrs: Attribute
         }
 
         canvas.drawColor(randomColor())
-        canvas.drawRect(width/2f-50, height/2f-50, width/2f+50, height/2f+50, paint5.apply { color = randomColor() })
+        canvas.drawCircle(width/2f, height/2f, 300f, paint4.apply { color = randomColor() })
         canvas.drawCircle(width/2f, height/2f, 250f, paint4.apply { color = randomColor() })
         canvas.drawCircle(width/2f, height/2f, 200f, paint3.apply { color = randomColor() })
         canvas.drawCircle(width/2f, height/2f, 150f, paint2.apply { color = randomColor() })
         canvas.drawCircle(width/2f, height/2f, 100f, paint1.apply { color = randomColor() })
+        canvas.drawRect(width/2f-30, height/2f-30, width/2f+30, height/2f+30, paint5.apply { color = randomColor() })
 //        x += 10
 //        y = (100 * Math.sin(3.0 * x.toDouble() * Math.PI / 180) + 400).toInt()
 //        //加入新的坐标点

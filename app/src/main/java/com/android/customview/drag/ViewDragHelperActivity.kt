@@ -120,6 +120,9 @@ override fun clampViewPositionVertical(child: View, top: Int, dy: Int): Int
         btn4.click {
             go(Case4Activity::class.java)
         }
+        btn5.click {
+            go(Case5Activity::class.java)
+        }
     }
 
 }

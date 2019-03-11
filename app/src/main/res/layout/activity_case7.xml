@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.android.customview.drag.Drag4View xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#6666ff"
+    tools:context="com.android.customview.drag.Case5Activity">
+
+    <TextView
+        android:id="@+id/tvDragMe"
+        android:tag="slideView"
+        android:textSize="20sp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="80dp"
+        android:padding="10dp"
+        android:ellipsize="end"
+        android:background="#ff6666"/>
+</com.android.customview.drag.Drag4View>
