@@ -1,4 +1,4 @@
-package com.android.common.test
+package com.android.customview.event.case1
 
 import android.graphics.Color
 import android.os.Handler
@@ -15,13 +15,6 @@ class TestVP1Fragment:KotlinFragment() {
     override fun init() {
         bg.setBackgroundColor(Color.BLUE)
         FragPagerEngine(this, vpInside, TestInside1Fragment(), TestInside2Fragment())
-        val handler = Handler()
-        refresh.setOnRefreshListener {
-            handler.postDelayed({
-                refresh.isRefreshing = false
-            },1500)
-        }
-
         vpInside.setOnPageChangeListener(object :OnPageChange{
             override fun onPageSelected(position: Int) {
                 (getAct() as TestVPActivity).vpOutside.canScrollToNext = position != 1

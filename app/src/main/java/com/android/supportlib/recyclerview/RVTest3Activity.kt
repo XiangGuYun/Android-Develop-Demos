@@ -1,6 +1,7 @@
 package com.android.supportlib.recyclerview
 
 import android.os.Bundle
+import android.support.v7.widget.RecyclerView
 import com.android.R
 import com.kotlinlib.activity.KotlinActivity
 import com.kotlinlib.other.LayoutId

@@ -1,4 +1,4 @@
-package com.android.common.test
+package com.android.customview.event.case1
 
 import android.os.Bundle
 import com.android.R

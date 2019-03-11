@@ -125,7 +125,7 @@
         <activity android:name=".gesture.DoubleTapListenerActivity" />
         <activity android:name=".gesture.DragImageActivity" />
         <activity android:name=".gesture.MatrixActivity" />
-        <activity android:name=".common.test.TestVPActivity" />
+        <activity android:name="com.android.customview.event.case1.TestVPActivity" />
         <activity android:name=".gesture.ScaleGestureDetectorActivity" />
         <activity android:name=".gesture.VelocityTrackerActivity" />
         <activity android:name=".gesture.view.DragActivity" />

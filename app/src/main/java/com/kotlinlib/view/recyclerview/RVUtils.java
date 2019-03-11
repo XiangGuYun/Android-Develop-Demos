@@ -46,7 +46,7 @@ public class RVUtils {
 
     private ItemTouchHelper mItemTouchHelper;
 
-    public RVUtils(RecyclerView recyclerView) {
+    public <T extends RecyclerView> RVUtils(T recyclerView) {
         rv = recyclerView;
         context = recyclerView.getContext();
     }

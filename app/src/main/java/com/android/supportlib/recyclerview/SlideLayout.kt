@@ -21,6 +21,10 @@ class SlideLayout @JvmOverloads constructor(context: Context, attrs: AttributeSe
                 return child.tag == "drag"
             }
 
+            override fun clampViewPositionVertical(child: View, top: Int, dy: Int): Int {
+                return 0
+            }
+
             override fun clampViewPositionHorizontal(child: View, left: Int, dx: Int): Int {
                 currLeft = left
                 val childWidth = DensityUtils.dip2px(context, -60f)
@@ -51,7 +55,10 @@ class SlideLayout @JvmOverloads constructor(context: Context, attrs: AttributeSe
         }
     }
 
+    var inInter = false
+
     override fun onInterceptTouchEvent(ev: MotionEvent?): Boolean {
+
         return dragHelper?.shouldInterceptTouchEvent(ev!!)!!
     }
 

@@ -1,4 +1,4 @@
-package com.android.common.test
+package com.android.customview.event.case1
 
 import com.android.R
 import com.kotlinlib.other.LayoutId

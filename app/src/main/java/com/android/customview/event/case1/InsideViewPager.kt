@@ -1,4 +1,4 @@
-package com.android.common.test
+package com.android.customview.event.case1
 
 import android.content.Context
 import android.support.v4.view.ViewPager
