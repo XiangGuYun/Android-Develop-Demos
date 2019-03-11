@@ -129,7 +129,7 @@ OnGestureListener，这个Listener监听一些手势，如单击、滑动、长�
 Step 1: 创建GestureDetector对象，创建时需实现GestureListener传入
 Step 2: 将Activity或者特定组件上的TouchEvent的事件交给GestureDetector处理即可！ 我们写个简单的代码来验证这个流程，即重写对应的方法：
 
-public class MainActivity extends AppCompatActivity {
+public class TextureViewCase1Activity extends AppCompatActivity {
 
     private MyGestureListener mgListener;
     private GestureDetector mDetector;

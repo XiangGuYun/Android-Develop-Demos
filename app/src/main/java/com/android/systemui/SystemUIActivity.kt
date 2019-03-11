@@ -4,6 +4,7 @@ import android.os.Bundle
 import com.android.R
 import com.android.systemui.popupwindow.PopupWindowActivity
 import com.android.systemui.status_bar.StatusBarActivity
+import com.android.systemui.textureview.TextureViewActivity
 import com.kotlinlib.activity.KotlinActivity
 import com.kotlinlib.other.LayoutId
 import kotlinx.android.synthetic.main.activity_system_ui.*
@@ -28,6 +29,9 @@ class SystemUIActivity : KotlinActivity() {
         }
         btnSurfaceView.click {
             go(SurfaceViewActivity::class.java)
+        }
+        btnTextureView.click {
+            go(TextureViewActivity::class.java)
         }
         btnStatusBar.click {
             go(StatusBarActivity::class.java)

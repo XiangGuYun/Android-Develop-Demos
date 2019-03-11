@@ -15,7 +15,7 @@ import org.jetbrains.annotations.Nullable;
 /**
  * 用于显示H5网页的Activity
  @LayoutId(R.layout.activity_main)
-class MainActivity : WebActivity() {
+class TextureViewCase1Activity : WebActivity() {
  ·12=
     override fun init(bundle: Bundle?) {
     webUrl = "http://www.baidu.com"

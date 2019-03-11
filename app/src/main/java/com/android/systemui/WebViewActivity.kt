@@ -115,7 +115,7 @@ public void onPageFinished(WebView view, String url) {
         header6.setLeftClick {
             codeDialog.text("""
 如何为WebView设置Cookie呢？ 我们可以在需要设置Cookie的地方加入下述代码：
-CookieSyncManager.createInstance(MainActivity.this);
+CookieSyncManager.createInstance(TextureViewCase1Activity.this);
 CookieManager cookieManager = CookieManager.getInstance();
 cookieManager.setAcceptCookie(true);
 cookieManager.setCookie(url, cookies);  //cookies是要设置的cookie字符串

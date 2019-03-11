@@ -3,6 +3,7 @@
     package="com.android" >
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
 
     <application
         android:allowBackup="true"
@@ -77,7 +78,7 @@
             android:name=".systemui.test.ET1Activity"
             android:windowSoftInputMode="adjustResize|stateHidden" />
         <activity android:name=".supportlib.constraint.ConstraintActivity" />
-        <activity android:name=".systemui.TextureViewActivity" />
+        <activity android:name=".systemui.textureview.TextureViewActivity" />
         <activity android:name=".systemui.WebViewActivity" />
         <activity
             android:name=".systemui.EditTextActivity"
@@ -162,6 +163,7 @@
         <activity android:name=".draw.xml.SelectorActivity" />
         <activity android:name=".draw.xml.BitmapActivity" >
         </activity>
+        <activity android:name=".systemui.textureview.TextureViewCase1Activity"/>
     </application>
 
 </manifest>
