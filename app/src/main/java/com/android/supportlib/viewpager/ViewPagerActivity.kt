@@ -110,42 +110,95 @@ class ViewPagerActivity : KotlinActivity() {
 
 
             """.trimIndent())
+        }.setRightClick {
+            codeDialog.text("""
+class ScalePageTransformer : ViewPager.PageTransformer {
+
+    override fun transformPage(page: View, position: Float) {
+        Log.d("Tdasdad", " "+position)
+        when {
+            position < -1.0f -> {
+                page.scaleX = MIN_SCALE
+                page.scaleY = MIN_SCALE
+            }
+            position <= 0.0f -> {
+                page.alpha = 1.0f
+                page.translationX = 0.0f
+                page.scaleX = 1.0f
+                page.scaleY = 1.0f
+            }
+            position <= 1.0f -> {
+                page.alpha = 1.0f - position
+                page.translationX = -page.width * position
+                val scale = MIN_SCALE + (1.0f - MIN_SCALE) * (1.0f - position)
+                page.scaleX = scale
+                page.scaleY = scale
+            }
+            else -> {
+                page.scaleX = MIN_SCALE
+                page.scaleY = MIN_SCALE
+            }
         }
 
-        header2.tvSubTitle.click {
+}
+            """.trimIndent())
+        }
+
+        header3.setRightClick {
             codeDialog.text("""
 
-                vp2.setPageTransformer(true, ScalePageTransformer())
+inner class RotatePageTransformer : ViewPager.PageTransformer {
 
-                class ScalePageTransformer : ViewPager.PageTransformer {
+        override fun transformPage(page: View, position: Float) {
+            if (position < -1)
+                rotate(page, -MAX_ROTATION)
+            else if (position <= 1)
+                rotate(page, MAX_ROTATION * position)
+            else
+                rotate(page, MAX_ROTATION)
+        }
 
-                    override fun transformPage(page: View, position: Float) {
-                        when {
-                            position < -1.0f -> {
-                                page.scaleX = MIN_SCALE
-                                page.scaleY = MIN_SCALE
-                            }
-                            position <= 0.0f -> {
-                                page.alpha = 1.0f
-                                page.translationX = 0.0f
-                                page.scaleX = 1.0f
-                                page.scaleY = 1.0f
-                            }
-                            position <= 1.0f -> {
-                                page.alpha = 1.0f - position
-                                page.translationX = -page.width * position
-                                val scale = MIN_SCALE + (1.0f - MIN_SCALE) * (1.0f - position)
-                                page.scaleX = scale
-                                page.scaleY = scale
-                            }
-                            else -> {
-                                page.scaleX = MIN_SCALE
-                                page.scaleY = MIN_SCALE
-                            }
-                        }
-                    }
+        private fun rotate(view: View, rotation: Float) {
+            view.pivotX = view.width * 0.5f
+            view.pivotY = view.height.toFloat()
+            view.rotation = rotation
+        }
 
-                }
+}
+            """.trimIndent())
+        }
+
+        header4.setRightClick {
+            codeDialog.text("""
+ inner class GalleryPageTransformer : ViewPager.PageTransformer {
+
+    override fun transformPage(page: View, position: Float) {
+        if (position < -1) {
+            page.translationX = MAX_TRANSLATE
+            page.scaleX = MIN_SCALE
+            page.scaleY = MIN_SCALE
+            page.rotationY = -MAX_ROTATION
+        } else if (position <= 0) {
+            page.translationX = -MAX_TRANSLATE * position
+            val scale = MIN_SCALE + (1 - MIN_SCALE) * (1.0f + position)
+            page.scaleX = scale
+            page.scaleY = scale
+            page.rotationY = MAX_ROTATION * position
+        } else if (position <= 1) {
+            page.translationX = -MAX_TRANSLATE * position
+            val scale = MIN_SCALE + (1 - MIN_SCALE) * (1.0f - position)
+            page.scaleX = scale
+            page.scaleY = scale
+            page.rotationY = MAX_ROTATION * position
+        } else {
+            page.translationX = -MAX_TRANSLATE
+            page.scaleX = MIN_SCALE
+            page.scaleY = MIN_SCALE
+            page.rotationY = MAX_ROTATION
+        }
+    }
+
+}
             """.trimIndent())
         }
 
@@ -217,12 +270,11 @@ class ViewPagerActivity : KotlinActivity() {
     inner class RotatePageTransformer : ViewPager.PageTransformer {
 
         override fun transformPage(page: View, position: Float) {
-            if (position < -1)
-                rotate(page, -MAX_ROTATION)
-            else if (position <= 1)
-                rotate(page, MAX_ROTATION * position)
-            else
-                rotate(page, MAX_ROTATION)
+            when {
+                position < -1 -> rotate(page, -MAX_ROTATION)
+                position <= 1 -> rotate(page, MAX_ROTATION * position)
+                else -> rotate(page, MAX_ROTATION)
+            }
         }
 
         private fun rotate(view: View, rotation: Float) {

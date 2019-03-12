@@ -2,10 +2,8 @@
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".customview.measure_layout.MeasureLayoutActivity">
+    android:layout_height="match_parent">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -13,19 +11,15 @@
         android:orientation="vertical">
 
         <com.android.common.view.Header1View
-            android:id="@+id/header1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:mainTitle1="MeasureSpec"/>
+            app:mainTitle1="打造Android中的\n流式布局和热门标签"/>
 
-        <com.android.customview.measure_layout.WrapView
-            android:layout_marginTop="10dp"
-            android:layout_width="wrap_content"
+
+        <com.android.common.view.Header1View
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="clip_horizontal"
-            android:background="#66ff66"/>
-
-
+            app:mainTitle1=" Android自定义\n任意层级树形控件"/>
 
     </LinearLayout>
 

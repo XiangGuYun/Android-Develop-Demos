@@ -1,29 +1,17 @@
 package com.android.systemui.textureview;
 
-import android.Manifest;
-import android.annotation.SuppressLint;
-import android.graphics.Bitmap;
-import android.graphics.Canvas;
 import android.graphics.SurfaceTexture;
 import android.media.MediaPlayer;
+import android.os.Bundle;
 import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.util.Log;
 import android.view.Surface;
-import android.view.SurfaceHolder;
 import android.view.TextureView;
 import android.view.View;
-import android.view.animation.Animation;
-import android.view.animation.AnimationSet;
 import android.widget.ImageView;
-import android.widget.Toast;
-
 import com.android.R;
-import com.tbruyelle.rxpermissions2.RxPermissions;
-
 import java.io.IOException;
-
 import static android.view.animation.Animation.REVERSE;
 
 public class TextureViewCase1Activity extends AppCompatActivity {

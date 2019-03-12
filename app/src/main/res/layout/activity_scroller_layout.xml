@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.android.customview.event.NestedLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.android.common.view.Header1View
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/header"
+            android:layout_marginTop="10dp"
+            app:mainTitle1="onMeasure和onLayout分析"/>
+
+        <com.android.common.view.Header1View
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/header1"
+            android:layout_marginTop="10dp"
+            app:mainTitle1="onInterceptTouchEvent分析"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/small_title"
+            android:text="思考：为什么要在左右滑动时拦截触摸事件，不由子控件来处理？（下面的案例将会不拦截）"/>
+
+        <com.android.customview.case_scrollerlayout.Scroller1Layout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="#ff6666"
+                android:text="This is first child view" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="#66ff66"
+                android:text="This is second child view" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="#6666ff"
+                android:text="This is third child view" />
+
+        </com.android.customview.case_scrollerlayout.Scroller1Layout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/small_title"
+            android:text="结论：如果ScrollerLayout不对触摸事件进行拦截，那么将不会触发它的ACTION_MOVE事件来进行滑动操作，因此必须拦截触摸事件交由自己消费处理。（下面的案例将进行拦截）"/>
+
+        <com.android.customview.slide_mothod.view.ScrollerLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="#ff6666"
+                android:text="This is first child view" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="#66ff66"
+                android:text="This is second child view" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="#6666ff"
+                android:text="This is third child view" />
+
+        </com.android.customview.slide_mothod.view.ScrollerLayout>
+
+        <com.android.common.view.Header1View
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/header2"
+            android:layout_marginTop="10dp"
+            app:mainTitle1="onTouchEvent分析"/>
+
+    </LinearLayout>
+
+</com.android.customview.event.NestedLayout>

@@ -101,17 +101,6 @@
             android:text="第三部分 其它"/>
 
         <com.android.common.view.MyTextView
-            android:id="@+id/btnShadow"
-            android:layout_marginTop="10dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="10dp"
-            android:background="@drawable/rect8"
-            android:gravity="center"
-            android:textSize="18sp"
-            android:text="阴影的绘制"/>
-
-        <com.android.common.view.MyTextView
             android:id="@+id/btnXMLDraw"
             android:layout_marginTop="10dp"
             android:layout_width="wrap_content"

@@ -56,4 +56,20 @@
         android:background="@drawable/rect4"
         android:id="@+id/btnViewEvent"/>
 
+    <com.android.common.view.MyTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/item"
+        android:text="ScrollerLayout源码分析"
+        android:background="@drawable/rect5"
+        android:id="@+id/btnScrollerLayout"/>
+
+    <com.android.common.view.MyTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/item"
+        android:text="慕课hyman之自定义View教程"
+        android:background="@drawable/rect6"
+        />
+
 </LinearLayout>

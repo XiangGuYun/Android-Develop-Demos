@@ -2,6 +2,7 @@ package com.android.customview
 
 import android.os.Bundle
 import com.android.R
+import com.android.customview.case_scrollerlayout.ScrollerLayoutActivity
 import com.android.customview.view_study.ViewActivity
 import com.android.customview.drag.ViewDragHelperActivity
 import com.android.customview.event.EventActivity
@@ -37,6 +38,10 @@ class CustomViewActivity : KotlinActivity() {
 
         btnViewEvent.click {
             go(EventActivity::class.java)
+        }
+
+        btnScrollerLayout.click {
+            go(ScrollerLayoutActivity::class.java)
         }
 
     }

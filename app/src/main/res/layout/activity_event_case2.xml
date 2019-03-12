@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.android.customview.event.case2.MyLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/ll"
+    tools:context="com.android.customview.event.case2.EventCase2Activity">
+
+    <TextView
+        android:id="@+id/tvParentLog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/small_title"
+        android:text="这里用来记录父容器的触摸事件"
+        />
+
+    <com.android.customview.event.case2.ViewStudy1View
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:background="#ff6666"
+        android:layout_height="200dp" />
+    <com.android.customview.event.case2.ViewStudy2View
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:background="#66ff66"
+        android:layout_height="200dp" />
+    <com.android.customview.event.case2.ViewStudy3View
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:background="#6666ff"
+        android:layout_height="200dp" />
+
+</com.android.customview.event.case2.MyLinearLayout>

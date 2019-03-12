@@ -96,7 +96,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        style="@style/tvSmallTitleLeft"
+        style="@style/small_title"
         android:text="注意：当页面较少时，优先使用FragmentPagerAdapter;当页面较多时，优先使用FragmentStatePagerAdapter。"/>
 
 

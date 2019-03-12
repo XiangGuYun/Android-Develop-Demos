@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.android" >
+    package="com.android">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -12,7 +12,7 @@
         android:roundIcon="@mipmap/launcher1"
         android:supportsRtl="true"
         android:testOnly="true"
-        android:theme="@style/Theme.Design.Light.NoActionBar" >
+        android:theme="@style/Theme.Design.Light.NoActionBar">
         <activity android:name=".systemui.status_bar.StatusBarActivity" />
         <activity android:name=".systemui.popupwindow.PopupWindowActivity" />
         <activity android:name=".customview.view_config.ViewConfigActivity" />
@@ -111,7 +111,7 @@
         <activity android:name=".anim.SecondActivity" />
         <activity android:name=".anim.FragmentTransitionActivity" />
         <activity android:name=".anim.RVActivity" />
-        <activity android:name=".common.IntroActivity" >
+        <activity android:name=".common.IntroActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -125,7 +125,7 @@
         <activity android:name=".gesture.DoubleTapListenerActivity" />
         <activity android:name=".gesture.DragImageActivity" />
         <activity android:name=".gesture.MatrixActivity" />
-        <activity android:name="com.android.customview.event.case1.TestVPActivity" />
+        <activity android:name=".customview.event.case1.TestVPActivity" />
         <activity android:name=".gesture.ScaleGestureDetectorActivity" />
         <activity android:name=".gesture.VelocityTrackerActivity" />
         <activity android:name=".gesture.view.DragActivity" />
@@ -161,9 +161,11 @@
         <activity android:name=".draw.xml.XMLDrawActivity" />
         <activity android:name=".draw.xml.LayerActivity" />
         <activity android:name=".draw.xml.SelectorActivity" />
-        <activity android:name=".draw.xml.BitmapActivity" >
-        </activity>
-        <activity android:name=".systemui.textureview.TextureViewCase1Activity"/>
+        <activity android:name=".draw.xml.BitmapActivity" />
+        <activity android:name=".systemui.textureview.TextureViewCase1Activity" />
+        <activity android:name=".customview.event.case2.EventCase2Activity" />
+        <activity android:name=".customview.case_scrollerlayout.ScrollerLayoutActivity" />
+        <activity android:name=".customview.imooc_hyman.ImoocHymanUIActivity"></activity>
     </application>
 
 </manifest>
