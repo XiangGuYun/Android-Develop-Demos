@@ -16,14 +16,120 @@
             android:id="@+id/header1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:mainTitle1="MeasureSpec"/>
+            app:mainTitle1="自定义View的wrap_content属性"/>
 
         <com.android.customview.measure_layout.WrapView
             android:layout_marginTop="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="clip_horizontal"
+            android:layout_gravity="center_horizontal"
             android:background="#66ff66"/>
+
+        <com.android.common.view.Header1View
+            android:id="@+id/header2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:mainTitle1="实现简易流式布局"
+            android:layout_marginTop="10dp"/>
+
+        <com.android.customview.measure_layout.MyViewGroup
+            android:layout_width="match_parent"
+            android:layout_margin="10dp"
+            android:layout_height="100dp">
+            <TextView
+                style="@style/small_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Yes"/>
+
+            <TextView
+                android:layout_marginLeft="20dp"
+                style="@style/small_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="customview"/>
+
+            <TextView
+                style="@style/small_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="measure"/>
+
+            <TextView
+                style="@style/small_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="layout"/>
+
+            <TextView
+                style="@style/small_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="MyViewGroup"/>
+
+            <TextView
+                style="@style/small_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="android"/>
+
+        </com.android.customview.measure_layout.MyViewGroup>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/small_title"
+            android:text="问题：如果想改变控件之间的间距该怎么做？"/>
+
+        <com.android.customview.measure_layout.MyViewGroup
+            android:layout_width="match_parent"
+            android:layout_margin="10dp"
+            android:layout_height="100dp"
+            app:horizontalSpace="10"
+            app:verticalSpace="10">
+            <TextView
+                style="@style/small_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Yes"/>
+
+            <TextView
+                android:layout_marginLeft="20dp"
+                style="@style/small_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="customview"/>
+
+            <TextView
+                style="@style/small_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="measure"/>
+
+            <TextView
+                style="@style/small_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="layout"/>
+
+            <TextView
+                style="@style/small_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="MyViewGroup"/>
+
+            <TextView
+                style="@style/small_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="android"/>
+
+        </com.android.customview.measure_layout.MyViewGroup>
+
+
+
+
+
 
 
 

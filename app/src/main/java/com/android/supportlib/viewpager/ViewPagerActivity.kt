@@ -1,18 +1,23 @@
 package com.android.supportlib.viewpager
 
+import android.graphics.Color
 import android.os.Bundle
 import android.support.v4.view.ViewPager
 import android.util.Log
 import android.view.View
 import android.widget.ImageView
+import com.ToxicBakery.viewpager.transforms.*
 import com.android.R
 import com.android.supportlib.adapter.Vp1Adapter
 import com.android.supportlib.adapter.Vp2Adapter
+import com.android.supportlib.viewpager.TestFragment.Companion.KEY_TEST_FRAGMENT
+import com.bigkoo.pickerview.builder.OptionsPickerBuilder
+import com.bigkoo.pickerview.listener.OnOptionsSelectListener
 import com.kotlinlib.IV
 import com.kotlinlib.activity.KotlinActivity
+import com.kotlinlib.fragment.FragPagerEngine
 import com.kotlinlib.other.LayoutId
 import kotlinx.android.synthetic.main.activity_view_pager.*
-import kotlinx.android.synthetic.main.header_view1.view.*
 
 
 @LayoutId(R.layout.activity_view_pager)
@@ -23,6 +28,12 @@ class ViewPagerActivity : KotlinActivity() {
         val MAX_ROTATION = 20.0f
         val MAX_TRANSLATE = 40.0f//数值越大越容易滑动
     }
+
+    val transformers = arrayListOf("AccordionTransformer","BackgroundToForegroundTransformer",
+            "CubeInTransformer","CubeOutTransformer","DefaultTransformer","DepthPageTransformer",
+            "DrawerTransformer","FlipHorizontalTransformer","FlipVerticalTransformer","ForegroundToBackgroundTransformer",
+            "RotateDownTransformer","RotateUpTransformer","ScaleInOutTransformer","StackTransformer","TabletTransformer",
+            "ZoomInTransformer","ZoomOutSlideTransformer","ZoomOutTransformer")
 
     override fun init(bundle: Bundle?) {
 
@@ -235,6 +246,74 @@ inner class RotatePageTransformer : ViewPager.PageTransformer {
         vp2.setPageTransformer(true, ScalePageTransformer())
         vp3.setPageTransformer(false, RotatePageTransformer())
         vp4.setPageTransformer(false, GalleryPageTransformer())
+
+        val engine = FragPagerEngine(this, vpEngine,
+                TestFragment().apply { arguments = Bundle().apply {
+                    putString(KEY_TEST_FRAGMENT, "fragment1")
+                    putInt(TestFragment.KEY_TEST_FRAGMENT_COLOR, Color.parseColor("#ff6666"))
+                } },
+                TestFragment().apply { arguments = Bundle().apply {
+                    putString(KEY_TEST_FRAGMENT, "fragment2")
+                    putInt(TestFragment.KEY_TEST_FRAGMENT_COLOR, Color.parseColor("#66ff66"))
+                } },
+                TestFragment().apply { arguments = Bundle().apply {
+                    putString(KEY_TEST_FRAGMENT, "fragment3")
+                    putInt(TestFragment.KEY_TEST_FRAGMENT_COLOR, Color.parseColor("#6666ff"))
+                } })
+        engine.addTabLayout(tlEngine,
+                {tab, index -> tab.text = "${index+1}" },
+                {tab -> vpEngine.currentItem = tab.position},
+                {tab ->  })
+
+        FragPagerEngine(this, vpTransformer,
+                TestFragment().apply { arguments = Bundle().apply {
+                    putString(KEY_TEST_FRAGMENT, "fragment1")
+                    putInt(TestFragment.KEY_TEST_FRAGMENT_COLOR, Color.parseColor("#ff6666"))
+                } },
+                TestFragment().apply { arguments = Bundle().apply {
+                    putString(KEY_TEST_FRAGMENT, "fragment2")
+                    putInt(TestFragment.KEY_TEST_FRAGMENT_COLOR, Color.parseColor("#66ff66"))
+                } },
+                TestFragment().apply { arguments = Bundle().apply {
+                    putString(KEY_TEST_FRAGMENT, "fragment3")
+                    putInt(TestFragment.KEY_TEST_FRAGMENT_COLOR, Color.parseColor("#6666ff"))
+                } })
+
+        /*
+        "ABaseTransformer","AccordionTransformer","BackgroundToForegroundTransformer",
+            "BuildConfig","CubeInTransformer","CubeOutTransformer","DefaultTransformer","DepthPageTransformer",
+            "DrawerTransformer","FlipHorizontalTransformer","FlipVerticalTransformer","ForegroundToBackgroundTransformer",
+            "RotateDownTransformer","RotateUpTransformer","ScaleInOutTransformer","StackTransformer","TabletTransformer",
+            "ZoomInTransformer","ZoomOutSlideTransformer","ZoomOutTransformer"
+         */
+        val pvOptions = OptionsPickerBuilder(this, OnOptionsSelectListener { options1, option2, options3, v ->
+            vpTransformer.setPageTransformer(false, when(options1){
+                0-> AccordionTransformer()
+                1-> BackgroundToForegroundTransformer()
+                2-> CubeInTransformer()
+                3-> CubeOutTransformer()
+                4-> DefaultTransformer()
+                5-> DepthPageTransformer()
+                6-> DrawerTransformer()
+                7-> FlipHorizontalTransformer()
+                8-> FlipVerticalTransformer()
+                9-> ForegroundToBackgroundTransformer()
+                10-> RotateDownTransformer()
+                11-> RotateUpTransformer()
+                12-> ScaleInOutTransformer()
+                13-> StackTransformer()
+                14-> TabletTransformer()
+                15-> ZoomInTransformer()
+                16-> ZoomOutSlideTransformer()
+                else-> ZoomOutTransformer()
+            })
+        }).build<String>()
+        pvOptions.setPicker(transformers.toMutableList())
+
+        btnTransformer.click {
+            pvOptions.show()
+        }
+
     }
 
     inner class GalleryPageTransformer : ViewPager.PageTransformer {

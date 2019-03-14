@@ -85,4 +85,7 @@ dependencies {
 
     implementation 'com.githang:status-bar-compat:0.7'
 
+    //viewPager转场效果
+    implementation 'com.ToxicBakery.viewpager.transforms:view-pager-transforms:2.0.24'
+
 }

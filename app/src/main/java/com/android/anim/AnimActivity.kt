@@ -13,6 +13,7 @@ class AnimActivity : KotlinActivity() {
         btn2.click { go(InterpolatorActivity::class.java) }
         btn3.click { go(PatchAnimActivity::class.java) }
         btn4.click { go(PropertyAnimActivity::class.java) }
+        btnSVG.click { go(SVGAnimActivity::class.java) }
     }
 
     override fun finish() {

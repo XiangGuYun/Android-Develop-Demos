@@ -13,6 +13,7 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/Theme.Design.Light.NoActionBar">
+        <activity android:name=".anim.SVGAnimActivity"></activity>
         <activity android:name=".systemui.status_bar.StatusBarActivity" />
         <activity android:name=".systemui.popupwindow.PopupWindowActivity" />
         <activity android:name=".customview.view_config.ViewConfigActivity" />
@@ -165,7 +166,7 @@
         <activity android:name=".systemui.textureview.TextureViewCase1Activity" />
         <activity android:name=".customview.event.case2.EventCase2Activity" />
         <activity android:name=".customview.case_scrollerlayout.ScrollerLayoutActivity" />
-        <activity android:name=".customview.imooc_hyman.ImoocHymanUIActivity"></activity>
+        <activity android:name=".customview.imooc_hyman.ImoocHymanUIActivity" />
     </application>
 
 </manifest>

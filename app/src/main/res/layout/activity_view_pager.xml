@@ -4,101 +4,140 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
 
-    <com.android.common.view.Header1View
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        app:mainTitle1="ViewPager的简单实现"
-        android:id="@+id/header1"/>
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#000000"
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp"
-        android:layout_marginTop="10dp">
-        <android.support.v4.view.ViewPager
+        <com.android.common.view.Header1View
+            android:id="@+id/header1"
             android:layout_width="match_parent"
-            android:layout_height="300dp"
-            android:id="@+id/vp1"/>
-    </FrameLayout>
+            android:layout_height="50dp"
+            app:mainTitle1="ViewPager的简单实现" />
 
-    <com.android.common.view.Header1View
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        app:mainTitle1="ViewPager的浮现特效"
-        android:id="@+id/header2"/>
-
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#000000"
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp"
-        android:layout_marginTop="10dp">
-        <android.support.v4.view.ViewPager
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="300dp"
-            android:id="@+id/vp2"/>
-    </FrameLayout>
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="#000000"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp">
 
-    <com.android.common.view.Header1View
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        app:mainTitle1="ViewPager的旋转特效"
-        android:id="@+id/header3"/>
+            <android.support.v4.view.ViewPager
+                android:id="@+id/vp1"
+                android:layout_width="match_parent"
+                android:layout_height="300dp" />
+        </FrameLayout>
 
-
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#000000"
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp"
-        android:layout_marginTop="10dp">
-        <android.support.v4.view.ViewPager
+        <com.android.common.view.Header1View
+            android:id="@+id/header2"
             android:layout_width="match_parent"
-            android:layout_height="300dp"
-            android:id="@+id/vp3"/>
-    </FrameLayout>
+            android:layout_height="50dp"
+            app:mainTitle1="ViewPager的浮现特效" />
 
-    <com.android.common.view.Header1View
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        app:mainTitle1="ViewPager的3D画廊特效"
-        android:id="@+id/header4"/>
-    <FrameLayout
-        android:clipChildren="false"
-        android:layout_width="match_parent"
-        android:background="#000000"
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_height="wrap_content">
-        <android.support.v4.view.ViewPager
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="300dp"
-            android:layout_marginLeft="100dp"
-            android:layout_marginRight="40dp"
-            android:id="@+id/vp4"/>
-    </FrameLayout>
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="#000000"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp">
 
-    <com.android.common.view.Header1View
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        app:mainTitle1="ViewPager搭配Fragment"/>
+            <android.support.v4.view.ViewPager
+                android:id="@+id/vp2"
+                android:layout_width="match_parent"
+                android:layout_height="300dp" />
+        </FrameLayout>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        style="@style/small_title"
-        android:text="注意：当页面较少时，优先使用FragmentPagerAdapter;当页面较多时，优先使用FragmentStatePagerAdapter。"/>
+        <com.android.common.view.Header1View
+            android:id="@+id/header3"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:mainTitle1="ViewPager的旋转特效" />
 
 
-</LinearLayout>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="#000000"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp">
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/vp3"
+                android:layout_width="match_parent"
+                android:layout_height="300dp" />
+        </FrameLayout>
+
+        <com.android.common.view.Header1View
+            android:id="@+id/header4"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:mainTitle1="ViewPager的3D画廊特效" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="#000000"
+            android:clipChildren="false"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp">
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/vp4"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_marginLeft="100dp"
+                android:layout_marginRight="40dp" />
+        </FrameLayout>
+
+        <com.android.common.view.Header1View
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:mainTitle1="ViewPager搭配Fragment" />
+
+        <TextView
+            style="@style/small_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="注意：当页面较少时，优先使用FragmentPagerAdapter;当页面较多时，优先使用FragmentStatePagerAdapter。" />
+
+        <com.android.common.view.Header1View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:mainTitle1="FragPagerEngine" />
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tlEngine"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"/>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vpEngine"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"/>
+
+        <com.android.common.view.Header1View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:mainTitle1="框架ViewPagerTransforms" />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vpTransformer"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginBottom="10dp"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/btn_test"
+            android:text="选择Transformer"
+            android:id="@+id/btnTransformer"/>
+
+    </LinearLayout>
 </ScrollView>

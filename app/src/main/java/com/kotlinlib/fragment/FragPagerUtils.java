@@ -282,4 +282,5 @@ public class FragPagerUtils<T extends Fragment>{
         }
 
     }
+
 }

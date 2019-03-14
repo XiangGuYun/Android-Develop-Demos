@@ -10,5 +10,9 @@
     <declare-styleable name="CircleImageView">
         <attr name="imageRes" format="integer"/>
     </declare-styleable>
+    <declare-styleable name="MyViewGroup">
+        <attr name="horizontalSpace" format="integer"/>
+        <attr name="verticalSpace" format="integer"/>
+    </declare-styleable>
     <attr name="listDivider" format="color"/>
 </resources>
