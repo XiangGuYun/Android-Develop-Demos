@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context="com.android.supportlib.coordinate.CoordinateCase0Activity">
+
+    <com.android.common.view.ReadMoreView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/readView"/>
+
+    <com.android.common.view.Header1View
+        android:id="@+id/header1"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:mainTitle1="scroll属性\n会跟随滚动事件一起移动"/>
+
+    <Button
+        android:id="@+id/btn1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/btn_test"
+        android:text="查看效果"/>
+
+    <com.android.common.view.Header1View
+        android:id="@+id/header2"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:mainTitle1="enterAlways属性"/>
+
+    <Button
+        android:id="@+id/btn2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/btn_test"
+        android:text="查看效果"/>
+
+    <com.android.common.view.Header1View
+        android:id="@+id/header3"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:mainTitle1="exitUntilCollapsed属性"/>
+
+    <Button
+        android:id="@+id/btn3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/btn_test"
+        android:text="查看效果"/>
+
+    <com.android.common.view.Header1View
+        android:id="@+id/header4"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:mainTitle1="enterAlwaysCollapsed属性"/>
+
+    <Button
+        android:id="@+id/btn4"
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/btn_test"
+        android:text="查看效果"/>
+
+
+</LinearLayout>
+</ScrollView>

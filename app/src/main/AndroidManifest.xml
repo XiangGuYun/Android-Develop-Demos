@@ -12,8 +12,21 @@
         android:roundIcon="@mipmap/launcher1"
         android:supportsRtl="true"
         android:testOnly="true"
-        android:theme="@style/Theme.Design.Light.NoActionBar">
-        <activity android:name=".anim.SVGAnimActivity"></activity>
+        android:theme="@style/Theme.Design.Light.NoActionBar"
+        >
+        <activity android:name=".anim.transitions_everywhere.TransitionsEverywhereActivity" />
+        <activity android:name=".anim.material_animations.MaterialAnimationsActivity" />
+        <activity android:name=".supportlib.coordinate.case0.CoordinateCase0_4Activity" />
+        <activity android:name=".supportlib.coordinate.case0.CoordinateCase0_3Activity" />
+        <activity android:name=".supportlib.coordinate.case0.CoordinateCase0_2Activity" />
+        <activity android:name=".supportlib.coordinate.case0.CoordinateCase0_1Activity" />
+        <activity android:name=".supportlib.coordinate.CoordinateCase0Activity" />
+        <activity android:name=".supportlib.collapsing_toolbar_layout.CTLCase1Activity" />
+        <activity android:name=".supportlib.coordinate.CoordinateCase3Activity" />
+        <activity android:name=".supportlib.coordinate.CoordinateCase2Activity" />
+        <activity android:name=".supportlib.coordinate.CoordinateCase1Activity" />
+        <activity android:name=".anim.EasyAndroidAnimations" />
+        <activity android:name=".anim.SVGAnimActivity" />
         <activity android:name=".systemui.status_bar.StatusBarActivity" />
         <activity android:name=".systemui.popupwindow.PopupWindowActivity" />
         <activity android:name=".customview.view_config.ViewConfigActivity" />
@@ -22,15 +35,8 @@
         <activity android:name=".customview.slide_mothod.demo.ScrollerActivity" />
         <activity android:name=".customview.slide_mothod.demo.AnimSlideActivity" />
         <activity android:name=".customview.slide_mothod.demo.ScrollToOrByActivity" />
-        <activity android:name=".customview.slide_mothod.demo.LayoutParamsActivity" />
         <activity android:name=".customview.slide_mothod.demo.OffsetLTRBActivity" />
         <activity android:name=".customview.slide_mothod.demo.LayoutSlideActivity" />
-        <activity
-            android:name=".supportlib.navigationview.TestNavigationActivity"
-            android:label="@string/title_activity_test_navigation" />
-        <activity
-            android:name=".supportlib.navigationview.NavigationDrawerActivity"
-            android:label="@string/title_activity_navigation_drawer" />
         <activity
             android:name=".supportlib.sliding_pane_layout.SlidingPaneLayoutCase3Activity"
             android:theme="@style/DIY.SlideClose.Transparent.Theme" />
@@ -154,19 +160,16 @@
         <activity android:name=".supportlib.sliding_pane_layout.SlidingPaneLayoutCase2Activity" />
         <activity android:name=".customview.slide_mothod.ViewSlideMethodActivity" />
         <activity android:name=".customview.event.EventActivity" />
-        <activity android:name=".customview.function_read.FunctionReadActivity" />
         <activity android:name=".customview.view_study.ViewActivity" />
         <activity android:name=".customview.measure_layout.MeasureLayoutActivity" />
         <activity android:name=".customview.drag.Case5Activity" />
         <activity android:name=".draw.xml.ShapeActivity" />
         <activity android:name=".draw.xml.XMLDrawActivity" />
         <activity android:name=".draw.xml.LayerActivity" />
-        <activity android:name=".draw.xml.SelectorActivity" />
         <activity android:name=".draw.xml.BitmapActivity" />
         <activity android:name=".systemui.textureview.TextureViewCase1Activity" />
         <activity android:name=".customview.event.case2.EventCase2Activity" />
         <activity android:name=".customview.case_scrollerlayout.ScrollerLayoutActivity" />
-        <activity android:name=".customview.imooc_hyman.ImoocHymanUIActivity" />
     </application>
 
 </manifest>

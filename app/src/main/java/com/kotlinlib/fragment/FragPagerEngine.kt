@@ -8,18 +8,18 @@ import com.kotlinlib.listener.OnTabSelected
 import com.kotlinlib.view.KotlinFragment
 
 class FragPagerEngine {
-    private var fpUtils: FragPagerUtils<KotlinFragment>
-    constructor(act:FragmentActivity?, vp:ViewPager, vararg frags:KotlinFragment){
+    private var fpUtils: FragPagerUtils<Fragment>
+    constructor(act:FragmentActivity?, vp:ViewPager, vararg frags:Fragment){
         fpUtils = FragPagerUtils(act, vp, frags.asList().toMutableList())
     }
-    constructor(act:Fragment?, vp:ViewPager, vararg frags:KotlinFragment){
+    constructor(act:Fragment?, vp:ViewPager, vararg frags:Fragment){
         fpUtils = FragPagerUtils(act, vp, frags.asList().toMutableList())
     }
-    constructor(act:FragmentActivity?, vp:ViewPager, frags:ArrayList<KotlinFragment>){
+    constructor(act:FragmentActivity?, vp:ViewPager, frags:ArrayList<Fragment>){
         fpUtils = FragPagerUtils(act, vp, frags)
     }
 
-    constructor(act:FragmentActivity?, vp:ViewPager, frags:List<KotlinFragment>){
+    constructor(act:FragmentActivity?, vp:ViewPager, frags:List<Fragment>){
         fpUtils = FragPagerUtils(act, vp, frags)
     }
 
@@ -53,7 +53,7 @@ class FragPagerEngine {
         return this
     }
 
-    fun getUtils(): FragPagerUtils<KotlinFragment> {
+    fun getUtils(): FragPagerUtils<Fragment> {
         return fpUtils
     }
 }

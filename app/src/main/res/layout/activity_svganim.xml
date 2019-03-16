@@ -1,26 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.android.anim.SVGAnimActivity">
 
-    <ImageView
-        android:id="@+id/ivTest"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:src="@drawable/my_svg"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
-
-    <Button
-        android:id="@+id/btn1"
-        android:text="开始"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        style="@style/btn_test"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/ivTest"/>
+        android:orientation="vertical">
 
-</android.support.constraint.ConstraintLayout>
+    <com.android.common.view.Header1View
+        android:id="@+id/header1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:mainTitle1="ImageView加载SVG动画"
+        android:layout_marginTop="10dp"/>
+
+        <ImageView
+            android:id="@+id/ivTest"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@drawable/my_svg"/>
+
+        <Button
+            android:id="@+id/btn1"
+            android:text="开始"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/btn_test"/>
+
+        <com.android.common.view.Header1View
+            android:id="@+id/header2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:mainTitle1="PathView之绘制显示器"
+            android:layout_marginTop="10dp"/>
+
+        <com.eftimoff.androipathview.PathView
+            android:id="@+id/pathView1"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            app:pathColor="@android:color/holo_green_light"
+            app:svg="@raw/monitor"
+            app:pathWidth="1dp"/>
+
+        <Button
+            android:id="@+id/btn2"
+            android:text="开始"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/btn_test"/>
+
+        <com.android.common.view.Header1View
+            android:id="@+id/header3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:mainTitle1="PathView之绘制路径动画"
+            android:layout_marginTop="10dp"/>
+
+        <com.eftimoff.androipathview.PathView
+            android:id="@+id/pathView2"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            app:pathColor="@android:color/holo_green_light"
+            app:pathWidth="1dp"/>
+
+        <Button
+            android:id="@+id/btn3"
+            android:text="开始"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/btn_test"
+            android:layout_marginBottom="10dp"/>
+
+
+    </LinearLayout>
+
+</ScrollView>

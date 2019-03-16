@@ -182,4 +182,9 @@
         <item name="android:windowExitAnimation">@anim/translate_out</item>
     </style>
 
+    <style name="AppTheme.White">
+        <item name="colorControlHighlight">#ff6666</item>
+        <item name="android:textColorPrimary">#333333</item>
+    </style>
+
 </resources>
