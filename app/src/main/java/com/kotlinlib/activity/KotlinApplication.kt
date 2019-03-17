@@ -30,8 +30,14 @@ import android.app.Application
 import android.content.Context
 import android.support.multidex.MultiDex
 import com.zhy.http.okhttp.OkHttpUtils
+import me.yokeyword.fragmentation.BuildConfig
+import me.yokeyword.fragmentation.Fragmentation
 import okhttp3.OkHttpClient
 import java.util.concurrent.TimeUnit
+import android.R
+import cat.ereza.customactivityoncrash.config.CaocConfig
+import com.android.fragment.crash_activity.CrashActivity
+
 
 //import android.support.multidex.MultiDex;
 
@@ -63,7 +69,18 @@ class KotlinApplication : Application() {
         KotlinApplication.instance = this
         _context = applicationContext
         initOKHttp()
+        initFragmentation()
         //----------------
+    }
+
+
+
+    private fun initFragmentation() {
+        // 栈视图等功能，建议在Application里初始化
+        Fragmentation.builder()
+                // 显示悬浮球 ; 其他Mode:SHAKE: 摇一摇唤出   NONE：隐藏
+                .stackViewMode(Fragmentation.BUBBLE)
+                .debug(BuildConfig.DEBUG).install()
     }
 
     @Synchronized

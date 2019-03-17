@@ -19,9 +19,10 @@ import com.githang.statusbar.StatusBarCompat
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import com.kotlinlib.other.*
+import me.yokeyword.fragmentation.SupportActivity
 import org.greenrobot.eventbus.EventBus
 
-abstract class AbstractKotlinActivity : AppCompatActivity(), BaseInterface {
+abstract class AbstractKotlinActivity : SupportActivity(), BaseInterface {
 
     val ACTIVITY_NAME = "ac_name"
     var startEventBus = false//是否启用EventBus

@@ -118,4 +118,18 @@
         android:text="PopupWindow"
         />
 
+    <com.android.common.view.MyTextView
+        android:id="@+id/btnImmersionBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="@drawable/rect5"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:textSize="18sp"
+        android:text="框架：ImmersionBar(状态栏和导航栏)"
+        />
+
+
+
 </LinearLayout>

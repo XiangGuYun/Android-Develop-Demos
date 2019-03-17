@@ -16,11 +16,16 @@ class TransitionsEverywhereActivity : KotlinActivity() {
 
         FragPagerEngine(this, viewPager, AutoTransitionSample(), ChangeTextSample(),
                 CustomTransitionSample(), ExplodeAndEpicenterExample(), ImageTransformSample(),
-                InterpolatorDurationStartDelaySample())
+                InterpolatorDurationStartDelaySample(),PathMotionSample(), RecolorSample(),
+                RotateSample(),ScaleSample(),ScenesSample(),SlideSample(),TransitionNameSample())
                 .addTabLayout(tabLayout,
                         {
                             tab, index ->
-                            tab.text = "动画${index+1}"
+                            if(index!=12){
+                                tab.text = "动画${index+1}"
+                            }else{
+                                tab.text = "动画Last"
+                            }
                         },
                         {
 

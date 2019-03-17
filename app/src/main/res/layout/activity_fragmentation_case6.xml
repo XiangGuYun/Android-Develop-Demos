@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.android.fragment.fragmentation.case1.FragmentationCase1Activity">
+
+    <Button
+        android:id="@+id/btnViewStack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/btn_test"
+        android:text="查看栈视图"/>
+
+    <Button
+        android:id="@+id/btnViewCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/btn_test"
+        android:text="查看代码"/>
+
+    <TextView
+        android:id="@+id/tvInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="提示：如果你选择了无懒加载的入口，静等三秒后，切换到fragment2，你会发现fragment2的文本已经变为了红色的TEXT2；如果你选择了有懒加载的入口，依然静等三秒后，切换到fragment2，你会发现fragment2的文本在三秒后才变为红色的TEXT2。"
+        style="@style/small_title"/>
+
+    <RadioGroup
+        android:id="@+id/rg_case3"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_height="50dp">
+        <RadioButton
+            android:id="@+id/rb1"
+            android:checked="true"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="第一个Fragment"/>
+        <RadioButton
+            android:id="@+id/rb2"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="第二个Fragment"/>
+    </RadioGroup>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/fl_container"/>
+
+</LinearLayout>

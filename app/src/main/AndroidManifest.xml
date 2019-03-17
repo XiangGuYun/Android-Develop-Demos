@@ -6,14 +6,26 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
+        android:name="com.kotlinlib.activity.KotlinApplication"
         android:allowBackup="true"
         android:icon="@mipmap/launcher1"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/launcher1"
         android:supportsRtl="true"
         android:testOnly="true"
-        android:theme="@style/Theme.Design.Light.NoActionBar"
-        >
+        android:theme="@style/Theme.Design.Light.NoActionBar">
+        <activity android:name=".fragment.crash_activity.ErrorOccurActivity"></activity>
+        <activity android:name=".fragment.crash_activity.CrashActivity" />
+        <activity android:name=".fragment.fragmentation.case9.FragmentationCase9Activity" />
+        <activity android:name=".fragment.fragmentation.case8.FragmentationCase8Activity" />
+        <activity android:name=".fragment.fragmentation.case7.FragmentationCase7Activity" />
+        <activity android:name=".fragment.fragmentation.case6.FragmentationCase6Activity" />
+        <activity android:name=".fragment.fragmentation.case5.FragmentationCase5Activity" />
+        <activity android:name=".fragment.fragmentation.case4.FragmentationCase4Activity" />
+        <activity android:name=".fragment.fragmentation.case3.FragmentationCase3Activity" />
+        <activity android:name=".fragment.fragmentation.case2.FragmentationCase2Activity" />
+        <activity android:name=".fragment.fragmentation.case1.FragmentationCase1Activity" />
+        <activity android:name=".fragment.fragmentation.FragmentationActivity" />
         <activity android:name=".anim.transitions_everywhere.TransitionsEverywhereActivity" />
         <activity android:name=".anim.material_animations.MaterialAnimationsActivity" />
         <activity android:name=".supportlib.coordinate.case0.CoordinateCase0_4Activity" />

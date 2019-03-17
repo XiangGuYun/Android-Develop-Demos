@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.android.common.view.Header1View
+            android:id="@+id/header1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:mainTitle1="Hello Fragmentation"/>
+
+        <Button
+            android:id="@+id/btn1"
+            android:text="第一个例子"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/btn_test"/>
+
+        <com.android.common.view.Header1View
+            android:id="@+id/header2"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:mainTitle1="Fragmentation API"/>
+
+        <Button
+            android:id="@+id/btn2"
+            android:text="装载一个Fragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/btn_test"/>
+
+        <Button
+            android:id="@+id/btn3"
+            android:text="装载多个Fragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/btn_test"/>
+
+        <Button
+            android:id="@+id/btn4"
+            android:text="Fragment启动、出栈和查找"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/btn_test"/>
+
+        <com.android.common.view.Header1View
+            android:id="@+id/header3"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:mainTitle1="onSupportVisible()等"/>
+
+        <Button
+            android:id="@+id/btn5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/btn_test"
+            android:text="进入DEMO"/>
+
+        <com.android.common.view.Header1View
+            android:id="@+id/header4"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:mainTitle1="懒加载、优化Animation性能"/>
+
+        <Button
+            android:id="@+id/btn6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/btn_test"
+            android:text="进入DEMO"/>
+
+        <com.android.common.view.Header1View
+            android:id="@+id/header5"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:mainTitle1="转场动画"/>
+
+        <Button
+            android:id="@+id/btn7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/btn_test"
+            android:text="进入DEMO"/>
+
+        <com.android.common.view.Header1View
+            android:id="@+id/header6"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:mainTitle1="Back键的事件传递机制"/>
+
+        <com.android.common.view.Header1View
+            android:id="@+id/header7"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:mainTitle1="FragmentationTabUtils"/>
+
+        <Button
+            android:id="@+id/btn8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/btn_test"
+            android:text="进入DEMO"/>
+
+        <com.android.common.view.Header1View
+            android:id="@+id/header8"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:mainTitle1="FragmentationPagerUtils"/>
+
+        <Button
+            android:id="@+id/btn9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            style="@style/btn_test"
+            android:text="进入DEMO"/>
+
+    </LinearLayout>
+
+</ScrollView>

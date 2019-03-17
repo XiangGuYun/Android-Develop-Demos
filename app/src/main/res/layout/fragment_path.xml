@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@+id/transitions_container"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.android.common.view.Header1View
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:mainTitle1="路径移动动画"
+        android:id="@+id/header"/>
+
+    <include
+        layout="@layout/button"
+        android:layout_marginTop="100dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left|top"/>
+
+</FrameLayout>

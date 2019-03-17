@@ -64,5 +64,13 @@
         android:background="@drawable/rect5"
         android:id="@+id/btnScrollerLayout"/>
 
+    <com.android.common.view.MyTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/item"
+        android:text="框架：DragPhotoView(高仿微信可拖拽返回PhotoView)"
+        android:background="@drawable/rect6"
+        android:id="@+id/btnDragPhotoView"/>
+
 
 </LinearLayout>

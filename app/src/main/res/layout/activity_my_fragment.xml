@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="match_parent">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:background="@mipmap/frag_girl"
-    tools:context=".fragment.MyFragmentActivity">
+    android:background="@mipmap/frag_girl">
 
     <com.android.common.view.MyTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         style="@style/item"
         android:text="Hello Fragment"
-        android:background="@drawable/rect6"
+        android:background="@drawable/rect1"
         android:id="@+id/btnHelloFragment"/>
 
     <com.android.common.view.MyTextView
@@ -21,7 +22,7 @@
         android:layout_height="wrap_content"
         style="@style/item"
         android:text="Book Fragment"
-        android:background="@drawable/rect6"
+        android:background="@drawable/rect2"
         android:id="@+id/btnBookFragment"/>
 
     <com.android.common.view.MyTextView
@@ -29,7 +30,7 @@
         android:layout_height="wrap_content"
         style="@style/item"
         android:text="Four Fragments"
-        android:background="@drawable/rect6"
+        android:background="@drawable/rect3"
         android:id="@+id/btnFourFragments"/>
 
     <com.android.common.view.MyTextView
@@ -37,9 +38,75 @@
         android:layout_height="wrap_content"
         style="@style/item"
         android:textSize="15sp"
-        android:text="360News(与ViewPager搭配，自由增删，懒加载)"
+        android:text="框架：Fragmentation(Fragment管理)"
         android:background="@drawable/rect6"
-        android:id="@+id/btn360News"/>
+        android:id="@+id/btnFragmentation"/>
 
+    <com.android.common.view.MyTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/item"
+        android:textSize="15sp"
+        android:text="框架：ActivityRouter(路由管理)"
+        android:background="@drawable/rect7"
+        android:id="@+id/btnActivityRouter"/>
+
+    <com.android.common.view.MyTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/item"
+        android:textSize="15sp"
+        android:text="框架：FinestWebView-Android(网页Activity)"
+        android:background="@drawable/rect8"
+        android:id="@+id/btnFinestWebView-Android"/>
 
 </LinearLayout>
+</ScrollView>
+
+<!--
+<com.android.common.view.MyTextView
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+style="@style/item"
+android:textSize="15sp"
+android:text="框架：SwipeBackHelper|SwipeBack|android-slidingactivity|BGASwipeBackLayout-Android(Activity滑动回退)"
+android:background="@drawable/rect9"
+android:gravity="left"
+android:layout_marginRight="10dp"
+android:id="@+id/btnSwipeBackHelper"/>
+
+<com.android.common.view.MyTextView
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+style="@style/item"
+android:textSize="15sp"
+android:text="框架：TransitionHelper|Dragger(Activity切换动画助手)"
+android:background="@drawable/rect1"
+android:id="@+id/btnTransitionHelper"/>
+
+<com.android.common.view.MyTextView
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+style="@style/item"
+android:textSize="15sp"
+android:text="框架：PreLollipopTransition(Activity和Fragment切换动画助手)"
+android:background="@drawable/rect2"
+android:id="@+id/btnPreLollipopTransition"/>
+
+<com.android.common.view.MyTextView
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+style="@style/item"
+android:textSize="15sp"
+android:text="框架：MultipleTheme|AndroidChangeSkin|Colorful(Activity换肤)"
+android:background="@drawable/rect5"
+android:id="@+id/btnMultipleTheme"/>
+
+<com.android.common.view.MyTextView
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+style="@style/item"
+android:textSize="15sp"
+android:text="框架：PreLoader(预加载)"
+android:background="@drawable/rect7"
+android:id="@+id/PreLoader"/>-->

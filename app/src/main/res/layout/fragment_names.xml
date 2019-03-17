@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <com.android.common.view.Header1View
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:mainTitle1="文字转场动画"
+        android:id="@+id/header"/>
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SHUFFLE"
+        android:layout_gravity="center_horizontal"
+        android:theme="@style/AppTheme.White"
+        android:layout_margin="16dp"/>
+
+    <LinearLayout
+        android:id="@+id/transitions_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"/>
+
+</LinearLayout>

@@ -64,12 +64,5 @@
         style="@style/item"
         android:text="框架-Transitions-Everywhere"/>
 
-    <com.android.common.view.MyTextView
-        android:id="@+id/btn7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/rect1"
-        style="@style/item"
-        android:text="框架-Material-Animations"/>
 
 </LinearLayout>

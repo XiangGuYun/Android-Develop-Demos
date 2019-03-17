@@ -15,8 +15,9 @@ import com.kotlinlib.activity.KotlinActivity
 import com.kotlinlib.other.BaseInterface
 import com.kotlinlib.other.DensityUtils
 import com.kotlinlib.other.LayoutId
+import me.yokeyword.fragmentation.SupportFragment
 
-abstract class KotlinFragment:Fragment(), BaseInterface{
+abstract class KotlinFragment:SupportFragment(), BaseInterface{
 
     companion object {
         lateinit var gson:Gson
