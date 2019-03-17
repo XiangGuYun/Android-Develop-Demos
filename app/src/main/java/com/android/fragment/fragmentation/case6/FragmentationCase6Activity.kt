@@ -22,8 +22,8 @@ class FragmentationCase6Activity : KotlinActivity() {
     override fun init(bundle: Bundle?) {
         val frag1 = FragmentationCase1Fragment.newInstance()
         val frag2 =  when(extraInt("type" to 1)){
-            1->LazyFragment.newInstance()
-            2->NoLazyFragment.newInstance()
+            1->NoLazyFragment.newInstance()
+            2->LazyFragment.newInstance()
             else->AnimEndLoadFragment.newInstance()
         }
 
