@@ -34,9 +34,6 @@ import me.yokeyword.fragmentation.BuildConfig
 import me.yokeyword.fragmentation.Fragmentation
 import okhttp3.OkHttpClient
 import java.util.concurrent.TimeUnit
-import android.R
-import cat.ereza.customactivityoncrash.config.CaocConfig
-import com.android.fragment.crash_activity.CrashActivity
 
 
 //import android.support.multidex.MultiDex;

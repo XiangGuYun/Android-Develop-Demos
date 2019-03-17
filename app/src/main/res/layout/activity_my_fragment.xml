@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
+<FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/frag_girl">
+<ScrollView
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:background="@mipmap/frag_girl">
+    android:orientation="vertical">
 
     <com.android.common.view.MyTextView
         android:layout_width="wrap_content"
@@ -62,7 +65,7 @@
 
 </LinearLayout>
 </ScrollView>
-
+</FrameLayout>
 <!--
 <com.android.common.view.MyTextView
 android:layout_width="wrap_content"
