@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".systemui.test.WV3Activity">
+    tools:context=".systemui.webview.WV3Activity">
 
     <com.android.systemui.view.MyWebView
         android:id="@+id/webView"

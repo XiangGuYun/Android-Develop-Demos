@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/sv"
-    tools:context=".systemui.test.SV1Activity">
+    tools:context=".systemui.scrollview.SV1Activity">
 
    <LinearLayout
        android:layout_width="match_parent"

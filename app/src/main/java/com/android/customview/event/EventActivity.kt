@@ -5,7 +5,7 @@ import com.android.R
 import com.android.customview.event.case1.TestVPActivity
 import com.android.customview.event.case2.EventCase2Activity
 import com.android.supportlib.recyclerview.RVTest3Activity
-import com.android.systemui.SurfaceViewActivity
+import com.android.systemui.surfaceview.SurfaceViewActivity
 import com.kotlinlib.activity.KotlinActivity
 import com.kotlinlib.other.LayoutId
 import kotlinx.android.synthetic.main.activity_event.*

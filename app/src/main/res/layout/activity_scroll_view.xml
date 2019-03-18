@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".systemui.ScrollViewActivity">
+    tools:context=".systemui.scrollview.ScrollViewActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -21,8 +21,38 @@
             style="@style/btn_test"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="测试一下"
+            android:text="进入DEMO"
             android:id="@+id/btnTest1"/>
+
+        <com.android.common.view.Header1View
+            android:id="@+id/header2"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:mainTitle1="横向ScrollView"/>
+
+        <Button
+            style="@style/btn_test"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="进入DEMO"
+            android:id="@+id/btnTest2"/>
+
+        <com.android.common.view.Header1View
+            android:id="@+id/header3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:mainTitle1="OverScroll-Decor"/>
+
+        <Button
+            style="@style/btn_test"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="进入DEMO"
+            android:id="@+id/btnTest3"/>
 
 
     </LinearLayout>

@@ -14,8 +14,9 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/Theme.Design.Light.NoActionBar">
-        <activity android:name=".fragment.crash_activity.ErrorOccurActivity"></activity>
-        <activity android:name=".fragment.crash_activity.CrashActivity" />
+        <activity android:name=".systemui.imageview.ImageViewExtendActivity"></activity>
+        <activity android:name=".systemui.scrollview.SV3Activity" />
+        <activity android:name=".systemui.scrollview.SV2Activity" />
         <activity android:name=".fragment.fragmentation.case9.FragmentationCase9Activity" />
         <activity android:name=".fragment.fragmentation.case8.FragmentationCase8Activity" />
         <activity android:name=".fragment.fragmentation.case7.FragmentationCase7Activity" />
@@ -27,7 +28,6 @@
         <activity android:name=".fragment.fragmentation.case1.FragmentationCase1Activity" />
         <activity android:name=".fragment.fragmentation.FragmentationActivity" />
         <activity android:name=".anim.transitions_everywhere.TransitionsEverywhereActivity" />
-        <activity android:name=".anim.material_animations.MaterialAnimationsActivity" />
         <activity android:name=".supportlib.coordinate.case0.CoordinateCase0_4Activity" />
         <activity android:name=".supportlib.coordinate.case0.CoordinateCase0_3Activity" />
         <activity android:name=".supportlib.coordinate.case0.CoordinateCase0_2Activity" />
@@ -84,28 +84,28 @@
         <activity android:name=".anim.PropertyAnimActivity" />
         <activity android:name=".anim.PatchAnimActivity" />
         <activity android:name=".anim.FrameAnimActivity" />
-        <activity android:name=".systemui.test.WV4Activity" />
-        <activity android:name=".systemui.test.WV3Activity" />
-        <activity android:name=".systemui.test.WV2Activity" />
-        <activity android:name=".systemui.test.WV1Activity" />
-        <activity android:name=".systemui.test.SV1Activity" />
-        <activity android:name=".systemui.test.ET3Activity" />
+        <activity android:name=".systemui.webview.WV4Activity" />
+        <activity android:name=".systemui.webview.WV3Activity" />
+        <activity android:name=".systemui.webview.WV2Activity" />
+        <activity android:name=".systemui.webview.WV1Activity" />
+        <activity android:name=".systemui.scrollview.SV1Activity" />
+        <activity android:name=".systemui.edittext.ET3Activity" />
         <activity
-            android:name=".systemui.test.ET2Activity"
+            android:name=".systemui.edittext.ET2Activity"
             android:windowSoftInputMode="adjustResize|stateHidden" />
         <activity
-            android:name=".systemui.test.ET1Activity"
+            android:name=".systemui.edittext.ET1Activity"
             android:windowSoftInputMode="adjustResize|stateHidden" />
         <activity android:name=".supportlib.constraint.ConstraintActivity" />
         <activity android:name=".systemui.textureview.TextureViewActivity" />
-        <activity android:name=".systemui.WebViewActivity" />
+        <activity android:name=".systemui.webview.WebViewActivity" />
         <activity
-            android:name=".systemui.EditTextActivity"
+            android:name=".systemui.edittext.EditTextActivity"
             android:windowSoftInputMode="adjustResize|stateHidden" />
-        <activity android:name=".systemui.SurfaceViewActivity" />
-        <activity android:name=".systemui.ImageViewActivity" />
-        <activity android:name=".systemui.ScrollViewActivity" />
-        <activity android:name=".systemui.TextViewActivity" />
+        <activity android:name=".systemui.surfaceview.SurfaceViewActivity" />
+        <activity android:name=".systemui.imageview.ImageViewActivity" />
+        <activity android:name=".systemui.scrollview.ScrollViewActivity" />
+        <activity android:name=".systemui.textview.TextViewActivity" />
         <activity android:name=".systemui.SystemUIActivity" />
         <activity android:name=".common.MainActivity" />
         <activity android:name=".draw.HuiTuActivity" />
@@ -124,7 +124,7 @@
         <activity android:name=".supportlib.recyclerview.RecyclerViewActivity" />
         <activity android:name=".supportlib.recyclerview.test.SnapHelperActivity" />
         <activity android:name=".supportlib.viewpager.ViewPagerActivity" />
-        <activity android:name=".systemui.test.WV5Activity" />
+        <activity android:name=".systemui.webview.WV5Activity" />
         <activity android:name=".anim.AnimActivity" />
         <activity android:name=".anim.InterpolatorActivity" />
         <activity android:name=".anim.SecondActivity" />

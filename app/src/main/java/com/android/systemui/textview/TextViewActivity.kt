@@ -1,4 +1,4 @@
-package com.android.systemui
+package com.android.systemui.textview
 
 import android.graphics.Color
 import android.graphics.Typeface

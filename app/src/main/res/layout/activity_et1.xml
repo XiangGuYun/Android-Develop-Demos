@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".systemui.test.ET1Activity">
+    tools:context=".systemui.edittext.ET1Activity">
 
     <EditText
         android:hint="点击我才弹出键盘"

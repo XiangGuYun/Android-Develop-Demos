@@ -45,24 +45,6 @@
         android:background="@drawable/rect6"
         android:id="@+id/btnFragmentation"/>
 
-    <com.android.common.view.MyTextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        style="@style/item"
-        android:textSize="15sp"
-        android:text="框架：ActivityRouter(路由管理)"
-        android:background="@drawable/rect7"
-        android:id="@+id/btnActivityRouter"/>
-
-    <com.android.common.view.MyTextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        style="@style/item"
-        android:textSize="15sp"
-        android:text="框架：FinestWebView-Android(网页Activity)"
-        android:background="@drawable/rect8"
-        android:id="@+id/btnFinestWebView-Android"/>
-
 </LinearLayout>
 </ScrollView>
 </FrameLayout>

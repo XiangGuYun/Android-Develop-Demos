@@ -1,4 +1,4 @@
-package com.android.systemui.test;
+package com.android.systemui.webview;
 
 import android.app.AlertDialog;
 import android.content.Context;
@@ -23,7 +23,7 @@ public class MyObject {
     public void showDialog() {
         new AlertDialog.Builder(context)
                 .setTitle("联系人列表").setIcon(R.mipmap.ic_launcher_round)
-                .setItems(new String[]{"基神", "B神", "曹神", "街神", "翔神"}, null)
+                .setItems(new String[]{"1", "2", "3", "4", "5"}, null)
                 .setPositiveButton("确定", null).create().show();
     }
 }

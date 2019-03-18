@@ -1,4 +1,4 @@
-package com.android.systemui.test
+package com.android.systemui.webview
 
 import android.annotation.SuppressLint
 import android.support.v7.app.AppCompatActivity

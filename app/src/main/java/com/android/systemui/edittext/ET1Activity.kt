@@ -1,4 +1,4 @@
-package com.android.systemui.test
+package com.android.systemui.edittext
 
 import android.os.Bundle
 import com.android.R

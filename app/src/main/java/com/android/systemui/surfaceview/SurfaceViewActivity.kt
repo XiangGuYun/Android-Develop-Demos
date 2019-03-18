@@ -1,4 +1,4 @@
-package com.android.systemui
+package com.android.systemui.surfaceview
 
 import android.os.Bundle
 import com.android.R

@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".systemui.webview.WebViewActivity">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:scrollbars="none">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -12,163 +11,198 @@
         android:orientation="vertical">
 
         <com.android.common.view.Header1View
-            android:id="@+id/headerWebView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:mainTitle1="WebView"/>
-
-        <Button
-            android:id="@+id/btnWebView1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            style="@style/btn_test"
-            android:text="常用方法"/>
-
-        <Button
-            android:id="@+id/btnWebView2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            style="@style/btn_test"
-            android:text="使用清单"/>
-
-        <com.android.common.view.Header1View
-            android:id="@+id/headerWebSettings"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            app:mainTitle1="WebSettings"/>
-
-        <Button
-            android:id="@+id/btnWebSettings1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            style="@style/btn_test"
-            android:text="常用方法"/>
-
-        <Button
-            android:id="@+id/btnWebSettings2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            style="@style/btn_test"
-            android:text="使用清单"/>
-
-        <com.android.common.view.Header1View
-            android:id="@+id/headerWebViewClient"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            app:mainTitle1="WebViewClient"/>
-
-        <Button
-            android:id="@+id/btnWebViewClient1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            style="@style/btn_test"
-            android:text="常用方法"/>
-
-        <Button
-            android:id="@+id/btnWebViewClient2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            style="@style/btn_test"
-            android:text="使用清单"/>
-
-        <com.android.common.view.Header1View
-            android:id="@+id/headerWebChromeClient"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            app:mainTitle1="WebChromeClient"/>
-
-        <Button
-            android:id="@+id/btnWebChromeClient1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            style="@style/btn_test"
-            android:text="常用方法"/>
-
-        <Button
-            android:id="@+id/btnWebChromeClient2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            style="@style/btn_test"
-            android:text="使用清单"/>
-
-        <com.android.common.view.Header1View
             android:id="@+id/header1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            app:mainTitle1="直接在Activity上加载一个WebView"/>
+            app:mainTitle1="hdodenhof\nCircleImageView"/>
 
         <Button
-            android:id="@+id/btnTest1"
-            style="@style/btn_test"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="测试一下"/>
+            style="@style/btn_test"
+            android:text="进入DEMO"/>
 
         <com.android.common.view.Header1View
             android:id="@+id/header2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:mainTitle1="布局代码中设置WebView"
             android:layout_marginTop="10dp"
-            />
+            app:mainTitle1="jasonpolites\ngesture-imageview"/>
 
         <Button
-            android:id="@+id/btnTest2"
-            style="@style/btn_test"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="测试一下"/>
+            style="@style/btn_test"
+            android:text="进入DEMO"/>
 
         <com.android.common.view.Header1View
+            android:id="@+id/header3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:mainTitle1="WebView滚动事件的监听"
             android:layout_marginTop="10dp"
-            android:id="@+id/header3"/>
+            app:mainTitle1="siyamed\nandroid-shape-imageview"/>
 
         <Button
-            android:id="@+id/btnTest3"
-            style="@style/btn_test"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="测试一下"/>
+            style="@style/btn_test"
+            android:text="进入DEMO"/>
 
         <com.android.common.view.Header1View
             android:id="@+id/header4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            app:mainTitle1="设置缩放以及自适应屏幕"/>
+            app:mainTitle1="sephiroth74\nImageViewZoom"/>
 
         <Button
-            android:id="@+id/btnTest4"
-            style="@style/btn_test"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="测试一下"/>
+            style="@style/btn_test"
+            android:text="进入DEMO"/>
+
+        <com.android.common.view.Header1View
+            android:id="@+id/header5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:mainTitle1="MikeOrtiz\nTouchImageView"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/btn_test"
+            android:text="进入DEMO"/>
+
+        <com.android.common.view.Header1View
+            android:id="@+id/header6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:mainTitle1="flavioarfaria\nKenBurnsView"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/btn_test"
+            android:text="进入DEMO"/>
 
         <com.android.common.view.Header1View
             android:id="@+id/header7"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            app:mainTitle1="WebView和JavaScrip交互基础"/>
+            app:mainTitle1="vinc3m1\nRoundedImageView"/>
 
         <Button
-            android:id="@+id/btnTest7"
-            android:text="测试一下"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            style="@style/btn_test"/>
+            style="@style/btn_test"
+            android:text="进入DEMO"/>
 
+        <com.android.common.view.Header1View
+            android:id="@+id/header8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:mainTitle1="felipecsl\nGifImageView"/>
 
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/btn_test"
+            android:text="进入DEMO"/>
 
+        <com.android.common.view.Header1View
+            android:id="@+id/header9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:mainTitle1="chrisbanes\nPhotoView"/>
 
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/btn_test"
+            android:text="进入DEMO"/>
 
+        <com.android.common.view.Header1View
+            android:id="@+id/header10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:mainTitle1="alexvasilkov/GestureViews"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/btn_test"
+            android:text="进入DEMO"/>
+
+        <com.android.common.view.Header1View
+            android:id="@+id/header11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:mainTitle1="lopspower\nCircularImageView"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/btn_test"
+            android:text="进入DEMO"/>
+
+        <com.android.common.view.Header1View
+            android:id="@+id/header12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:mainTitle1="developer-shivam/Crescento"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/btn_test"
+            android:text="进入DEMO"/>
+
+        <com.android.common.view.Header1View
+            android:id="@+id/header12A"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:mainTitle1="pungrue26\nSelectableRoundedImageView"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/btn_test"
+            android:text="进入DEMO"/>
+
+        <com.android.common.view.Header1View
+            android:id="@+id/header14"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:mainTitle1="boycy815\nPinchImageView"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/btn_test"
+            android:text="进入DEMO"/>
+
+        <com.android.common.view.Header1View
+            android:id="@+id/header15"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:mainTitle1="DingMouRen\nPaletteImageView"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/btn_test"
+            android:text="进入DEMO"/>
     </LinearLayout>
 
 </ScrollView>

@@ -5,22 +5,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".systemui.edittext.ET3Activity">
-    <EditText
-        android:id="@+id/etSelect"
+    tools:context="com.android.fragment.activity_router.ActivityRouterActivity">
+
+    <com.android.common.view.Header1View
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="10dp"
-        android:text="请选中android这个单词"/>
-    <EditText
-        android:id="@+id/etSelect1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="10dp"
-        android:text="点击按钮就把光标移到android这个单词的左边"/>
+        app:mainTitle1="Hello ActivityRouter"/>
+
     <Button
+        android:id="@+id/btn1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/btnTest"
-        android:text="点击"/>
+        style="@style/btn_test"
+        android:text="跳转第一个Activity"/>
+
 </LinearLayout>

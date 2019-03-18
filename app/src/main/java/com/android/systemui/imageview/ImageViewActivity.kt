@@ -1,4 +1,4 @@
-package com.android.systemui
+package com.android.systemui.imageview
 
 import android.graphics.BitmapFactory
 import android.os.Bundle

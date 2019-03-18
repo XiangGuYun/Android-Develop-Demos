@@ -1,4 +1,4 @@
-package com.android.systemui.test
+package com.android.systemui.scrollview
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle

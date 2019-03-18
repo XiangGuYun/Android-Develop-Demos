@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".systemui.test.ET2Activity">
+    tools:context=".systemui.edittext.ET2Activity">
     <EditText
         android:id="@+id/etTest"
         android:layout_width="match_parent"

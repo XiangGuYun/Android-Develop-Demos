@@ -1,29 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<FrameLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:paddingLeft="10dp"
     android:background="@mipmap/bg_sysview"
-    tools:context=".systemui.SystemUIActivity">
-
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="10dp">
 
     <com.android.common.view.MyTextView
         android:id="@+id/btnTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="10dp"
-        android:background="@drawable/rect3"
-        android:gravity="center"
-        android:layout_marginTop="10dp"
-        android:textSize="18sp"
-        android:text="TextView"
-        />
-
-    <com.android.common.view.MyTextView
-        android:id="@+id/btnEditText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="10dp"
@@ -31,11 +22,23 @@
         android:gravity="center"
         android:layout_marginTop="10dp"
         android:textSize="18sp"
-        android:text="EditText"
+        android:text="TextView"
         />
 
     <com.android.common.view.MyTextView
-        android:id="@+id/btnImageView"
+        android:id="@+id/btnTextViewExtend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="@drawable/rect1"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:textSize="18sp"
+        android:text="TextView扩展"
+        />
+
+    <com.android.common.view.MyTextView
+        android:id="@+id/btnEditText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="10dp"
@@ -43,19 +46,44 @@
         android:gravity="center"
         android:layout_marginTop="10dp"
         android:textSize="18sp"
-        android:text="ImageView"
+        android:text="EditText"
         />
 
     <com.android.common.view.MyTextView
-        android:id="@+id/btnScrollView"
+        android:id="@+id/btnEditTextExtend"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="10dp"
-        android:background="@drawable/rect4"
+        android:background="@drawable/rect2"
         android:gravity="center"
         android:layout_marginTop="10dp"
         android:textSize="18sp"
-        android:text="ScrollView"
+        android:text="EditText扩展"
+        />
+
+    <com.android.common.view.MyTextView
+        android:id="@+id/btnImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="@drawable/rect3"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:textSize="18sp"
+        android:text="ImageView"
+        />
+
+
+    <com.android.common.view.MyTextView
+        android:id="@+id/btnImageViewExtend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="@drawable/rect3"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:textSize="18sp"
+        android:text="ImageView扩展"
         />
 
     <com.android.common.view.MyTextView
@@ -68,6 +96,78 @@
         android:layout_marginTop="10dp"
         android:textSize="18sp"
         android:text="WebView"
+        />
+
+    <com.android.common.view.MyTextView
+        android:id="@+id/btnWebViewExtend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="@drawable/rect5"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:textSize="18sp"
+        android:text="WebView扩展"
+        />
+
+    <com.android.common.view.MyTextView
+        android:id="@+id/btnProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="@drawable/rect4"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:textSize="18sp"
+        android:text="ProgressBar及扩展"
+        />
+
+    <com.android.common.view.MyTextView
+        android:id="@+id/btnSeekBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="@drawable/rect5"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:textSize="18sp"
+        android:text="SeekBar及扩展"
+        />
+
+    <com.android.common.view.MyTextView
+        android:id="@+id/btnButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="@drawable/rect6"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:textSize="18sp"
+        android:text="Button及扩展"
+        />
+
+    <com.android.common.view.MyTextView
+        android:id="@+id/btnPicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="@drawable/rect7"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:textSize="18sp"
+        android:text="Picker"
+        />
+
+    <com.android.common.view.MyTextView
+        android:id="@+id/btnScrollView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="@drawable/rect4"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:textSize="18sp"
+        android:text="ScrollView"
         />
 
     <com.android.common.view.MyTextView
@@ -133,3 +233,5 @@
 
 
 </LinearLayout>
+</ScrollView>
+</FrameLayout>

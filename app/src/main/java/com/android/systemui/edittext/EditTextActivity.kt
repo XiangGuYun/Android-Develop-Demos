@@ -1,13 +1,10 @@
-package com.android.systemui
+package com.android.systemui.edittext
 
 import android.os.Bundle
 import android.text.Spannable
 import android.text.SpannableString
 import android.text.style.ImageSpan
 import com.android.R
-import com.android.systemui.test.ET1Activity
-import com.android.systemui.test.ET2Activity
-import com.android.systemui.test.ET3Activity
 import com.kotlinlib.activity.KotlinActivity
 import com.kotlinlib.other.LayoutId
 import kotlinx.android.synthetic.main.activity_edit_text.*
