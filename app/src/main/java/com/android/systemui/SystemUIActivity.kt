@@ -11,6 +11,7 @@ import com.android.systemui.status_bar.StatusBarActivity
 import com.android.systemui.surfaceview.SurfaceViewActivity
 import com.android.systemui.textureview.TextureViewActivity
 import com.android.systemui.textview.TextViewActivity
+import com.android.systemui.textview.TextViewExtendActivity
 import com.android.systemui.webview.WebViewActivity
 import com.kotlinlib.activity.KotlinActivity
 import com.kotlinlib.other.LayoutId
@@ -21,6 +22,9 @@ class SystemUIActivity : KotlinActivity() {
     override fun init(bundle: Bundle?) {
         btnTextView.click {
             go(TextViewActivity::class.java)
+        }
+        btnTextViewExtend.click {
+            go(TextViewExtendActivity::class.java)
         }
         btnEditText.click {
             go(EditTextActivity::class.java)

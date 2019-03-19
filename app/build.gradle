@@ -79,4 +79,12 @@ dependencies {
     //Over-Scroll Support For Android's RecyclerView, ListView, GridView, ScrollView ...
     implementation 'me.everything:overscroll-decor-android:1.0.4'
 
+    //CircleImageView
+    implementation 'de.hdodenhof:circleimageview:3.0.0'
+
+    //倾斜TextView
+    implementation 'com.haozhang.libary:android-slanted-textview:1.2'
+
+    implementation 'org.sufficientlysecure:html-textview:3.6'
+
 }
