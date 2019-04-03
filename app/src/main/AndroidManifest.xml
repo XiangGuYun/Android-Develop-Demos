@@ -133,7 +133,11 @@
         <activity android:name=".anim.FragmentTransitionActivity" />
         <activity android:name=".anim.RVActivity" />
         <activity android:name=".common.IntroActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity android:name=".gesture.GestureActivity" />
         <activity android:name=".gesture.GestureListenerActivity" />
@@ -181,11 +185,7 @@
         <activity android:name=".customview.event.case2.EventCase2Activity" />
         <activity android:name=".customview.case_scrollerlayout.ScrollerLayoutActivity" />
         <activity android:name=".bitmap.BitmapActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 
