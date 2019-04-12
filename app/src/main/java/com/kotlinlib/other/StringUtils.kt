@@ -245,15 +245,5 @@ interface StringUtils {
         return Color.parseColor("#${r + g + b}")
     }
 
-    /**
-    * 避免不合法字符串转换成int
-    */
-    fun String?.toSafeInt(defInt:Int=-1): Int {
-        if(!this.isNullOrEmpty()&&TextUtils.isDigitsOnly(this)){
-            return this!!.toInt()
-        }
-        return defInt
-    }
-
 
 }

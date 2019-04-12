@@ -1,6 +1,5 @@
 package com.kotlinlib.view
 
-import android.app.Activity
 import android.content.Context
 import android.os.Bundle
 import android.support.v4.app.Fragment
@@ -97,10 +96,6 @@ abstract class KotlinFragment:SupportFragment(), BaseInterface{
         fun transArrayList(jsonStr:String): ArrayList<T> {
             return gson.fromJson(jsonStr, object : TypeToken<ArrayList<T>>(){}.type) as ArrayList<T>
         }
-    }
-
-    fun <T: Activity> go(cls:Class<T>, vararg pairs:Pair<String,Any>){
-        getAct().go(cls, *pairs)
     }
 
 }

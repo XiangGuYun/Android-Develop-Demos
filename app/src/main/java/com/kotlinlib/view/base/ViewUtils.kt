@@ -326,15 +326,4 @@ interface ViewUtils {
         return findViewById(id)
     }
 
-    fun <T:View> T.showOrGone(result:Boolean):T {
-        if(result){
-            this.visibility=View.VISIBLE
-        }else{
-            this.visibility=View.GONE
-        }
-        return this
-    }
-
-
-
 }

@@ -323,15 +323,4 @@ SlideInUpAnimator, SlideInDownAnimator
         }
     }
 
-    fun <T> RecyclerView.deleteAnim(pos:Int, list:MutableList<T>){
-        list.removeAt(pos)
-        adapter?.notifyItemRemoved(pos)
-        adapter?.notifyItemRangeChanged(pos, list.size - pos)
-    }
-
-    fun Holder.click(id:Int, onClick:(View)->Unit):Holder{
-        v(id).setOnClickListener(onClick)
-        return this
-    }
-
 }

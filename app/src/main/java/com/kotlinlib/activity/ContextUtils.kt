@@ -12,7 +12,6 @@ import android.graphics.Rect
 import android.graphics.drawable.Drawable
 import android.net.Uri
 import android.os.Environment
-import android.support.design.widget.BottomSheetDialog
 import android.support.v4.app.Fragment
 import android.util.Log
 import android.view.LayoutInflater
@@ -22,7 +21,6 @@ import java.io.Serializable
 import android.support.v4.content.ContextCompat.getSystemService
 import android.widget.EditText
 import android.support.v4.content.ContextCompat.getSystemService
-import android.view.View
 import java.util.*
 
 
@@ -261,15 +259,6 @@ interface ContextUtils {
         startActivity(intent)
         val anims = addTransition.invoke()
         overridePendingTransition(anims.first, anims.second)
-    }
-
-    fun Context.getBottomSheetDialog(viewId:Int): BottomSheetDialog {
-        val dialog = BottomSheetDialog(this)
-        val dialogView = LayoutInflater.from(this).inflate(viewId, null)
-        dialog.setContentView(dialogView)
-        dialog.delegate.findViewById<View>(android.support.design.R.id.design_bottom_sheet)
-                ?.setBackgroundColor(resources.getColor(android.R.color.transparent))
-        return dialog
     }
 
 
