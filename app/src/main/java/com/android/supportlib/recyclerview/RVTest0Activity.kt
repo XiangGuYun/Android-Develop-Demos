@@ -3,6 +3,7 @@ package com.android.supportlib.recyclerview
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
+import android.view.LayoutInflater
 import com.android.R
 import com.android.common.dialog.InputDialog
 import com.kotlinlib.activity.KotlinActivity
@@ -23,12 +24,19 @@ class RVTest0Activity : KotlinActivity() {
 
         val dialog = InputDialog(this)
 
+
+
+
+
         val rvUtils = RVUtils(rv1)//传入RecyclerView对象
                 .rvAdapterHF(testData, //数据源
                         R.layout.header1, //HeaderView布局
                         {
                             headerHolder ->
-                            headerHolder.text(R.id.tvHeader, "Header")//处理HeaderView
+                            val text = headerHolder::setText
+                            text(R.id.tvHeader, "Header")//处理HeaderView
+                            val itemView = headerHolder::itemView
+                            itemView.get().click {  }
                         },
                         R.layout.header1,
                         {

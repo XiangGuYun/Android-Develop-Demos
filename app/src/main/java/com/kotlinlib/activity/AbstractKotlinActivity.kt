@@ -46,6 +46,9 @@ abstract class AbstractKotlinActivity : SupportActivity(), BaseInterface {
                 Orientation::class->{
                     orientationInject = it as Orientation
                 }
+                Bus::class->{
+                    startEventBus = true
+                }
             }
         }
 

@@ -7,6 +7,7 @@ import android.text.*
 import android.text.method.LinkMovementMethod
 import android.text.style.ClickableSpan
 import android.view.View
+import android.widget.TextView
 import com.android.R
 import com.kotlinlib.activity.KotlinActivity
 import com.kotlinlib.other.LayoutId
@@ -16,11 +17,29 @@ import kotlinx.android.synthetic.main.activity_text_view.*
 @LayoutId(R.layout.activity_text_view)
 class TextViewActivity : KotlinActivity() {
 
+    fun TextView.text(init: TextView.()->Unit){
+        this.init()
+    }
+
     override fun init(bundle: Bundle?) {
         /*
         字间距属性
          */
         tvTextSpacing.textScaleX = 2.0f
+
+        tvTextSpacing.text{
+            textSize = 18f
+            click {
+                println("Hello")
+            }
+        }
+
+        tvTextSpacing.apply {
+            textSize = 18f
+            click {
+                println("Hello")
+            }
+        }
 
         headerSpacing.setRightClick {
             codeDialog.text("""

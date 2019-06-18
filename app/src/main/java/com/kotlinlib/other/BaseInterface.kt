@@ -12,12 +12,13 @@ import com.kotlinlib.persistence.SPUtils
 import com.kotlinlib.transfer.IOUtils
 import com.kotlinlib.transfer.MessageUtils
 import com.kotlinlib.view.base.ViewUtils
+import com.kotlinlib.view.edittext.ETEngine
 import com.kotlinlib.view.recyclerview.RVInterface
 import com.kotlinlib.view.textview.TextViewUtils
 
 interface BaseInterface: SPUtils, TextViewUtils, StringUtils,
         DensityUtils, ViewUtils, BmpUtils, NetUtils,DateUtils,
-        RVInterface, IOUtils, ContextUtils, MessageUtils, OnPageChange, OnTabSelected{
+        RVInterface, IOUtils, ContextUtils, MessageUtils, OnPageChange, OnTabSelected, ETEngine{
 
     fun <T: TextView> T.text_(text:String?): T {
         if(text.isNullOrEmpty()){

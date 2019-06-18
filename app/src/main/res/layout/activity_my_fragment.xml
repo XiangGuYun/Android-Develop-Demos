@@ -40,10 +40,19 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         style="@style/item"
+        android:text="Activity"
+        android:background="@drawable/rect4"
+        android:id="@+id/btnActivityStudy"/>
+
+    <com.android.common.view.MyTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/item"
         android:textSize="15sp"
         android:text="框架：Fragmentation(Fragment管理)"
         android:background="@drawable/rect6"
         android:id="@+id/btnFragmentation"/>
+
 
 </LinearLayout>
 </ScrollView>

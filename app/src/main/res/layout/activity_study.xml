@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.android.common.view.Header1View
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:mainTitle1="Activity启动的几种方式"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="跳转"
+            style="@style/btn_test"
+            android:id="@+id/btnGo"/>
+
+        <com.android.common.view.ReadMoreView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/readView1"/>
+
+        <com.android.common.view.Header1View
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:mainTitle1="系统自带的Activity"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/btn_test"
+            android:text="拨打电话"
+            android:id="@+id/btnCallPhone"/>
+
+    </LinearLayout>
+
+</ScrollView>

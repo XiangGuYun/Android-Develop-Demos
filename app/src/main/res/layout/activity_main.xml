@@ -121,6 +121,7 @@
                 android:background="@drawable/circle3"
                 android:text="Activity\nFragment"/>
             <com.android.common.view.MyTextView
+                android:id="@+id/btnRxJava"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:textSize="20sp"

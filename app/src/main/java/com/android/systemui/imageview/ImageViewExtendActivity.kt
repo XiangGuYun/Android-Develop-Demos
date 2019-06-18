@@ -12,6 +12,7 @@ class ImageViewExtendActivity : KotlinActivity() {
 
     override fun init(bundle: Bundle?) {
 
+
         header1.setRightClick {
             codeDialog.text("""
 <de.hdodenhof.circleimageview.CircleImageView

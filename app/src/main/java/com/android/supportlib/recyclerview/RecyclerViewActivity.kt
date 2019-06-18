@@ -5,6 +5,8 @@ import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.support.v7.widget.RecyclerView.*
+import android.view.View
+import android.widget.EditText
 import com.android.R
 import com.kotlinlib.activity.KotlinActivity
 import com.kotlinlib.other.LayoutId
@@ -13,6 +15,7 @@ import kotlinx.android.synthetic.main.activity_recycler_view.*
 
 @LayoutId(R.layout.activity_recycler_view)
 class RecyclerViewActivity : KotlinActivity() {
+
 
     override fun init(bundle: Bundle?) {
         btnViewResult0.click {  go(RVTest0Activity::class.java) }
@@ -265,4 +268,8 @@ class SlideLayout @JvmOverloads constructor(context: Context, attrs: AttributeSe
         }
 
     }
+}
+
+private fun EditText.addOnLayoutChangeListener(onLayoutChangeListener: View.OnLayoutChangeListener, function: () -> Unit) {
+
 }

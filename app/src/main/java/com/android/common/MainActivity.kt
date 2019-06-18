@@ -12,6 +12,7 @@ import com.android.fragment.MyFragmentActivity
 import com.android.gesture.GestureActivity
 import com.android.draw.HuiTuActivity
 import com.android.kotlin.KotlinStudyActivity
+import com.android.rxjava.RXJavaActivity
 import com.android.supportlib.SupportLibUIActivity
 import com.android.systemui.SystemUIActivity
 import kotlinx.android.synthetic.main.activity_main.*
@@ -66,6 +67,10 @@ class MainActivity : AppCompatActivity() {
         btnFragment.setOnClickListener {
             startActivity(Intent(this, MyFragmentActivity::class.java))
             overridePendingTransition(R.anim.my_fade_in, R.anim.my_fade_out)
+        }
+
+        btnRxJava.setOnClickListener {
+            startActivity(Intent(this, RXJavaActivity::class.java))
         }
 
     }

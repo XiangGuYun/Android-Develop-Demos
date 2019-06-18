@@ -8,6 +8,7 @@ import com.android.fragment.case3.Case3Activity
 import com.android.fragment.fragmentation.FragmentationActivity
 import com.kotlinlib.activity.KotlinActivity
 import com.kotlinlib.other.LayoutId
+import kotlinx.android.synthetic.main.activity_constraint_case1.*
 import kotlinx.android.synthetic.main.activity_my_fragment.*
 
 @LayoutId(R.layout.activity_my_fragment)
@@ -16,6 +17,7 @@ class MyFragmentActivity : KotlinActivity() {
         btnHelloFragment.click { go(TestActivity::class.java) }
         btnBookFragment.click { go(Case2Activity::class.java) }
         btnFourFragments.click { go(Case3Activity::class.java) }
+        btnActivityStudy.click { go(ActivityStudyActivity::class.java) }
         btnFragmentation.click { go(FragmentationActivity::class.java) }
     }
 }

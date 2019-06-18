@@ -9,6 +9,18 @@
     android:background="@mipmap/bg_rxjava">
 
     <com.android.common.view.MyTextView
+        android:id="@+id/btnCreateOp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="@drawable/rect1"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:text="创建操作符"
+        android:layout_margin="10dp"
+        />
+
+    <com.android.common.view.MyTextView
         android:id="@+id/btnReflect"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

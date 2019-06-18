@@ -9,6 +9,9 @@ import kotlinx.android.synthetic.main.fragment_test_rv.*
 @LayoutId(R.layout.fragment_test_rv)
 class TestFragment:KotlinFragment() {
     override fun init() {
+
+
+
         RVUtils(rvTest).rvAdapter((1..50).toList(),
                 {
                     holder, pos ->
