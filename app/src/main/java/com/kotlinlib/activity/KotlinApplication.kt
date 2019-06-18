@@ -29,6 +29,11 @@ import android.annotation.SuppressLint
 import android.app.Application
 import android.content.Context
 import android.support.multidex.MultiDex
+import com.android.R
+import com.android.customview.smart_refresh_layout.ClassicsHeader
+import com.android.customview.smart_refresh_layout.GifHeaderView
+import com.android.customview.smart_refresh_layout.ProjectRefreshFooter
+import com.scwang.smartrefresh.layout.SmartRefreshLayout
 import com.zhy.http.okhttp.OkHttpUtils
 import me.yokeyword.fragmentation.BuildConfig
 import me.yokeyword.fragmentation.Fragmentation
@@ -68,6 +73,18 @@ class KotlinApplication : Application() {
         initOKHttp()
         initFragmentation()
         //----------------
+    }
+
+    init {
+        //设置全局的HeaderView
+        SmartRefreshLayout.setDefaultRefreshHeaderCreator { context, layout ->
+//            layout.setPrimaryColorsId(R.color.color_12b38d, android.R.color.black)//全局设置主题颜色
+            return@setDefaultRefreshHeaderCreator ClassicsHeader(context)
+        }
+        //设置全局的FooterView
+        SmartRefreshLayout.setDefaultRefreshFooterCreator { context, layout ->
+            ProjectRefreshFooter(context)
+        }
     }
 
 

@@ -8,6 +8,7 @@ import com.android.customview.drag.ViewDragHelperActivity
 import com.android.customview.event.EventActivity
 import com.android.customview.measure_layout.MeasureLayoutActivity
 import com.android.customview.slide_mothod.ViewSlideMethodActivity
+import com.android.customview.smart_refresh_layout.SmartRefreshLayoutActivity
 import com.kotlinlib.activity.KotlinActivity
 import com.kotlinlib.other.LayoutId
 import kotlinx.android.synthetic.main.activity_custom_view.*
@@ -42,6 +43,10 @@ class CustomViewActivity : KotlinActivity() {
 
         btnScrollerLayout.click {
             go(ScrollerLayoutActivity::class.java)
+        }
+
+        btnSwipeRefreshLayout.click {
+            go(SmartRefreshLayoutActivity::class.java)
         }
 
     }

@@ -14,6 +14,7 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/Theme.Design.Light.NoActionBar">
+        <activity android:name=".customview.smart_refresh_layout.SmartRefreshLayoutActivity"></activity>
         <activity android:name=".systemui.textview.TextViewExtendActivity" />
         <activity android:name=".systemui.imageview.cicleimageview.CircleImageViewCase1Activity" />
         <activity android:name=".systemui.imageview.ImageViewExtendActivity" />
@@ -184,9 +185,7 @@
         <activity android:name=".systemui.textureview.TextureViewCase1Activity" />
         <activity android:name=".customview.event.case2.EventCase2Activity" />
         <activity android:name=".customview.case_scrollerlayout.ScrollerLayoutActivity" />
-        <activity android:name=".bitmap.BitmapActivity">
-
-        </activity>
+        <activity android:name=".bitmap.BitmapActivity"></activity>
     </application>
 
 </manifest>
