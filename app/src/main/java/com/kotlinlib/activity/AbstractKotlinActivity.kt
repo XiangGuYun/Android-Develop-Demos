@@ -10,11 +10,7 @@ import android.support.v7.app.AppCompatActivity
 import android.util.Log
 import android.view.*
 import android.widget.Toast
-import com.android.common.dialog.CodeViewerDialog
-import com.android.common.dialog.TextInputDialog
-import com.android.common.dialog.WebViewerDialog
-import com.flask.colorpicker.ColorPickerView
-import com.flask.colorpicker.builder.ColorPickerDialogBuilder
+
 import com.githang.statusbar.StatusBarCompat
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken

@@ -3,8 +3,6 @@ package com.android.supportlib.cardview
 import android.graphics.Color
 import android.os.Bundle
 import com.android.R
-import com.flask.colorpicker.ColorPickerView
-import com.flask.colorpicker.builder.ColorPickerDialogBuilder
 import com.kotlinlib.activity.KotlinActivity
 import com.kotlinlib.other.LayoutId
 import kotlinx.android.synthetic.main.activity_card_view.*
@@ -39,22 +37,7 @@ card_view:cardPreventCornerOverlap 在V20和之前的版本中添加内边距，
         card1.setContentPadding(10,10,10,10)
 
         card1.click {
-            ColorPickerDialogBuilder
-                    .with(this)
-                    .setTitle("设置CardView颜色")
-                    .initialColor(currentColor)
-                    .wheelType(ColorPickerView.WHEEL_TYPE.FLOWER)
-                    .density(12)
-                    .setOnColorSelectedListener {
-                        card1.setCardBackgroundColor(it)
-                        currentColor = it
-                    }
-                    .setPositiveButton("ok") { p0, p1, p2 ->
 
-                    }
-                    .setNegativeButton("cancel") { dialog, which -> }
-                    .build()
-                    .show()
         }
 
         sb1.change { seekBar, progress, fromUser ->

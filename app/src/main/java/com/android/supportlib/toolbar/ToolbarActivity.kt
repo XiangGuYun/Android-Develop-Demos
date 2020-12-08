@@ -6,8 +6,6 @@ import android.support.v7.widget.Toolbar
 import com.android.R
 import com.android.common.dialog.SeekBartDialog
 import com.android.common.dialog.TextInputDialog
-import com.flask.colorpicker.ColorPickerView
-import com.flask.colorpicker.builder.ColorPickerDialogBuilder
 import com.kotlinlib.activity.KotlinActivity
 import com.kotlinlib.other.LayoutId
 import kotlinx.android.synthetic.main.activity_toolbar.*
@@ -39,22 +37,7 @@ class ToolbarActivity : KotlinActivity() {
         }
 
         btnBgColor.click {
-            ColorPickerDialogBuilder
-                    .with(this)
-                    .setTitle("设置CardView颜色")
-                    .initialColor(currentColor)
-                    .wheelType(ColorPickerView.WHEEL_TYPE.FLOWER)
-                    .density(12)
-                    .setOnColorSelectedListener {
-                        toolbar.setBackgroundColor(it)
-                        currentColor = it
-                    }
-                    .setPositiveButton("ok") { p0, p1, p2 ->
 
-                    }
-                    .setNegativeButton("cancel") { dialog, which -> }
-                    .build()
-                    .show()
         }
 
         btnTitle.click {
@@ -67,21 +50,7 @@ class ToolbarActivity : KotlinActivity() {
         }
 
         btnTitleColor.click {
-            ColorPickerDialogBuilder
-                    .with(this)
-                    .setTitle("设置Title颜色")
-                    .initialColor(currentColor)
-                    .wheelType(ColorPickerView.WHEEL_TYPE.FLOWER)
-                    .density(12)
-                    .setOnColorSelectedListener {
-                        toolbar.setTitleTextColor(it)
-                    }
-                    .setPositiveButton("ok") { p0, p1, p2 ->
 
-                    }
-                    .setNegativeButton("cancel") { dialog, which -> }
-                    .build()
-                    .show()
         }
 
         val sbDialog = SeekBartDialog(this)
@@ -115,21 +84,7 @@ class ToolbarActivity : KotlinActivity() {
         }
 
         btnSubTitleColor.click {
-            ColorPickerDialogBuilder
-                    .with(this)
-                    .setTitle("设置SubTitle颜色")
-                    .initialColor(currentColor)
-                    .wheelType(ColorPickerView.WHEEL_TYPE.FLOWER)
-                    .density(12)
-                    .setOnColorSelectedListener {
-                        toolbar.setSubtitleTextColor(it)
-                    }
-                    .setPositiveButton("ok") { p0, p1, p2 ->
 
-                    }
-                    .setNegativeButton("cancel") { dialog, which -> }
-                    .build()
-                    .show()
         }
 
         tvQuestion1.text = "通过继承系统style来设置标题字体大小（查看）"

@@ -9,6 +9,7 @@
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/main.appbar"
+        app:elevation="0dp"
         android:layout_width="match_parent"
         android:layout_height="300dp"
         android:fitsSystemWindows="true"
